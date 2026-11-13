@@ -483,4 +483,65 @@
   var refresh = function () { ScrollTrigger.refresh(); };
   window.addEventListener('load', refresh);
   if (document.fonts && document.fonts.ready) document.fonts.ready.then(refresh);
+
+  /* AVISO DE SCROLL: ventanita al inicio que invita a bajar; se va con el primer scroll,
+     con la × o con Esc, y no vuelve a salir en la misma sesión. Sube si está el banner de cookies. */
+  (function () {
+    var CLAVE = 'pivotek-aviso-scroll';
+    try { if (sessionStorage.getItem(CLAVE)) return; } catch (e) {}
+    var en = (document.documentElement.lang || '').indexOf('en') === 0;
+    var t = en
+      ? { titulo: 'Scroll down', texto: 'The portfolio unfolds as you scroll: each section comes to life on the way down.', cerrar: 'Close' }
+      : { titulo: 'Desliza hacia abajo', texto: 'El portafolio se recorre con scroll: cada sección cobra vida al bajar.', cerrar: 'Cerrar' };
+
+    var caja = document.createElement('div');
+    caja.className = 'scrollhint';
+    caja.setAttribute('role', 'status');
+    var ir = document.createElement('button');
+    ir.type = 'button';
+    ir.className = 'scrollhint__go';
+    ir.innerHTML = '<span class="scrollhint__ico" aria-hidden="true"><i></i></span><span class="scrollhint__txt"><strong></strong><span></span></span>';
+    ir.querySelector('strong').textContent = t.titulo;
+    ir.querySelector('.scrollhint__txt span').textContent = t.texto;
+    var x = document.createElement('button');
+    x.type = 'button';
+    x.className = 'scrollhint__x';
+    x.setAttribute('aria-label', t.cerrar);
+    x.textContent = '×';
+    caja.appendChild(ir);
+    caja.appendChild(x);
+
+    var cerrado = false;
+    function cerrar() {
+      if (cerrado) return;
+      cerrado = true;
+      try { sessionStorage.setItem(CLAVE, '1'); } catch (e) {}
+      caja.classList.remove('is-on');
+      window.removeEventListener('scroll', alBajar);
+      setTimeout(function () { if (caja.parentNode) caja.parentNode.removeChild(caja); }, 500);
+    }
+    function alBajar() { if (window.scrollY > 80) cerrar(); }
+    function posicion() {
+      var c = document.querySelector('.cookies');
+      caja.style.bottom = c && !c.hidden ? (c.offsetHeight + 10) + 'px' : '';
+    }
+
+    ir.addEventListener('click', function () {
+      var destino = window.innerHeight * 0.9;
+      if (lenis) lenis.scrollTo(destino); else window.scrollTo({ top: destino, behavior: 'smooth' });
+      cerrar();
+    });
+    x.addEventListener('click', cerrar);
+    document.addEventListener('keydown', function (e) { if (e.key === 'Escape') cerrar(); });
+    window.addEventListener('scroll', alBajar, { passive: true });
+    window.addEventListener('resize', posicion);
+    document.addEventListener('pivotek:cookies', function () { setTimeout(posicion, 0); });
+
+    setTimeout(function () {
+      if (cerrado || window.scrollY > 80) return;
+      posicion(); // antes de insertarla, para que no se deslice desde abajo
+      document.body.appendChild(caja);
+      requestAnimationFrame(function () { requestAnimationFrame(function () { caja.classList.add('is-on'); }); });
+    }, 1600);
+  })();
 })();
