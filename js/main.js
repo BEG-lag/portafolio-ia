@@ -461,11 +461,12 @@
           .fromTo('.pvk__t', { scale: 2.4, opacity: 0 }, { scale: 1, opacity: 1, ease: 'power2.out', duration: 0.2 }, 0.52)
           .from('.pvk__def--pivot', { y: 40, opacity: 0, ease: 'power2.out', duration: 0.16 }, 0.68)
           .from('.pvk__def--tek', { y: 40, opacity: 0, ease: 'power2.out', duration: 0.16 }, 0.76)
-          .from('.pvk__logo', { y: 30, opacity: 0, ease: 'power2.out', duration: 0.14 }, 0.86);
+          .from('.pvk__why', { y: 34, opacity: 0, ease: 'power2.out', duration: 0.14 }, 0.84)
+          .from('.pvk__logo', { y: 30, opacity: 0, ease: 'power2.out', duration: 0.12 }, 0.92);
       } else {
         gsap.fromTo('.pvk__p', { clipPath: 'inset(100% 0% 0% 0%)' }, { clipPath: 'inset(0% 0% 0% 0%)', duration: 0.9, ease: 'power3.out', scrollTrigger: once('.pvk__iso') });
         gsap.fromTo('.pvk__arrow', { x: 110, rotation: 180, opacity: 0 }, { x: 0, rotation: 0, opacity: 1, duration: 1.1, delay: 0.35, ease: 'back.out(1.4)', scrollTrigger: once('.pvk__iso') });
-        gsap.from(['.pvk__word', '.pvk__def--pivot', '.pvk__def--tek', '.pvk__logo'], { y: 30, opacity: 0, duration: 0.7, stagger: 0.12, ease: 'power3.out', scrollTrigger: once('.pvk__copy') });
+        gsap.from(['.pvk__word', '.pvk__def--pivot', '.pvk__def--tek', '.pvk__why', '.pvk__logo'], { y: 30, opacity: 0, duration: 0.7, stagger: 0.12, ease: 'power3.out', scrollTrigger: once('.pvk__copy') });
       }
     }
 

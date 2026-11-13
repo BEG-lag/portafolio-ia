@@ -622,3 +622,13 @@ h4{font-size:1.05rem;line-height:1.25;font-weight:650;letter-spacing:-.01em}
   .pvk__iso{width:min(200px,52vw)}
   .pvk__defs{grid-template-columns:1fr}
 }
+
+.pvk__why{margin-top:clamp(1.8rem,4vw,3rem);padding-left:1.1rem;border-left:3px solid var(--lime);font-size:clamp(1.25rem,2.3vw,1.95rem);line-height:1.25;letter-spacing:-.02em;max-width:36ch;color:var(--fg)}
+.pvk__lema{color:var(--lime)}
+@media (min-width:900px){
+  .pvk__pin{padding:7vh 0}
+  .pvk__word{font-size:clamp(4rem,10vw,9rem)}
+  .pvk__defs{margin-top:1.3rem}
+  .pvk__why{font-size:clamp(1.1rem,1.75vw,1.55rem);margin-top:1.6rem}
+  .pvk__logo{width:min(280px,60%);margin-top:1.5rem}
+}
