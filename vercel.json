@@ -43,6 +43,14 @@
     {
       "source": "/site.webmanifest",
       "headers": [{ "key": "Content-Type", "value": "application/manifest+json" }]
+    },
+    {
+      "source": "/pdf/portafolio-BEG-es.pdf",
+      "headers": [{ "key": "Link", "value": "<https://pivotek.mx/>; rel=\"canonical\"" }]
+    },
+    {
+      "source": "/pdf/portfolio-BEG-en.pdf",
+      "headers": [{ "key": "Link", "value": "<https://pivotek.mx/en>; rel=\"canonical\"" }]
     }
   ]
 }
