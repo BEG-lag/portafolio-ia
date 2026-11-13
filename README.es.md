@@ -4,7 +4,7 @@
 
 Ciudad de México · beg.empleos@gmail.com · Español (nativo), inglés (profesional) · [English version](README.md) · PDF en [`pdf/`](pdf/)
 
-> El trabajo para clientes está anonimizado: se quitaron nombres, cifras y datos que los identifiquen. Nada en este repositorio constituye opinión legal.
+> **Uso la IA todos los días.** Este portafolio es una muestra, no una lista completa: hay proyectos confidenciales y otros que todavía no salen. El trabajo para clientes está anonimizado: se quitaron nombres, cifras y datos que los identifiquen. Nada en este repositorio constituye opinión legal.
 
 <p align="center"><img src="assets/ornamento.svg" width="220" alt=""></p>
 
@@ -22,7 +22,7 @@ Ciudad de México · beg.empleos@gmail.com · Español (nativo), inglés (profes
 10. [Conectores: cómo automatizo, consulto y genero](#10-conectores-cómo-automatizo-consulto-y-genero)
 11. [Herramientas y sistemas](#11-herramientas-y-sistemas)
 12. [Estudios de viabilidad](#12-estudios-de-viabilidad)
-13. [Formación](#13-formación)
+13. [Formación y comunidad](#13-formación-y-comunidad)
 14. [Cómo trabajo con IA](#14-cómo-trabajo-con-ia)
 15. [Herramientas técnicas](#15-herramientas-técnicas)
 
@@ -30,11 +30,12 @@ Ciudad de México · beg.empleos@gmail.com · Español (nativo), inglés (profes
 
 ## 1. En breve
 
+- **IA todos los días:** la uso a diario en trabajo legal, productos, automatización y contenido, y me mantengo a la vanguardia de las herramientas y funciones nuevas. Lo que sigue es una muestra; hay proyectos confidenciales y otros que todavía no salen.
 - **Más de 25 proyectos en 2026**, desde auditorías regulatorias internacionales hasta un producto legal-tech a la venta.
 - **Un producto en vivo:** Con Criterio, guía con 7 plugins y 7 skills para abogados en México, en ediciones para Claude y ChatGPT, a la venta en [concriterio.mx](https://concriterio.mx) desde el 5 de noviembre de 2026.
 - **Búsqueda sobre texto legal:** 374 instrumentos de derecho energético divididos en 11,112 fragmentos según la jerarquía de la norma mexicana, con búsqueda híbrida y un juego de pruebas de regresión.
 - **Datos a escala:** un pipeline sobre más de 560,000 contratos de compras públicas para mostrar a proveedores de petróleo y gas dónde está el dinero.
-- **Sitios, video y marketing:** [casalegado.mx](https://casalegado.mx) y [carocomunicando.com](https://carocomunicando.com) en vivo, un video de entrada a escenario para una conferencista, un pipeline automático de Reels y redes sociales operadas por agentes de IA (Grok Bot y Muse de Meta).
+- **Sitios, video y marketing:** cuatro sitios en vivo ([concriterio.mx](https://concriterio.mx), [pivotek.mx](https://pivotek.mx), [casalegado.mx](https://casalegado.mx) y [carocomunicando.com](https://carocomunicando.com)), un video de entrada a escenario para una conferencista, un pipeline automático de Reels y redes sociales operadas por agentes de IA (Grok Bot y Muse de Meta).
 - **Herramientas conectadas:** Stripe, Gmail, Google Calendar y Drive, Vercel, Higgsfield, Apify, Canva y automatización del navegador, todo desde Claude Code.
 - **Automatización con criterio:** todo flujo deja a una persona en el circuito cuando hay firmas, dinero o juicio legal de por medio.
 
@@ -50,18 +51,18 @@ Ciudad de México · beg.empleos@gmail.com · Español (nativo), inglés (profes
 | Automatización de procesos | Diseños en n8n para un cierre inmobiliario de 20 pasos y un resumen diario del DOF ([§6](#6-destacado-automatización-del-cierre-inmobiliario-en-n8n), [§7](#7-resumen-diario-del-dof-para-el-sector-energético-n8n)); tareas programadas para la revisión regulatoria mensual y la revisión semanal del segundo cerebro ([§3](#3-destacado-con-criterio-kit-de-ia-para-abogados-mexicanos), [§11](#11-herramientas-y-sistemas)) |
 | IA para el trabajo legal | Auditorías regulatorias internacionales, revisiones de contratos y de cumplimiento, dictámenes y cartas, cada dato con fuente y fecha de corte ([§8](#8-trabajo-legal-y-regulatorio-hecho-con-ia)) |
 | Construcción de productos | Con Criterio, del contenido al cobro, la entrega automática y las pruebas con compradores simulados ([§3](#3-destacado-con-criterio-kit-de-ia-para-abogados-mexicanos)) |
-| Desarrollo web | casalegado.mx, carocomunicando.com y el sitio de mi firma ([§9.1](#91-sitios-web)) |
+| Desarrollo web | concriterio.mx, pivotek.mx, casalegado.mx y carocomunicando.com ([§9.1](#91-sitios-web)) |
 | Video y contenido con IA | Un video de entrada a escenario con locución de IA y motion graphics, y un pipeline automático de Reels con transcripción local y visión por computadora ([§9.2](#92-video-de-entrada-de-la-conferencista-y-videos-de-eventos), [§9.3](#93-pipeline-automático-de-reels)) |
 | Marketing con IA | Más de una docena de skills de marketing y creatividad aplicados a campañas reales, auditorías SEO y textos de anuncios ([§9.5](#95-skills-de-marketing-y-cómo-los-apliqué)) |
 | Integraciones (conectores MCP) | Stripe, Gmail, Google Calendar y Drive, Vercel, Higgsfield, Apify, Canva y más de 10,000 acciones de navegador ([§10](#10-conectores-cómo-automatizo-consulto-y-genero)) |
 | Criterio y calidad | Compuertas de aprobación humana, reglas antifraude, incertidumbre etiquetada, pruebas golden y construcción reproducible ([§14](#14-cómo-trabajo-con-ia)) |
-| Aprendizaje continuo | Cursos gratuitos en línea de Anthropic y de Harvey, un evento de ingeniería con Claude y un curso de n8n ([§13](#13-formación)) |
+| Aprendizaje continuo y comunidad | Uso diario de la IA y de las herramientas nuevas en cuanto salen; cursos gratuitos de Anthropic y Harvey; la comunidad Tododeia; pláticas y workshops de Claude y Grok Bot; cenas de networking con CTOs ([§13](#13-formación-y-comunidad)) |
 
 <p align="center"><img src="assets/ornamento.svg" width="220" alt=""></p>
 
 ## 3. Destacado: Con Criterio, kit de IA para abogados mexicanos
 
-**Qué es.** Un kit práctico de IA para abogados en México: una guía (116 páginas en la edición Claude y 134 en la edición ChatGPT), 7 plugins por materia y 7 skills de redacción. A la venta en [concriterio.mx](https://concriterio.mx) desde el 5 de noviembre de 2026.
+**Qué es.** Un kit práctico de IA para abogados en México: una guía (116 páginas en la edición Claude y 134 en la edición ChatGPT), 7 plugins por materia y 7 skills de redacción. A la venta en [concriterio.mx](https://concriterio.mx) desde el 5 de noviembre de 2026. Desde el 11 de noviembre también ofrece una guía de IA para principiantes, para el público general.
 
 | Plugin | Qué cubre |
 |:----|:------------|
@@ -190,9 +191,10 @@ Todos los asuntos están anonimizados.
 
 | Sitio | Qué es | Cómo se hizo |
 |:----|:------|:---------|
+| [concriterio.mx](https://concriterio.mx) | Sitio de venta de Con Criterio: página para abogados y [/para-todos](https://concriterio.mx/para-todos/) para principiantes, con panel "Arma tu compra" | Páginas y textos legales (términos, aviso de privacidad, licencia) generados con scripts de Python; ligas de pago de Stripe y un Worker de Cloudflare para el cobro y la entrega; Cloudflare Pages, DNS y Web Analytics; Pixel de Meta y dos campañas de búsqueda en Google Ads configuradas |
+| [pivotek.mx](https://pivotek.mx) | Sitio de PIVOTEK, mi firma boutique de derecho energético y de infraestructura | Next.js y TypeScript, formulario de contacto con Resend, SEO técnico (sitemap, datos estructurados, imágenes sociales dinámicas), desplegado en Vercel |
 | [casalegado.mx](https://casalegado.mx) | Mi marca de documentales biográficos: sitio de cinco páginas, más brandbook, dossier y presentación de ventas | HTML y CSS estáticos con un sistema de marca estricto (dos familias tipográficas, paleta cálida y reglas de voz), imágenes ilustrativas generadas con Higgsfield, aviso de privacidad, sitemap, textos para el Perfil de Negocio de Google, etiquetas de Google Ads y política de seguridad de contenido, desplegado en Vercel |
 | [carocomunicando.com](https://carocomunicando.com) | Sitio de una capacitadora en oratoria y comunicación: home con portada animada, su método, su charla TEDx, casos y la marca | Sitio estático con GSAP, ScrollTrigger y Lenis auto-hospedados; guía PDF descargable con captura opcional de correo; GA4, Microsoft Clarity y Vercel Analytics declarados en el aviso de privacidad y el banner de cookies; redirecciones 301, encabezados de seguridad y política de seguridad de contenido; auditoría SEO y artículos de blog |
-| PIVOTEK (mi firma boutique de derecho energético) | Sitio de la firma | Next.js y TypeScript, formulario de contacto con Resend, SEO técnico (sitemap, datos estructurados, imágenes sociales dinámicas), desplegado en Vercel |
 
 ### 9.2 Video de entrada de la conferencista y videos de eventos
 
@@ -290,11 +292,16 @@ Proyectos propios y servicios de mi firma, cada uno con veredicto y semáforo po
 
 <p align="center"><img src="assets/ornamento.svg" width="220" alt=""></p>
 
-## 13. Formación
+## 13. Formación y comunidad
+
+Uso la IA todos los días y me mantengo a la vanguardia de las herramientas y funciones nuevas de IA: las pruebo en trabajo real en cuanto salen.
 
 - **Cursos gratuitos en línea de Anthropic** (Anthropic Academy).
 - **Cursos gratuitos en línea de Harvey** sobre IA para el trabajo legal.
-- **Claude for AI Engineering** (Claude Community CDMX, octubre de 2026): resumí las cinco ponencias (uso de herramientas, MCP, ingeniería de contexto) y convertí las notas en un agente que responde como lo haría cada ponente.
+- **Comunidad Tododeia** (Juan Lombana y Enrique Rocha): videos y cursos. También uso herramientas de la comunidad, como Motion Architect y Video Editor Architect.
+- **Pláticas y workshops de Claude en México**, como Claude for AI Engineering (Claude Community CDMX, octubre de 2026). Ahí resumí las cinco ponencias (uso de herramientas, MCP, ingeniería de contexto) y convertí las notas en un agente que responde como lo haría cada ponente.
+- **Pláticas y workshops de Grok Bot.**
+- **Cenas de networking con CTOs** de empresas grandes y medianas.
 - **Curso de automatización con n8n** (en curso): el resumen diario del DOF de la [§7](#7-resumen-diario-del-dof-para-el-sector-energético-n8n) fue la primera entrega.
 
 <p align="center"><img src="assets/ornamento.svg" width="220" alt=""></p>

@@ -4,7 +4,7 @@
 
 Mexico City · beg.empleos@gmail.com · Spanish (native), English (professional) · [Versión en español](README.es.md) · PDF in [`pdf/`](pdf/)
 
-> Client work is anonymized: names, figures and identifying details were removed. Nothing in this repository is legal advice.
+> **I use AI every day.** This portfolio is a sample, not a complete list: some projects are confidential and others haven't been released yet. Client work is anonymized: names, figures and identifying details were removed. Nothing in this repository is legal advice.
 
 <p align="center"><img src="assets/ornamento.svg" width="220" alt=""></p>
 
@@ -22,7 +22,7 @@ Mexico City · beg.empleos@gmail.com · Spanish (native), English (professional)
 10. [Connectors: how I automate, query and generate](#10-connectors-how-i-automate-query-and-generate)
 11. [Tools and systems](#11-tools-and-systems)
 12. [Feasibility studies](#12-feasibility-studies)
-13. [Learning](#13-learning)
+13. [Learning and community](#13-learning-and-community)
 14. [How I work with AI](#14-how-i-work-with-ai)
 15. [Stack](#15-stack)
 
@@ -30,11 +30,12 @@ Mexico City · beg.empleos@gmail.com · Spanish (native), English (professional)
 
 ## 1. At a glance
 
+- **AI every day:** I use it daily for legal work, products, automation and content, and I stay at the forefront of new tools and features. What follows is a sample; some projects are confidential and others haven't been released yet.
 - **More than 25 projects in 2026**, from cross-border regulatory audits to a legal-tech product that is on sale.
 - **One product live:** Con Criterio, a guide plus 7 plugins and 7 skills for Mexican lawyers, sold in Claude and ChatGPT editions at [concriterio.mx](https://concriterio.mx) since November 5, 2026.
 - **Retrieval over legal text:** 374 energy-law instruments split into 11,112 chunks along the hierarchy of Mexican statutes, with hybrid search and a regression test set.
 - **Data at scale:** a pipeline over more than 560,000 public procurement contracts to show oil and gas suppliers where the money goes.
-- **Websites, video and marketing:** [casalegado.mx](https://casalegado.mx) and [carocomunicando.com](https://carocomunicando.com) live, a stage-entrance video for a speaker, an automated Reels pipeline, and social media run by AI agents (Grok Bot and Meta's Muse).
+- **Websites, video and marketing:** four sites live ([concriterio.mx](https://concriterio.mx), [pivotek.mx](https://pivotek.mx), [casalegado.mx](https://casalegado.mx) and [carocomunicando.com](https://carocomunicando.com)), a stage-entrance video for a speaker, an automated Reels pipeline, and social media run by AI agents (Grok Bot and Meta's Muse).
 - **Connected tools:** Stripe, Gmail, Google Calendar and Drive, Vercel, Higgsfield, Apify, Canva and browser automation, all driven from Claude Code.
 - **Automation with judgment:** every workflow keeps a person in the loop where signatures, money or legal judgment are involved.
 
@@ -50,18 +51,18 @@ Mexico City · beg.empleos@gmail.com · Spanish (native), English (professional)
 | Workflow automation | n8n designs for a 20-step real-estate closing and a daily regulatory digest ([§6](#6-featured-real-estate-closing-automation-in-n8n), [§7](#7-daily-regulatory-digest-from-the-official-gazette-n8n)); scheduled tasks for monthly regulatory reviews and a weekly second-brain review ([§3](#3-featured-con-criterio-an-ai-toolkit-for-mexican-lawyers), [§11](#11-tools-and-systems)) |
 | AI for legal work | Cross-border regulatory audits, contract and compliance reviews, opinions and letters, every data point with source and cut-off date ([§8](#8-legal-and-regulatory-work-built-with-ai)) |
 | Product building | Con Criterio, from content to payments, automated delivery and QA with simulated buyers ([§3](#3-featured-con-criterio-an-ai-toolkit-for-mexican-lawyers)) |
-| Web development | casalegado.mx, carocomunicando.com and my firm's site ([§9.1](#91-websites)) |
+| Web development | concriterio.mx, pivotek.mx, casalegado.mx and carocomunicando.com ([§9.1](#91-websites)) |
 | AI video and content | A stage-entrance video with AI voice-over and motion graphics, and an automated Reels pipeline with local transcription and computer vision ([§9.2](#92-speaker-intro-and-event-videos), [§9.3](#93-automated-reels-pipeline)) |
 | AI marketing | More than a dozen marketing and creative skills applied to real campaigns, SEO audits and ad copy ([§9.5](#95-marketing-skills-and-how-i-applied-them)) |
 | Integrations (MCP connectors) | Stripe, Gmail, Google Calendar and Drive, Vercel, Higgsfield, Apify, Canva and more than 10,000 browser actions ([§10](#10-connectors-how-i-automate-query-and-generate)) |
 | Judgment and quality | Human approval gates, anti-fraud rules, labeled uncertainty, golden test sets and reproducible builds ([§14](#14-how-i-work-with-ai)) |
-| Continuous learning | Free online courses from Anthropic and Harvey, a Claude engineering event and an n8n course ([§13](#13-learning)) |
+| Continuous learning and community | Daily use of AI and of new tools as soon as they launch; free courses from Anthropic and Harvey; the Tododeia community; Claude and Grok Bot talks and workshops; networking dinners with CTOs ([§13](#13-learning-and-community)) |
 
 <p align="center"><img src="assets/ornamento.svg" width="220" alt=""></p>
 
 ## 3. Featured: Con Criterio, an AI toolkit for Mexican lawyers
 
-**What it is.** A practical AI toolkit for lawyers in Mexico: a guide (116 pages in the Claude edition, 134 in the ChatGPT edition), 7 plugins by practice area and 7 drafting skills. On sale at [concriterio.mx](https://concriterio.mx) since November 5, 2026.
+**What it is.** A practical AI toolkit for lawyers in Mexico: a guide (116 pages in the Claude edition, 134 in the ChatGPT edition), 7 plugins by practice area and 7 drafting skills. On sale at [concriterio.mx](https://concriterio.mx) since November 5, 2026. Since November 11 it also offers a beginners' guide to everyday AI for the general public.
 
 | Plugin | What it covers |
 |:----|:------------|
@@ -190,9 +191,10 @@ All matters are anonymized.
 
 | Site | What it is | How it was built |
 |:----|:------|:---------|
+| [concriterio.mx](https://concriterio.mx) | Sales site of Con Criterio: a page for lawyers and [/para-todos](https://concriterio.mx/para-todos/) for beginners, with a build-your-purchase panel | Pages and legal texts (terms, privacy notice, license) generated with Python scripts; Stripe payment links and a Cloudflare Worker for checkout and delivery; Cloudflare Pages, DNS and Web Analytics; Meta Pixel and two Google Ads search campaigns set up |
+| [pivotek.mx](https://pivotek.mx) | Website of PIVOTEK, my boutique energy and infrastructure law firm | Next.js and TypeScript, contact form with Resend, technical SEO (sitemap, structured data, dynamic social images), deployed on Vercel |
 | [casalegado.mx](https://casalegado.mx) | My biographical documentary brand: five-page site plus brandbook, sales dossier and sales presentation | Static HTML and CSS under a strict brand system (two typefaces, a warm palette and voice rules), illustrative images generated with Higgsfield, privacy notice, sitemap, Google Business Profile copy, Google Ads tags and a content security policy, deployed on Vercel |
 | [carocomunicando.com](https://carocomunicando.com) | Site of a public-speaking and communication trainer: home with an animated cover, her method, her TEDx talk, cases and brand pages | Static site with self-hosted GSAP, ScrollTrigger and Lenis; a downloadable PDF guide with optional email capture; GA4, Microsoft Clarity and Vercel Analytics declared in the privacy notice and cookie banner; 301 redirects, security headers and a content security policy; SEO audit and blog articles |
-| PIVOTEK (my boutique energy-law firm) | Firm website | Next.js and TypeScript, contact form with Resend, technical SEO (sitemap, structured data, dynamic social images), deployed on Vercel |
 
 ### 9.2 Speaker intro and event videos
 
@@ -290,11 +292,16 @@ Own ventures and services of my firm, each with a go or no-go verdict and traffi
 
 <p align="center"><img src="assets/ornamento.svg" width="220" alt=""></p>
 
-## 13. Learning
+## 13. Learning and community
+
+I use AI every day and I stay at the forefront of new AI tools and features: I test them on real work as soon as they come out.
 
 - **Anthropic's free online courses** (Anthropic Academy).
 - **Harvey's free online courses** on AI for legal work.
-- **Claude for AI Engineering** (Claude Community CDMX, October 2026): I summarized the five talks (tool use, MCP, context engineering) and turned the notes into an agent that answers as each speaker would.
+- **Tododeia community** (Juan Lombana and Enrique Rocha): videos and courses. I also use tools from the community, such as Motion Architect and Video Editor Architect.
+- **Claude talks and workshops in Mexico**, such as Claude for AI Engineering (Claude Community CDMX, October 2026). There I summarized the five talks (tool use, MCP, context engineering) and turned the notes into an agent that answers as each speaker would.
+- **Grok Bot talks and workshops.**
+- **Networking dinners with CTOs** of large and mid-size companies.
 - **n8n automation course** (in progress): the daily regulatory digest in [§7](#7-daily-regulatory-digest-from-the-official-gazette-n8n) was the first deliverable.
 
 <p align="center"><img src="assets/ornamento.svg" width="220" alt=""></p>
