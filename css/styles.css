@@ -518,6 +518,8 @@ h4{font-size:1.05rem;line-height:1.25;font-weight:650;letter-spacing:-.01em}
 .learn{padding:clamp(6rem,14vh,11rem) 0 clamp(4rem,9vh,7rem)}
 .learn__grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(2rem,6vw,6rem);align-items:start}
 .learn h2{font-size:clamp(2rem,4.2vw,3.9rem);margin-bottom:1.5rem}
+.learn__foto{margin-top:clamp(2rem,4vw,3rem);max-width:420px;border-radius:var(--r);overflow:hidden;border:1px solid var(--line);background:var(--card)}
+.learn__foto img{width:100%;height:auto;aspect-ratio:3/4;object-fit:cover}
 .learn__list li{border-top:1px solid var(--line);padding:1.05rem 0;color:var(--mut)}
 .learn__list b{color:var(--fg)}
 .stackwrap{margin-top:clamp(5rem,10vw,9rem)}
