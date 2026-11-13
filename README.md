@@ -2,7 +2,7 @@
 
 **Mexican corporate lawyer (energy, hydrocarbons and mining, about 8 years of practice) who builds with AI.** I write the legal analysis, and I build the systems around it and beyond it: Claude Code plugins and agents, retrieval over legal text, n8n workflows, Python data pipelines, websites, video and AI agents for marketing.
 
-Mexico City · beg.empleos@gmail.com · Spanish (native), English (professional) · [Versión en español](README.es.md) · PDF in [`pdf/`](pdf/)
+Mexico City · beg.empleos@gmail.com · [pivotek.mx](https://pivotek.mx) · Spanish (native), English (professional) · [Versión en español](README.es.md) · PDF in [`pdf/`](pdf/)
 
 > **I use AI every day.** This portfolio is a sample, not a complete list: some projects are confidential and others haven't been released yet. Client work is anonymized: names, figures and identifying details were removed. Nothing in this repository is legal advice.
 
@@ -192,7 +192,7 @@ All matters are anonymized.
 | Site | What it is | How it was built |
 |:----|:------|:---------|
 | [concriterio.mx](https://concriterio.mx) | Sales site of Con Criterio: a page for lawyers and [/para-todos](https://concriterio.mx/para-todos/) for beginners, with a build-your-purchase panel | Pages and legal texts (terms, privacy notice, license) generated with Python scripts; Stripe payment links and a Cloudflare Worker for checkout and delivery; Cloudflare Pages, DNS and Web Analytics; Meta Pixel and two Google Ads search campaigns set up |
-| [pivotek.mx](https://pivotek.mx) | Website of PIVOTEK, my boutique energy and infrastructure law firm | Next.js and TypeScript, contact form with Resend, technical SEO (sitemap, structured data, dynamic social images), deployed on Vercel |
+| [pivotek.mx](https://pivotek.mx) | Home of this portfolio. It replaced my firm's Next.js site, which I also built (TypeScript, contact form with Resend, technical SEO) | Generated from this README with pandoc and a custom template; curtain intro, a cover drawn on canvas, scroll reveals and counters with GSAP, ScrollTrigger and Lenis (self-hosted, strict content security policy); deployed on Vercel |
 | [casalegado.mx](https://casalegado.mx) | My biographical documentary brand: five-page site plus brandbook, sales dossier and sales presentation | Static HTML and CSS under a strict brand system (two typefaces, a warm palette and voice rules), illustrative images generated with Higgsfield, privacy notice, sitemap, Google Business Profile copy, Google Ads tags and a content security policy, deployed on Vercel |
 | [carocomunicando.com](https://carocomunicando.com) | Site of a public-speaking and communication trainer: home with an animated cover, her method, her TEDx talk, cases and brand pages | Static site with self-hosted GSAP, ScrollTrigger and Lenis; a downloadable PDF guide with optional email capture; GA4, Microsoft Clarity and Vercel Analytics declared in the privacy notice and cookie banner; 301 redirects, security headers and a content security policy; SEO audit and blog articles |
 
@@ -272,9 +272,24 @@ Plus two external agents (Grok Bot and Muse, [§9.4](#94-social-media-run-by-ai-
 
 - **Second brain on Obsidian and Claude Code.** One note per project, person and official document; every working session leaves a log entry; a scheduled task reads my calendar and email every Sunday (read-only) and updates the vault; hourly backup with launchd. This portfolio was assembled from it.
 - **Personal multi-agent system.** Nine specialist roles read one shared record, pass typed signals instead of prose and follow a declared precedence rule when they disagree. Personal use; no data shown.
-- **BeCa.** A macOS desktop companion: my cat, in sticker style, changes pose with Claude Code's lifecycle hooks (ready, working, reviewing, done, needs attention, error) and plays with Clawd, Claude Code's mascot. Local, no network, stores no content.
 
-![BeCa playing with Clawd, the Claude Code mascot](assets/beca-jugando-con-clawd.gif)
+### BeCa, my desktop companion
+
+![BeCa playing with Clawd, the Claude Code mascot](assets/beca-jugando-con-clawd-animado.png)
+
+BeCa is my cat turned into a sticker-style companion that lives in a small floating window on my Mac. It listens to Claude Code's lifecycle hooks, so I can tell at a glance what Claude is doing without looking at the terminal. Click it once and it waves; click again and it plays with Clawd, Claude Code's mascot, for about four seconds. It runs locally, uses no network and stores no content.
+
+| What Claude Code is doing | Hook | What BeCa does |
+|:-------|:------|:--------|
+| Starting a session | SessionStart | Waves twice, then rests |
+| Working on a request or running a tool | UserPromptSubmit, PreToolUse, PostToolUse | Types in the air |
+| Editing or writing a file | PostToolUse of Edit or Write | Inspects the work, paw on chin |
+| Finished its turn | Stop | Jumps four times and waves |
+| Waiting for my permission or answer | PermissionRequest, Notification | Asks with its paws together |
+| Hit an API error | StopFailure | Deflates once |
+| Session closed | SessionEnd | Rests |
+
+**How it was built:** a native macOS app in Swift, made with Claude Code; the art was generated with Higgsfield from three photos of my cat and cut into animation strips with Python scripts; the sounds were extracted from AI-generated video clips; the hooks are global, so BeCa works in every project.
 
 <p align="center"><img src="assets/ornamento.svg" width="220" alt=""></p>
 

@@ -2,7 +2,7 @@
 
 **Abogado corporativo mexicano (energía, hidrocarburos y minería, unos 8 años de práctica) que construye con inteligencia artificial.** Escribo el análisis legal y armo los sistemas alrededor de él y más allá: plugins y agentes en Claude Code, búsqueda sobre texto legal, flujos en n8n, pipelines de datos en Python, sitios web, video y agentes de IA para marketing.
 
-Ciudad de México · beg.empleos@gmail.com · Español (nativo), inglés (profesional) · [English version](README.md) · PDF en [`pdf/`](pdf/)
+Ciudad de México · beg.empleos@gmail.com · [pivotek.mx](https://pivotek.mx) · Español (nativo), inglés (profesional) · [English version](README.md) · PDF en [`pdf/`](pdf/)
 
 > **Uso la IA todos los días.** Este portafolio es una muestra, no una lista completa: hay proyectos confidenciales y otros que todavía no salen. El trabajo para clientes está anonimizado: se quitaron nombres, cifras y datos que los identifiquen. Nada en este repositorio constituye opinión legal.
 
@@ -192,7 +192,7 @@ Todos los asuntos están anonimizados.
 | Sitio | Qué es | Cómo se hizo |
 |:----|:------|:---------|
 | [concriterio.mx](https://concriterio.mx) | Sitio de venta de Con Criterio: página para abogados y [/para-todos](https://concriterio.mx/para-todos/) para principiantes, con panel "Arma tu compra" | Páginas y textos legales (términos, aviso de privacidad, licencia) generados con scripts de Python; ligas de pago de Stripe y un Worker de Cloudflare para el cobro y la entrega; Cloudflare Pages, DNS y Web Analytics; Pixel de Meta y dos campañas de búsqueda en Google Ads configuradas |
-| [pivotek.mx](https://pivotek.mx) | Sitio de PIVOTEK, mi firma boutique de derecho energético y de infraestructura | Next.js y TypeScript, formulario de contacto con Resend, SEO técnico (sitemap, datos estructurados, imágenes sociales dinámicas), desplegado en Vercel |
+| [pivotek.mx](https://pivotek.mx) | Casa de este portafolio. Sustituyó el sitio en Next.js de mi firma, que también construí (TypeScript, formulario con Resend, SEO técnico) | Generado desde este README con pandoc y una plantilla propia; telón de entrada, portada dibujada en canvas, apariciones al hacer scroll y contadores con GSAP, ScrollTrigger y Lenis (auto-hospedados, con política de seguridad estricta); desplegado en Vercel |
 | [casalegado.mx](https://casalegado.mx) | Mi marca de documentales biográficos: sitio de cinco páginas, más brandbook, dossier y presentación de ventas | HTML y CSS estáticos con un sistema de marca estricto (dos familias tipográficas, paleta cálida y reglas de voz), imágenes ilustrativas generadas con Higgsfield, aviso de privacidad, sitemap, textos para el Perfil de Negocio de Google, etiquetas de Google Ads y política de seguridad de contenido, desplegado en Vercel |
 | [carocomunicando.com](https://carocomunicando.com) | Sitio de una capacitadora en oratoria y comunicación: home con portada animada, su método, su charla TEDx, casos y la marca | Sitio estático con GSAP, ScrollTrigger y Lenis auto-hospedados; guía PDF descargable con captura opcional de correo; GA4, Microsoft Clarity y Vercel Analytics declarados en el aviso de privacidad y el banner de cookies; redirecciones 301, encabezados de seguridad y política de seguridad de contenido; auditoría SEO y artículos de blog |
 
@@ -272,9 +272,24 @@ Además, dos agentes externos (Grok Bot y Muse, [§9.4](#94-redes-sociales-opera
 
 - **Segundo cerebro en Obsidian y Claude Code.** Una nota por proyecto, persona y documento oficial; cada sesión de trabajo deja su entrada en la bitácora; una tarea programada lee mi calendario y mi correo cada domingo (sólo lectura) y actualiza la bóveda; respaldo cada hora con launchd. Este portafolio se armó a partir de ahí.
 - **Sistema multiagente personal.** Nueve roles especializados leen un mismo expediente, se pasan señales tipadas en lugar de prosa y siguen una regla de precedencia declarada cuando se contradicen. Uso personal; no se muestran datos.
-- **BeCa.** Acompañante de escritorio para macOS: mi gato, en estilo sticker, cambia de pose con los hooks del ciclo de vida de Claude Code (esperando, trabajando, revisando, terminó, necesita atención, error) y juega con Clawd, la mascota de Claude Code. Local, sin red y sin guardar contenido.
 
-![BeCa jugando con Clawd, la mascota de Claude Code](assets/beca-jugando-con-clawd.gif)
+### BeCa, mi acompañante de escritorio
+
+![BeCa jugando con Clawd, la mascota de Claude Code](assets/beca-jugando-con-clawd-animado.png)
+
+BeCa es mi gato convertido en un acompañante en estilo sticker que vive en una ventanita flotante de mi Mac. Escucha los hooks del ciclo de vida de Claude Code, así que de un vistazo sé qué está haciendo Claude sin mirar la terminal. Con un clic saluda; con otro juega unos cuatro segundos con Clawd, la mascota de Claude Code. Corre en local, sin red y sin guardar contenido.
+
+| Qué hace Claude Code | Hook | Qué hace BeCa |
+|:-------|:------|:--------|
+| Abre una sesión | SessionStart | Saluda dos veces y se queda en reposo |
+| Trabaja en una petición o usa una herramienta | UserPromptSubmit, PreToolUse, PostToolUse | Teclea en el aire |
+| Edita o escribe un archivo | PostToolUse de Edit o Write | Revisa con la pata en el mentón |
+| Termina su turno | Stop | Salta cuatro veces y saluda |
+| Espera mi permiso o mi respuesta | PermissionRequest, Notification | Pide con las patas juntas |
+| Choca con un error de la API | StopFailure | Se desinfla una vez |
+| Cierra la sesión | SessionEnd | Reposa |
+
+**Cómo se hizo:** app nativa de macOS en Swift, hecha con Claude Code; el arte se generó con Higgsfield a partir de tres fotos de mi gato y se cortó en tiras de animación con scripts de Python; los sonidos se extrajeron de clips de video generados con IA; los hooks son globales, así que BeCa funciona en todos los proyectos.
 
 <p align="center"><img src="assets/ornamento.svg" width="220" alt=""></p>
 

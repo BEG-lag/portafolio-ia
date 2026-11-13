@@ -1,0 +1,956 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Benjamín Esponda García · AI portfolio</title>
+<meta name="description" content="Corporate and energy lawyer who builds with AI: Claude Code plugins, legal RAG, n8n workflows, data pipelines, websites, video and marketing with agents.">
+<meta name="theme-color" content="#F4EBDD">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Benjamín Esponda García · AI portfolio">
+<meta property="og:description" content="Corporate and energy lawyer who builds with AI: Claude Code plugins, legal RAG, n8n workflows, data pipelines, websites, video and marketing with agents.">
+<meta property="og:image" content="/assets/og-en.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="alternate" hreflang="es" href="/">
+<link rel="alternate" hreflang="en" href="/en">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="/sitio/fonts/cormorant-garamond-400-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/sitio/sitio.css">
+<script src="/sitio/telon.js"></script>
+<script defer src="/sitio/vendor/gsap-3.12.5.min.js"></script>
+<script defer src="/sitio/vendor/ScrollTrigger-3.12.5.min.js"></script>
+<script defer src="/sitio/vendor/lenis-1.1.13.min.js"></script>
+<script defer src="/sitio/sitio.js"></script>
+</head>
+<body>
+
+<div id="intro" aria-hidden="true">
+  <div class="intro-panel intro-left"></div>
+  <div class="intro-panel intro-right"></div>
+  <div class="intro-core">
+    <svg class="intro-mark" viewBox="0 0 300 24" fill="none">
+      <path class="m1" pathLength="1" d="M10,12 H128"/>
+      <path class="m1" pathLength="1" d="M290,12 H172"/>
+      <path class="m2" pathLength="1" d="M150,3.5 L158.5,12 L150,20.5 L141.5,12 Z"/>
+      <path class="m3" pathLength="1" d="M135,8.8 L138.2,12 L135,15.2 L131.8,12 Z"/>
+      <path class="m3" pathLength="1" d="M165,8.8 L168.2,12 L165,15.2 L161.8,12 Z"/>
+      <path class="m3" pathLength="1" d="M150,7.8 L154.2,12 L150,16.2 L145.8,12 Z"/>
+    </svg>
+    <div class="intro-word">
+      <span class="iw-name">Benjamín Esponda García</span>
+      <span class="iw-sub">AI PORTFOLIO</span>
+    </div>
+  </div>
+</div>
+
+<header class="nav">
+  <div class="nav-inner">
+    <a class="brand" href="/en" aria-label="Benjamín Esponda García"><i class="r"></i><span>BEG</span></a>
+    <nav class="nav-links" aria-label="Secciones">
+      <a href="#2-ai-skills-map">Skills</a>
+      <a href="#3-featured-con-criterio-an-ai-toolkit-for-mexican-lawyers">Projects</a>
+      <a href="#9-websites-video-and-digital-marketing-with-ai">Marketing</a>
+      <a href="#13-learning-and-community">Learning</a>
+    </nav>
+    <a class="lang" href="/" title="Español">ES</a>
+    <a class="btn-cta" href="/pdf/portfolio-BEG-en.pdf">Download PDF</a>
+    <button class="burger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="menu-movil"><span></span><span></span><span></span></button>
+  </div>
+</header>
+<div class="menu-movil" id="menu-movil" aria-hidden="true">
+  <nav aria-label="Menú">
+    <a href="#2-ai-skills-map">Skills</a>
+    <a href="#3-featured-con-criterio-an-ai-toolkit-for-mexican-lawyers">Projects</a>
+    <a href="#9-websites-video-and-digital-marketing-with-ai">Marketing</a>
+    <a href="#13-learning-and-community">Learning</a>
+    <a href="/">Español</a>
+    <a class="menu-cta" href="/pdf/portfolio-BEG-en.pdf">Download PDF</a>
+  </nav>
+</div>
+
+<main>
+  <section class="hero" id="inicio">
+    <canvas id="stage" aria-hidden="true"></canvas>
+    <div class="hero-frame" aria-hidden="true">
+      <img class="c tl" src="/assets/esquina.svg" alt=""><img class="c tr" src="/assets/esquina.svg" alt="">
+      <img class="c bl" src="/assets/esquina.svg" alt=""><img class="c br" src="/assets/esquina.svg" alt="">
+    </div>
+    <div class="hero-in wrap">
+      <p class="hero-label" data-in>AI PORTFOLIO</p>
+      <h1 class="hero-name">Benjamín Esponda García</h1>
+      <p class="hero-linea" data-in>Corporate and energy lawyer who builds with AI</p>
+      <img class="hero-orn" data-in src="/assets/ornamento.svg" alt="">
+      <p class="hero-lema" data-in>I write the legal analysis and I build the systems that research, draft, check and deliver it: Claude Code plugins, retrieval over legal text, n8n workflows, data pipelines, websites, video and AI agents for marketing.</p>
+      <div class="hero-cta" data-in>
+        <a class="btn" href="#2-ai-skills-map">See projects</a>
+        <a class="btn btn-ghost" href="/pdf/portfolio-BEG-en.pdf">Download PDF</a>
+        <a class="link" href="https://github.com/BEG-lag/portafolio-ia" target="_blank" rel="noopener">View on GitHub ↗</a>
+      </div>
+      <ul class="cifras" data-in>
+        <li><span class="cifra-num"><span data-to="1">1</span></span><span class="cifra-txt">legal-tech product on sale</span></li>
+        <li><span class="cifra-num"><span data-to="374">374</span></span><span class="cifra-txt">energy-law instruments indexed for retrieval</span></li>
+        <li><span class="cifra-num"><span data-to="560">560</span>K+</span><span class="cifra-txt">public procurement contracts analyzed</span></li>
+        <li><span class="cifra-num"><span data-to="25">25</span>+</span><span class="cifra-txt">projects built in 2026</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee-track"><div class="marquee-set">
+      <span>Claude Code</span><i class="r"></i>
+      <span>Legal RAG</span><i class="r"></i>
+      <span>n8n</span><i class="r"></i>
+      <span>Python</span><i class="r"></i>
+      <span>PostgreSQL and pgvector</span><i class="r"></i>
+      <span>MCP connectors</span><i class="r"></i>
+      <span>Stripe</span><i class="r"></i>
+      <span>Cloudflare Workers</span><i class="r"></i>
+      <span>Vercel</span><i class="r"></i>
+      <span>Higgsfield</span><i class="r"></i>
+      <span>Remotion</span><i class="r"></i>
+      <span>Whisper</span><i class="r"></i>
+      <span>Grok Bot</span><i class="r"></i>
+      <span>Meta’s Muse</span><i class="r"></i>
+      <span>Obsidian</span><i class="r"></i>
+    </div></div>
+  </div>
+
+  <article class="doc wrap">
+<section id="contents" class="level2">
+<h2>Contents</h2>
+<ol type="1">
+<li><a href="#1-at-a-glance">At a glance</a></li>
+<li><a href="#2-ai-skills-map">AI skills map</a></li>
+<li><a href="#3-featured-con-criterio-an-ai-toolkit-for-mexican-lawyers">Featured: Con Criterio, an AI toolkit for Mexican lawyers</a></li>
+<li><a href="#4-featured-retrieval-engine-over-mexican-energy-law-rag">Featured: retrieval engine over Mexican energy law (RAG)</a></li>
+<li><a href="#5-featured-public-procurement-intelligence-for-oil-and-gas">Featured: public procurement intelligence for oil and gas</a></li>
+<li><a href="#6-featured-real-estate-closing-automation-in-n8n">Featured: real-estate closing automation in n8n</a></li>
+<li><a href="#7-daily-regulatory-digest-from-the-official-gazette-n8n">Daily regulatory digest from the Official Gazette (n8n)</a></li>
+<li><a href="#8-legal-and-regulatory-work-built-with-ai">Legal and regulatory work built with AI</a></li>
+<li><a href="#9-websites-video-and-digital-marketing-with-ai">Websites, video and digital marketing with AI</a></li>
+<li><a href="#10-connectors-how-i-automate-query-and-generate">Connectors: how I automate, query and generate</a></li>
+<li><a href="#11-tools-and-systems">Tools and systems</a></li>
+<li><a href="#12-feasibility-studies">Feasibility studies</a></li>
+<li><a href="#13-learning-and-community">Learning and community</a></li>
+<li><a href="#14-how-i-work-with-ai">How I work with AI</a></li>
+<li><a href="#15-stack">Stack</a></li>
+</ol>
+<p align="center">
+<img src="/assets/ornamento.svg" width="220" alt="">
+</p>
+</section>
+<section id="1-at-a-glance" class="level2">
+<h2>1. At a glance</h2>
+<ul>
+<li><strong>AI every day:</strong> I use it daily for legal work, products, automation and content, and I stay at the forefront of new tools and features. What follows is a sample; some projects are confidential and others haven’t been released yet.</li>
+<li><strong>More than 25 projects in 2026</strong>, from cross-border regulatory audits to a legal-tech product that is on sale.</li>
+<li><strong>One product live:</strong> Con Criterio, a guide plus 7 plugins and 7 skills for Mexican lawyers, sold in Claude and ChatGPT editions at <a href="https://concriterio.mx">concriterio.mx</a> since November 5, 2026.</li>
+<li><strong>Retrieval over legal text:</strong> 374 energy-law instruments split into 11,112 chunks along the hierarchy of Mexican statutes, with hybrid search and a regression test set.</li>
+<li><strong>Data at scale:</strong> a pipeline over more than 560,000 public procurement contracts to show oil and gas suppliers where the money goes.</li>
+<li><strong>Websites, video and marketing:</strong> four sites live (<a href="https://concriterio.mx">concriterio.mx</a>, <a href="https://pivotek.mx" target="_blank" rel="noopener">pivotek.mx</a>, <a href="https://casalegado.mx" target="_blank" rel="noopener">casalegado.mx</a> and <a href="https://carocomunicando.com" target="_blank" rel="noopener">carocomunicando.com</a>), a stage-entrance video for a speaker, an automated Reels pipeline, and social media run by AI agents (Grok Bot and Meta’s Muse).</li>
+<li><strong>Connected tools:</strong> Stripe, Gmail, Google Calendar and Drive, Vercel, Higgsfield, Apify, Canva and browser automation, all driven from Claude Code.</li>
+<li><strong>Automation with judgment:</strong> every workflow keeps a person in the loop where signatures, money or legal judgment are involved.</li>
+</ul>
+<p align="center">
+<img src="/assets/ornamento.svg" width="220" alt="">
+</p>
+</section>
+<section id="2-ai-skills-map" class="level2">
+<h2>2. AI skills map</h2>
+<div class="tabla">
+<table>
+<colgroup>
+<col style="width: 30%" />
+<col style="width: 70%" />
+</colgroup>
+<thead>
+<tr>
+<th style="text-align: left;">Skill</th>
+<th style="text-align: left;">What I have built with it</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">AI agents and agentic workflows</td>
+<td style="text-align: left;">Claude Code plugins, skills and subagents for seven areas of Mexican law (<a href="#3-featured-con-criterio-an-ai-toolkit-for-mexican-lawyers">§3</a>); a nine-role multi-agent system with typed handoffs (<a href="#11-tools-and-systems">§11</a>); social media run by Grok Bot and Meta’s Muse (<a href="#94-social-media-run-by-ai-agents">§9.4</a>)</td>
+</tr>
+<tr>
+<td style="text-align: left;">Retrieval over documents (RAG)</td>
+<td style="text-align: left;">Legal RAG with law-specific embeddings, pgvector and hybrid ranking over 374 energy-law instruments (<a href="#4-featured-retrieval-engine-over-mexican-energy-law-rag">§4</a>)</td>
+</tr>
+<tr>
+<td style="text-align: left;">Data engineering</td>
+<td style="text-align: left;">A pipeline over more than 560,000 public procurement contracts with weekly updates and audits (<a href="#5-featured-public-procurement-intelligence-for-oil-and-gas">§5</a>); financial models in Python and Excel (<a href="#12-feasibility-studies">§12</a>)</td>
+</tr>
+<tr>
+<td style="text-align: left;">Workflow automation</td>
+<td style="text-align: left;">n8n designs for a 20-step real-estate closing and a daily regulatory digest (<a href="#6-featured-real-estate-closing-automation-in-n8n">§6</a>, <a href="#7-daily-regulatory-digest-from-the-official-gazette-n8n">§7</a>); scheduled tasks for monthly regulatory reviews and a weekly second-brain review (<a href="#3-featured-con-criterio-an-ai-toolkit-for-mexican-lawyers">§3</a>, <a href="#11-tools-and-systems">§11</a>)</td>
+</tr>
+<tr>
+<td style="text-align: left;">AI for legal work</td>
+<td style="text-align: left;">Cross-border regulatory audits, contract and compliance reviews, opinions and letters, every data point with source and cut-off date (<a href="#8-legal-and-regulatory-work-built-with-ai">§8</a>)</td>
+</tr>
+<tr>
+<td style="text-align: left;">Product building</td>
+<td style="text-align: left;">Con Criterio, from content to payments, automated delivery and QA with simulated buyers (<a href="#3-featured-con-criterio-an-ai-toolkit-for-mexican-lawyers">§3</a>)</td>
+</tr>
+<tr>
+<td style="text-align: left;">Web development</td>
+<td style="text-align: left;">concriterio.mx, pivotek.mx, casalegado.mx and carocomunicando.com (<a href="#91-websites">§9.1</a>)</td>
+</tr>
+<tr>
+<td style="text-align: left;">AI video and content</td>
+<td style="text-align: left;">A stage-entrance video with AI voice-over and motion graphics, and an automated Reels pipeline with local transcription and computer vision (<a href="#92-speaker-intro-and-event-videos">§9.2</a>, <a href="#93-automated-reels-pipeline">§9.3</a>)</td>
+</tr>
+<tr>
+<td style="text-align: left;">AI marketing</td>
+<td style="text-align: left;">More than a dozen marketing and creative skills applied to real campaigns, SEO audits and ad copy (<a href="#95-marketing-skills-and-how-i-applied-them">§9.5</a>)</td>
+</tr>
+<tr>
+<td style="text-align: left;">Integrations (MCP connectors)</td>
+<td style="text-align: left;">Stripe, Gmail, Google Calendar and Drive, Vercel, Higgsfield, Apify, Canva and more than 10,000 browser actions (<a href="#10-connectors-how-i-automate-query-and-generate">§10</a>)</td>
+</tr>
+<tr>
+<td style="text-align: left;">Judgment and quality</td>
+<td style="text-align: left;">Human approval gates, anti-fraud rules, labeled uncertainty, golden test sets and reproducible builds (<a href="#14-how-i-work-with-ai">§14</a>)</td>
+</tr>
+<tr>
+<td style="text-align: left;">Continuous learning and community</td>
+<td style="text-align: left;">Daily use of AI and of new tools as soon as they launch; free courses from Anthropic and Harvey; the Tododeia community; Claude and Grok Bot talks and workshops; networking dinners with CTOs (<a href="#13-learning-and-community">§13</a>)</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p align="center">
+<img src="/assets/ornamento.svg" width="220" alt="">
+</p>
+</section>
+<section id="3-featured-con-criterio-an-ai-toolkit-for-mexican-lawyers" class="level2">
+<h2>3. Featured: Con Criterio, an AI toolkit for Mexican lawyers</h2>
+<p><strong>What it is.</strong> A practical AI toolkit for lawyers in Mexico: a guide (116 pages in the Claude edition, 134 in the ChatGPT edition), 7 plugins by practice area and 7 drafting skills. On sale at <a href="https://concriterio.mx">concriterio.mx</a> since November 5, 2026. Since November 11 it also offers a beginners’ guide to everyday AI for the general public.</p>
+<div class="tabla">
+<table>
+<colgroup>
+<col style="width: 27%" />
+<col style="width: 72%" />
+</colgroup>
+<thead>
+<tr>
+<th style="text-align: left;">Plugin</th>
+<th style="text-align: left;">What it covers</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Data protection</td>
+<td style="text-align: left;">Federal data protection law: privacy notices, processor agreements, transfers, infringement risk, defense before the authority</td>
+</tr>
+<tr>
+<td style="text-align: left;">Corporate</td>
+<td style="text-align: left;">General Law of Commercial Companies: shareholder minutes, bylaws audits, powers of attorney, corporate due diligence, step-by-step restructurings</td>
+</tr>
+<tr>
+<td style="text-align: left;">Trademarks</td>
+<td style="text-align: left;">Industrial Property Law: registrability, oppositions, nullity and lapse, infringement, deadlines before the trademark office</td>
+</tr>
+<tr>
+<td style="text-align: left;">Copyright</td>
+<td style="text-align: left;">Federal Copyright Law: ownership opinions, transfer clauses, exceptions, notice and takedown, works made with AI</td>
+</tr>
+<tr>
+<td style="text-align: left;">Commercial contracts</td>
+<td style="text-align: left;">Commercial Code and negotiable instruments law: drafting and review, promissory notes, credit operations and trusts, interest and usury, collection routes</td>
+</tr>
+<tr>
+<td style="text-align: left;">Energy</td>
+<td style="text-align: left;">Mexico’s 2025 energy laws: permit roadmaps, power and hydrocarbons projects, sanctions, a 2014 versus 2025 comparison</td>
+</tr>
+<tr>
+<td style="text-align: left;">Notarial practice (Mexico City)</td>
+<td style="text-align: left;">Notarial and registry law: deed requirements, wills and advance directives, probate before a notary</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><strong>Drafting skills:</strong> residential lease (Mexico City), mutual NDA, commercial agency, professional services, letter of intent, simple power of attorney and a severance calculator.</p>
+<p><strong>How it was built.</strong></p>
+<ul>
+<li>Each plugin is a set of Claude Code skills grounded on a curated corpus of statutes and verified court criteria, with one citation format, data labels and a validation block that runs before any answer is delivered.</li>
+<li>The Claude edition guide carries 115 verified claims and 46 screenshots. The ChatGPT edition was ported with install steps for Windows.</li>
+<li>A Python monitor reads the Official Gazette (DOF) through the government’s open-data web service and flags anything that touches the statutes the product covers. A scheduled task runs a regulatory review on the 1st of every month.</li>
+<li>Sales and delivery: sales page, Stripe payment links and webhook, and a Cloudflare Worker that delivers the files and runs the newsletter (101 automated tests passing).</li>
+<li>Its own legal layer: terms and conditions, privacy notice and license of use.</li>
+<li>QA like a buyer: a simulated round with 20 buyers produced 118 distinct findings and zero blockers; 114 of the 115 open findings were closed the same day.</li>
+<li>Marketing: content produced with Claude Code and published by AI agents (<a href="#94-social-media-run-by-ai-agents">§9.4</a>), SEO audit, two Google Ads campaigns prepared and the Meta Pixel connected to the payment flow.</li>
+</ul>
+<p align="center">
+<img src="/assets/ornamento.svg" width="220" alt="">
+</p>
+</section>
+<section id="4-featured-retrieval-engine-over-mexican-energy-law-rag" class="level2">
+<h2>4. Featured: retrieval engine over Mexican energy law (RAG)</h2>
+<p><strong>Problem.</strong> Mexico’s energy rules are scattered across the Official Gazette and the websites of eight energy authorities, and the 2025 reform replaced much of the framework. Finding the instrument that actually applies, and knowing whether it still applies, takes hours.</p>
+<p><strong>What I built.</strong> A pipeline that collects, structures and indexes Mexican energy legislation so it can be queried in natural language.</p>
+<div class="tabla">
+<table>
+<colgroup>
+<col style="width: 23%" />
+<col style="width: 76%" />
+</colgroup>
+<thead>
+<tr>
+<th style="text-align: left;">Stage</th>
+<th style="text-align: left;">How it works</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Collection</td>
+<td style="text-align: left;">Async scrapers over the Official Gazette and regulators’ sites, with polite delays</td>
+</tr>
+<tr>
+<td style="text-align: left;">Extraction</td>
+<td style="text-align: left;">Text from PDFs with an OCR fallback for scanned documents</td>
+</tr>
+<tr>
+<td style="text-align: left;">Chunking</td>
+<td style="text-align: left;">Splits text along the hierarchy of Mexican legal instruments (title, chapter, article) instead of fixed sizes</td>
+</tr>
+<tr>
+<td style="text-align: left;">Storage</td>
+<td style="text-align: left;">PostgreSQL with pgvector: documents and chunks, validity flags and a validity note for rules that are formally in force but suspended in practice</td>
+</tr>
+<tr>
+<td style="text-align: left;">Embeddings</td>
+<td style="text-align: left;">Voyage AI <code>voyage-law-2</code>, built for legal text</td>
+</tr>
+<tr>
+<td style="text-align: left;">Search</td>
+<td style="text-align: left;">Hybrid ranking (vector similarity plus keyword, merged with reciprocal rank fusion), synonyms, statute detection and boosts</td>
+</tr>
+<tr>
+<td style="text-align: left;">Answers</td>
+<td style="text-align: left;">Claude answers natural-language questions over the retrieved chunks</td>
+</tr>
+<tr>
+<td style="text-align: left;">Quality</td>
+<td style="text-align: left;">A golden test set used as a regression guardrail (9 of 9 passing) and database audits for duplicates, validity and publication dates</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><strong>Scale (April 2026).</strong> 374 documents and 11,112 chunks, all embedded: 352 in force and 22 repealed, from the Energy Regulatory Commission, the Energy Ministry, the grid operator, the hydrocarbons and gas regulators, the safety agency and Congress. No LangChain or LlamaIndex: plain Python and SQL.</p>
+<p align="center">
+<img src="/assets/ornamento.svg" width="220" alt="">
+</p>
+</section>
+<section id="5-featured-public-procurement-intelligence-for-oil-and-gas" class="level2">
+<h2>5. Featured: public procurement intelligence for oil and gas</h2>
+<p><strong>Problem.</strong> Suppliers to the oil and gas sector in Mexico bid blind: they don’t know who buys what they sell, at what price, or when.</p>
+<p><strong>What I built.</strong> SupplySense, a price-intelligence tool built on public procurement data.</p>
+<ul>
+<li>Loaded more than 560,000 contracts from CompraNet (2023 to 2025) across 26 categories, plus 150,000 recent contracts from ComprasMX collected with Playwright.</li>
+<li>Weekly automatic download with deduplication; data enrichment with geography and level of government; per-subsidiary links for the national oil company.</li>
+<li>Dashboard with KPIs, watchlists, “my line of business” filters, global search, and CSV and PDF export; basic multi-tenancy per client.</li>
+<li>Data audits that caught and fixed misclassified categories and outliers, and a market sizing (TAM) analysis.</li>
+</ul>
+<p align="center">
+<img src="/assets/ornamento.svg" width="220" alt="">
+</p>
+</section>
+<section id="6-featured-real-estate-closing-automation-in-n8n" class="level2">
+<h2>6. Featured: real-estate closing automation in n8n</h2>
+<figure>
+<img src="/assets/arquitectura-cierre-n8n-en.svg" loading="lazy" alt="Architecture of the automated real-estate closing in n8n" />
+<figcaption aria-hidden="true">Architecture of the automated real-estate closing in n8n</figcaption>
+</figure>
+<p><strong>Problem.</strong> A real-estate law firm in Baja California closes property purchases by foreign buyers through Mexican bank trusts. Each closing has 20 steps and depends on a notary, a trust bank, an appraiser, an escrow agent and the public registry. Most of the lawyers’ time goes to chasing documents and answering “what’s the status of my closing?”.</p>
+<p><strong>Design.</strong></p>
+<ul>
+<li>One deal record feeds every email, document and notice.</li>
+<li>11 of the 20 steps can run almost on their own, 7 are assisted, and 2 stay human: the legal review of the deed draft and the signing before the notary.</li>
+<li>Steps 4 to 7 (foreign-affairs permit, deed draft, appraisal and certificates) start in parallel the moment escrow opens, which could cut 7 to 10 days per closing [ESTIMATE].</li>
+<li>Document AI reads passports and certificates and compares the deed draft against the record, always with human approval.</li>
+<li>A signing gate blocks booking the closing until six conditions are met, including certificates that are still valid on the proposed date, not just today.</li>
+<li>Anti-fraud: no workflow ever sends bank details, and any incoming email about new wiring instructions raises a red alert and requires a phone call.</li>
+<li>Client data never lives on my infrastructure: the demo runs on fictitious data and production goes on the firm’s own server.</li>
+</ul>
+<div class="tabla">
+<table>
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 50%" />
+<col style="width: 29%" />
+</colgroup>
+<thead>
+<tr>
+<th style="text-align: left;">Component</th>
+<th style="text-align: left;">What it is</th>
+<th style="text-align: left;">Tool</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Single deal record</td>
+<td style="text-align: left;">One row per deal with buyers, unit, bank, notary, escrow, dates per step, validity periods and status</td>
+<td style="text-align: left;">Google Sheets first; own database if volume grows</td>
+</tr>
+<tr>
+<td style="text-align: left;">Folder per deal</td>
+<td style="text-align: left;">Fixed structure created automatically: 01 Client to 08 Post-closing</td>
+<td style="text-align: left;">Google Drive</td>
+</tr>
+<tr>
+<td style="text-align: left;">Outgoing email</td>
+<td style="text-align: left;">Bilingual templates for client, notary, bank, appraiser, HOA and escrow, filled from the record</td>
+<td style="text-align: left;">Gmail</td>
+</tr>
+<tr>
+<td style="text-align: left;">Incoming email reader</td>
+<td style="text-align: left;">Classifies third-party emails, links them to the deal, files attachments and moves the status</td>
+<td style="text-align: left;">Gmail and AI</td>
+</tr>
+<tr>
+<td style="text-align: left;">WhatsApp</td>
+<td style="text-align: left;">Notices, reminders and a bot that answers “what’s my status?” from the record</td>
+<td style="text-align: left;">WhatsApp Business API</td>
+</tr>
+<tr>
+<td style="text-align: left;">Document AI</td>
+<td style="text-align: left;">Reads passports and certificates, compares the deed draft, summarizes calls and bank comments</td>
+<td style="text-align: left;">Claude API, with human approval</td>
+</tr>
+<tr>
+<td style="text-align: left;">Timers and gates</td>
+<td style="text-align: left;">Deadlines per step, certificate validity and the signing gate</td>
+<td style="text-align: left;">n8n</td>
+</tr>
+<tr>
+<td style="text-align: left;">Partner dashboard</td>
+<td style="text-align: left;">Deals by stage, days per step, who is blocking, alerts</td>
+<td style="text-align: left;">Google Sheets or Looker Studio</td>
+</tr>
+<tr>
+<td style="text-align: left;">Logs and errors</td>
+<td style="text-align: left;">Record of every run and an instant alert if a flow fails</td>
+<td style="text-align: left;">n8n</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><strong>Status.</strong> Design stage (November 2026). Proposal delivered; decisions kept in a decision register; rollout planned in 4 phases over 10 to 13 weeks [ESTIMATE], starting with a pilot on one development. Expected savings: 50% to 70% of busywork hours per closing [ESTIMATE], to be measured in the diagnosis.</p>
+<p align="center">
+<img src="/assets/ornamento.svg" width="220" alt="">
+</p>
+</section>
+<section id="7-daily-regulatory-digest-from-the-official-gazette-n8n" class="level2">
+<h2>7. Daily regulatory digest from the Official Gazette (n8n)</h2>
+<p><strong>Problem.</strong> Every morning I reviewed the Official Gazette by hand for anything affecting my energy clients: about 30 minutes a day [ESTIMATE].</p>
+<pre class="text"><code>Schedule (Mon to Fri, 8:30) → HTTP Request (today&#39;s index) → HTML (title, agency, link)
+  → Filter (energy keywords and agencies) → Aggregate → LLM (one line + priority) → Gmail</code></pre>
+<p><strong>Result.</strong> One email a day with the energy publications sorted by priority, about 100 hours a year saved [ESTIMATE]. The workflow tells me what to read; reading it is still my job. Built as the first deliverable of an n8n automation course, with a documented prompt and an error-handling plan.</p>
+<p align="center">
+<img src="/assets/ornamento.svg" width="220" alt="">
+</p>
+</section>
+<section id="8-legal-and-regulatory-work-built-with-ai" class="level2">
+<h2>8. Legal and regulatory work built with AI</h2>
+<p>All matters are anonymized.</p>
+<div class="tabla">
+<table>
+<colgroup>
+<col style="width: 26%" />
+<col style="width: 39%" />
+<col style="width: 34%" />
+</colgroup>
+<thead>
+<tr>
+<th style="text-align: left;">Matter</th>
+<th style="text-align: left;">What I delivered</th>
+<th style="text-align: left;">How AI was used</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Saudi Arabia market entry for three Mexican energy contractors (pipelines, industrial construction, offshore fire protection)</td>
+<td style="text-align: left;">Company audits and entry routes: which business line, which entry door, and what blocks it today. Key finding: the obstacle was rarely demand; it was missing certifications or an intermediary model that foreign technology owners can bypass by selling directly in the Gulf</td>
+<td style="text-align: left;">Research with official sources downloaded by category; every data point with source and cut-off date; one Saudi regulatory framework reused across the three files; generator scripts rebuild the PDFs</td>
+</tr>
+<tr>
+<td style="text-align: left;">Beef exports to Saudi Arabia (meat-processing group, southeast Mexico)</td>
+<td style="text-align: left;">Regulatory route (food authority, halal certification, Mexican sanitary agency), market presentations for Saudi Arabia and Asia, and direct inquiries to authorities in both countries</td>
+<td style="text-align: left;">Research and drafting with Claude; a reusable research prompt for open items</td>
+</tr>
+<tr>
+<td style="text-align: left;">10-year petroleum services contract with a Central American energy ministry</td>
+<td style="text-align: left;">Obligations map, critical deadlines, internal compliance, operational alerts and a review of the client’s own analysis of the contract</td>
+<td style="text-align: left;">Structured extraction of the contract into a project context file; deliverables in Word</td>
+</tr>
+<tr>
+<td style="text-align: left;">Advertising compliance guide for consumer health products (global company)</td>
+<td style="text-align: left;">Checked every cited source (health authority guidance, official standards, industry codes), 19 recommendations, and version 3 of the guide with tracked changes and 8 validation comments</td>
+<td style="text-align: left;">Official texts downloaded and converted to plain text for cross-checking; report with traffic lights by section</td>
+</tr>
+<tr>
+<td style="text-align: left;">Institutional response from a state government agency to an international hospitality company</td>
+<td style="text-align: left;">Three versions of the letter under strict drafting rules: no admissions, no apologies, no offers, no restricted topics</td>
+<td style="text-align: left;">Drafting rules written as constraints; one script rebuilds the three deliverables</td>
+</tr>
+<tr>
+<td style="text-align: left;">Due diligence on a fuel marketing permit</td>
+<td style="text-align: left;">Verified the permit, its resolution, electronic signature and QR code, and the tax authority’s public registries; one-page summary</td>
+<td style="text-align: left;">Source verification and a one-pager in HTML and PDF</td>
+</tr>
+<tr>
+<td style="text-align: left;">Trademark viability opinion for a law firm brand</td>
+<td style="text-align: left;">Preliminary registrability opinion under the Industrial Property Law</td>
+<td style="text-align: left;">Drafted with my own trademark plugin</td>
+</tr>
+<tr>
+<td style="text-align: left;">Fuel trader’s pitch to Colombia’s hydrocarbons agency</td>
+<td style="text-align: left;">Critical analysis of a 33-slide institutional pitch</td>
+<td style="text-align: left;">Analysis with Claude over the client’s deck</td>
+</tr>
+<tr>
+<td style="text-align: left;">Technical note on AI in the energy sector for the Mexican Senate</td>
+<td style="text-align: left;">Technical note and cover letter to a senator</td>
+<td style="text-align: left;">Research and drafting with Claude; Markdown to PDF</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p align="center">
+<img src="/assets/ornamento.svg" width="220" alt="">
+</p>
+</section>
+<section id="9-websites-video-and-digital-marketing-with-ai" class="level2">
+<h2>9. Websites, video and digital marketing with AI</h2>
+<section id="91-websites" class="level3">
+<h3>9.1 Websites</h3>
+<div class="tabla">
+<table>
+<colgroup>
+<col style="width: 22%" />
+<col style="width: 31%" />
+<col style="width: 45%" />
+</colgroup>
+<thead>
+<tr>
+<th style="text-align: left;">Site</th>
+<th style="text-align: left;">What it is</th>
+<th style="text-align: left;">How it was built</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><a href="https://concriterio.mx">concriterio.mx</a></td>
+<td style="text-align: left;">Sales site of Con Criterio: a page for lawyers and <a href="https://concriterio.mx/para-todos/">/para-todos</a> for beginners, with a build-your-purchase panel</td>
+<td style="text-align: left;">Pages and legal texts (terms, privacy notice, license) generated with Python scripts; Stripe payment links and a Cloudflare Worker for checkout and delivery; Cloudflare Pages, DNS and Web Analytics; Meta Pixel and two Google Ads search campaigns set up</td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="https://pivotek.mx" target="_blank" rel="noopener">pivotek.mx</a></td>
+<td style="text-align: left;">Home of this portfolio. It replaced my firm’s Next.js site, which I also built (TypeScript, contact form with Resend, technical SEO)</td>
+<td style="text-align: left;">Generated from this README with pandoc and a custom template; curtain intro, a cover drawn on canvas, scroll reveals and counters with GSAP, ScrollTrigger and Lenis (self-hosted, strict content security policy); deployed on Vercel</td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="https://casalegado.mx" target="_blank" rel="noopener">casalegado.mx</a></td>
+<td style="text-align: left;">My biographical documentary brand: five-page site plus brandbook, sales dossier and sales presentation</td>
+<td style="text-align: left;">Static HTML and CSS under a strict brand system (two typefaces, a warm palette and voice rules), illustrative images generated with Higgsfield, privacy notice, sitemap, Google Business Profile copy, Google Ads tags and a content security policy, deployed on Vercel</td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="https://carocomunicando.com" target="_blank" rel="noopener">carocomunicando.com</a></td>
+<td style="text-align: left;">Site of a public-speaking and communication trainer: home with an animated cover, her method, her TEDx talk, cases and brand pages</td>
+<td style="text-align: left;">Static site with self-hosted GSAP, ScrollTrigger and Lenis; a downloadable PDF guide with optional email capture; GA4, Microsoft Clarity and Vercel Analytics declared in the privacy notice and cookie banner; 301 redirects, security headers and a content security policy; SEO audit and blog articles</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="92-speaker-intro-and-event-videos" class="level3">
+<h3>9.2 Speaker intro and event videos</h3>
+<ul>
+<li><strong>Stage-entrance intro (102 seconds)</strong> for the trainer, projected before she walks on stage. Five versions; the current one combines motion graphics built in Remotion, an AI voice-over (ElevenLabs v4 through Higgsfield), original music and sound effects, and her photos. It comes with a waiting loop for the screen and three short Instagram Reels cut from the same material. Every version can be rebuilt from scripts (Python, Node and ffmpeg).</li>
+<li><strong>Event highlight (40 seconds)</strong> of her role as host and moderator of a university entrepreneurship summit: 9:16 for Reels, TikTok and LinkedIn and 16:9 for YouTube, with original music timed to the moment the stage lights come on.</li>
+<li><strong>Book launch loop:</strong> an animated screen for the presentation of her book, with quotes that rotate every 10 seconds and verified QR codes to her Instagram and website.</li>
+</ul>
+</section>
+<section id="93-automated-reels-pipeline" class="level3">
+<h3>9.3 Automated Reels pipeline</h3>
+<p>Drop a raw video in Downloads and get a finished Reel:</p>
+<ol type="1">
+<li><strong>Transcription</strong> word by word, locally, with Whisper.</li>
+<li><strong>Style rules</strong> learned from a reference creator: four Reels analyzed frame by frame, with cut-rate measurements (a hard cut to B-roll every 5 to 9 seconds, title pills, a closing question).</li>
+<li><strong>Supporting visuals:</strong> licensed real photos from Wikimedia Commons and Openverse, with credits, or B-roll generated with Higgsfield.</li>
+<li><strong>Subject cut-out and face tracking</strong> with Apple’s Vision framework (Swift).</li>
+<li><strong>Automatic edit</strong> in Python: format, subtitles, pills, cards, photo credits and the speaker’s frame; a history file avoids repeating formats.</li>
+</ol>
+<p>Six Reels ready to publish in November 2026, a monthly set of scripts, and a technical guide to publish through the Instagram Graph API with n8n.</p>
+</section>
+<section id="94-social-media-run-by-ai-agents" class="level3">
+<h3>9.4 Social media run by AI agents</h3>
+<p>For Con Criterio, the work is split between Claude Code and two external agents:</p>
+<div class="tabla">
+<table>
+<colgroup>
+<col style="width: 30%" />
+<col style="width: 70%" />
+</colgroup>
+<thead>
+<tr>
+<th style="text-align: left;">Who</th>
+<th style="text-align: left;">What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Claude Code</td>
+<td style="text-align: left;">Produces the content and the publishing calendar, writes the prompts for the agents and the checklists to verify their work</td>
+</tr>
+<tr>
+<td style="text-align: left;">Grok Bot (an agent that operates my Mac)</td>
+<td style="text-align: left;">Publishes two TikTok Reels a day and handles Instagram prospecting and direct messages; if the Mac is asleep or asks for a code, it stops and warns</td>
+</tr>
+<tr>
+<td style="text-align: left;">Muse (Meta’s AI marketing agent)</td>
+<td style="text-align: left;">Publishes three posts a day on Instagram and Facebook, runs the campaigns and continues the conversation when a prospect answers</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>The labeling of AI-generated content was reviewed with Muse, and verification prompts audit what each agent actually did.</p>
+</section>
+<section id="95-marketing-skills-and-how-i-applied-them" class="level3">
+<h3>9.5 Marketing skills and how I applied them</h3>
+<div class="tabla">
+<table>
+<colgroup>
+<col style="width: 23%" />
+<col style="width: 38%" />
+<col style="width: 38%" />
+</colgroup>
+<thead>
+<tr>
+<th style="text-align: left;">Skill</th>
+<th style="text-align: left;">What it does</th>
+<th style="text-align: left;">Where I applied it</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">humanizalo-es</td>
+<td style="text-align: left;">Removes the tells of AI writing in Spanish and keeps a human or brand voice</td>
+<td style="text-align: left;">Copy for carocomunicando.com and its Reels, Con Criterio pages and posts, course deliverables</td>
+</tr>
+<tr>
+<td style="text-align: left;">social-content</td>
+<td style="text-align: left;">Social posts, calendars and short-video scripts</td>
+<td style="text-align: left;">Reels scripts and calendar for the trainer; Con Criterio’s social strategy</td>
+</tr>
+<tr>
+<td style="text-align: left;">content-strategy</td>
+<td style="text-align: left;">What to publish and why: pillars, topics and calendar</td>
+<td style="text-align: left;">Con Criterio’s content strategy for Instagram, Facebook and TikTok</td>
+</tr>
+<tr>
+<td style="text-align: left;">copywriting</td>
+<td style="text-align: left;">Page and offer copy</td>
+<td style="text-align: left;">Business plans and the trainer’s site</td>
+</tr>
+<tr>
+<td style="text-align: left;">marketing-psychology</td>
+<td style="text-align: left;">Behavioral principles such as anchoring, social proof and framing</td>
+<td style="text-align: left;">The trainer’s offer and pages; business plans</td>
+</tr>
+<tr>
+<td style="text-align: left;">pricing-strategy</td>
+<td style="text-align: left;">Packaging and price</td>
+<td style="text-align: left;">Pricing in business plans and the trainer’s proposals</td>
+</tr>
+<tr>
+<td style="text-align: left;">ad-creative</td>
+<td style="text-align: left;">Ad headlines and copy at scale, within each platform’s limits</td>
+<td style="text-align: left;">Ad variations for the trainer’s campaigns</td>
+</tr>
+<tr>
+<td style="text-align: left;">campaign-plan</td>
+<td style="text-align: left;">Campaign brief: goals, audience, channels, calendar and metrics</td>
+<td style="text-align: left;">Traffic and contacts plan for the trainer (November 2026)</td>
+</tr>
+<tr>
+<td style="text-align: left;">seo-audit</td>
+<td style="text-align: left;">SEO audit with quick wins and strategic actions</td>
+<td style="text-align: left;">Audits of carocomunicando.com and concriterio.mx</td>
+</tr>
+<tr>
+<td style="text-align: left;">Higgsfield skills (generate, art director, brand kit, video explainer)</td>
+<td style="text-align: left;">Images, video, voice-over and music</td>
+<td style="text-align: left;">Speaker intro, B-roll and book loop; Casa Legado images; Con Criterio explainer pieces</td>
+</tr>
+<tr>
+<td style="text-align: left;">frontend-design and emil-design-eng</td>
+<td style="text-align: left;">Interface design and motion polish</td>
+<td style="text-align: left;">Con Criterio’s sales page</td>
+</tr>
+<tr>
+<td style="text-align: left;">apify-lead-gen</td>
+<td style="text-align: left;">Lead lists from public sources</td>
+<td style="text-align: left;">Prospect base for a website service in Los Cabos</td>
+</tr>
+<tr>
+<td style="text-align: left;">abogado-el-diablo</td>
+<td style="text-align: left;">Stress-tests a plan before acting</td>
+<td style="text-align: left;">Con Criterio’s launch strategy</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p align="center">
+<img src="/assets/ornamento.svg" width="220" alt="">
+</p>
+</section>
+</section>
+<section id="10-connectors-how-i-automate-query-and-generate" class="level2">
+<h2>10. Connectors: how I automate, query and generate</h2>
+<p>Claude Code reaches my tools through connectors (MCP). Counts come from my own session logs.</p>
+<div class="tabla">
+<table style="width:99%;">
+<colgroup>
+<col style="width: 14%" />
+<col style="width: 38%" />
+<col style="width: 47%" />
+</colgroup>
+<thead>
+<tr>
+<th style="text-align: left;">Use</th>
+<th style="text-align: left;">Connector</th>
+<th style="text-align: left;">What I do with it</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Automate</td>
+<td style="text-align: left;">Claude in Chrome and the built-in browser (more than 10,000 actions)</td>
+<td style="text-align: left;">Operate web dashboards, test my sites end to end, upload files and check what is live</td>
+</tr>
+<tr>
+<td style="text-align: left;">Automate</td>
+<td style="text-align: left;">Computer use (more than 900 actions)</td>
+<td style="text-align: left;">Drive native Mac apps when there is no API</td>
+</tr>
+<tr>
+<td style="text-align: left;">Automate</td>
+<td style="text-align: left;">Stripe (about 800 calls)</td>
+<td style="text-align: left;">Products, prices, payment links and webhooks for Con Criterio</td>
+</tr>
+<tr>
+<td style="text-align: left;">Automate</td>
+<td style="text-align: left;">Gmail, Google Calendar and Google Drive</td>
+<td style="text-align: left;">Weekly review of calendar and inbox, drafts and follow-ups, file search</td>
+</tr>
+<tr>
+<td style="text-align: left;">Automate</td>
+<td style="text-align: left;">Scheduled tasks</td>
+<td style="text-align: left;">Weekly second-brain review, monthly regulatory review, follow-ups on campaign setup</td>
+</tr>
+<tr>
+<td style="text-align: left;">Automate</td>
+<td style="text-align: left;">Vercel</td>
+<td style="text-align: left;">Projects, domains and web analytics of my sites</td>
+</tr>
+<tr>
+<td style="text-align: left;">Query</td>
+<td style="text-align: left;">Apify</td>
+<td style="text-align: left;">Web scraping, lead lists and web browsing for research</td>
+</tr>
+<tr>
+<td style="text-align: left;">Query</td>
+<td style="text-align: left;">Wispr Flow</td>
+<td style="text-align: left;">Search across my meeting notes</td>
+</tr>
+<tr>
+<td style="text-align: left;">Generate</td>
+<td style="text-align: left;">Higgsfield (more than 1,000 calls)</td>
+<td style="text-align: left;">Images, video, voice-over and music for sites, Reels and the speaker intro</td>
+</tr>
+<tr>
+<td style="text-align: left;">Generate</td>
+<td style="text-align: left;">Canva</td>
+<td style="text-align: left;">Designs from brand kits</td>
+</tr>
+<tr>
+<td style="text-align: left;">Generate</td>
+<td style="text-align: left;">Claude artifacts</td>
+<td style="text-align: left;">Shareable pages</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Plus two external agents (Grok Bot and Muse, <a href="#94-social-media-run-by-ai-agents">§9.4</a>) and local command-line tools: Obsidian, GitHub, Whisper and ffmpeg.</p>
+<p align="center">
+<img src="/assets/ornamento.svg" width="220" alt="">
+</p>
+</section>
+<section id="11-tools-and-systems" class="level2">
+<h2>11. Tools and systems</h2>
+<ul>
+<li><strong>Second brain on Obsidian and Claude Code.</strong> One note per project, person and official document; every working session leaves a log entry; a scheduled task reads my calendar and email every Sunday (read-only) and updates the vault; hourly backup with launchd. This portfolio was assembled from it.</li>
+<li><strong>Personal multi-agent system.</strong> Nine specialist roles read one shared record, pass typed signals instead of prose and follow a declared precedence rule when they disagree. Personal use; no data shown.</li>
+</ul>
+<section id="beca-my-desktop-companion" class="level3">
+<h3>BeCa, my desktop companion</h3>
+<figure>
+<img src="/assets/beca-jugando-con-clawd-animado.png" loading="lazy" alt="BeCa playing with Clawd, the Claude Code mascot" />
+<figcaption aria-hidden="true">BeCa playing with Clawd, the Claude Code mascot</figcaption>
+</figure>
+<p>BeCa is my cat turned into a sticker-style companion that lives in a small floating window on my Mac. It listens to Claude Code’s lifecycle hooks, so I can tell at a glance what Claude is doing without looking at the terminal. Click it once and it waves; click again and it plays with Clawd, Claude Code’s mascot, for about four seconds. It runs locally, uses no network and stores no content.</p>
+<div class="tabla">
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 29%" />
+<col style="width: 37%" />
+</colgroup>
+<thead>
+<tr>
+<th style="text-align: left;">What Claude Code is doing</th>
+<th style="text-align: left;">Hook</th>
+<th style="text-align: left;">What BeCa does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Starting a session</td>
+<td style="text-align: left;">SessionStart</td>
+<td style="text-align: left;">Waves twice, then rests</td>
+</tr>
+<tr>
+<td style="text-align: left;">Working on a request or running a tool</td>
+<td style="text-align: left;">UserPromptSubmit, PreToolUse, PostToolUse</td>
+<td style="text-align: left;">Types in the air</td>
+</tr>
+<tr>
+<td style="text-align: left;">Editing or writing a file</td>
+<td style="text-align: left;">PostToolUse of Edit or Write</td>
+<td style="text-align: left;">Inspects the work, paw on chin</td>
+</tr>
+<tr>
+<td style="text-align: left;">Finished its turn</td>
+<td style="text-align: left;">Stop</td>
+<td style="text-align: left;">Jumps four times and waves</td>
+</tr>
+<tr>
+<td style="text-align: left;">Waiting for my permission or answer</td>
+<td style="text-align: left;">PermissionRequest, Notification</td>
+<td style="text-align: left;">Asks with its paws together</td>
+</tr>
+<tr>
+<td style="text-align: left;">Hit an API error</td>
+<td style="text-align: left;">StopFailure</td>
+<td style="text-align: left;">Deflates once</td>
+</tr>
+<tr>
+<td style="text-align: left;">Session closed</td>
+<td style="text-align: left;">SessionEnd</td>
+<td style="text-align: left;">Rests</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><strong>How it was built:</strong> a native macOS app in Swift, made with Claude Code; the art was generated with Higgsfield from three photos of my cat and cut into animation strips with Python scripts; the sounds were extracted from AI-generated video clips; the hooks are global, so BeCa works in every project.</p>
+<p align="center">
+<img src="/assets/ornamento.svg" width="220" alt="">
+</p>
+</section>
+</section>
+<section id="12-feasibility-studies" class="level2">
+<h2>12. Feasibility studies</h2>
+<p>Own ventures and services of my firm, each with a go or no-go verdict and traffic lights by phase:</p>
+<ul>
+<li>Fuel trucking from La Paz to Los Cabos: conditional go.</li>
+<li>Gas station under a national fuel brand franchise in Los Cabos: conditional go.</li>
+<li>Processed-glass plant for real estate in Baja California Sur: pre-feasibility with a financial model in Python, 782 business-registry records and a matrix of 24 industrial permits; conditional go in two phases.</li>
+<li>Biographical documentaries (Casa Legado): viability, business model, financial model, brand and website executed.</li>
+<li>Ice factory, organizational consulting, marine tours and a Los Cabos business plan.</li>
+<li>Monetization service for small and mid-size mines: sales deck and master prompt.</li>
+<li>Ten-year real-estate appreciation model in Excel with live formulas.</li>
+</ul>
+<p align="center">
+<img src="/assets/ornamento.svg" width="220" alt="">
+</p>
+</section>
+<section id="13-learning-and-community" class="level2">
+<h2>13. Learning and community</h2>
+<p>I use AI every day and I stay at the forefront of new AI tools and features: I test them on real work as soon as they come out.</p>
+<ul>
+<li><strong>Anthropic’s free online courses</strong> (Anthropic Academy).</li>
+<li><strong>Harvey’s free online courses</strong> on AI for legal work.</li>
+<li><strong>Tododeia community</strong> (Juan Lombana and Enrique Rocha): videos and courses. I also use tools from the community, such as Motion Architect and Video Editor Architect.</li>
+<li><strong>Claude talks and workshops in Mexico</strong>, such as Claude for AI Engineering (Claude Community CDMX, October 2026). There I summarized the five talks (tool use, MCP, context engineering) and turned the notes into an agent that answers as each speaker would.</li>
+<li><strong>Grok Bot talks and workshops.</strong></li>
+<li><strong>Networking dinners with CTOs</strong> of large and mid-size companies.</li>
+<li><strong>n8n automation course</strong> (in progress): the daily regulatory digest in <a href="#7-daily-regulatory-digest-from-the-official-gazette-n8n">§7</a> was the first deliverable.</li>
+</ul>
+<p align="center">
+<img src="/assets/ornamento.svg" width="220" alt="">
+</p>
+</section>
+<section id="14-how-i-work-with-ai" class="level2">
+<h2>14. How I work with AI</h2>
+<ol type="1">
+<li><strong>Sources first.</strong> Official texts are downloaded into the project, and each data point carries its source and cut-off date.</li>
+<li><strong>Uncertainty is labeled.</strong> Every deliverable marks [ESTIMATE], [ASSUMPTION] and [DATA GAP].</li>
+<li><strong>People approve what matters.</strong> Signatures, money and legal judgment always go through a person.</li>
+<li><strong>Reproducible deliverables.</strong> Markdown first, then PDF with pandoc and Typst; generator scripts rebuild the final files. This portfolio is built the same way (<a href="https://github.com/BEG-lag/portafolio-ia/tree/main/build" target="_blank" rel="noopener"><code>build/</code></a>).</li>
+<li><strong>Decisions are logged.</strong> Decision registers and GREEN, YELLOW and RED status lights.</li>
+<li><strong>Test like a user.</strong> Simulated buyers, golden test sets, automated tests and checks against the live site.</li>
+<li><strong>Validation is explicit.</strong> Studies state what must be confirmed with the competent authority and are not legal advice.</li>
+</ol>
+<p align="center">
+<img src="/assets/ornamento.svg" width="220" alt="">
+</p>
+</section>
+<section id="15-stack" class="level2">
+<h2>15. Stack</h2>
+<ul>
+<li><strong>AI:</strong> Claude Code (skills, plugins, subagents, MCP connectors, hooks, scheduled tasks), Claude API, Voyage AI embeddings, ChatGPT and Codex, Higgsfield (image, video, voice and music), Grok Bot and Meta’s Muse.</li>
+<li><strong>Data:</strong> Python, PostgreSQL with pgvector, Playwright, pdfplumber and OCR, Excel.</li>
+<li><strong>Automation:</strong> n8n, Docker, launchd and scheduled tasks.</li>
+<li><strong>Video:</strong> Remotion, ffmpeg, Whisper, Apple Vision (Swift).</li>
+<li><strong>Web:</strong> Next.js, TypeScript, static HTML and CSS, GSAP, Cloudflare Workers, Vercel, Stripe, Resend, Web3Forms.</li>
+<li><strong>Marketing and analytics:</strong> GA4, Microsoft Clarity, Vercel Analytics, Google Ads, Meta Pixel, Google Search Console.</li>
+<li><strong>Documents:</strong> Markdown, pandoc, Typst, Word with tracked changes.</li>
+<li><strong>Knowledge:</strong> Obsidian.</li>
+</ul>
+<p align="center">
+<img src="/assets/ornamento.svg" width="220" alt="">
+</p>
+</section>
+  </article>
+</main>
+
+<aside class="beca" id="beca" data-seccion="beca-my-desktop-companion" hidden>
+  <div class="beca-globo">
+    <button class="beca-cerrar" type="button" aria-label="Close">×</button>
+    <strong>Hi! I’m BeCa.</strong>
+    On Benjamín’s Mac I react to what Claude Code is doing: I type while it works, celebrate when it’s done and ask for attention when it needs permission.
+    <a href="#beca-my-desktop-companion">Meet me →</a>
+  </div>
+  <img class="beca-gif" src="/assets/beca-jugando-con-clawd-animado.png" alt="BeCa playing with Clawd, Claude Code’s mascot" width="192" height="208">
+</aside>
+
+<footer class="pie">
+  <div class="wrap">
+    <img class="pie-orn" src="/assets/ornamento.svg" alt="">
+    <p class="pie-nombre">Benjamín Esponda García</p>
+    <p class="pie-contacto">Mexico City · beg.empleos@gmail.com · pivotek.mx</p>
+    <p class="pie-links">
+      <a href="/pdf/portfolio-BEG-en.pdf">Download PDF</a> <i class="r"></i>
+      <a href="https://github.com/BEG-lag/portafolio-ia" target="_blank" rel="noopener">GitHub</a> <i class="r"></i>
+      <a href="/">Español</a>
+    </p>
+    <p class="pie-aviso">I use AI every day; this portfolio is a sample, not a complete list. Client work is anonymized: names, figures and identifying details were removed. Nothing in this document is legal advice.</p>
+    <p class="pie-hecho">Built with Claude Code. Designed in sand and brick.</p>
+  </div>
+</footer>
+</body>
+</html>

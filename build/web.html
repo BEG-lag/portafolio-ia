@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="$lang$">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>$web-titulo$</title>
+<meta name="description" content="$web-descripcion$">
+<meta name="theme-color" content="#F4EBDD">
+<meta property="og:type" content="website">
+<meta property="og:title" content="$web-titulo$">
+<meta property="og:description" content="$web-descripcion$">
+<meta property="og:image" content="/assets/og-$lang$.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="alternate" hreflang="es" href="/">
+<link rel="alternate" hreflang="en" href="/en">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="/sitio/fonts/cormorant-garamond-400-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/sitio/sitio.css">
+<script src="/sitio/telon.js"></script>
+<script defer src="/sitio/vendor/gsap-3.12.5.min.js"></script>
+<script defer src="/sitio/vendor/ScrollTrigger-3.12.5.min.js"></script>
+<script defer src="/sitio/vendor/lenis-1.1.13.min.js"></script>
+<script defer src="/sitio/sitio.js"></script>
+</head>
+<body>
+
+<div id="intro" aria-hidden="true">
+  <div class="intro-panel intro-left"></div>
+  <div class="intro-panel intro-right"></div>
+  <div class="intro-core">
+    <svg class="intro-mark" viewBox="0 0 300 24" fill="none">
+      <path class="m1" pathLength="1" d="M10,12 H128"/>
+      <path class="m1" pathLength="1" d="M290,12 H172"/>
+      <path class="m2" pathLength="1" d="M150,3.5 L158.5,12 L150,20.5 L141.5,12 Z"/>
+      <path class="m3" pathLength="1" d="M135,8.8 L138.2,12 L135,15.2 L131.8,12 Z"/>
+      <path class="m3" pathLength="1" d="M165,8.8 L168.2,12 L165,15.2 L161.8,12 Z"/>
+      <path class="m3" pathLength="1" d="M150,7.8 L154.2,12 L150,16.2 L145.8,12 Z"/>
+    </svg>
+    <div class="intro-word">
+      <span class="iw-name">$nombre$</span>
+      <span class="iw-sub">$etiqueta$</span>
+    </div>
+  </div>
+</div>
+
+<header class="nav">
+  <div class="nav-inner">
+    <a class="brand" href="$web-url$" aria-label="$nombre$"><i class="r"></i><span>BEG</span></a>
+    <nav class="nav-links" aria-label="Secciones">
+      <a href="$ancla-1$">$nav-1$</a>
+      <a href="$ancla-2$">$nav-2$</a>
+      <a href="$ancla-3$">$nav-3$</a>
+      <a href="$ancla-4$">$nav-4$</a>
+    </nav>
+    <a class="lang" href="$otro-idioma-url$" title="$otro-idioma-nombre$">$otro-idioma$</a>
+    <a class="btn-cta" href="$pdf-url$">$cta-pdf$</a>
+    <button class="burger" type="button" aria-label="$abrir-menu$" aria-expanded="false" aria-controls="menu-movil"><span></span><span></span><span></span></button>
+  </div>
+</header>
+<div class="menu-movil" id="menu-movil" aria-hidden="true">
+  <nav aria-label="Menú">
+    <a href="$ancla-1$">$nav-1$</a>
+    <a href="$ancla-2$">$nav-2$</a>
+    <a href="$ancla-3$">$nav-3$</a>
+    <a href="$ancla-4$">$nav-4$</a>
+    <a href="$otro-idioma-url$">$otro-idioma-nombre$</a>
+    <a class="menu-cta" href="$pdf-url$">$cta-pdf$</a>
+  </nav>
+</div>
+
+<main>
+  <section class="hero" id="inicio">
+    <canvas id="stage" aria-hidden="true"></canvas>
+    <div class="hero-frame" aria-hidden="true">
+      <img class="c tl" src="/assets/esquina.svg" alt=""><img class="c tr" src="/assets/esquina.svg" alt="">
+      <img class="c bl" src="/assets/esquina.svg" alt=""><img class="c br" src="/assets/esquina.svg" alt="">
+    </div>
+    <div class="hero-in wrap">
+      <p class="hero-label" data-in>$etiqueta$</p>
+      <h1 class="hero-name">$nombre$</h1>
+      <p class="hero-linea" data-in>$linea$</p>
+      <img class="hero-orn" data-in src="/assets/ornamento.svg" alt="">
+      <p class="hero-lema" data-in>$lema$</p>
+      <div class="hero-cta" data-in>
+        <a class="btn" href="$ancla-1$">$cta-ver$</a>
+        <a class="btn btn-ghost" href="$pdf-url$">$cta-pdf$</a>
+        <a class="link" href="https://github.com/BEG-lag/portafolio-ia" target="_blank" rel="noopener">$cta-github$ ↗</a>
+      </div>
+      <ul class="cifras" data-in>
+$for(cifras)$
+        <li><span class="cifra-num"><span data-to="$cifras.num$">$cifras.num$</span>$cifras.suf$</span><span class="cifra-txt">$cifras.texto$</span></li>
+$endfor$
+      </ul>
+    </div>
+  </section>
+
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee-track"><div class="marquee-set">
+$for(marquesina)$
+      <span>$marquesina$</span><i class="r"></i>
+$endfor$
+    </div></div>
+  </div>
+
+  <article class="doc wrap">
+$body$
+  </article>
+</main>
+
+<aside class="beca" id="beca" data-seccion="$beca-seccion$" hidden>
+  <div class="beca-globo">
+    <button class="beca-cerrar" type="button" aria-label="$beca-cerrar$">×</button>
+    <strong>$beca-hola$</strong>
+    $beca-texto$
+    <a href="#$beca-seccion$">$beca-ver$ →</a>
+  </div>
+  <img class="beca-gif" src="/assets/beca-jugando-con-clawd-animado.png" alt="$beca-alt$" width="192" height="208">
+</aside>
+
+<footer class="pie">
+  <div class="wrap">
+    <img class="pie-orn" src="/assets/ornamento.svg" alt="">
+    <p class="pie-nombre">$nombre$</p>
+    <p class="pie-contacto">$contacto$</p>
+    <p class="pie-links">
+      <a href="$pdf-url$">$cta-pdf$</a> <i class="r"></i>
+      <a href="https://github.com/BEG-lag/portafolio-ia" target="_blank" rel="noopener">GitHub</a> <i class="r"></i>
+      <a href="$otro-idioma-url$">$otro-idioma-nombre$</a>
+    </p>
+    <p class="pie-aviso">$aviso$</p>
+    <p class="pie-hecho">$pie$</p>
+  </div>
+</footer>
+</body>
+</html>

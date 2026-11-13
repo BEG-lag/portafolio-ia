@@ -66,6 +66,8 @@ def escribir(nombre, contenido):
 # 1. Ornamento divisor y esquina
 escribir("ornamento.svg", svg(300, 24, divisor(150, 12, 140)))
 escribir("esquina.svg", svg(78, 78, esquina_g()))
+escribir("favicon.svg", svg(64, 64, f'<rect width="64" height="64" rx="14" fill="{ARENA_100}"/>'
+                         + rombo(32, 32, 22, fill=LADRILLO) + rombo(32, 32, 10, fill="none", stroke=ARENA_100, sw=2.2)))
 
 # 2. Portadas del README
 PORTADA = {
@@ -221,10 +223,18 @@ for L in ("en", "es"):
 ARTE = os.path.expanduser("~/Claudecodetodo/axo-acompanante")
 gif, sprite = f"{ARTE}/arte-gato/juego/play.gif", f"{ARTE}/app/clips/play.png"
 if os.path.exists(gif) and os.path.exists(sprite):
-    from PIL import Image
-    shutil.copyfile(gif, os.path.join(OUT, "beca-jugando-con-clawd.gif"))
+    from PIL import Image, PngImagePlugin
     hoja = Image.open(sprite).convert("RGBA")
     fw, fh = 192, hoja.height
+    # Animación con fondo transparente (APNG): se ve animada en GitHub y en el sitio
+    paleta = hoja.quantize(colors=160, method=Image.Quantize.FASTOCTREE)  # paleta compartida: ~170 KB en vez de 1.4 MB
+    marcos = [paleta.crop((k * fw, 0, (k + 1) * fw, fh)) for k in range(paleta.width // fw)]
+    marcos[0].save(os.path.join(OUT, "beca-jugando-con-clawd-animado.png"), save_all=True,
+                   append_images=marcos[1:], duration=[109] * (len(marcos) - 1) + [900], loop=0,
+                   disposal=PngImagePlugin.Disposal.OP_NONE, blend=PngImagePlugin.Blend.OP_SOURCE, optimize=True)
+    viejo = os.path.join(OUT, "beca-jugando-con-clawd.gif")
+    if os.path.exists(viejo):
+        os.remove(viejo)
     cuadros = [9, 17, 19, 23]  # cuadros donde Clawd queda completo
     gap = 24
     tira = Image.new("RGBA", (len(cuadros) * fw + (len(cuadros) - 1) * gap, fh), (0, 0, 0, 0))

@@ -19,7 +19,7 @@ function Link(el)
 end
 
 function Image(el)
-  if el.src:match("beca%-jugando%-con%-clawd%.gif$") then
+  if el.src:match("beca%-jugando%-con%-clawd%-animado%.png$") then
     el.src = "assets/beca-jugando-con-clawd-tira.png"
     el.attributes.width = "62%"
   elseif el.src:match("arquitectura") then
