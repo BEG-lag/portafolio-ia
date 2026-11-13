@@ -130,9 +130,10 @@
 
   window.pivotekCookies = { version: VERSION, decision: decision, abrir: function () { mostrar(true); } };
 
-  // Si la decisión es «rechazadas» y quedó alguna cookie de GA (por ejemplo, la que GA4 reescribe
-  // al cerrar la página en que se retiró el consentimiento), se borra al cargar; GA4 no se carga.
-  if (decision() === 'rechazadas' && hayCookiesGA()) {
+  // Sin «aceptadas» no debe haber cookies de GA: se borran al cargar las que hayan quedado, sea la que
+  // GA4 reescribe al cerrar la página en que se retiró el consentimiento o las de visitas anteriores al
+  // banner (antes del 13-11-2026) de quien todavía no decide. GA4 no se carga sin «aceptadas».
+  if (decision() !== 'aceptadas' && hayCookiesGA()) {
     window['ga-disable-' + ID_GA] = true;
     borrarCookiesGA();
   }
