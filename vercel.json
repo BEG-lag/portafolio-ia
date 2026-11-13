@@ -14,7 +14,7 @@
       ]
     },
     {
-      "source": "/sitio/(fonts|vendor)/(.*)",
+      "source": "/(sitio/fonts|sitio/vendor|fonts|vendor)/(.*)",
       "headers": [{ "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }]
     }
   ]

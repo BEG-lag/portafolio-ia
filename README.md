@@ -192,7 +192,7 @@ All matters are anonymized.
 | Site | What it is | How it was built |
 |:----|:------|:---------|
 | [concriterio.mx](https://concriterio.mx) | Sales site of Con Criterio: a page for lawyers and [/para-todos](https://concriterio.mx/para-todos/) for beginners, with a build-your-purchase panel | Pages and legal texts (terms, privacy notice, license) generated with Python scripts; Stripe payment links and a Cloudflare Worker for checkout and delivery; Cloudflare Pages, DNS and Web Analytics; Meta Pixel and two Google Ads search campaigns set up |
-| [pivotek.mx](https://pivotek.mx) | Home of this portfolio. It replaced my firm's Next.js site, which I also built (TypeScript, contact form with Resend, technical SEO) | Generated from this README with pandoc and a custom template; curtain intro, a cover drawn on canvas, scroll reveals and counters with GSAP, ScrollTrigger and Lenis (self-hosted, strict content security policy); deployed on Vercel |
+| [pivotek.mx](https://pivotek.mx) | Home of this portfolio. It replaced the previous Next.js site of PIVOTEK, my personal brand and consultancy, which I also built (TypeScript, contact form with Resend, technical SEO) | Designed and built by Fable 5.2 (Claude) from the plain text of this README, under my direction: ink and traffic-light palette, 20 sections with their own scroll animations (word-by-word reveals, stacking cards, a 20-step closing that flips block by block, BeCa's states), GSAP, ScrollTrigger and Lenis self-hosted under a strict content security policy; deployed on Vercel |
 | [casalegado.mx](https://casalegado.mx) | My biographical documentary brand: five-page site plus brandbook, sales dossier and sales presentation | Static HTML and CSS under a strict brand system (two typefaces, a warm palette and voice rules), illustrative images generated with Higgsfield, privacy notice, sitemap, Google Business Profile copy, Google Ads tags and a content security policy, deployed on Vercel |
 | [carocomunicando.com](https://carocomunicando.com) | Site of a public-speaking and communication trainer: home with an animated cover, her method, her TEDx talk, cases and brand pages | Static site with self-hosted GSAP, ScrollTrigger and Lenis; a downloadable PDF guide with optional email capture; GA4, Microsoft Clarity and Vercel Analytics declared in the privacy notice and cookie banner; 301 redirects, security headers and a content security policy; SEO audit and blog articles |
 
@@ -295,7 +295,7 @@ BeCa is my cat turned into a sticker-style companion that lives in a small float
 
 ## 12. Feasibility studies
 
-Own ventures and services of my firm, each with a go or no-go verdict and traffic lights by phase:
+Own ventures and services of PIVOTEK, my consultancy, each with a go or no-go verdict and traffic lights by phase:
 
 - Fuel trucking from La Paz to Los Cabos: conditional go.
 - Gas station under a national fuel brand franchise in Los Cabos: conditional go.

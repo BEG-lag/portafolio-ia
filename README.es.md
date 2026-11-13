@@ -192,7 +192,7 @@ Todos los asuntos están anonimizados.
 | Sitio | Qué es | Cómo se hizo |
 |:----|:------|:---------|
 | [concriterio.mx](https://concriterio.mx) | Sitio de venta de Con Criterio: página para abogados y [/para-todos](https://concriterio.mx/para-todos/) para principiantes, con panel "Arma tu compra" | Páginas y textos legales (términos, aviso de privacidad, licencia) generados con scripts de Python; ligas de pago de Stripe y un Worker de Cloudflare para el cobro y la entrega; Cloudflare Pages, DNS y Web Analytics; Pixel de Meta y dos campañas de búsqueda en Google Ads configuradas |
-| [pivotek.mx](https://pivotek.mx) | Casa de este portafolio. Sustituyó el sitio en Next.js de mi firma, que también construí (TypeScript, formulario con Resend, SEO técnico) | Generado desde este README con pandoc y una plantilla propia; telón de entrada, portada dibujada en canvas, apariciones al hacer scroll y contadores con GSAP, ScrollTrigger y Lenis (auto-hospedados, con política de seguridad estricta); desplegado en Vercel |
+| [pivotek.mx](https://pivotek.mx) | Casa de este portafolio. Sustituyó el sitio anterior en Next.js de PIVOTEK, mi marca personal y consultoría, que también construí (TypeScript, formulario con Resend, SEO técnico) | Diseñado y construido por Fable 5.2 (Claude) a partir del texto de este README, bajo mi dirección: paleta tinta y semáforo, 20 secciones con animaciones de scroll propias (texto que se revela palabra por palabra, cartas que se apilan, un cierre de 20 pasos que se voltea bloque por bloque, los estados de BeCa), GSAP, ScrollTrigger y Lenis auto-hospedados con política de seguridad estricta; desplegado en Vercel |
 | [casalegado.mx](https://casalegado.mx) | Mi marca de documentales biográficos: sitio de cinco páginas, más brandbook, dossier y presentación de ventas | HTML y CSS estáticos con un sistema de marca estricto (dos familias tipográficas, paleta cálida y reglas de voz), imágenes ilustrativas generadas con Higgsfield, aviso de privacidad, sitemap, textos para el Perfil de Negocio de Google, etiquetas de Google Ads y política de seguridad de contenido, desplegado en Vercel |
 | [carocomunicando.com](https://carocomunicando.com) | Sitio de una capacitadora en oratoria y comunicación: home con portada animada, su método, su charla TEDx, casos y la marca | Sitio estático con GSAP, ScrollTrigger y Lenis auto-hospedados; guía PDF descargable con captura opcional de correo; GA4, Microsoft Clarity y Vercel Analytics declarados en el aviso de privacidad y el banner de cookies; redirecciones 301, encabezados de seguridad y política de seguridad de contenido; auditoría SEO y artículos de blog |
 
@@ -295,7 +295,7 @@ BeCa es mi gato convertido en un acompañante en estilo sticker que vive en una 
 
 ## 12. Estudios de viabilidad
 
-Proyectos propios y servicios de mi firma, cada uno con veredicto y semáforo por fase:
+Proyectos propios y servicios de PIVOTEK, mi consultoría, cada uno con veredicto y semáforo por fase:
 
 - Transporte de petrolíferos por autotanque de La Paz a Los Cabos: GO condicionado.
 - Gasolinera con franquicia en Los Cabos: GO condicionado.

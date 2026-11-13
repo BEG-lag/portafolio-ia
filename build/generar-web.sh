@@ -6,7 +6,9 @@ set -e
 cd "$(dirname "$0")/.."
 python3 build/generar_assets.py
 mkdir -p en
-for L in es en; do
+# Desde el 13-11-2026 la portada en español (index.html, css/, js/) es la propuesta B,
+# diseñada por Fable 5.2 a mano; este script sólo regenera la versión en inglés (en/).
+for L in en; do
   if [[ $L == es ]]; then src=README.es.md; out=index.html
   else src=README.md; out=en/index.html; fi
   pandoc "$src" -o "$out" --standalone --wrap=none --section-divs \
