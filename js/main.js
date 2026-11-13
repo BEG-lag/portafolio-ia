@@ -209,8 +209,9 @@
     var intro = gsap.timeline({ defaults: { ease: 'power4.out' } });
     intro.from('.hero__line .ch', { yPercent: 115, duration: 1.1, stagger: 0.028 }, 0.1)
       .from('.hero__eyebrow', { opacity: 0, y: 14, duration: 0.8 }, 0.2)
-      .from('.hero__row > *', { opacity: 0, y: 30, duration: 0.9, stagger: 0.1 }, 0.75)
-      .from('.hero__chips li', { opacity: 0, y: 16, scale: 0.9, duration: 0.6, stagger: 0.05 }, 1.0);
+      /* sin opacity: el texto del hero se pinta desde el primer cuadro (LCP) y sólo se acomoda */
+      .from('.hero__row > *', { y: 22, duration: 1, stagger: 0.08 }, 0.15)
+      .from('.hero__chips li', { y: 12, scale: 0.95, duration: 0.7, stagger: 0.04 }, 0.3);
     lines.forEach(function (l) {
       gsap.to(l, { xPercent: (l.dataset.dir === '1' ? 1 : -1) * (desk ? 16 : 8), ease: 'none',
         scrollTrigger: { trigger: '.hero', start: 'top top', end: 'bottom top', scrub: true } });

@@ -111,7 +111,7 @@
 <div class="progress" aria-hidden="true"></div>
 
 <header class="top" id="top">
-  <a class="top__brand" href="#inicio" aria-label="Inicio">
+  <a class="top__brand" href="#inicio" aria-label="BEG, inicio">
     <span class="lights" aria-hidden="true"><i></i><i></i><i></i></span>
     <span>BEG</span>
   </a>
@@ -431,13 +431,13 @@
     <div class="flow">
       <span class="flow__line" aria-hidden="true"><i></i></span>
       <ol class="flow__nodes">
-        <li class="node"><span class="node__ico" aria-hidden="true">01</span><h3>Schedule</h3><p>lun a vie, 8:30</p></li>
-        <li class="node"><span class="node__ico" aria-hidden="true">02</span><h3>HTTP Request</h3><p>índice del día</p></li>
-        <li class="node"><span class="node__ico" aria-hidden="true">03</span><h3>HTML</h3><p>título, dependencia, liga</p></li>
-        <li class="node"><span class="node__ico" aria-hidden="true">04</span><h3>Filter</h3><p>palabras y dependencias de energía</p></li>
-        <li class="node"><span class="node__ico" aria-hidden="true">05</span><h3>Aggregate</h3><p>todo junto</p></li>
-        <li class="node node--llm"><span class="node__ico" aria-hidden="true">06</span><h3>LLM</h3><p>una frase + prioridad</p></li>
-        <li class="node node--out"><span class="node__ico" aria-hidden="true">07</span><h3>Gmail</h3><p>correo diario</p></li>
+        <li class="node"><span class="node__ico" aria-hidden="true">01</span><p class="node__name">Schedule</p><p>lun a vie, 8:30</p></li>
+        <li class="node"><span class="node__ico" aria-hidden="true">02</span><p class="node__name">HTTP Request</p><p>índice del día</p></li>
+        <li class="node"><span class="node__ico" aria-hidden="true">03</span><p class="node__name">HTML</p><p>título, dependencia, liga</p></li>
+        <li class="node"><span class="node__ico" aria-hidden="true">04</span><p class="node__name">Filter</p><p>palabras y dependencias de energía</p></li>
+        <li class="node"><span class="node__ico" aria-hidden="true">05</span><p class="node__name">Aggregate</p><p>todo junto</p></li>
+        <li class="node node--llm"><span class="node__ico" aria-hidden="true">06</span><p class="node__name">LLM</p><p>una frase + prioridad</p></li>
+        <li class="node node--out"><span class="node__ico" aria-hidden="true">07</span><p class="node__name">Gmail</p><p>correo diario</p></li>
       </ol>
     </div>
     <div class="dof__result">
@@ -651,7 +651,7 @@
         <div class="beca__win">
           <div class="beca__winbar" aria-hidden="true"><i></i><i></i><i></i><span>BeCa</span></div>
           <button class="beca__pet" type="button" aria-label="Saludar a BeCa">
-            <img src="img/beca.png" width="192" height="208" alt="BeCa, un gato en estilo sticker, jugando con Clawd, la mascota de Claude Code">
+            <img src="img/beca.png" width="192" height="208" loading="lazy" decoding="async" alt="BeCa, un gato en estilo sticker, jugando con Clawd, la mascota de Claude Code">
           </button>
           <p class="beca__bubble" aria-live="polite"><span class="beca__hook">click</span><span class="beca__does">Con un clic saluda; con otro juega unos cuatro segundos con Clawd.</span></p>
         </div>
@@ -783,8 +783,6 @@
   </div>
 </section>
 
-</main>
-
 <!-- ============ PIVOTEK ============ -->
 <section class="pvk" id="pivotek" aria-labelledby="pvk-h">
   <div class="pvk__pin">
@@ -792,8 +790,8 @@
       <p class="eyebrow">Mi marca personal y consultoría · pivotek.mx</p>
       <div class="pvk__stage">
         <div class="pvk__iso" role="img" aria-label="Isotipo de PIVOTEK: una P cuya flecha gira hacia la izquierda">
-          <img class="pvk__arrow" src="img/pivotek-flecha.png" width="169" height="560" alt="">
-          <img class="pvk__p" src="img/pivotek-p.png" width="314" height="560" alt="">
+          <img class="pvk__arrow" src="img/pivotek-flecha.png" width="169" height="560" loading="lazy" decoding="async" alt="">
+          <img class="pvk__p" src="img/pivotek-p.png" width="314" height="560" loading="lazy" decoding="async" alt="">
         </div>
         <div class="pvk__copy">
           <h2 id="pvk-h" class="pvk__word" aria-label="Pivotek"><span class="pvk__pivo" aria-hidden="true">pivo</span><span class="pvk__t" aria-hidden="true">t</span><span class="pvk__ek" aria-hidden="true">ek</span></h2>
@@ -809,6 +807,8 @@
   </div>
 </section>
 
+</main>
+
 <!-- ============ CONTACTO ============ -->
 <footer class="contact" id="contacto">
   <div class="wrap">
@@ -822,7 +822,7 @@
     </ul>
     <div class="contact__end">
       <p class="contact__disc">Este portafolio es una muestra, no una lista completa. El trabajo para clientes está anonimizado: se quitaron nombres, cifras y datos que los identifiquen. Nada de lo que aparece aquí constituye opinión legal.</p>
-      <img class="contact__beca" src="img/beca.png" width="96" height="104" alt="" loading="lazy">
+      <img class="contact__beca" src="img/beca.png" width="96" height="104" alt="" loading="lazy" decoding="async">
     </div>
     <p class="contact__priv"><strong>Aviso de privacidad simplificado.</strong> Benjamín Esponda García, con domicilio en código postal 05500, Ciudad de México, es responsable de los datos personales que me envíes por correo electrónico: tu nombre, tu dirección de correo y lo que decidas incluir en tu mensaje. No te pido datos personales sensibles. Los uso sólo para atender y responder tu mensaje; es la única finalidad y no hay finalidades adicionales que requieran tu consentimiento. Para limitar su uso o divulgación, escríbeme a <a href="mailto:hola@concriterio.mx">hola@concriterio.mx</a>. Consulta el <a href="aviso-de-privacidad">aviso de privacidad integral</a>.</p>
     <p class="contact__sig">Benjamín Esponda García · Español (nativo), inglés (profesional)</p>
