@@ -224,11 +224,19 @@
     window.addEventListener('pointermove', onMove, { passive: true });
     undo.push(function () { window.removeEventListener('pointermove', onMove); heroStop(); });
 
-    /* 2. MANIFIESTO: texto que se revela palabra por palabra */
+    /* 2. MANIFIESTO: texto que se revela palabra por palabra. Cada palabra entra con un color de la
+       paleta según su lugar en la frase (cian, lima, ámbar, coral) y vuelve al color del texto cuando
+       pasa la ola; al final del recorrido queda todo en el color normal (pedido de BEG). */
     var mtext = $('.manifesto__text');
     var words = $$('.w', mtext); if (!words.length) words = splitWords(mtext);
-    gsap.fromTo(words, { opacity: 0.12 }, { opacity: 1, ease: 'none', stagger: 0.1,
-      scrollTrigger: { trigger: mtext, start: 'top 80%', end: 'bottom 45%', scrub: 0.5 } });
+    var mbase = getComputedStyle(mtext).color;
+    var mola = gsap.utils.interpolate(['#7fd8ff', '#cfff45', '#ffb648', '#ff5d47']);
+    var mtl = gsap.timeline({ scrollTrigger: { trigger: mtext, start: 'top 80%', end: 'bottom 45%', scrub: 0.5 } });
+    words.forEach(function (w, i) {
+      var t = i * 0.1, c = mola(words.length > 1 ? i / (words.length - 1) : 0);
+      mtl.fromTo(w, { opacity: 0.12, color: mbase }, { opacity: 1, color: c, ease: 'none', duration: 0.3 }, t)
+        .to(w, { color: mbase, ease: 'power1.in', duration: 0.7 }, t + 0.7);
+    });
 
     /* 2b. ESTE SOY YO: la foto se abre desde un recuadro hasta llenar la pantalla */
     if ($('.yo')) {
