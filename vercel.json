@@ -4,6 +4,12 @@
   "trailingSlash": false,
   "redirects": [
     {
+      "source": "/",
+      "has": [{ "type": "host", "value": "portafolio-ia-pink.vercel.app" }],
+      "destination": "https://pivotek.mx/",
+      "permanent": true
+    },
+    {
       "source": "/:path*",
       "has": [{ "type": "host", "value": "portafolio-ia-pink.vercel.app" }],
       "destination": "https://pivotek.mx/:path*",
@@ -31,7 +37,7 @@
       "headers": [{ "key": "X-Robots-Tag", "value": "noindex" }]
     },
     {
-      "source": "/(sitio/fonts|sitio/vendor|fonts|vendor)/(.*)",
+      "source": "/(fonts|vendor)/(.*)",
       "headers": [{ "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }]
     },
     {

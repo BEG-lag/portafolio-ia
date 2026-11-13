@@ -1,6 +1,5 @@
 # pivotek.mx: portafolio de IA de Benjamín Esponda García
 User-agent: *
 Allow: /
-Disallow: /sitio/
 
 Sitemap: https://pivotek.mx/sitemap.xml
