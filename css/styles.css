@@ -532,6 +532,7 @@ h4{font-size:1.05rem;line-height:1.25;font-weight:650;letter-spacing:-.01em}
 .contact{background:var(--lime);color:var(--ink);--fg:var(--ink);--mut:#2c3a08;--line:rgba(10,12,16,.25);--acc:var(--ink);padding:clamp(5rem,13vh,10rem) 0 2.2rem;overflow:clip}
 .contact em{color:var(--ink)}
 .contact__h{max-width:none;font-size:clamp(2.4rem,7.5vw,7.5rem)}
+.contact__inv{font-size:clamp(1.1rem,1.7vw,1.5rem);line-height:1.4;font-weight:500;letter-spacing:-.01em;max-width:44ch;margin-top:clamp(1.2rem,2.6vw,2.2rem)}
 .contact__mail{display:block;margin:clamp(2rem,5vw,4rem) 0 2rem;font-size:clamp(1.5rem,6.3vw,6.4rem);font-weight:650;letter-spacing:-.055em;line-height:1;text-decoration:none;border-block:2px solid var(--ink);padding:.3em 0;overflow-wrap:anywhere}
 .contact__mail span{display:inline-block}
 .contact__mail:hover{color:var(--ink);background:rgba(10,12,16,.06)}
