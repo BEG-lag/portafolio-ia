@@ -171,8 +171,8 @@ Schedule (Mon to Fri, 8:30) → HTTP Request (today's index) → HTML (title, ag
 
 For confidentiality, I don't detail each matter or its clients.
 
-- **What kind of matters.** Energy, international trade, regulatory compliance, contracts and industrial property, for private companies and public entities in Mexico and abroad.
-- **How I use AI.** I research with downloaded official sources, and every data point carries its source and cut-off date. I extract contracts into context files, write drafting rules as constraints and generate the deliverables with scripts. The analysis and the judgment are mine.
+- **What kind of matters.** Market entry routes, obligation maps for energy contracts, permit due diligence, health and advertising compliance reviews, trademark opinions, institutional letters and technical notes. For energy contractors, fuel traders, consumer goods companies, law firms and government agencies, in Mexico and abroad.
+- **How I use AI.** I work with Claude and Claude Code on a corpus of official sources, downloaded and converted to plain text for verbatim cross-checking; every data point carries a citation and a cut-off date. I extract contracts in structured form into a context file (obligations, deadlines, alerts), reuse regulatory frameworks across files and write drafting rules as verifiable constraints. Where it applies, I use my own plugins with the current text of the law. Deliverables (Word, PDF and HTML) come out of generator scripts, with a traffic light per section. This is only an example, not everything I do with AI. The analysis and the judgment are mine.
 
 <p align="center"><img src="assets/ornamento.svg" width="220" alt=""></p>
 

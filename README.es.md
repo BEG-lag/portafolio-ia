@@ -171,8 +171,8 @@ Schedule (lun a vie, 8:30) → HTTP Request (índice del día) → HTML (título
 
 Por confidencialidad no detallo cada asunto ni a sus clientes.
 
-- **Qué tipo de asuntos.** Energía, comercio exterior, cumplimiento regulatorio, contratos y propiedad industrial, para empresas privadas y entidades públicas en México y en el extranjero.
-- **Cómo uso la IA.** Investigo con fuentes oficiales descargadas y cada dato lleva su fuente y su fecha de corte. Extraigo los contratos a archivos de contexto, escribo las reglas de redacción como restricciones y genero los entregables con scripts. El análisis y el criterio son míos.
+- **Qué tipo de asuntos.** Rutas de entrada a mercados extranjeros, mapas de obligaciones de contratos de energía, due diligence de permisos, revisiones de cumplimiento sanitario y publicitario, dictámenes de marca, cartas institucionales y notas técnicas. Para contratistas de energía, comercializadoras de combustibles, empresas de consumo, despachos y dependencias de gobierno, en México y en el extranjero.
+- **Cómo uso la IA.** Trabajo con Claude y Claude Code sobre un corpus de fuentes oficiales descargadas y convertidas a texto plano para cotejo literal; cada dato lleva cita y fecha de corte. Extraigo los contratos de forma estructurada a un archivo de contexto (obligaciones, plazos, alertas), reutilizo marcos regulatorios entre expedientes y escribo las reglas de redacción como restricciones verificables. Cuando aplica, uso mis propios plugins con el texto vigente de la ley. Los entregables (Word, PDF y HTML) salen de scripts generadores, con semáforo por sección. Esto es sólo un ejemplo, no todo lo que hago con IA. El análisis y el criterio son míos.
 
 <p align="center"><img src="assets/ornamento.svg" width="220" alt=""></p>
 
