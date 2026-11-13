@@ -7,6 +7,7 @@
 (function () {
   var CLAVE = 'pivotek-cookies';
   var VERSION = '2026-11'; // si cambia (por ejemplo, un proveedor nuevo), se vuelve a preguntar; avisar a SEO
+  var ID_GA = 'G-0BEBP5SK25';
   var COOKIES_GA = ['_ga', '_ga_0BEBP5SK25'];
   var en = (document.documentElement.lang || '').indexOf('en') === 0;
 
@@ -109,8 +110,10 @@
     try {
       document.dispatchEvent(new CustomEvent('pivotek:cookies', { detail: { decision: dec } }));
     } catch (e) {}
-    // Retiro: si había aceptado (o quedaron cookies de GA), se borran y se recarga sin GA4.
+    // Retiro: si había aceptado (o quedaron cookies de GA), se apaga GA4 para que no vuelva a
+    // escribir sus cookies al salir de la página, se borran y se recarga sin GA4.
     if (dec === 'rechazadas' && (previa === 'aceptadas' || hayCookiesGA())) {
+      window['ga-disable-' + ID_GA] = true;
       borrarCookiesGA();
       location.reload();
     }
@@ -125,6 +128,13 @@
   });
 
   window.pivotekCookies = { version: VERSION, decision: decision, abrir: function () { mostrar(true); } };
+
+  // Si la decisión es «rechazadas» y quedó alguna cookie de GA (por ejemplo, la que GA4 reescribe
+  // al cerrar la página en que se retiró el consentimiento), se borra al cargar; GA4 no se carga.
+  if (decision() === 'rechazadas' && hayCookiesGA()) {
+    window['ga-disable-' + ID_GA] = true;
+    borrarCookiesGA();
+  }
 
   function iniciar() { if (!decision()) mostrar(false); }
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', iniciar);
