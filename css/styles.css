@@ -424,6 +424,7 @@ h4{font-size:1.05rem;line-height:1.25;font-weight:650;letter-spacing:-.01em}
 
 /* ============ beca ============ */
 .beca{padding:clamp(6rem,14vh,11rem) 0;background:radial-gradient(90% 60% at 20% 45%,#1b2030 0%,var(--ink) 70%)}
+.beca__why{color:var(--lime)}
 .beca__grid{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:clamp(2rem,6vw,6rem);align-items:start}
 .beca__stage{position:sticky;top:clamp(90px,16vh,150px)}
 .beca__win{width:min(100%,400px);border-radius:20px;background:linear-gradient(160deg,#252b3a,#161a24);border:1px solid rgba(236,238,230,.2);box-shadow:0 40px 90px rgba(0,0,0,.55),0 0 0 1px rgba(0,0,0,.4);overflow:hidden}

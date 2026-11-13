@@ -246,6 +246,26 @@
       }
     }
 
+    /* 2c. PIVOTEK (va después de ESTE SOY YO; los pines se crean en el orden de la página): la P aparece, la flecha hace el giro y el nombre se parte en pivot + tek */
+    if ($('.pvk')) {
+      if (desk) {
+        gsap.timeline({ scrollTrigger: { trigger: '.pvk', start: 'top top', end: '+=170%', scrub: 0.6, pin: '.pvk__pin', anticipatePin: 1 } })
+          .fromTo('.pvk__p', { clipPath: 'inset(100% 0% 0% 0%)' }, { clipPath: 'inset(0% 0% 0% 0%)', ease: 'none', duration: 0.3 }, 0)
+          .fromTo('.pvk__arrow', { x: 240, rotation: 180, opacity: 0 }, { x: 0, rotation: 0, opacity: 1, ease: 'power2.inOut', duration: 0.38 }, 0.18)
+          .fromTo('.pvk__pivo', { xPercent: -35, opacity: 0 }, { xPercent: 0, opacity: 1, ease: 'power2.out', duration: 0.2 }, 0.46)
+          .fromTo('.pvk__ek', { xPercent: 70, opacity: 0 }, { xPercent: 0, opacity: 1, ease: 'power2.out', duration: 0.2 }, 0.46)
+          .fromTo('.pvk__t', { scale: 2.4, opacity: 0 }, { scale: 1, opacity: 1, ease: 'power2.out', duration: 0.2 }, 0.52)
+          .from('.pvk__def--pivot', { y: 40, opacity: 0, ease: 'power2.out', duration: 0.16 }, 0.68)
+          .from('.pvk__def--tek', { y: 40, opacity: 0, ease: 'power2.out', duration: 0.16 }, 0.76)
+          .from('.pvk__why', { y: 34, opacity: 0, ease: 'power2.out', duration: 0.14 }, 0.84)
+          .from('.pvk__logo', { y: 30, opacity: 0, ease: 'power2.out', duration: 0.12 }, 0.92);
+      } else {
+        gsap.fromTo('.pvk__p', { clipPath: 'inset(100% 0% 0% 0%)' }, { clipPath: 'inset(0% 0% 0% 0%)', duration: 0.9, ease: 'power3.out', scrollTrigger: once('.pvk__iso') });
+        gsap.fromTo('.pvk__arrow', { x: 110, rotation: 180, opacity: 0 }, { x: 0, rotation: 0, opacity: 1, duration: 1.1, delay: 0.35, ease: 'back.out(1.4)', scrollTrigger: once('.pvk__iso') });
+        gsap.from(['.pvk__word', '.pvk__def--pivot', '.pvk__def--tek', '.pvk__why', '.pvk__logo'], { y: 30, opacity: 0, duration: 0.7, stagger: 0.12, ease: 'power3.out', scrollTrigger: once('.pvk__copy') });
+      }
+    }
+
     /* genéricos: títulos, bloques y grupos */
     $$('[data-reveal]').forEach(function (el) {
       gsap.from(el, { y: 46, opacity: 0, duration: 1, ease: 'power3.out', scrollTrigger: once(el, 'top 90%') });
@@ -450,26 +470,6 @@
       gsap.from($$('.chips li', row), { opacity: 0, scale: 0.6, y: 14, duration: 0.45, ease: 'back.out(2)', stagger: 0.035, scrollTrigger: once(row, 'top 90%') });
       gsap.from($('dt', row), { opacity: 0, x: -30, duration: 0.6, ease: 'power3.out', scrollTrigger: once(row, 'top 90%') });
     });
-
-    /* 17b. PIVOTEK: la P aparece, la flecha hace el giro y el nombre se parte en pivot + tek */
-    if ($('.pvk')) {
-      if (desk) {
-        gsap.timeline({ scrollTrigger: { trigger: '.pvk', start: 'top top', end: '+=170%', scrub: 0.6, pin: '.pvk__pin', anticipatePin: 1 } })
-          .fromTo('.pvk__p', { clipPath: 'inset(100% 0% 0% 0%)' }, { clipPath: 'inset(0% 0% 0% 0%)', ease: 'none', duration: 0.3 }, 0)
-          .fromTo('.pvk__arrow', { x: 240, rotation: 180, opacity: 0 }, { x: 0, rotation: 0, opacity: 1, ease: 'power2.inOut', duration: 0.38 }, 0.18)
-          .fromTo('.pvk__pivo', { xPercent: -35, opacity: 0 }, { xPercent: 0, opacity: 1, ease: 'power2.out', duration: 0.2 }, 0.46)
-          .fromTo('.pvk__ek', { xPercent: 70, opacity: 0 }, { xPercent: 0, opacity: 1, ease: 'power2.out', duration: 0.2 }, 0.46)
-          .fromTo('.pvk__t', { scale: 2.4, opacity: 0 }, { scale: 1, opacity: 1, ease: 'power2.out', duration: 0.2 }, 0.52)
-          .from('.pvk__def--pivot', { y: 40, opacity: 0, ease: 'power2.out', duration: 0.16 }, 0.68)
-          .from('.pvk__def--tek', { y: 40, opacity: 0, ease: 'power2.out', duration: 0.16 }, 0.76)
-          .from('.pvk__why', { y: 34, opacity: 0, ease: 'power2.out', duration: 0.14 }, 0.84)
-          .from('.pvk__logo', { y: 30, opacity: 0, ease: 'power2.out', duration: 0.12 }, 0.92);
-      } else {
-        gsap.fromTo('.pvk__p', { clipPath: 'inset(100% 0% 0% 0%)' }, { clipPath: 'inset(0% 0% 0% 0%)', duration: 0.9, ease: 'power3.out', scrollTrigger: once('.pvk__iso') });
-        gsap.fromTo('.pvk__arrow', { x: 110, rotation: 180, opacity: 0 }, { x: 0, rotation: 0, opacity: 1, duration: 1.1, delay: 0.35, ease: 'back.out(1.4)', scrollTrigger: once('.pvk__iso') });
-        gsap.from(['.pvk__word', '.pvk__def--pivot', '.pvk__def--tek', '.pvk__why', '.pvk__logo'], { y: 30, opacity: 0, duration: 0.7, stagger: 0.12, ease: 'power3.out', scrollTrigger: once('.pvk__copy') });
-      }
-    }
 
     /* 18. CONTACTO */
     gsap.from('.contact__h', { yPercent: 40, opacity: 0, duration: 1, ease: 'power3.out', scrollTrigger: once('.contact', 'top 70%') });
