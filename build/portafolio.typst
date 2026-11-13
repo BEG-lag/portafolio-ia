@@ -1,0 +1,135 @@
+// Plantilla de pandoc para Typst: portafolio en arena y ladrillo con ornamentos.
+// Se usa desde build/generar-pdf.sh; los metadatos vienen de build/meta-{en,es}.yaml.
+
+#let arena-50 = rgb("#FBF7F0")
+#let arena-100 = rgb("#F4EBDD")
+#let arena-200 = rgb("#E9DBC4")
+#let arena-300 = rgb("#D9C4A3")
+#let ladrillo = rgb("#A3452E")
+#let ladrillo-hondo = rgb("#7C2F1E")
+#let tinta = rgb("#2E241D")
+#let gris = rgb("#6E5D50")
+#let serif = ("Baskerville", "Hoefler Text", "Georgia")
+#let sans = ("Avenir Next", "Helvetica Neue", "Arial")
+
+#let rombo(t, c) = box(baseline: -0.12em, rotate(45deg, rect(width: t, height: t, fill: c, stroke: none)))
+#let horizontalrule = align(center, image("assets/ornamento.svg", width: 30%))
+#let divider = horizontalrule
+
+$if(highlighting-definitions)$
+$highlighting-definitions$
+$endif$
+
+#set document(title: [$pdf-title$], author: "Benjamín Esponda García")
+#set text(font: sans, size: 9.6pt, fill: tinta, lang: "$lang$")
+#set par(justify: true, leading: 0.62em, spacing: 0.95em)
+#set page(
+  paper: "us-letter",
+  fill: arena-50,
+  margin: (x: 2.1cm, top: 2.5cm, bottom: 2.3cm),
+  header: [
+    #set text(font: serif, size: 8.8pt, fill: gris)
+    #grid(columns: (1fr, auto), align: (left, right), [$cabeza-izq$], [#text(fill: ladrillo)[$cabeza-der$]])
+    #v(-5pt)
+    #line(length: 100%, stroke: 0.5pt + arena-300)
+  ],
+  footer: context [
+    #set text(font: serif, size: 9.5pt, fill: ladrillo)
+    #align(center)[#rombo(3.4pt, ladrillo) #h(7pt) #counter(page).display() #h(7pt) #rombo(3.4pt, ladrillo)]
+  ],
+)
+
+// Encabezados
+#show heading: set text(font: serif, weight: "regular")
+#show heading.where(level: 1): it => {
+  v(16pt, weak: true)
+  block(sticky: true, below: 10pt, width: 100%)[
+    #text(size: 19pt, fill: ladrillo)[#it.body]
+    #v(-7pt)
+    #grid(columns: (auto, 1fr, auto), column-gutter: 5pt, align: horizon,
+      rombo(5pt, ladrillo), line(length: 100%, stroke: 0.7pt + ladrillo), rombo(2.6pt, ladrillo))
+  ]
+}
+#show heading.where(level: 2): it => block(sticky: true, above: 14pt, below: 7pt)[
+  #text(size: 13pt, fill: ladrillo-hondo)[#rombo(3.2pt, ladrillo) #h(4pt) #it.body]
+]
+
+// Texto, listas, enlaces y citas
+#show link: set text(fill: ladrillo)
+#set list(marker: rombo(3.3pt, ladrillo), indent: 3pt, body-indent: 7pt)
+#set enum(numbering: n => text(font: serif, fill: ladrillo)[#n.], indent: 2pt)
+#show quote.where(block: true): it => block(
+  fill: arena-100, inset: (x: 12pt, y: 9pt), radius: 3pt, width: 100%,
+  stroke: (left: 2.5pt + ladrillo), it.body)
+#show raw: set text(font: ("Menlo", "Courier New"), size: 7.6pt)
+#show raw.where(block: true): it => block(
+  fill: arena-100, inset: 9pt, radius: 3pt, width: 100%, stroke: 0.5pt + arena-300,
+  text(fill: ladrillo-hondo, it))
+
+// Tablas
+#set table(
+  inset: (x: 6pt, y: 5pt),
+  stroke: none,
+  fill: (_, y) => if y == 0 { ladrillo } else if calc.even(y) { arena-100 } else { white.transparentize(30%) },
+)
+#set table.hline(stroke: 0pt)
+#show table: set text(size: 8.5pt)
+#show table: set par(justify: false, leading: 0.5em)
+#show table.cell.where(y: 0): set text(fill: arena-50, weight: "semibold")
+#show figure.where(kind: table): set block(breakable: true)
+#show figure: set block(breakable: true)
+
+// Figuras
+#show figure.caption: set text(font: serif, size: 8.8pt, style: "italic", fill: gris)
+
+#set smartquote(enabled: true)
+
+// Portada
+#let cifra(valor, texto) = block(
+  fill: arena-50, stroke: 0.7pt + arena-300, radius: 4pt, inset: (x: 6pt, top: 11pt, bottom: 9pt), width: 100%,
+)[
+  #place(top + center, dy: -14pt, rombo(5pt, ladrillo))
+  #text(font: serif, size: 21pt, fill: ladrillo)[#valor] \
+  #v(-4pt)
+  #text(size: 7.6pt, fill: gris)[#texto]
+]
+
+#page(fill: arena-100, margin: 0pt, header: none, footer: none)[
+  #place(top + left, dx: 24pt, dy: 24pt, rect(width: 564pt, height: 744pt, stroke: 1.6pt + ladrillo, radius: 3pt))
+  #place(top + left, dx: 31pt, dy: 31pt, rect(width: 550pt, height: 730pt, stroke: 0.5pt + ladrillo))
+  #place(top + left, dx: 31pt, dy: 31pt, image("assets/esquina.svg", width: 62pt))
+  #place(top + right, dx: -31pt, dy: 31pt, scale(x: -100%, image("assets/esquina.svg", width: 62pt)))
+  #place(bottom + left, dx: 31pt, dy: -31pt, scale(y: -100%, image("assets/esquina.svg", width: 62pt)))
+  #place(bottom + right, dx: -31pt, dy: -31pt, scale(x: -100%, y: -100%, image("assets/esquina.svg", width: 62pt)))
+  #set align(center)
+  #v(120pt)
+  #text(size: 9pt, fill: ladrillo, tracking: 3.2pt, weight: "semibold")[$etiqueta$]
+  #v(26pt)
+  #image("assets/ornamento.svg", width: 42%)
+  #v(18pt)
+  #text(font: serif, size: 36pt, fill: tinta)[$nombre$]
+  #v(2pt)
+  #text(font: serif, size: 17pt, style: "italic", fill: ladrillo)[$linea$]
+  #v(20pt)
+  #block(width: 72%)[#set par(justify: false, leading: 0.7em); #text(size: 10.5pt, fill: gris)[$lema$]]
+  #v(34pt)
+  #block(width: 80%)[
+    #grid(columns: (1fr, 1fr), column-gutter: 14pt, row-gutter: 22pt,
+$for(cifras)$
+      cifra([$cifras.valor$], [$cifras.texto$]),
+$endfor$
+    )
+  ]
+  #v(1fr)
+  #image("assets/ornamento.svg", width: 22%)
+  #v(8pt)
+  #text(font: serif, size: 11pt, fill: tinta)[$contacto$]
+  #v(2pt)
+  #text(font: serif, size: 10pt, fill: ladrillo)[$fecha$]
+  #v(10pt)
+  #block(width: 64%)[#set par(justify: false); #text(size: 7.8pt, fill: gris)[$aviso$]]
+  #v(70pt)
+]
+#counter(page).update(1)
+
+$body$

@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="430" viewBox="0 0 1200 430"><title>Benjamín Esponda García · Ai Portfolio</title>
+<rect x="0" y="0" width="1200" height="430" rx="18" fill="#F4EBDD"/>
+<rect x="18" y="18" width="1164" height="394" rx="6" fill="none" stroke="#A3452E" stroke-width="2"/>
+<rect x="27" y="27" width="1146" height="376" rx="3" fill="none" stroke="#A3452E" stroke-width="0.8"/>
+<g transform="translate(27,27)"><path d="M6,6 H70 M6,6 V70" stroke="#A3452E" stroke-width="1.6" fill="none"/>
+<path d="M14,14 H44 M14,14 V44" stroke="#A3452E" stroke-width="0.8" fill="none"/>
+<path d="M6,0 L12,6 L6,12 L0,6 Z" fill="#A3452E"/>
+<path d="M22,18.8 L25.2,22 L22,25.2 L18.8,22 Z" fill="#A3452E"/>
+<circle cx="70" cy="6" r="2.4" fill="#A3452E"/>
+<circle cx="6" cy="70" r="2.4" fill="#A3452E"/></g>
+<g transform="translate(1173,27) scale(-1,1)"><path d="M6,6 H70 M6,6 V70" stroke="#A3452E" stroke-width="1.6" fill="none"/>
+<path d="M14,14 H44 M14,14 V44" stroke="#A3452E" stroke-width="0.8" fill="none"/>
+<path d="M6,0 L12,6 L6,12 L0,6 Z" fill="#A3452E"/>
+<path d="M22,18.8 L25.2,22 L22,25.2 L18.8,22 Z" fill="#A3452E"/>
+<circle cx="70" cy="6" r="2.4" fill="#A3452E"/>
+<circle cx="6" cy="70" r="2.4" fill="#A3452E"/></g>
+<g transform="translate(27,403) scale(1,-1)"><path d="M6,6 H70 M6,6 V70" stroke="#A3452E" stroke-width="1.6" fill="none"/>
+<path d="M14,14 H44 M14,14 V44" stroke="#A3452E" stroke-width="0.8" fill="none"/>
+<path d="M6,0 L12,6 L6,12 L0,6 Z" fill="#A3452E"/>
+<path d="M22,18.8 L25.2,22 L22,25.2 L18.8,22 Z" fill="#A3452E"/>
+<circle cx="70" cy="6" r="2.4" fill="#A3452E"/>
+<circle cx="6" cy="70" r="2.4" fill="#A3452E"/></g>
+<g transform="translate(1173,403) scale(-1,-1)"><path d="M6,6 H70 M6,6 V70" stroke="#A3452E" stroke-width="1.6" fill="none"/>
+<path d="M14,14 H44 M14,14 V44" stroke="#A3452E" stroke-width="0.8" fill="none"/>
+<path d="M6,0 L12,6 L6,12 L0,6 Z" fill="#A3452E"/>
+<path d="M22,18.8 L25.2,22 L22,25.2 L18.8,22 Z" fill="#A3452E"/>
+<circle cx="70" cy="6" r="2.4" fill="#A3452E"/>
+<circle cx="6" cy="70" r="2.4" fill="#A3452E"/></g>
+<text x="600" y="88" font-family="'Avenir Next', Avenir, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="15" font-weight="600" font-style="normal" fill="#A3452E" text-anchor="middle" letter-spacing="5">AI PORTFOLIO</text>
+<text x="600" y="160" font-family="Baskerville, 'Libre Baskerville', 'Hoefler Text', Georgia, serif" font-size="56" font-weight="normal" font-style="normal" fill="#2E241D" text-anchor="middle">Benjamín Esponda García</text>
+<text x="600" y="205" font-family="Baskerville, 'Libre Baskerville', 'Hoefler Text', Georgia, serif" font-size="25" font-weight="normal" font-style="italic" fill="#A3452E" text-anchor="middle">Corporate and energy lawyer who builds with AI</text>
+<line x1="450" y1="236" x2="578" y2="236" stroke="#A3452E" stroke-width="1.1"/>
+<line x1="622" y1="236" x2="750" y2="236" stroke="#A3452E" stroke-width="1.1"/>
+<circle cx="450" cy="236" r="2.4" fill="#A3452E"/>
+<circle cx="750" cy="236" r="2.4" fill="#A3452E"/>
+<path d="M585,232.8 L588.2,236 L585,239.2 L581.8,236 Z" fill="#A3452E"/>
+<path d="M615,232.8 L618.2,236 L615,239.2 L611.8,236 Z" fill="#A3452E"/>
+<path d="M600,227.5 L608.5,236 L600,244.5 L591.5,236 Z" fill="none" stroke="#A3452E" stroke-width="1.2"/>
+<path d="M600,231.8 L604.2,236 L600,240.2 L595.8,236 Z" fill="#A3452E"/>
+<text x="600" y="274" font-family="'Avenir Next', Avenir, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="16.5" font-weight="normal" font-style="normal" fill="#6E5D50" text-anchor="middle">Claude Code plugins · legal RAG · n8n workflows · data pipelines · websites and video</text>
+<rect x="90" y="304" width="240" height="70" rx="8" fill="#FBF7F0" stroke="#D9C4A3" stroke-width="1.2"/>
+<path d="M210.0,299.5 L214.5,304 L210.0,308.5 L205.5,304 Z" fill="#A3452E"/>
+<text x="210.0" y="340" font-family="Baskerville, 'Libre Baskerville', 'Hoefler Text', Georgia, serif" font-size="28" font-weight="normal" font-style="normal" fill="#A3452E" text-anchor="middle">1</text>
+<text x="210.0" y="361" font-family="'Avenir Next', Avenir, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="13.5" font-weight="normal" font-style="normal" fill="#6E5D50" text-anchor="middle">legal-tech product on sale</text>
+<rect x="350" y="304" width="240" height="70" rx="8" fill="#FBF7F0" stroke="#D9C4A3" stroke-width="1.2"/>
+<path d="M470.0,299.5 L474.5,304 L470.0,308.5 L465.5,304 Z" fill="#A3452E"/>
+<text x="470.0" y="340" font-family="Baskerville, 'Libre Baskerville', 'Hoefler Text', Georgia, serif" font-size="28" font-weight="normal" font-style="normal" fill="#A3452E" text-anchor="middle">374</text>
+<text x="470.0" y="361" font-family="'Avenir Next', Avenir, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="13.5" font-weight="normal" font-style="normal" fill="#6E5D50" text-anchor="middle">energy-law instruments indexed</text>
+<rect x="610" y="304" width="240" height="70" rx="8" fill="#FBF7F0" stroke="#D9C4A3" stroke-width="1.2"/>
+<path d="M730.0,299.5 L734.5,304 L730.0,308.5 L725.5,304 Z" fill="#A3452E"/>
+<text x="730.0" y="340" font-family="Baskerville, 'Libre Baskerville', 'Hoefler Text', Georgia, serif" font-size="28" font-weight="normal" font-style="normal" fill="#A3452E" text-anchor="middle">560K+</text>
+<text x="730.0" y="361" font-family="'Avenir Next', Avenir, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="13.5" font-weight="normal" font-style="normal" fill="#6E5D50" text-anchor="middle">public contracts analyzed</text>
+<rect x="870" y="304" width="240" height="70" rx="8" fill="#FBF7F0" stroke="#D9C4A3" stroke-width="1.2"/>
+<path d="M990.0,299.5 L994.5,304 L990.0,308.5 L985.5,304 Z" fill="#A3452E"/>
+<text x="990.0" y="340" font-family="Baskerville, 'Libre Baskerville', 'Hoefler Text', Georgia, serif" font-size="28" font-weight="normal" font-style="normal" fill="#A3452E" text-anchor="middle">25+</text>
+<text x="990.0" y="361" font-family="'Avenir Next', Avenir, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="13.5" font-weight="normal" font-style="normal" fill="#6E5D50" text-anchor="middle">projects built in 2026</text>
+</svg>
