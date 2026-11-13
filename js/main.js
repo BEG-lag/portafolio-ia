@@ -398,7 +398,7 @@
     });
 
     /* 10. LEGAL: filas con barrido */
-    gsap.from('.matter', { opacity: 0, x: 60, duration: 0.8, ease: 'power3.out', stagger: 0.07, scrollTrigger: once('.legal__list', 'top 80%') });
+    gsap.from('.legal__gen > div', { opacity: 0, x: 60, duration: 0.8, ease: 'power3.out', stagger: 0.1, scrollTrigger: once('.legal__gen', 'top 80%') });
 
     /* 11. ESTUDIO: parallax de sitios, cabezal del video, pasos de Reels */
     if (desk) {

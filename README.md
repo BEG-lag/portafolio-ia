@@ -169,19 +169,10 @@ Schedule (Mon to Fri, 8:30) → HTTP Request (today's index) → HTML (title, ag
 
 ## 8. Legal and regulatory work built with AI
 
-All matters are anonymized.
+For confidentiality, I don't detail each matter or its clients.
 
-| Matter | What I delivered | How AI was used |
-|:-----|:--------|:-------|
-| Saudi Arabia market entry for three Mexican energy contractors (pipelines, industrial construction, offshore fire protection) | Company audits and entry routes: which business line, which entry door, and what blocks it today. Key finding: the obstacle was rarely demand; it was missing certifications or an intermediary model that foreign technology owners can bypass by selling directly in the Gulf | Research with official sources downloaded by category; every data point with source and cut-off date; one Saudi regulatory framework reused across the three files; generator scripts rebuild the PDFs |
-| Beef exports to Saudi Arabia (meat-processing group, southeast Mexico) | Regulatory route (food authority, halal certification, Mexican sanitary agency), market presentations for Saudi Arabia and Asia, and direct inquiries to authorities in both countries | Research and drafting with Claude; a reusable research prompt for open items |
-| 10-year petroleum services contract with a Central American energy ministry | Obligations map, critical deadlines, internal compliance, operational alerts and a review of the client's own analysis of the contract | Structured extraction of the contract into a project context file; deliverables in Word |
-| Advertising compliance guide for consumer health products (global company) | Checked every cited source (health authority guidance, official standards, industry codes), 19 recommendations, and version 3 of the guide with tracked changes and 8 validation comments | Official texts downloaded and converted to plain text for cross-checking; report with traffic lights by section |
-| Institutional response from a state government agency to an international hospitality company | Three versions of the letter under strict drafting rules: no admissions, no apologies, no offers, no restricted topics | Drafting rules written as constraints; one script rebuilds the three deliverables |
-| Due diligence on a fuel marketing permit | Verified the permit, its resolution, electronic signature and QR code, and the tax authority's public registries; one-page summary | Source verification and a one-pager in HTML and PDF |
-| Trademark viability opinion for a law firm brand | Preliminary registrability opinion under the Industrial Property Law | Drafted with my own trademark plugin |
-| Fuel trader's pitch to Colombia's hydrocarbons agency | Critical analysis of a 33-slide institutional pitch | Analysis with Claude over the client's deck |
-| Technical note on AI in the energy sector for the Mexican Senate | Technical note and cover letter to a senator | Research and drafting with Claude; Markdown to PDF |
+- **What kind of matters.** Energy, international trade, regulatory compliance, contracts and industrial property, for private companies and public entities in Mexico and abroad.
+- **How I use AI.** I research with downloaded official sources, and every data point carries its source and cut-off date. I extract contracts into context files, write drafting rules as constraints and generate the deliverables with scripts. The analysis and the judgment are mine.
 
 <p align="center"><img src="assets/ornamento.svg" width="220" alt=""></p>
 

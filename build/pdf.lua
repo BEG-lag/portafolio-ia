@@ -6,6 +6,7 @@
 -- 4. Convierte en texto los enlaces internos de GitHub (anclas y README).
 -- 5. Pone en verde la frase "¿Por qué BeCa?".
 -- 6. Cambia el GIF de BeCa por la tira de cuadros y el diagrama por su versión oscura.
+-- 7. El párrafo que sigue al titular no se queda solo al pie de una página: va pegado a lo que sigue.
 
 local function a_typst(inlines)
   local s = pandoc.write(pandoc.Pandoc({ pandoc.Plain(inlines) }), "typst")
@@ -37,7 +38,7 @@ end
 
 function Pandoc(doc)
   local titulares = doc.meta.titulares or {}
-  local blocks, started, salta_lista = {}, false, false
+  local blocks, started, salta_lista, pega = {}, false, false, false
   for _, b in ipairs(doc.blocks) do
     if not started and b.t == "Header" then started = true end
     if started then
@@ -47,6 +48,7 @@ function Pandoc(doc)
         if n then
           local t = titulares[n]
           table.insert(blocks, titular(t and t or resto))
+          pega = true
         elseif #blocks == 1 then
           -- "Contenido": titular propio y, en lugar de la lista, el índice
           if doc.meta["titular-indice"] then table.insert(blocks, titular(doc.meta["titular-indice"])) end
@@ -55,7 +57,13 @@ function Pandoc(doc)
         end
       elseif salta_lista and (b.t == "OrderedList" or b.t == "BulletList") then
         salta_lista = false
+      elseif pega and b.t == "Para" then
+        pega = false
+        table.insert(blocks, pandoc.RawBlock("typst", "#block(sticky: true)["))
+        table.insert(blocks, b)
+        table.insert(blocks, pandoc.RawBlock("typst", "]"))
       else
+        pega = false
         table.insert(blocks, b)
       end
     end

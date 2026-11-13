@@ -169,19 +169,10 @@ Schedule (lun a vie, 8:30) → HTTP Request (índice del día) → HTML (título
 
 ## 8. Trabajo legal y regulatorio hecho con IA
 
-Todos los asuntos están anonimizados.
+Por confidencialidad no detallo cada asunto ni a sus clientes.
 
-| Asunto | Qué entregué | Cómo se usó la IA |
-|:-----|:--------|:-------|
-| Entrada a Arabia Saudita de tres contratistas mexicanos del sector energético (ductos, construcción industrial, sistemas contra incendio costa afuera) | Auditorías de empresa y rutas de entrada: por cuál línea de negocio, por cuál puerta y qué la detiene hoy. Hallazgo clave: el obstáculo casi nunca fue la demanda, sino certificaciones faltantes o un modelo de intermediación que el dueño extranjero de la tecnología puede saltarse vendiendo directo en el Golfo | Investigación con fuentes oficiales descargadas por categoría; cada dato con fuente y fecha de corte; un mismo marco regulatorio saudita reutilizado en los tres expedientes; scripts que regeneran los PDF |
-| Exportación de carne de bovino a Arabia Saudita (grupo cárnico del sureste) | Ruta regulatoria (autoridad sanitaria saudita, certificación halal, SENASICA), presentaciones de mercado para Arabia Saudita y Asia, y consultas directas a autoridades de ambos países | Investigación y redacción con Claude; un prompt reutilizable para investigar pendientes |
-| Contrato de servicios petroleros a 10 años con un ministerio de energía centroamericano | Mapa de obligaciones, plazos críticos, compliance interno, alertas operativas y observaciones al análisis del propio cliente | Extracción estructurada del contrato a un archivo de contexto; entregables en Word |
-| Guía de cumplimiento publicitario para productos de salud al consumidor (empresa global) | Verificación de cada fuente citada (guías de COFEPRIS, NOM, códigos de la industria), 19 recomendaciones y versión 3 de la guía con control de cambios y 8 comentarios de validación | Textos oficiales descargados y convertidos a texto plano para cotejo; reporte con semáforo por sección |
-| Respuesta institucional de una dependencia estatal a una cadena hotelera internacional | Tres versiones de la carta bajo reglas estrictas de redacción: no admitir, no disculparse, no ofrecer, no tocar temas vedados | Reglas de redacción escritas como restricciones; un script regenera los tres entregables |
-| Due diligence de un permiso de comercialización de petrolíferos | Verificación del permiso, su resolución, la firma electrónica y el QR, y los padrones públicos del SAT; one-pager | Verificación de fuentes y one-pager en HTML y PDF |
-| Dictamen de viabilidad de marca para un despacho | Dictamen preliminar de registrabilidad conforme a la LFPPI | Hecho con mi propio plugin de marcas |
-| Propuesta de una comercializadora de combustibles a la ANH de Colombia | Análisis crítico de una presentación institucional de 33 láminas | Análisis con Claude sobre la presentación |
-| Nota técnica sobre IA en el sector energético para el Senado de la República | Nota técnica y carta de presentación a un senador | Investigación y redacción con Claude; Markdown a PDF |
+- **Qué tipo de asuntos.** Energía, comercio exterior, cumplimiento regulatorio, contratos y propiedad industrial, para empresas privadas y entidades públicas en México y en el extranjero.
+- **Cómo uso la IA.** Investigo con fuentes oficiales descargadas y cada dato lleva su fuente y su fecha de corte. Extraigo los contratos a archivos de contexto, escribo las reglas de redacción como restricciones y genero los entregables con scripts. El análisis y el criterio son míos.
 
 <p align="center"><img src="assets/ornamento.svg" width="220" alt=""></p>
 
