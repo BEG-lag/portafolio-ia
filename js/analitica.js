@@ -1,11 +1,15 @@
 // Google Analytics 4 de pivotek.mx (chat SEO). Archivo propio porque la CSP no permite scripts en línea.
 // Eventos y ajustes acordados con el chat Analítica (pivotek/analitica/01-plan-de-medicion.md, 5.2 y 5.3).
+// GA4 sólo se carga con consentimiento ("aceptadas") del banner de /js/consentimiento.js (chat Web, opción A de Legal).
 (function () {
   if (location.hostname !== 'pivotek.mx') return; // fuera: vistas previas de Vercel y localhost
 
   var ID = 'G-0BEBP5SK25';
   var idioma = (document.documentElement.lang || '').indexOf('en') === 0 ? 'en' : 'es';
   var proyectos = { 'concriterio.mx': 'concriterio', 'casalegado.mx': 'casalegado', 'carocomunicando.com': 'carocomunicando' };
+  var CLAVE = 'pivotek-cookies';
+  var VERSION = '2026-11'; // si consentimiento.js expone window.pivotekCookies.version, manda esa
+  var CATORCE_MESES = 36720000; // 425 días: caducidad de _ga en segundos (Legal, 9.5); se renueva con cada visita
   var cargado = false;
 
   function gtag() { window.dataLayer.push(arguments); }
@@ -27,8 +31,9 @@
 
     window.dataLayer = window.dataLayer || [];
     window.gtag = gtag;
-    var config = { allow_google_signals: false, allow_ad_personalization_signals: false };
+    var config = { allow_google_signals: false, allow_ad_personalization_signals: false, cookie_expires: CATORCE_MESES };
     if (interno) config.traffic_type = 'internal';
+    gtag('consent', 'default', { ad_storage: 'denied', ad_user_data: 'denied', ad_personalization: 'denied', analytics_storage: 'granted' });
     gtag('js', new Date());
     gtag('config', ID, config);
 
@@ -62,5 +67,34 @@
     }
   });
 
-  cargar();
+  // ver_seccion (aprobado por Legal con el aviso nuevo): una vez por sección y por carga, cuando la mitad
+  // de la sección, o la mitad de la pantalla, está a la vista. Sólo se manda el id fijo de la sección.
+  if ('IntersectionObserver' in window) {
+    var vistas = {};
+    var observador = new IntersectionObserver(function (entradas) {
+      entradas.forEach(function (en) {
+        var id = en.target.id;
+        if (!cargado || vistas[id] || !en.isIntersecting) return;
+        if (en.intersectionRatio >= 0.5 || en.intersectionRect.height >= window.innerHeight * 0.5) {
+          vistas[id] = true;
+          medir('ver_seccion', { seccion: id, idioma: idioma });
+        }
+      });
+    }, { threshold: [0, 0.1, 0.2, 0.3, 0.4, 0.5] });
+    Array.prototype.forEach.call(document.querySelectorAll('section[id]'), function (sec) {
+      if (/^[a-z0-9-]+$/.test(sec.id)) observador.observe(sec);
+    });
+  }
+
+  try {
+    var version = (window.pivotekCookies && window.pivotekCookies.version) || VERSION;
+    var guardada = JSON.parse(localStorage.getItem(CLAVE) || 'null');
+    if (guardada && guardada.decision === 'aceptadas' && guardada.version === version) cargar();
+  } catch (e) {
+    // Sin almacenamiento: GA4 sólo se carga si la persona acepta en esta página.
+  }
+
+  document.addEventListener('pivotek:cookies', function (e) {
+    if (e.detail && e.detail.decision === 'aceptadas') cargar();
+  });
 })();
