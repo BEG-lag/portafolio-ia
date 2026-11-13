@@ -56,7 +56,7 @@ Mexico City · beg.empleos@gmail.com · [pivotek.mx](https://pivotek.mx) · [Lin
 | AI marketing | More than a dozen marketing and creative skills applied to real campaigns, SEO audits and ad copy ([§9.5](#95-marketing-skills-and-how-i-applied-them)) |
 | Integrations (MCP connectors) | Stripe, Gmail, Google Calendar and Drive, Vercel, Higgsfield, Apify, Canva and more than 10,000 browser actions ([§10](#10-connectors-how-i-automate-query-and-generate)) |
 | Judgment and quality | Human approval gates, anti-fraud rules, labeled uncertainty, golden test sets and reproducible builds ([§14](#14-how-i-work-with-ai)) |
-| Continuous learning and community | Law degree (Ibero), Master's in Business Law (Anáhuac) and MBA (EAE Madrid); daily use of AI and of new tools as soon as they launch; free courses from Anthropic and Harvey; the Tododeia community; Claude and Grok Bot talks and workshops; networking dinners with CTOs ([§13](#13-learning-and-community)) |
+| Continuous learning and community | Law degree (Ibero), Master's in Business Law (Anáhuac) and MBA (EAE Madrid); daily use of AI and of new tools as soon as they launch; free courses from Anthropic and Harvey; live and pre-recorded courses from tech influencers and digital schools; Claude and Grok Bot talks and workshops; networking dinners with CTOs ([§13](#13-learning-and-community)) |
 
 <p align="center"><img src="assets/ornamento.svg" width="220" alt=""></p>
 
@@ -272,6 +272,7 @@ Plus two external agents (Grok Bot and Muse, [§9.4](#94-social-media-run-by-ai-
 
 - **Second brain on Obsidian and Claude Code.** One note per project, person and official document; every working session leaves a log entry; a scheduled task reads my calendar and email every Sunday (read-only) and updates the vault; hourly backup with launchd. This portfolio was assembled from it.
 - **Personal multi-agent system.** Nine specialist roles read one shared record, pass typed signals instead of prose and follow a declared precedence rule when they disagree. Personal use; no data shown.
+- **My own internal CRMs.** Built on the architecture of [auto-crm](https://github.com/Hainrixz/auto-crm), an open-source local CRM with Next.js, SQLite and Claude Code that adapts to each business.
 
 ### BeCa, my desktop companion
 
@@ -323,8 +324,8 @@ I use AI every day and I stay at the forefront of new AI tools and features: I t
 
 - **Anthropic's free online courses** (Anthropic Academy).
 - **Harvey's free online courses** on AI for legal work.
-- **Tododeia community** (Juan Lombana and Enrique Rocha): videos and courses. I also use tools from the community, such as Motion Architect and Video Editor Architect.
-- **Claude talks and workshops in Mexico**, such as Claude for AI Engineering (Claude Community CDMX, October 2026). There I summarized the five talks (tool use, MCP, context engineering) and turned the notes into an agent that answers as each speaker would.
+- **Live and pre-recorded courses** from the community of tech influencers such as Juan Lombana and Enrique Rocha, and from digital schools such as Coderhouse and OrangutanAI.
+- **Claude talks and workshops in Mexico**, such as Claude for AI Engineering (Claude Community CDMX, October 2026), Claude for Legal, Claude for Finance, Claude Community House, Claude for Revenue, Claude for Games, Claude at the Chamber of Deputies and Claude at the Mexican Senate, among others. At Claude for AI Engineering I summarized the five talks (tool use, MCP, context engineering) and turned the notes into an agent that answers as each speaker would.
 - **Grok Bot talks and workshops.**
 - **Networking dinners with CTOs** of large and mid-size companies.
 - **n8n automation course** (in progress): the daily regulatory digest in [§7](#7-daily-regulatory-digest-from-the-official-gazette-n8n) was the first deliverable.

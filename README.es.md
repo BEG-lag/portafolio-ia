@@ -56,7 +56,7 @@ Ciudad de México · beg.empleos@gmail.com · [pivotek.mx](https://pivotek.mx) �
 | Marketing con IA | Más de una docena de skills de marketing y creatividad aplicados a campañas reales, auditorías SEO y textos de anuncios ([§9.5](#95-skills-de-marketing-y-cómo-los-apliqué)) |
 | Integraciones (conectores MCP) | Stripe, Gmail, Google Calendar y Drive, Vercel, Higgsfield, Apify, Canva y más de 10,000 acciones de navegador ([§10](#10-conectores-cómo-automatizo-consulto-y-genero)) |
 | Criterio y calidad | Compuertas de aprobación humana, reglas antifraude, incertidumbre etiquetada, pruebas golden y construcción reproducible ([§14](#14-cómo-trabajo-con-ia)) |
-| Aprendizaje continuo y comunidad | Licenciatura en Derecho (Ibero), Maestría en Derecho de la Empresa (Anáhuac) y MBA (EAE Madrid); uso diario de la IA y de las herramientas nuevas en cuanto salen; cursos gratuitos de Anthropic y Harvey; la comunidad Tododeia; pláticas y workshops de Claude y Grok Bot; cenas de networking con CTOs ([§13](#13-formación-y-comunidad)) |
+| Aprendizaje continuo y comunidad | Licenciatura en Derecho (Ibero), Maestría en Derecho de la Empresa (Anáhuac) y MBA (EAE Madrid); uso diario de la IA y de las herramientas nuevas en cuanto salen; cursos gratuitos de Anthropic y Harvey; cursos en vivo y pregrabados de tech influencers y escuelas digitales; pláticas y workshops de Claude y Grok Bot; cenas de networking con CTOs ([§13](#13-formación-y-comunidad)) |
 
 <p align="center"><img src="assets/ornamento.svg" width="220" alt=""></p>
 
@@ -272,6 +272,7 @@ Además, dos agentes externos (Grok Bot y Muse, [§9.4](#94-redes-sociales-opera
 
 - **Segundo cerebro en Obsidian y Claude Code.** Una nota por proyecto, persona y documento oficial; cada sesión de trabajo deja su entrada en la bitácora; una tarea programada lee mi calendario y mi correo cada domingo (sólo lectura) y actualiza la bóveda; respaldo cada hora con launchd. Este portafolio se armó a partir de ahí.
 - **Sistema multiagente personal.** Nueve roles especializados leen un mismo expediente, se pasan señales tipadas en lugar de prosa y siguen una regla de precedencia declarada cuando se contradicen. Uso personal; no se muestran datos.
+- **CRMs internos propios.** Los armé sobre la arquitectura de [auto-crm](https://github.com/Hainrixz/auto-crm), un CRM local y open-source con Next.js, SQLite y Claude Code que se adapta a cada negocio.
 
 ### BeCa, mi acompañante de escritorio
 
@@ -323,8 +324,8 @@ Uso la IA todos los días y me mantengo a la vanguardia de las herramientas y fu
 
 - **Cursos gratuitos en línea de Anthropic** (Anthropic Academy).
 - **Cursos gratuitos en línea de Harvey** sobre IA para el trabajo legal.
-- **Comunidad Tododeia** (Juan Lombana y Enrique Rocha): videos y cursos. También uso herramientas de la comunidad, como Motion Architect y Video Editor Architect.
-- **Pláticas y workshops de Claude en México**, como Claude for AI Engineering (Claude Community CDMX, octubre de 2026). Ahí resumí las cinco ponencias (uso de herramientas, MCP, ingeniería de contexto) y convertí las notas en un agente que responde como lo haría cada ponente.
+- **Cursos en vivo y pregrabados** de la comunidad de tech influencers como Juan Lombana y Enrique Rocha, así como de escuelas digitales como Coderhouse y OrangutanAI.
+- **Pláticas y workshops de Claude en México**, como Claude for AI Engineering (Claude Community CDMX, octubre de 2026), Claude for Legal, Claude for Finance, Claude Community House, Claude for Revenue, Claude for Games, Claude en la Cámara de Diputados y Claude en el Senado de la República, entre otros. En Claude for AI Engineering resumí las cinco ponencias (uso de herramientas, MCP, ingeniería de contexto) y convertí las notas en un agente que responde como lo haría cada ponente.
 - **Pláticas y workshops de Grok Bot.**
 - **Cenas de networking con CTOs** de empresas grandes y medianas.
 - **Curso de automatización con n8n** (en curso): el resumen diario del DOF de la [§7](#7-resumen-diario-del-dof-para-el-sector-energético-n8n) fue la primera entrega.
