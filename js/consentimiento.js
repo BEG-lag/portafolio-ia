@@ -107,6 +107,7 @@
     var previa = decision();
     guardar(dec);
     banner.hidden = true;
+    if (dec === 'aceptadas') window['ga-disable-' + ID_GA] = false; // por si esta página lo había apagado
     try {
       document.dispatchEvent(new CustomEvent('pivotek:cookies', { detail: { decision: dec } }));
     } catch (e) {}
