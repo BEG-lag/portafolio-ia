@@ -2,7 +2,7 @@
 
 Uso: python3 build/generar_assets.py   (desde la raíz del repo)
 Crea en assets/: ornamento.svg, esquina.svg, portada-{en,es}.svg,
-arquitectura-cierre-n8n-{en,es}.svg y, si existe el arte de BeCa,
+arquitectura-cierre-n8n-{en,es}.svg (README), arquitectura-cierre-n8n-{en,es}-oscuro.svg (PDF) y, si existe el arte de BeCa,
 beca-jugando-con-clawd.gif y beca-jugando-con-clawd-tira.png.
 """
 import os
@@ -165,59 +165,93 @@ def caja(x, y, w, h, fill=ARENA_50, stroke=ARENA_300, r=10, sw=1.2):
     return f'<rect x="{x}" y="{y}" width="{w}" height="{h}" rx="{r}" fill="{fill}" stroke="{stroke}" stroke-width="{sw}"/>'
 
 
-def arquitectura(L):
-    d = T[L]
+# Paletas del diagrama: "arena" para el README y "oscuro" (la de pivotek.mx) para el PDF
+TEMAS = {
+    "arena": dict(fondo="#FFFCF7", borde_fondo=ARENA_200, caja=ARENA_50, borde_caja=ARENA_300, panel="#FFFFFF",
+                  acento=LADRILLO, acento_hondo=LADRILLO_HONDO, destacado=ARENA_100, texto=TINTA, gris=GRIS,
+                  sans=SANS, titulo=(SERIF, "normal", "normal", 23), etiqueta=(SANS, "600"),
+                  subtitulo=(SERIF, "normal", 15), check=("#FFFFFF", 2)),
+    "oscuro": dict(fondo="#11141b", borde_fondo="#2a2d33", caja="#191d27", borde_caja="#33373f", panel="#0d0f14",
+                   acento="#cfff45", acento_hondo="#cfff45", destacado="#222a17", texto="#eceee6", gris="#969dab",
+                   sans="Inter, 'Helvetica Neue', Arial, sans-serif",
+                   titulo=("Inter, 'Helvetica Neue', Arial, sans-serif", "700", "normal", 22),
+                   etiqueta=("'JetBrains Mono', Menlo, monospace", "normal"),
+                   subtitulo=("'Cormorant Garamond', Georgia, serif", "italic", 19), check=("#191d27", 3)),
+}
+
+
+def arquitectura(L, tema="arena"):
+    d, P = T[L], TEMAS[tema]
+    oscuro = tema == "oscuro"
+
+    def cj(x, y, w, h, fill=None, stroke=None, r=10, sw=1.2):
+        return caja(x, y, w, h, fill or P["caja"], stroke or P["borde_caja"], r, sw)
+
+    def tx(x, y, s, size=11, weight="normal", fill=None, anchor="start", family=None, style="normal", spacing=0):
+        return t(x, y, s, size, weight, fill or P["texto"], anchor, family or P["sans"], style, spacing)
+
+    def vineta(cx, cy):
+        return f'<circle cx="{cx}" cy="{cy}" r="2.6" fill="{P["acento"]}"/>' if oscuro else rombo(cx, cy, 3.3)
+
+    tf, tw, ts, tsize = P["titulo"]
+    ef, ew = P["etiqueta"]
+    sf, ss, ssize = P["subtitulo"]
     o = ['<defs><marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" '
-         f'orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="{GRIS}"/></marker></defs>',
-         caja(0, 0, 1000, 650, fill="#FFFCF7", stroke=ARENA_200, r=14),
-         t(40, 46, d["title"], 23, "normal", TINTA, family=SERIF),
-         t(40, 70, d["sub"], 12.5, fill=GRIS),
-         t(40, 99, d["in"].upper(), 11, "600", LADRILLO, spacing=1.5),
-         t(750, 99, d["out"].upper(), 11, "600", LADRILLO, spacing=1.5)]
+         f'orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="{P["gris"]}"/></marker></defs>',
+         cj(0, 0, 1000, 650, fill=P["fondo"], stroke=P["borde_fondo"], r=14),
+         tx(40, 46, d["title"], tsize, tw, family=tf, style=ts),
+         tx(40, 70, d["sub"], 12.5, fill=P["gris"]),
+         tx(40, 99, d["in"].upper(), 11, ew, P["acento"], family=ef, spacing=1.5),
+         tx(750, 99, d["out"].upper(), 11, ew, P["acento"], family=ef, spacing=1.5)]
     ys = [110, 184, 258, 332]
     for (a, b), y in zip(d["inputs"], ys):
-        o += [caja(40, y, 210, 56), t(56, y + 24, a, 13, "600"), t(56, y + 42, b, 10.5, fill=GRIS),
-              f'<line x1="250" y1="{y+28}" x2="288" y2="{y+28}" stroke="{GRIS}" stroke-width="1.5" marker-end="url(#ar)"/>']
+        o += [cj(40, y, 210, 56), tx(56, y + 24, a, 13, "600"), tx(56, y + 42, b, 10.5, fill=P["gris"]),
+              f'<line x1="250" y1="{y+28}" x2="288" y2="{y+28}" stroke="{P["gris"]}" stroke-width="1.5" marker-end="url(#ar)"/>']
     for (a, b), y in zip(d["outputs"], ys):
-        o += [caja(750, y, 210, 56), t(766, y + 24, a, 13, "600"), t(766, y + 42, b, 10.5, fill=GRIS),
-              f'<line x1="712" y1="{y+28}" x2="748" y2="{y+28}" stroke="{GRIS}" stroke-width="1.5" marker-end="url(#ar)"/>']
-    o += [caja(290, 92, 420, 298, fill="#FFFFFF", stroke=LADRILLO, r=14, sw=1.8),
-          t(310, 113, d["container"], 12, "600", LADRILLO),
-          caja(310, 122, 380, 50, fill=ARENA_100, stroke=LADRILLO),
-          t(500, 143, d["record"][0], 13, "600", anchor="middle"),
-          t(500, 161, d["record"][1], 10.5, fill=GRIS, anchor="middle")]
+        o += [cj(750, y, 210, 56), tx(766, y + 24, a, 13, "600"), tx(766, y + 42, b, 10.5, fill=P["gris"]),
+              f'<line x1="712" y1="{y+28}" x2="748" y2="{y+28}" stroke="{P["gris"]}" stroke-width="1.5" marker-end="url(#ar)"/>']
+    o += [cj(290, 92, 420, 298, fill=P["panel"], stroke=P["acento"], r=14, sw=1.8),
+          tx(310, 113, d["container"], 12, "600", P["acento"]),
+          cj(310, 122, 380, 50, fill=P["destacado"], stroke=P["acento"]),
+          tx(500, 143, d["record"][0], 13, "600", anchor="middle"),
+          tx(500, 161, d["record"][1], 10.5, fill=P["gris"], anchor="middle")]
     for i, ((title, lines), x) in enumerate(zip(d["mods"], [310, 440, 570])):
         cx = x + 60
-        o += [f'<line x1="{cx}" y1="172" x2="{cx}" y2="188" stroke="{LADRILLO}" stroke-width="1.5" marker-end="url(#ar)"/>',
-              caja(x, 190, 120, 112), t(cx, 210, title, 12, "600", anchor="middle")]
+        o += [f'<line x1="{cx}" y1="172" x2="{cx}" y2="188" stroke="{P["acento"]}" stroke-width="1.5" marker-end="url(#ar)"/>',
+              cj(x, 190, 120, 112), tx(cx, 210, title, 12, "600", anchor="middle")]
         for j, ln in enumerate(lines):
-            o.append(t(cx, 228 + j * 14, ln, 10.5, fill=GRIS, anchor="middle"))
+            o.append(tx(cx, 228 + j * 14, ln, 10.5, fill=P["gris"], anchor="middle"))
         if i == 1:
-            o += [caja(x + 10, 280, 100, 16, fill=ARENA_100, stroke=LADRILLO, r=8, sw=1),
-                  t(cx, 292, d["pill"], 9.5, "600", LADRILLO, "middle")]
+            o += [cj(x + 10, 280, 100, 16, fill=P["destacado"], stroke=P["acento"], r=8, sw=1),
+                  tx(cx, 292, d["pill"], 9.5, "600", P["acento"], "middle")]
     g, lg = d["gate"], d["logs"]
-    o += [caja(310, 316, 250, 60, fill=ARENA_100, stroke=LADRILLO), t(435, 337, g[0], 12, "600", anchor="middle"),
-          t(435, 353, g[1][0], 10.5, fill=GRIS, anchor="middle"), t(435, 367, g[1][1], 10.5, fill=GRIS, anchor="middle"),
-          caja(570, 316, 120, 60), t(630, 337, lg[0], 12, "600", anchor="middle"),
-          t(630, 353, lg[1][0], 10.5, fill=GRIS, anchor="middle"), t(630, 367, lg[1][1], 10.5, fill=GRIS, anchor="middle")]
-    o += [caja(40, 412, 450, 190), t(60, 441, d["a_title"], 15, "normal", LADRILLO_HONDO, family=SERIF)]
+    o += [cj(310, 316, 250, 60, fill=P["destacado"], stroke=P["acento"]), tx(435, 337, g[0], 12, "600", anchor="middle"),
+          tx(435, 353, g[1][0], 10.5, fill=P["gris"], anchor="middle"), tx(435, 367, g[1][1], 10.5, fill=P["gris"], anchor="middle"),
+          cj(570, 316, 120, 60), tx(630, 337, lg[0], 12, "600", anchor="middle"),
+          tx(630, 353, lg[1][0], 10.5, fill=P["gris"], anchor="middle"), tx(630, 367, lg[1][1], 10.5, fill=P["gris"], anchor="middle")]
+    o += [cj(40, 412, 450, 190), tx(60, 441, d["a_title"], ssize, "normal", P["acento_hondo"], family=sf, style=ss)]
     for i, s in enumerate(d["a"]):
         y = 467 + i * 21
-        o += [caja(60, y - 10, 11, 11, fill="#FFFFFF", stroke=LADRILLO, r=2, sw=1.4),
-              f'<path d="M62.5,{y-4.5} L65,{y-2} L69,{y-7.5}" fill="none" stroke="{LADRILLO}" stroke-width="1.6"/>',
-              t(80, y, s, 11.5)]
-    o += [caja(510, 412, 450, 190), t(530, 441, d["b_title"], 15, "normal", LADRILLO_HONDO, family=SERIF)]
+        o += [cj(60, y - 10, 11, 11, fill=P["check"][0], stroke=P["acento"], r=P["check"][1], sw=1.4),
+              f'<path d="M62.5,{y-4.5} L65,{y-2} L69,{y-7.5}" fill="none" stroke="{P["acento"]}" stroke-width="1.6"/>',
+              tx(80, y, s, 11.5)]
+    o += [cj(510, 412, 450, 190), tx(530, 441, d["b_title"], ssize, "normal", P["acento_hondo"], family=sf, style=ss)]
     for i, (bul, s) in enumerate(d["b"]):
         y = 467 + i * 21
         if bul:
-            o.append(rombo(534, y - 4, 3.3))
-        o.append(t(546, y, s, 11.5))
-    o += [divisor(880, 622, 70), t(40, 626, d["foot"], 10.5, fill=GRIS)]
+            o.append(vineta(534, y - 4))
+        o.append(tx(546, y, s, 11.5))
+    if oscuro:  # las tres luces del sitio en lugar del ornamento
+        o += [f'<circle cx="{cx}" cy="622" r="4" fill="{c}"/>' for cx, c in ((918, "#cfff45"), (932, "#ffb648"), (946, "#ff5d47"))]
+    else:
+        o.append(divisor(880, 622, 70))
+    o.append(tx(40, 626, d["foot"], 10.5, fill=P["gris"]))
     return svg(1000, 650, "\n".join(o), d["title"])
 
 
 for L in ("en", "es"):
     escribir(f"arquitectura-cierre-n8n-{L}.svg", arquitectura(L))
+    escribir(f"arquitectura-cierre-n8n-{L}-oscuro.svg", arquitectura(L, "oscuro"))
 
 # 4. BeCa jugando con Clawd (GIF animado para GitHub y tira de cuadros para el PDF)
 ARTE = os.path.expanduser("~/Claudecodetodo/axo-acompanante")
