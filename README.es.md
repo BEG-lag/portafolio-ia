@@ -2,7 +2,7 @@
 
 **Abogado corporativo mexicano (energía, hidrocarburos y minería, unos 8 años de práctica) que construye con inteligencia artificial.** Escribo el análisis legal y armo los sistemas alrededor de él y más allá: plugins y agentes en Claude Code, búsqueda sobre texto legal, flujos en n8n, pipelines de datos en Python, sitios web, video y agentes de IA para marketing.
 
-Ciudad de México · beg.empleos@gmail.com · [pivotek.mx](https://pivotek.mx) · Español (nativo), inglés (profesional) · [English version](README.md) · PDF en [`pdf/`](pdf/)
+Ciudad de México · beg.empleos@gmail.com · [pivotek.mx](https://pivotek.mx) · [LinkedIn](https://www.linkedin.com/in/benjamin-esponda-garc%C3%ADa-a743051b2) · Español (nativo), inglés (profesional) · [English version](README.md) · PDF en [`pdf/`](pdf/)
 
 > **Uso la IA todos los días.** Este portafolio es una muestra, no una lista completa: hay proyectos confidenciales y otros que todavía no salen. El trabajo para clientes está anonimizado: se quitaron nombres, cifras y datos que los identifiquen. Nada en este repositorio constituye opinión legal.
 
