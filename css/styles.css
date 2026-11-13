@@ -633,3 +633,4 @@ h4{font-size:1.05rem;line-height:1.25;font-weight:650;letter-spacing:-.01em}
   .pvk__logo{width:min(280px,60%);margin-top:1.5rem}
 }
 .legal h2,.legal h3{max-width:none}
+@media (max-width:760px){.top__nav a[hreflang]{display:inline-flex}}

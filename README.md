@@ -277,7 +277,7 @@ Plus two external agents (Grok Bot and Muse, [§9.4](#94-social-media-run-by-ai-
 
 ![BeCa playing with Clawd, the Claude Code mascot](assets/beca-jugando-con-clawd-animado.png)
 
-BeCa is my cat turned into a sticker-style companion that lives in a small floating window on my Mac. It listens to Claude Code's lifecycle hooks, so I can tell at a glance what Claude is doing without looking at the terminal. Click it once and it waves; click again and it plays with Clawd, Claude Code's mascot, for about four seconds. It runs locally, uses no network and stores no content.
+BeCa is my cat turned into a sticker-style companion that lives in a small floating window on my Mac. It listens to Claude Code's lifecycle hooks, so I can tell at a glance what Claude is doing without looking at the terminal. Click it once and it waves; click again and it plays with Clawd, Claude Code's mascot, for about four seconds. It runs locally, uses no network and stores no content. Why BeCa? To bring a sense of humor to my day-to-day work with AI.
 
 | What Claude Code is doing | Hook | What BeCa does |
 |:-------|:------|:--------|

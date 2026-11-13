@@ -277,7 +277,7 @@ Además, dos agentes externos (Grok Bot y Muse, [§9.4](#94-redes-sociales-opera
 
 ![BeCa jugando con Clawd, la mascota de Claude Code](assets/beca-jugando-con-clawd-animado.png)
 
-BeCa es mi gato convertido en un acompañante en estilo sticker que vive en una ventanita flotante de mi Mac. Escucha los hooks del ciclo de vida de Claude Code, así que de un vistazo sé qué está haciendo Claude sin mirar la terminal. Con un clic saluda; con otro juega unos cuatro segundos con Clawd, la mascota de Claude Code. Corre en local, sin red y sin guardar contenido.
+BeCa es mi gato convertido en un acompañante en estilo sticker que vive en una ventanita flotante de mi Mac. Escucha los hooks del ciclo de vida de Claude Code, así que de un vistazo sé qué está haciendo Claude sin mirar la terminal. Con un clic saluda; con otro juega unos cuatro segundos con Clawd, la mascota de Claude Code. Corre en local, sin red y sin guardar contenido. ¿Por qué BeCa? Para darle un sentido del humor a mi día a día con la IA mientras trabajo.
 
 | Qué hace Claude Code | Hook | Qué hace BeCa |
 |:-------|:------|:--------|
