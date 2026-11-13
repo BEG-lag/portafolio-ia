@@ -56,7 +56,7 @@ Ciudad de México · beg.empleos@gmail.com · [pivotek.mx](https://pivotek.mx) �
 | Marketing con IA | Más de una docena de skills de marketing y creatividad aplicados a campañas reales, auditorías SEO y textos de anuncios ([§9.5](#95-skills-de-marketing-y-cómo-los-apliqué)) |
 | Integraciones (conectores MCP) | Stripe, Gmail, Google Calendar y Drive, Vercel, Higgsfield, Apify, Canva y más de 10,000 acciones de navegador ([§10](#10-conectores-cómo-automatizo-consulto-y-genero)) |
 | Criterio y calidad | Compuertas de aprobación humana, reglas antifraude, incertidumbre etiquetada, pruebas golden y construcción reproducible ([§14](#14-cómo-trabajo-con-ia)) |
-| Aprendizaje continuo y comunidad | Uso diario de la IA y de las herramientas nuevas en cuanto salen; cursos gratuitos de Anthropic y Harvey; la comunidad Tododeia; pláticas y workshops de Claude y Grok Bot; cenas de networking con CTOs ([§13](#13-formación-y-comunidad)) |
+| Aprendizaje continuo y comunidad | Licenciatura en Derecho (Ibero), Maestría en Derecho de la Empresa (Anáhuac) y MBA (EAE Madrid); uso diario de la IA y de las herramientas nuevas en cuanto salen; cursos gratuitos de Anthropic y Harvey; la comunidad Tododeia; pláticas y workshops de Claude y Grok Bot; cenas de networking con CTOs ([§13](#13-formación-y-comunidad)) |
 
 <p align="center"><img src="assets/ornamento.svg" width="220" alt=""></p>
 
@@ -308,6 +308,16 @@ Proyectos propios y servicios de mi firma, cada uno con veredicto y semáforo po
 <p align="center"><img src="assets/ornamento.svg" width="220" alt=""></p>
 
 ## 13. Formación y comunidad
+
+### Formación académica
+
+| Título | Institución | Años |
+|:--------|:-------|:----|
+| Maestría en Derecho de la Empresa (Derecho Corporativo) | Universidad Anáhuac | 2023 a 2025 |
+| Master of Business Administration (MBA), Administración de Empresas | EAE Business School, Madrid, España | 2023 a 2024 |
+| Licenciatura en Derecho | Universidad Iberoamericana, CDMX | 2015 a 2020 |
+
+### Cursos y comunidad
 
 Uso la IA todos los días y me mantengo a la vanguardia de las herramientas y funciones nuevas de IA: las pruebo en trabajo real en cuanto salen.
 

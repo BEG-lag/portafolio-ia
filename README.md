@@ -56,7 +56,7 @@ Mexico City · beg.empleos@gmail.com · [pivotek.mx](https://pivotek.mx) · Span
 | AI marketing | More than a dozen marketing and creative skills applied to real campaigns, SEO audits and ad copy ([§9.5](#95-marketing-skills-and-how-i-applied-them)) |
 | Integrations (MCP connectors) | Stripe, Gmail, Google Calendar and Drive, Vercel, Higgsfield, Apify, Canva and more than 10,000 browser actions ([§10](#10-connectors-how-i-automate-query-and-generate)) |
 | Judgment and quality | Human approval gates, anti-fraud rules, labeled uncertainty, golden test sets and reproducible builds ([§14](#14-how-i-work-with-ai)) |
-| Continuous learning and community | Daily use of AI and of new tools as soon as they launch; free courses from Anthropic and Harvey; the Tododeia community; Claude and Grok Bot talks and workshops; networking dinners with CTOs ([§13](#13-learning-and-community)) |
+| Continuous learning and community | Law degree (Ibero), Master's in Business Law (Anáhuac) and MBA (EAE Madrid); daily use of AI and of new tools as soon as they launch; free courses from Anthropic and Harvey; the Tododeia community; Claude and Grok Bot talks and workshops; networking dinners with CTOs ([§13](#13-learning-and-community)) |
 
 <p align="center"><img src="assets/ornamento.svg" width="220" alt=""></p>
 
@@ -308,6 +308,16 @@ Own ventures and services of my firm, each with a go or no-go verdict and traffi
 <p align="center"><img src="assets/ornamento.svg" width="220" alt=""></p>
 
 ## 13. Learning and community
+
+### Academic background
+
+| Degree | School | Years |
+|:--------|:-------|:----|
+| Master's in Business Law (Maestría en Derecho de la Empresa), corporate law | Universidad Anáhuac | 2023 to 2025 |
+| Master of Business Administration (MBA), business administration | EAE Business School, Madrid, Spain | 2023 to 2024 |
+| Law degree (Licenciatura en Derecho) | Universidad Iberoamericana, Mexico City | 2015 to 2020 |
+
+### Courses and community
 
 I use AI every day and I stay at the forefront of new AI tools and features: I test them on real work as soon as they come out.
 
