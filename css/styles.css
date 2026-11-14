@@ -546,11 +546,17 @@ h4{font-size:1.05rem;line-height:1.25;font-weight:650;letter-spacing:-.01em}
 .acad{margin-top:clamp(4rem,8vw,7rem)}
 .acad__list{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
 .acad__list li{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:1.5rem;display:flex;flex-direction:column;gap:.45rem}
+/* logos de las universidades, en el color del texto (decisión de BEG, 13-11-2026) */
+.acad__logo{height:76px;display:flex;align-items:center;margin-bottom:.9rem}
+.acad__logo img{height:56px;width:auto;max-width:190px;object-fit:contain;object-position:left center}
+.acad__logo--anahuac img{height:76px}
+.acad__logo--eae img{height:44px}
 .acad__y{font-family:var(--mono);font-size:.76rem;letter-spacing:.08em;color:var(--lime);margin-bottom:.8rem}
 .acad__list h4{font-size:clamp(1.25rem,2vw,1.7rem);letter-spacing:-.035em;line-height:1.1}
 .acad__u{font-weight:600}
 .acad__d{color:var(--mut);font-size:.9rem;margin-top:auto;padding-top:.8rem}
 @media (max-width:900px){.acad__list{grid-template-columns:1fr}}
+@media (max-width:620px){.acad__logo{height:64px}.acad__logo img{height:48px}.acad__logo--anahuac img{height:64px}.acad__logo--eae img{height:38px}}
 
 /* ---------- Este soy yo: la foto se abre desde un recuadro ---------- */
 .yo{background:var(--ink)}
