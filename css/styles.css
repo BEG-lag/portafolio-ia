@@ -547,8 +547,10 @@ h4{font-size:1.05rem;line-height:1.25;font-weight:650;letter-spacing:-.01em}
 .acad__list{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
 .acad__list li{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:1.5rem;display:flex;flex-direction:column;gap:.45rem}
 /* logos de las universidades, en el color del texto (decisión de BEG, 13-11-2026) */
-.acad__logo{height:76px;display:flex;align-items:center;margin-bottom:.9rem}
-.acad__logo img{height:56px;width:auto;max-width:190px;object-fit:contain;object-position:left center}
+.acad__logo{height:76px;display:flex;align-items:center;margin-bottom:.9rem;position:relative;align-self:flex-start}
+.acad__logo img{height:56px;width:auto;max-width:190px;object-fit:contain;object-position:left center;clip-path:inset(0 calc(100% - var(--scan,100%)) 0 0)}
+/* barrido al hacer scroll: main.js mueve --scan y --scan-o; sin JS o con movimiento reducido el logo queda completo */
+.acad__logo::after{content:"";position:absolute;top:8%;bottom:8%;left:var(--scan,100%);width:2px;margin-left:-1px;background:var(--lime);box-shadow:0 0 14px 2px rgba(207,255,69,.55);opacity:var(--scan-o,0);pointer-events:none}
 .acad__logo--anahuac img{height:76px}
 .acad__logo--eae img{height:44px}
 .acad__y{font-family:var(--mono);font-size:.76rem;letter-spacing:.08em;color:var(--lime);margin-bottom:.8rem}

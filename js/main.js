@@ -282,6 +282,16 @@
       gsap.from(el.children, { y: 28, opacity: 0, duration: 0.7, ease: 'power3.out', stagger: 0.07, scrollTrigger: once(el) });
     });
 
+    /* logos de las universidades: barrido con línea lima ligado al scroll (escalonado en escritorio) */
+    $$('.acad__logo').forEach(function (el, i) {
+      var off = desk ? i * 6 : 0;
+      gsap.timeline({ scrollTrigger: { trigger: el, start: 'top ' + (88 - off) + '%', end: 'top ' + (56 - off) + '%', scrub: 0.6 } })
+        .fromTo(el, { '--scan': '0%' }, { '--scan': '100%', ease: 'none', duration: 1 }, 0)
+        .fromTo(el, { '--scan-o': 0 }, { '--scan-o': 1, ease: 'none', duration: 0.08 }, 0)
+        .to(el, { '--scan-o': 0, ease: 'none', duration: 0.12 }, 0.88)
+        .fromTo($('img', el), { filter: 'blur(6px)', scale: 1.05, transformOrigin: '0% 50%' }, { filter: 'blur(0px)', scale: 1, ease: 'power1.out', duration: 1 }, 0);
+    });
+
     /* contadores */
     $$('[data-count]').forEach(function (el) {
       var end = +el.dataset.count, o = { v: 0 }, final = el.textContent;
