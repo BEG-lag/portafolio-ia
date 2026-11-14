@@ -7,6 +7,8 @@
 -- 5. Pone en verde la frase "¿Por qué BeCa?".
 -- 6. Cambia el GIF de BeCa por la tira de cuadros y el diagrama por su versión oscura.
 -- 7. El párrafo que sigue al titular no se queda solo al pie de una página: va pegado a lo que sigue.
+-- 8. En la tabla de formación académica, el logo de cada universidad (en claro, como en el sitio)
+--    va arriba de su nombre.
 
 local function a_typst(inlines)
   local s = pandoc.write(pandoc.Pandoc({ pandoc.Plain(inlines) }), "typst")
@@ -101,4 +103,33 @@ function Image(el)
     el.attributes.width = "100%"
   end
   return el
+end
+
+-- Logos de las universidades en la tabla de formación académica (columna "Institución" / "School")
+local LOGOS = {
+  { "Anáhuac", "img/logo-anahuac-claro.png", "24pt" },
+  { "EAE", "img/logo-eae-claro.png", "12.5pt" },
+  { "Iberoamericana", "img/logo-ibero-claro.png", "17pt" },
+}
+
+function Table(tbl)
+  local head = tbl.head.rows[1]
+  if not head or not head.cells[2] then return nil end
+  local h = pandoc.utils.stringify(head.cells[2].contents)
+  if h ~= "Institución" and h ~= "School" then return nil end
+  for _, body in ipairs(tbl.bodies) do
+    for _, row in ipairs(body.body) do
+      local cell = row.cells[2]
+      local txt = pandoc.utils.stringify(cell.contents)
+      for _, l in ipairs(LOGOS) do
+        if txt:find(l[1], 1, true) then
+          local img = pandoc.Image({}, l[2], "")
+          img.attributes.height = l[3]
+          table.insert(cell.contents, 1, pandoc.Plain({ img, pandoc.LineBreak() }))
+          break
+        end
+      end
+    end
+  end
+  return tbl
 end
