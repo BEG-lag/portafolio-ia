@@ -479,9 +479,43 @@ h4{font-size:1.05rem;line-height:1.25;font-weight:650;letter-spacing:-.01em}
 
 /* ============ viabilidad ============ */
 .viab{padding:clamp(6rem,14vh,11rem) 0;overflow:clip}
-/* sin casos específicos, sólo la mención general (decisión de BEG, 14-11-2026) */
+/* sin casos específicos, sólo la mención general (decisión de BEG, 14-11-2026); la escena es ilustrativa */
+.viab__grid{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:clamp(2.5rem,6vw,7rem);align-items:center}
+.viab__copy .sec-head{margin-bottom:clamp(2rem,4vw,3rem)}
 .viab__gen{border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:clamp(1.6rem,3vw,2.4rem) 0}
-.viab__gen p{margin:0;max-width:34ch;font-size:clamp(1.25rem,2.4vw,2rem);font-weight:600;letter-spacing:-.035em;line-height:1.2}
+.viab__gen p{margin:0;max-width:30ch;font-size:clamp(1.25rem,2.2vw,1.9rem);font-weight:600;letter-spacing:-.035em;line-height:1.22}
+.viab__gen mark{color:inherit;background:linear-gradient(rgba(207,255,69,.34),rgba(207,255,69,.34)) no-repeat 0 92%/100% .42em;padding:0 .04em}
+/* escena: pila de estudios, hoja con semáforo por fase, veredicto y sello */
+.viab__stage{position:relative;width:min(100%,470px);justify-self:center;margin:2.5rem 0}
+.viab__pile{position:absolute;inset:0}
+.viab__sheet{position:absolute;inset:0;border:1px solid var(--line);border-radius:var(--r);box-shadow:0 18px 40px rgba(0,0,0,.35);
+  background:linear-gradient(rgba(236,238,230,.12),rgba(236,238,230,.12)) 26px 30px/38% 8px no-repeat,
+    repeating-linear-gradient(rgba(236,238,230,.06) 0 6px,transparent 6px 24px) 26px 66px/calc(100% - 52px) 62% no-repeat,var(--ink-2)}
+.viab__sheet::after{content:"";position:absolute;top:28px;right:26px;width:11px;height:11px;border-radius:50%;background:var(--c,var(--lime));box-shadow:0 0 10px var(--c,var(--lime))}
+.viab__card{position:relative;z-index:2;background:#141822;border:1px solid rgba(236,238,230,.22);border-radius:var(--r);padding:1.5rem 1.6rem 1.6rem;box-shadow:0 30px 70px rgba(0,0,0,.5)}
+.viab__top{display:flex;justify-content:space-between;align-items:center;font-family:var(--mono);font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--lime);margin-bottom:1.1rem}
+.viab__bars{display:flex;gap:5px}
+.viab__bars i{display:block;width:26px;height:6px;border-radius:3px;background:rgba(236,238,230,.14)}
+.viab__ph{position:relative}
+.viab__phases li{display:grid;grid-template-columns:4.6rem 1fr auto;align-items:center;gap:.8rem;padding:.8rem 0;border-top:1px solid var(--line)}
+.viab__phases span{font-family:var(--mono);font-size:.7rem;letter-spacing:.06em;text-transform:uppercase;color:var(--mut)}
+.viab__phases b{font-size:1.02rem;font-weight:600;letter-spacing:-.01em}
+.viab__l{display:block;width:14px;height:14px;border-radius:50%}
+.viab__l--v{background:var(--lime);box-shadow:0 0 12px rgba(207,255,69,.65)}
+.viab__l--a{background:var(--amber);box-shadow:0 0 12px rgba(255,182,72,.65)}
+.viab__scan{position:absolute;left:-1.6rem;right:-1.6rem;top:0;height:2px;background:var(--lime);box-shadow:0 0 16px 3px rgba(207,255,69,.5);opacity:0;pointer-events:none}
+.viab__verdict{display:flex;justify-content:space-between;align-items:center;border-top:1px solid var(--line);padding-top:1rem;font-family:var(--mono);font-size:.74rem;letter-spacing:.1em;text-transform:uppercase}
+.viab__tl{display:flex;gap:8px;background:#0b0d12;border:1px solid var(--line);border-radius:999px;padding:6px 9px}
+.viab__tl i{display:block;width:16px;height:16px;border-radius:50%;background:#2c313d}
+.viab__tl .is-on{background:var(--lime);box-shadow:0 0 14px rgba(207,255,69,.75)}
+.viab__stamp{position:absolute;z-index:3;right:-8%;top:-7%;transform:rotate(-12deg);font-family:var(--mono);font-size:1.15rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--lime);border:3px solid var(--lime);border-radius:10px;padding:.45rem .9rem .5rem;background:rgba(10,12,16,.72);text-align:center;line-height:1.1;box-shadow:0 0 24px rgba(207,255,69,.25)}
+.viab__stamp small{display:block;font-size:.62em;letter-spacing:.2em;font-weight:500;margin-top:.2em}
+@media (min-width:900px){
+  .viab{padding:0}
+  .viab__pin{min-height:100vh;min-height:100svh;display:flex;align-items:center;padding:8vh 0}
+  .viab__pin > .wrap{width:min(1280px,100% - 2*var(--gut))}
+}
+@media (max-width:899.98px){.viab__grid{grid-template-columns:1fr}.viab__stage{justify-self:start;margin:3.5rem 0 1rem}.viab__stamp{right:-2%;top:-9%;font-size:1rem}}
 
 /* ============ método (paper) ============ */
 .method{padding:clamp(6rem,14vh,11rem) 0}

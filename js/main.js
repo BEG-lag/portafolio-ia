@@ -22,6 +22,22 @@
     cells.appendChild(frag);
   }
 
+  // Estudios de viabilidad: pila ilustrativa de hojas, cada una con su punto de semáforo (sin casos reales)
+  (function () {
+    var pile = $('.viab__pile');
+    if (!pile) return;
+    var cols = ['var(--lime)', 'var(--amber)', 'var(--lime)', 'var(--coral)', 'var(--lime)', 'var(--amber)'];
+    for (var n = 0; n < 12; n++) {
+      var sh = document.createElement('div');
+      var rot = ((n * 37) % 17) - 8, dx = ((n * 53) % 23) - 11, dy = ((n * 29) % 19) - 9;
+      sh.className = 'viab__sheet';
+      sh.dataset.r = rot; sh.dataset.x = dx; sh.dataset.y = dy;
+      sh.style.transform = 'translate(' + dx + 'px,' + dy + 'px) rotate(' + rot + 'deg)';
+      sh.style.setProperty('--c', cols[n % cols.length]);
+      pile.appendChild(sh);
+    }
+  })();
+
   // Diagrama de nueve roles
   var orbit = $('.orbit svg');
   var orbitPts = [];
@@ -463,7 +479,65 @@
         onToggle: function (self) { if (self.isActive) sig.play(); else sig.pause(); } });
     }
 
-    /* 15. VIABILIDAD: el bloque general entra con data-reveal (sin lista de casos) */
+    /* 15. VIABILIDAD: llueven estudios y forman una pila, el escáner prende el semáforo de cada fase,
+       se enciende el veredicto, cae el sello y la frase se revela palabra por palabra.
+       Escritorio: fijado y ligado al scroll. Celular: se reproduce una vez al llegar. */
+    if ($('.viab__stage')) {
+      var vSheets = $$('.viab__sheet'), vRows = $$('.viab__phases li'), vLights = $$('.viab__l'), vPh = $('.viab__ph');
+      var vTxt = $('.viab__gen p'), vWords = $$('.w', vTxt); if (!vWords.length) vWords = splitWords(vTxt);
+      var vMark = $('.viab__gen mark'), vR = $('.viab__tl-r'), vA = $('.viab__tl-a'), vV = $('.viab__tl-v');
+      var OFF = '#2c313d', NOGLOW = 'rgba(0, 0, 0, 0) 0px 0px 0px 0px', CORAL = '#ff5d47', AMBER = '#ffb648';
+      var fin = function (el) { var cs = getComputedStyle(el); return { backgroundColor: cs.backgroundColor, boxShadow: cs.boxShadow }; };
+      var vt = gsap.timeline(desk
+        ? { scrollTrigger: { trigger: '.viab', start: 'top top', end: '+=170%', scrub: 0.6, pin: '.viab__pin', anticipatePin: 1, invalidateOnRefresh: true } }
+        : { paused: true });
+
+      /* las hojas llegan desde la derecha, girando, y aterrizan en la pila */
+      vSheets.forEach(function (s, n) {
+        vt.fromTo(s, { x: (desk ? 420 : 230) + (n % 4) * (desk ? 90 : 40), y: ((n % 5) - 2) * (desk ? 170 : 90), rotation: (n % 2 ? 1 : -1) * (35 + n * 7), opacity: 0 },
+          { x: +s.dataset.x, y: +s.dataset.y, rotation: +s.dataset.r, opacity: 1, ease: 'power3.out', duration: 0.11 }, n * 0.016);
+      });
+      vt.fromTo('.viab__card', { y: 110, rotation: 5, opacity: 0 }, { y: 0, rotation: 0, opacity: 1, ease: 'power3.out', duration: 0.12 }, 0.2);
+
+      /* escáner: baja por las fases y prende cada semáforo (rojo, ámbar y su color final) */
+      vt.fromTo('.viab__scan', { opacity: 0 }, { opacity: 1, ease: 'none', duration: 0.02 }, 0.34)
+        .fromTo('.viab__scan', { y: 0 }, { y: function () { return vPh.offsetHeight; }, ease: 'none', duration: 0.36 }, 0.34)
+        .to('.viab__scan', { opacity: 0, ease: 'none', duration: 0.03 }, 0.69);
+      vRows.forEach(function (row, n) {
+        var t = 0.34 + 0.36 * (2 * n + 1) / (2 * vRows.length), l = vLights[n], f = fin(l);
+        vt.fromTo(row, { opacity: 0.3 }, { opacity: 1, ease: 'none', duration: 0.03 }, t - 0.02)
+          .fromTo(l, { backgroundColor: OFF, boxShadow: NOGLOW }, { backgroundColor: CORAL, ease: 'none', duration: 0.015 }, t)
+          .to(l, { backgroundColor: AMBER, ease: 'none', duration: 0.015 }, t + 0.015)
+          .to(l, { backgroundColor: f.backgroundColor, boxShadow: f.boxShadow, ease: 'none', duration: 0.02 }, t + 0.03);
+      });
+
+      /* veredicto: el semáforo recorre rojo y ámbar y se queda en verde */
+      var fv = fin(vV);
+      vt.fromTo(vR, { backgroundColor: OFF }, { backgroundColor: CORAL, ease: 'none', duration: 0.02 }, 0.72)
+        .to(vR, { backgroundColor: OFF, ease: 'none', duration: 0.02 }, 0.75)
+        .fromTo(vA, { backgroundColor: OFF }, { backgroundColor: AMBER, ease: 'none', duration: 0.02 }, 0.75)
+        .to(vA, { backgroundColor: OFF, ease: 'none', duration: 0.02 }, 0.78)
+        .fromTo(vV, { backgroundColor: OFF, boxShadow: NOGLOW }, { backgroundColor: fv.backgroundColor, boxShadow: fv.boxShadow, ease: 'none', duration: 0.03 }, 0.78);
+
+      /* sello: cae con fuerza y la hoja tiembla */
+      vt.fromTo('.viab__stamp', { scale: 2.8, rotation: -30, opacity: 0 }, { scale: 1, rotation: -12, opacity: 1, ease: 'power4.in', duration: 0.07 }, 0.84)
+        .to('.viab__card', { x: -7, ease: 'none', duration: 0.012 }, 0.91)
+        .to('.viab__card', { x: 6, ease: 'none', duration: 0.012 }, 0.922)
+        .to('.viab__card', { x: 0, ease: 'power2.out', duration: 0.02 }, 0.934);
+
+      if (desk) {
+        /* la frase se ilumina palabra por palabra y al final se subraya «validadas por mí» */
+        vt.fromTo(vWords, { opacity: 0.14 }, { opacity: 1, ease: 'none', duration: 0.08, stagger: 0.62 / vWords.length }, 0.1)
+          .fromTo(vMark, { backgroundSize: '0% 0.42em' }, { backgroundSize: '100% 0.42em', ease: 'power2.out', duration: 0.06 }, 0.9)
+          .to({}, { duration: 0.08 });
+      } else {
+        vt.duration(3.6);
+        ScrollTrigger.create({ trigger: '.viab__stage', start: 'top 78%', once: true, onEnter: function () { vt.play(); } });
+        gsap.timeline({ scrollTrigger: once('.viab__gen', 'top 85%') })
+          .fromTo(vWords, { opacity: 0.14 }, { opacity: 1, ease: 'power1.out', duration: 0.35, stagger: 0.035 })
+          .fromTo(vMark, { backgroundSize: '0% 0.42em' }, { backgroundSize: '100% 0.42em', ease: 'power2.out', duration: 0.6 }, '-=0.15');
+      }
+    }
 
     /* 16. MÉTODO: la regla activa se resalta y el contador cambia */
     var pr = $('.principles'), prItems = $$('li', pr), cur = $('.method__cur');
