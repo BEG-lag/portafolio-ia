@@ -463,10 +463,7 @@
         onToggle: function (self) { if (self.isActive) sig.play(); else sig.pause(); } });
     }
 
-    /* 15. VIABILIDAD: filas que entran alternando lados */
-    $$('.viab__list li').forEach(function (li, n) {
-      gsap.from(li, { x: n % 2 ? 90 : -90, opacity: 0, duration: 0.9, ease: 'power3.out', scrollTrigger: once(li, 'top 92%') });
-    });
+    /* 15. VIABILIDAD: el bloque general entra con data-reveal (sin lista de casos) */
 
     /* 16. MÉTODO: la regla activa se resalta y el contador cambia */
     var pr = $('.principles'), prItems = $$('li', pr), cur = $('.method__cur');

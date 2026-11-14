@@ -287,15 +287,7 @@ BeCa es mi gato convertido en un acompañante en estilo sticker que vive en una 
 
 ## 12. Estudios de viabilidad
 
-Proyectos propios y servicios de PIVOTEK, mi consultoría, cada uno con veredicto y semáforo por fase:
-
-- Transporte de petrolíferos por autotanque de La Paz a Los Cabos: GO condicionado.
-- Gasolinera con franquicia en Los Cabos: GO condicionado.
-- Planta de vidrio procesado para el sector inmobiliario de BCS: prefactibilidad con modelo financiero en Python, 782 registros del DENUE y una matriz de 24 permisos industriales; GO condicionado en dos fases.
-- Documentales biográficos (Casa Legado): viabilidad, modelo de negocio, modelo financiero, marca y sitio ejecutados.
-- Fábrica de hielo, consultoría de capital humano, tours marítimos y un plan de negocio en Los Cabos.
-- Servicio de monetización para minas pequeñas y medianas: deck de venta y prompt maestro.
-- Modelo de plusvalía inmobiliaria a 10 años en Excel con fórmulas vivas.
+Proyectos propios y servicios de PIVOTEK, mi consultoría, cada uno con veredicto y semáforo por fase. Gracias a herramientas de inteligencia artificial y al uso de skills propios, hemos hecho muchos planes de negocio, todos con conclusiones validadas por mí.
 
 <p align="center"><img src="assets/ornamento.svg" width="220" alt=""></p>
 

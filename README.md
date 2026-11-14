@@ -287,15 +287,7 @@ BeCa is my cat turned into a sticker-style companion that lives in a small float
 
 ## 12. Feasibility studies
 
-Own ventures and services of PIVOTEK, my consultancy, each with a go or no-go verdict and traffic lights by phase:
-
-- Fuel trucking from La Paz to Los Cabos: conditional go.
-- Gas station under a national fuel brand franchise in Los Cabos: conditional go.
-- Processed-glass plant for real estate in Baja California Sur: pre-feasibility with a financial model in Python, 782 business-registry records and a matrix of 24 industrial permits; conditional go in two phases.
-- Biographical documentaries (Casa Legado): viability, business model, financial model, brand and website executed.
-- Ice factory, organizational consulting, marine tours and a Los Cabos business plan.
-- Monetization service for small and mid-size mines: sales deck and master prompt.
-- Ten-year real-estate appreciation model in Excel with live formulas.
+Own ventures and services of PIVOTEK, my consultancy, each with a go or no-go verdict and traffic lights by phase. Thanks to artificial intelligence tools and our own custom skills, we have produced many business plans, all with conclusions I have validated personally.
 
 <p align="center"><img src="assets/ornamento.svg" width="220" alt=""></p>
 
