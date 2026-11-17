@@ -441,6 +441,31 @@
     /* 12. CONECTORES: barras que crecen */
     gsap.from('.bar__fill', { scaleX: 0, duration: 1.5, ease: 'power3.out', stagger: 0.15, scrollTrigger: once('.bars', 'top 80%') });
 
+    /* 12b. CÓDIGO ABIERTO: se teclea el comando, los repos entran en cascada y su CI pasa de ámbar a verde */
+    if ($('.oss')) {
+      var ossType = $('.oss__type');
+      var ossChars = $('.ch', ossType) ? $$('.ch', ossType) : splitChars(ossType);
+      var ossCards = $$('.repo'), ossStep = desk ? 0.09 : 0.06;
+      var ot = gsap.timeline({ scrollTrigger: once('.oss__term', 'top 84%') });
+      ot.fromTo(ossChars, { opacity: 0 }, { opacity: 1, duration: 0.01, stagger: 0.045, ease: 'none' }, 0)
+        .fromTo('.oss__out', { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.4, ease: 'power2.out' }, '+=0.15');
+      var ossAt = ot.duration() - 0.1;
+      ot.fromTo(ossCards, { opacity: 0, y: 46, rotationX: desk ? -14 : 0, transformOrigin: '50% 0%' },
+        { opacity: 1, y: 0, rotationX: 0, duration: 0.75, stagger: ossStep, ease: 'power3.out' }, ossAt);
+      $$('.repo__ci').forEach(function (ci) {
+        var idx = ossCards.indexOf(ci.closest('.repo')), b = $('b', ci), n = +(b.dataset.n || 0), o = { v: 0 };
+        var start = ossAt + idx * ossStep + 0.25, run = 0.9 + ((idx * 37) % 5) * 0.16;
+        ci.classList.add('is-run');
+        if (n) {
+          b.textContent = '0';
+          ot.to(o, { v: n, duration: run, ease: 'power1.inOut', onUpdate: function () { b.textContent = Math.round(o.v); } }, start);
+        }
+        ot.call(function () { ci.classList.remove('is-run'); }, null, start + run)
+          .fromTo(ci, { scale: 1 }, { scale: 1.12, duration: 0.14, yoyo: true, repeat: 1, ease: 'power2.out' }, start + run);
+        undo.push(function () { ci.classList.remove('is-run'); if (n) b.textContent = String(n); });
+      });
+    }
+
     /* 13. BECA: la ventana cae y los estados cambian con el scroll */
     gsap.from('.beca__win', { y: -90, rotation: -7, opacity: 0, duration: 1.3, ease: 'elastic.out(1,0.55)', scrollTrigger: once('.beca__grid', 'top 78%') });
     var states = $('.beca__states'), stateItems = $$('li', states);

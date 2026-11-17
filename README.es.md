@@ -2,7 +2,7 @@
 
 **Abogado corporativo mexicano (energía, hidrocarburos y minería, unos 8 años de práctica) que construye con inteligencia artificial.** Escribo el análisis legal y armo los sistemas alrededor de él y más allá: plugins y agentes en Claude Code, búsqueda sobre texto legal, flujos en n8n, pipelines de datos en Python, sitios web, video y agentes de IA para marketing.
 
-Ciudad de México · beg.empleos@gmail.com · [pivotek.mx](https://pivotek.mx) · [LinkedIn](https://www.linkedin.com/in/benjamin-esponda-garc%C3%ADa-a743051b2) · Español (nativo), inglés (profesional) · [English version](README.md) · PDF en [`pdf/`](pdf/)
+Ciudad de México · beg.empleos@gmail.com · [pivotek.mx](https://pivotek.mx) · [LinkedIn](https://www.linkedin.com/in/benjamin-esponda-garc%C3%ADa-a743051b2) · [GitHub](https://github.com/BEG-lag) · Español (nativo), inglés (profesional) · [English version](README.md) · PDF en [`pdf/`](pdf/)
 
 > **Uso la IA todos los días.** Este portafolio es una muestra, no una lista completa: hay proyectos confidenciales y otros que todavía no salen. El trabajo para clientes está anonimizado: se quitaron nombres, cifras y datos que los identifiquen. Nada en este repositorio constituye opinión legal.
 
@@ -20,11 +20,12 @@ Ciudad de México · beg.empleos@gmail.com · [pivotek.mx](https://pivotek.mx) �
 8. [Trabajo legal y regulatorio hecho con IA](#8-trabajo-legal-y-regulatorio-hecho-con-ia)
 9. [Sitios web, video y marketing digital con IA](#9-sitios-web-video-y-marketing-digital-con-ia)
 10. [Conectores: cómo automatizo, consulto y genero](#10-conectores-cómo-automatizo-consulto-y-genero)
-11. [Herramientas y sistemas](#11-herramientas-y-sistemas)
-12. [Estudios de viabilidad](#12-estudios-de-viabilidad)
-13. [Formación y comunidad](#13-formación-y-comunidad)
-14. [Cómo trabajo con IA](#14-cómo-trabajo-con-ia)
-15. [Herramientas técnicas](#15-herramientas-técnicas)
+11. [Código abierto](#11-código-abierto)
+12. [Herramientas y sistemas](#12-herramientas-y-sistemas)
+13. [Estudios de viabilidad](#13-estudios-de-viabilidad)
+14. [Formación y comunidad](#14-formación-y-comunidad)
+15. [Cómo trabajo con IA](#15-cómo-trabajo-con-ia)
+16. [Herramientas técnicas](#16-herramientas-técnicas)
 
 <p align="center"><img src="assets/ornamento.svg" width="220" alt=""></p>
 
@@ -36,6 +37,7 @@ Ciudad de México · beg.empleos@gmail.com · [pivotek.mx](https://pivotek.mx) �
 - **Búsqueda sobre texto legal:** 374 instrumentos de derecho energético divididos en 11,112 fragmentos según la jerarquía de la norma mexicana, con búsqueda híbrida y un juego de pruebas de regresión.
 - **Datos a escala:** un pipeline sobre más de 560,000 contratos de compras públicas para mostrar a proveedores de petróleo y gas dónde está el dinero.
 - **Sitios, video y marketing:** cuatro sitios en vivo ([concriterio.mx](https://concriterio.mx), [pivotek.mx](https://pivotek.mx), [casalegado.mx](https://casalegado.mx) y [carocomunicando.com](https://carocomunicando.com)), un video de entrada a escenario para una conferencista, un pipeline automático de Reels y redes sociales operadas por agentes de IA (Grok Bot y Muse de Meta).
+- **Código abierto:** ocho repositorios públicos en [GitHub](https://github.com/BEG-lag), entre ellos un servidor MCP del Diario Oficial, 36 leyes federales versionadas en git y calculadoras con pruebas automáticas ([§11](#11-código-abierto)).
 - **Herramientas conectadas:** Stripe, Gmail, Google Calendar y Drive, Vercel, Higgsfield, Apify, Canva y automatización del navegador, todo desde Claude Code.
 - **Automatización con criterio:** todo flujo deja a una persona en el circuito cuando hay firmas, dinero o juicio legal de por medio.
 
@@ -45,18 +47,18 @@ Ciudad de México · beg.empleos@gmail.com · [pivotek.mx](https://pivotek.mx) �
 
 | Habilidad | Qué he construido con ella |
 |:-----|:-------------|
-| Agentes de IA y flujos agénticos | Plugins, skills y subagentes de Claude Code para siete materias del derecho mexicano ([§3](#3-destacado-con-criterio-kit-de-ia-para-abogados-mexicanos)); un sistema multiagente de nueve roles con señales tipadas ([§11](#11-herramientas-y-sistemas)); redes sociales operadas por Grok Bot y Muse de Meta ([§9.4](#94-redes-sociales-operadas-por-agentes-de-ia)) |
+| Agentes de IA y flujos agénticos | Plugins, skills y subagentes de Claude Code para siete materias del derecho mexicano ([§3](#3-destacado-con-criterio-kit-de-ia-para-abogados-mexicanos)); un sistema multiagente de nueve roles con señales tipadas ([§12](#12-herramientas-y-sistemas)); redes sociales operadas por Grok Bot y Muse de Meta ([§9.4](#94-redes-sociales-operadas-por-agentes-de-ia)) |
 | Búsqueda sobre documentos (RAG) | RAG legal con embeddings especializados en derecho, pgvector y ranking híbrido sobre 374 instrumentos de energía ([§4](#4-destacado-motor-de-búsqueda-sobre-derecho-energético-mexicano-rag)) |
-| Ingeniería de datos | Un pipeline sobre más de 560,000 contratos de compras públicas con actualización semanal y auditorías ([§5](#5-destacado-inteligencia-de-compras-públicas-para-petróleo-y-gas)); modelos financieros en Python y Excel ([§12](#12-estudios-de-viabilidad)) |
-| Automatización de procesos | Diseños en n8n para un cierre inmobiliario de 20 pasos y un resumen diario del DOF ([§6](#6-destacado-automatización-del-cierre-inmobiliario-en-n8n), [§7](#7-resumen-diario-del-dof-para-el-sector-energético-n8n)); tareas programadas para la revisión regulatoria mensual y la revisión semanal del segundo cerebro ([§3](#3-destacado-con-criterio-kit-de-ia-para-abogados-mexicanos), [§11](#11-herramientas-y-sistemas)) |
+| Ingeniería de datos | Un pipeline sobre más de 560,000 contratos de compras públicas con actualización semanal y auditorías ([§5](#5-destacado-inteligencia-de-compras-públicas-para-petróleo-y-gas)); modelos financieros en Python y Excel ([§13](#13-estudios-de-viabilidad)) |
+| Automatización de procesos | Diseños en n8n para un cierre inmobiliario de 20 pasos y un resumen diario del DOF ([§6](#6-destacado-automatización-del-cierre-inmobiliario-en-n8n), [§7](#7-resumen-diario-del-dof-para-el-sector-energético-n8n)); tareas programadas para la revisión regulatoria mensual y la revisión semanal del segundo cerebro ([§3](#3-destacado-con-criterio-kit-de-ia-para-abogados-mexicanos), [§12](#12-herramientas-y-sistemas)) |
 | IA para el trabajo legal | Auditorías regulatorias internacionales, revisiones de contratos y de cumplimiento, dictámenes y cartas, cada dato con fuente y fecha de corte ([§8](#8-trabajo-legal-y-regulatorio-hecho-con-ia)) |
 | Construcción de productos | Con Criterio, del contenido al cobro, la entrega automática y las pruebas con compradores simulados ([§3](#3-destacado-con-criterio-kit-de-ia-para-abogados-mexicanos)) |
 | Desarrollo web | concriterio.mx, pivotek.mx, casalegado.mx y carocomunicando.com ([§9.1](#91-sitios-web)) |
 | Video y contenido con IA | Un video de entrada a escenario con locución de IA y motion graphics, y un pipeline automático de Reels con transcripción local y visión por computadora ([§9.2](#92-video-de-entrada-de-la-conferencista-y-videos-de-eventos), [§9.3](#93-pipeline-automático-de-reels)) |
 | Marketing con IA | Más de una docena de skills de marketing y creatividad aplicados a campañas reales, auditorías SEO y textos de anuncios ([§9.5](#95-skills-de-marketing-y-cómo-los-apliqué)) |
-| Integraciones (conectores MCP) | Stripe, Gmail, Google Calendar y Drive, Vercel, Higgsfield, Apify, Canva y más de 10,000 acciones de navegador ([§10](#10-conectores-cómo-automatizo-consulto-y-genero)) |
-| Criterio y calidad | Compuertas de aprobación humana, reglas antifraude, incertidumbre etiquetada, pruebas golden y construcción reproducible ([§14](#14-cómo-trabajo-con-ia)) |
-| Aprendizaje continuo y comunidad | Licenciatura en Derecho (Ibero), Maestría en Derecho de la Empresa (Anáhuac) y MBA (EAE Madrid); uso diario de la IA y de las herramientas nuevas en cuanto salen; cursos gratuitos de Anthropic y Harvey; cursos en vivo y pregrabados de tech influencers y escuelas digitales; pláticas y workshops de Claude y Grok Bot; cenas de networking con CTOs ([§13](#13-formación-y-comunidad)) |
+| Integraciones (conectores MCP) | Stripe, Gmail, Google Calendar y Drive, Vercel, Higgsfield, Apify, Canva y más de 10,000 acciones de navegador ([§10](#10-conectores-cómo-automatizo-consulto-y-genero)), además de un servidor MCP propio para el DOF ([§11](#11-código-abierto)) |
+| Criterio y calidad | Compuertas de aprobación humana, reglas antifraude, incertidumbre etiquetada, pruebas golden y construcción reproducible ([§15](#15-cómo-trabajo-con-ia)) |
+| Aprendizaje continuo y comunidad | Licenciatura en Derecho (Ibero), Maestría en Derecho de la Empresa (Anáhuac) y MBA (EAE Madrid); uso diario de la IA y de las herramientas nuevas en cuanto salen; cursos gratuitos de Anthropic y Harvey; cursos en vivo y pregrabados de tech influencers y escuelas digitales; pláticas y workshops de Claude y Grok Bot; cenas de networking con CTOs ([§14](#14-formación-y-comunidad)) |
 
 <p align="center"><img src="assets/ornamento.svg" width="220" alt=""></p>
 
@@ -259,9 +261,24 @@ Además, dos agentes externos (Grok Bot y Muse, [§9.4](#94-redes-sociales-opera
 
 <p align="center"><img src="assets/ornamento.svg" width="220" alt=""></p>
 
-## 11. Herramientas y sistemas
+## 11. Código abierto
 
-- **Segundo cerebro en Obsidian y Claude Code.** Una nota por proyecto, persona y documento oficial; cada sesión de trabajo deja su entrada en la bitácora; una tarea programada lee mi calendario y mi correo cada domingo (sólo lectura) y actualiza la bóveda; respaldo cada hora con launchd. Este portafolio se armó a partir de ahí.
+Ocho repositorios públicos en [github.com/BEG-lag](https://github.com/BEG-lag), hechos con Claude Code. Siete corren sus pruebas en GitHub Actions con cada cambio y cinco tienen sitio en vivo. Cifras tomadas del README de cada repositorio el 17 de noviembre de 2026.
+
+- **[mcp-dof](https://github.com/BEG-lag/mcp-dof)** · Python · 78 pruebas. Servidor MCP para que Claude consulte el Diario Oficial de la Federación: la edición de cualquier día, el texto íntegro de cada nota, búsqueda por título y el tipo de cambio FIX, las UDIS y la TIIE, desde la API oficial del SIDOF.
+- **[dof-diario](https://github.com/BEG-lag/dof-diario)** · Python. Archivo del sumario del DOF desde enero de 2025: 484 días y 43,994 notas. Se actualiza solo dos veces al día con GitHub Actions y tiene un buscador con filtros. Datos en dominio público (CC0). [Sitio en vivo](https://beg-lag.github.io/dof-diario/).
+- **[leyes-mx](https://github.com/BEG-lag/leyes-mx)** · Python. 36 leyes federales en Markdown dentro de git, con 375 versiones históricas recuperadas de copias archivadas de los archivos de la Cámara de Diputados. Cada reforma es un commit con la fecha de su publicación en el DOF, así que cada ley tiene historial, `blame` y `diff`. 13,370 artículos con la numeración validada. [Sitio en vivo](https://beg-lag.github.io/leyes-mx/).
+- **[finiquito-mx](https://github.com/BEG-lag/finiquito-mx)** · TypeScript · 123 pruebas. Calcula finiquito y liquidación conforme a la Ley Federal del Trabajo, renglón por renglón y con el artículo de cada concepto; librería y web. Es una herramienta de cálculo, no asesoría legal. [Sitio en vivo](https://beg-lag.github.io/finiquito-mx/).
+- **[hoy-circulo](https://github.com/BEG-lag/hoy-circulo)** · TypeScript · 101 pruebas. Hoy No Circula, verificación y contingencias ambientales de la CAMe en la Ciudad de México y el Estado de México; revisa los comunicados cada 30 minutos. App instalable que funciona sin conexión y exporta al calendario (.ics). No es oficial; cada regla cita su fuente. [Sitio en vivo](https://beg-lag.github.io/hoy-circulo/).
+- **[facturas-cfdi](https://github.com/BEG-lag/facturas-cfdi)** · TypeScript · 79 pruebas unitarias y 13 de navegador. Organiza facturas CFDI (XML o el ZIP de descarga masiva del SAT) en el navegador, sin subir nada, y marca las que podrían ser deducciones personales. Es una herramienta de organización, no asesoría fiscal. [Sitio en vivo](https://beg-lag.github.io/facturas-cfdi/).
+- **[segundo-cerebro](https://github.com/BEG-lag/segundo-cerebro)**. Plantilla instalable de bóveda de Obsidian con las reglas para que Claude Code la lea antes de trabajar y la actualice después, con revisión semanal incluida. Es la versión pública, sin mis datos, del sistema de la [§12](#12-herramientas-y-sistemas).
+- **[tema-clawds](https://github.com/BEG-lag/tema-clawds)**. Tema claro para la app de Claude Code con 64 Clawds, la mascota de Claude Code, jugando en 20 escenas SVG.
+
+<p align="center"><img src="assets/ornamento.svg" width="220" alt=""></p>
+
+## 12. Herramientas y sistemas
+
+- **Segundo cerebro en Obsidian y Claude Code.** Una nota por proyecto, persona y documento oficial; cada sesión de trabajo deja su entrada en la bitácora; una tarea programada lee mi calendario y mi correo cada domingo (sólo lectura) y actualiza la bóveda; respaldo cada hora con launchd. Este portafolio se armó a partir de ahí. La plantilla, sin mis datos, es pública: [segundo-cerebro](https://github.com/BEG-lag/segundo-cerebro).
 - **Sistema multiagente personal.** Nueve roles especializados leen un mismo expediente, se pasan señales tipadas en lugar de prosa y siguen una regla de precedencia declarada cuando se contradicen. Uso personal; no se muestran datos.
 - **CRMs internos propios.** Los armé sobre la arquitectura de [auto-crm](https://github.com/Hainrixz/auto-crm), un CRM local y open-source con Next.js, SQLite y Claude Code que se adapta a cada negocio.
 
@@ -285,13 +302,13 @@ BeCa es mi gato convertido en un acompañante en estilo sticker que vive en una 
 
 <p align="center"><img src="assets/ornamento.svg" width="220" alt=""></p>
 
-## 12. Estudios de viabilidad
+## 13. Estudios de viabilidad
 
 Proyectos propios y servicios de PIVOTEK, mi consultoría, cada uno con veredicto y semáforo por fase. Gracias a herramientas de inteligencia artificial y al uso de skills propios, hemos hecho muchos planes de negocio, todos con conclusiones validadas por mí.
 
 <p align="center"><img src="assets/ornamento.svg" width="220" alt=""></p>
 
-## 13. Formación y comunidad
+## 14. Formación y comunidad
 
 ### Formación académica
 
@@ -315,7 +332,7 @@ Uso la IA todos los días y me mantengo a la vanguardia de las herramientas y fu
 
 <p align="center"><img src="assets/ornamento.svg" width="220" alt=""></p>
 
-## 14. Cómo trabajo con IA
+## 15. Cómo trabajo con IA
 
 1. **Primero la fuente.** Los textos oficiales se descargan al proyecto y cada dato lleva su fuente y fecha de corte.
 2. **La incertidumbre se etiqueta.** Todo entregable marca [ESTIMADO], [SUPUESTO] y [BRECHA DE DATO].
@@ -327,13 +344,13 @@ Uso la IA todos los días y me mantengo a la vanguardia de las herramientas y fu
 
 <p align="center"><img src="assets/ornamento.svg" width="220" alt=""></p>
 
-## 15. Herramientas técnicas
+## 16. Herramientas técnicas
 
 - **IA:** Claude Code (skills, plugins, subagentes, conectores MCP, hooks, tareas programadas), API de Claude, embeddings de Voyage AI, ChatGPT y Codex, Higgsfield (imagen, video, voz y música), Grok Bot y Muse de Meta.
 - **Datos:** Python, PostgreSQL con pgvector, Playwright, pdfplumber y OCR, Excel.
-- **Automatización:** n8n, Docker, launchd y tareas programadas.
+- **Automatización:** n8n, Docker, launchd, GitHub Actions y tareas programadas.
 - **Video:** Remotion, ffmpeg, Whisper, Apple Vision (Swift).
-- **Web:** Next.js, TypeScript, HTML y CSS estáticos, GSAP, Cloudflare Workers, Vercel, Stripe, Resend, Web3Forms.
+- **Web:** Next.js, TypeScript, HTML y CSS estáticos, GSAP, Cloudflare Workers, Vercel, GitHub Pages, Stripe, Resend, Web3Forms.
 - **Marketing y analítica:** GA4, Microsoft Clarity, Vercel Analytics, Google Ads, Pixel de Meta, Google Search Console.
 - **Documentos:** Markdown, pandoc, Typst, Word con control de cambios.
 - **Conocimiento:** Obsidian.

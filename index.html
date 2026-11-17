@@ -290,7 +290,7 @@
       <li class="skill"><span class="skill__k">07</span><h3>Desarrollo web</h3><p>concriterio.mx, pivotek.mx, casalegado.mx y carocomunicando.com.</p></li>
       <li class="skill"><span class="skill__k">08</span><h3>Video y contenido con IA</h3><p>Un video de entrada a escenario con locución de IA y motion graphics, y un pipeline automático de Reels con transcripción local y visión por computadora.</p></li>
       <li class="skill"><span class="skill__k">09</span><h3>Marketing con IA</h3><p>Más de una docena de skills de marketing y creatividad aplicados a campañas reales, auditorías SEO y textos de anuncios.</p></li>
-      <li class="skill"><span class="skill__k">10</span><h3>Integraciones (conectores MCP)</h3><p>Stripe, Gmail, Google Calendar y Drive, Vercel, Higgsfield, Apify, Canva y más de 10,000 acciones de navegador.</p></li>
+      <li class="skill"><span class="skill__k">10</span><h3>Integraciones (conectores MCP)</h3><p>Stripe, Gmail, Google Calendar y Drive, Vercel, Higgsfield, Apify, Canva y más de 10,000 acciones de navegador, además de un servidor MCP propio para el DOF.</p></li>
       <li class="skill"><span class="skill__k">11</span><h3>Criterio y calidad</h3><p>Compuertas de aprobación humana, reglas antifraude, incertidumbre etiquetada, pruebas golden y construcción reproducible.</p></li>
       <li class="skill"><span class="skill__k">12</span><h3>Aprendizaje continuo y comunidad</h3><p>Uso diario de la IA y de las herramientas nuevas en cuanto salen; cursos gratuitos de Anthropic y Harvey; cursos en vivo y pregrabados de tech influencers y escuelas digitales; pláticas y workshops de Claude y Grok Bot; cenas de networking con CTOs.</p></li>
     </ul>
@@ -674,11 +674,80 @@
   </div>
 </section>
 
+<!-- ============ CODIGO ABIERTO ============ -->
+<section class="oss" id="codigo">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">11 · Código abierto</p>
+      <h2 data-reveal>Ocho repositorios públicos: <em>el código, a la vista.</em></h2>
+      <p class="lead" data-reveal>Hechos con Claude Code y abiertos para que cualquiera revise el código. Siete corren sus pruebas en GitHub Actions con cada cambio y cinco tienen sitio en vivo.</p>
+    </div>
+    <div class="oss__term" aria-hidden="true">
+      <p class="oss__line"><span class="oss__ps">$</span> <span class="oss__type">gh repo list BEG-lag</span><i class="oss__caret"></i></p>
+      <p class="oss__out">8 repositorios · 7 con pruebas en CI · 5 sitios en vivo</p>
+    </div>
+    <ul class="oss__grid" aria-label="Repositorios públicos">
+      <li class="repo">
+        <p class="repo__meta"><span class="repo__lang" style="--c:var(--cyan)">Python</span><span class="repo__ci"><i></i><b data-n="78">78</b> pruebas</span></p>
+        <h3><a href="https://github.com/BEG-lag/mcp-dof" rel="noopener"><span class="repo__owner">BEG-lag/</span>mcp-dof</a></h3>
+        <p class="repo__d">Servidor MCP para que Claude consulte el Diario Oficial: la edición de cualquier día, el texto íntegro de cada nota, búsqueda por título, FIX, UDIS y TIIE, desde la API oficial del SIDOF.</p>
+        <p class="repo__links"><a href="https://github.com/BEG-lag/mcp-dof" rel="noopener">Código</a></p>
+      </li>
+      <li class="repo">
+        <p class="repo__meta"><span class="repo__lang" style="--c:var(--cyan)">Python</span><span class="repo__ci"><i></i><b>CI</b></span></p>
+        <h3><a href="https://github.com/BEG-lag/dof-diario" rel="noopener"><span class="repo__owner">BEG-lag/</span>dof-diario</a></h3>
+        <p class="repo__d">Archivo del sumario del DOF desde enero de 2025: 484 días y 43,994 notas. Se actualiza solo dos veces al día y tiene buscador con filtros. Datos CC0.</p>
+        <p class="repo__links"><a href="https://github.com/BEG-lag/dof-diario" rel="noopener">Código</a><a href="https://beg-lag.github.io/dof-diario/" rel="noopener"><span class="live" aria-hidden="true"></span>Sitio en vivo</a></p>
+      </li>
+      <li class="repo">
+        <p class="repo__meta"><span class="repo__lang" style="--c:var(--cyan)">Python</span><span class="repo__ci"><i></i><b>CI</b></span></p>
+        <h3><a href="https://github.com/BEG-lag/leyes-mx" rel="noopener"><span class="repo__owner">BEG-lag/</span>leyes-mx</a></h3>
+        <p class="repo__d">36 leyes federales en Markdown con 375 versiones históricas: cada reforma es un commit, así que cada ley tiene historial, blame y diff. 13,370 artículos con la numeración validada.</p>
+        <p class="repo__links"><a href="https://github.com/BEG-lag/leyes-mx" rel="noopener">Código</a><a href="https://beg-lag.github.io/leyes-mx/" rel="noopener"><span class="live" aria-hidden="true"></span>Sitio en vivo</a></p>
+      </li>
+      <li class="repo">
+        <p class="repo__meta"><span class="repo__lang" style="--c:var(--paper)">TypeScript</span><span class="repo__ci"><i></i><b data-n="123">123</b> pruebas</span></p>
+        <h3><a href="https://github.com/BEG-lag/finiquito-mx" rel="noopener"><span class="repo__owner">BEG-lag/</span>finiquito-mx</a></h3>
+        <p class="repo__d">Calcula finiquito y liquidación conforme a la Ley Federal del Trabajo, renglón por renglón y con el artículo de cada concepto. Librería y web. Herramienta de cálculo, no asesoría legal.</p>
+        <p class="repo__links"><a href="https://github.com/BEG-lag/finiquito-mx" rel="noopener">Código</a><a href="https://beg-lag.github.io/finiquito-mx/" rel="noopener"><span class="live" aria-hidden="true"></span>Sitio en vivo</a></p>
+      </li>
+      <li class="repo">
+        <p class="repo__meta"><span class="repo__lang" style="--c:var(--paper)">TypeScript</span><span class="repo__ci"><i></i><b data-n="101">101</b> pruebas</span></p>
+        <h3><a href="https://github.com/BEG-lag/hoy-circulo" rel="noopener"><span class="repo__owner">BEG-lag/</span>hoy-circulo</a></h3>
+        <p class="repo__d">Hoy No Circula, verificación y contingencias de la CAMe en la CDMX y el Edomex, revisadas cada 30 minutos. App instalable, funciona sin conexión y exporta al calendario.</p>
+        <p class="repo__links"><a href="https://github.com/BEG-lag/hoy-circulo" rel="noopener">Código</a><a href="https://beg-lag.github.io/hoy-circulo/" rel="noopener"><span class="live" aria-hidden="true"></span>Sitio en vivo</a></p>
+      </li>
+      <li class="repo">
+        <p class="repo__meta"><span class="repo__lang" style="--c:var(--paper)">TypeScript</span><span class="repo__ci"><i></i><b data-n="92">92</b> pruebas</span></p>
+        <h3><a href="https://github.com/BEG-lag/facturas-cfdi" rel="noopener"><span class="repo__owner">BEG-lag/</span>facturas-cfdi</a></h3>
+        <p class="repo__d">Organiza facturas CFDI (XML o el ZIP del SAT) en tu navegador, sin subir nada, y marca las posibles deducciones personales. Herramienta de organización, no asesoría fiscal.</p>
+        <p class="repo__links"><a href="https://github.com/BEG-lag/facturas-cfdi" rel="noopener">Código</a><a href="https://beg-lag.github.io/facturas-cfdi/" rel="noopener"><span class="live" aria-hidden="true"></span>Sitio en vivo</a></p>
+      </li>
+      <li class="repo">
+        <p class="repo__meta"><span class="repo__lang" style="--c:var(--lime)">Obsidian</span><span class="repo__ci"><i></i><b>CI</b></span></p>
+        <h3><a href="https://github.com/BEG-lag/segundo-cerebro" rel="noopener"><span class="repo__owner">BEG-lag/</span>segundo-cerebro</a></h3>
+        <p class="repo__d">Plantilla instalable de bóveda de Obsidian con las reglas para que Claude Code la lea antes de trabajar y la actualice después. La versión pública, sin mis datos.</p>
+        <p class="repo__links"><a href="https://github.com/BEG-lag/segundo-cerebro" rel="noopener">Código</a></p>
+      </li>
+      <li class="repo">
+        <p class="repo__meta"><span class="repo__lang" style="--c:var(--amber)">SVG</span></p>
+        <h3><a href="https://github.com/BEG-lag/tema-clawds" rel="noopener"><span class="repo__owner">BEG-lag/</span>tema-clawds</a></h3>
+        <p class="repo__d">Tema claro para la app de Claude Code con 64 Clawds, la mascota de Claude Code, jugando en 20 escenas SVG.</p>
+        <p class="repo__links"><a href="https://github.com/BEG-lag/tema-clawds" rel="noopener">Código</a></p>
+      </li>
+    </ul>
+    <div class="oss__foot">
+      <p class="fine" data-reveal>Cifras tomadas del README de cada repositorio el 17 de noviembre de 2026. finiquito-mx y facturas-cfdi son herramientas de cálculo y organización; no constituyen asesoría legal ni fiscal.</p>
+      <a class="oss__all" href="https://github.com/BEG-lag" rel="me noopener" data-reveal>Ver el perfil completo en GitHub <span aria-hidden="true">→</span></a>
+    </div>
+  </div>
+</section>
+
 <!-- ============ BECA ============ -->
 <section class="beca" id="beca">
   <div class="wrap">
     <div class="sec-head">
-      <p class="eyebrow">11 · Acompañante de escritorio</p>
+      <p class="eyebrow">12 · Acompañante de escritorio</p>
       <h2 data-reveal>BeCa: mi gato sabe <em>qué está haciendo Claude.</em></h2>
       <p class="lead" data-reveal>BeCa es mi gato convertido en un acompañante en estilo sticker que vive en una ventanita flotante de mi Mac. Escucha los hooks del ciclo de vida de Claude Code, así que de un vistazo sé qué está haciendo Claude sin mirar la terminal. <span class="beca__why">¿Por qué BeCa? Para darle un sentido del humor a mi día a día con la IA mientras trabajo.</span></p>
     </div>
@@ -711,11 +780,11 @@
 <section class="systems" id="sistemas">
   <div class="wrap systems__grid">
     <div>
-      <p class="eyebrow">12 · Herramientas y sistemas</p>
+      <p class="eyebrow">13 · Herramientas y sistemas</p>
       <h2 data-reveal>Sistemas que <em>trabajan mientras trabajo.</em></h2>
       <div class="sys" data-reveal>
         <h3>Segundo cerebro en Obsidian y Claude Code</h3>
-        <p>Una nota por proyecto, persona y documento oficial; cada sesión de trabajo deja su entrada en la bitácora; una tarea programada lee mi calendario y mi correo cada domingo (sólo lectura) y actualiza la bóveda; respaldo cada hora con launchd. Este portafolio se armó a partir de ahí.</p>
+        <p>Una nota por proyecto, persona y documento oficial; cada sesión de trabajo deja su entrada en la bitácora; una tarea programada lee mi calendario y mi correo cada domingo (sólo lectura) y actualiza la bóveda; respaldo cada hora con launchd. Este portafolio se armó a partir de ahí. La plantilla, sin mis datos, es pública: <a href="https://github.com/BEG-lag/segundo-cerebro" rel="noopener">segundo-cerebro</a>.</p>
       </div>
       <div class="sys" data-reveal>
         <h3>Sistema multiagente personal</h3>
@@ -746,7 +815,7 @@
   <div class="wrap viab__grid">
     <div class="viab__copy">
       <div class="sec-head">
-        <p class="eyebrow">13 · Estudios de viabilidad</p>
+        <p class="eyebrow">14 · Estudios de viabilidad</p>
         <h2 data-reveal>Cada estudio, con veredicto y <em>semáforo por fase.</em></h2>
         <p class="lead" data-reveal>Proyectos propios y servicios de PIVOTEK, mi consultoría.</p>
       </div>
@@ -776,7 +845,7 @@
 <section class="method paper" id="metodo">
   <div class="wrap method__grid">
     <div class="method__left">
-      <p class="eyebrow">14 · Cómo trabajo con IA</p>
+      <p class="eyebrow">15 · Cómo trabajo con IA</p>
       <h2 data-reveal>Siete reglas <em>que no se negocian.</em></h2>
       <p class="method__count" aria-hidden="true"><span class="method__cur">1</span><span class="method__tot">/7</span></p>
     </div>
@@ -795,13 +864,13 @@
 <!-- ============ STACK ============ -->
 <section class="learn learn--stack" id="stack">
   <div class="wrap">
-    <p class="eyebrow">15 · Herramientas técnicas</p>
+    <p class="eyebrow">16 · Herramientas técnicas</p>
     <dl class="tech">
       <div><dt>IA</dt><dd><ul class="chips"><li>Claude Code (skills, plugins, subagentes, conectores MCP, hooks, tareas programadas)</li><li>API de Claude</li><li>embeddings de Voyage AI</li><li>ChatGPT y Codex</li><li>Higgsfield (imagen, video, voz y música)</li><li>Grok Bot</li><li>Muse de Meta</li></ul></dd></div>
       <div><dt>Datos</dt><dd><ul class="chips"><li>Python</li><li>PostgreSQL con pgvector</li><li>Playwright</li><li>pdfplumber y OCR</li><li>Excel</li></ul></dd></div>
-      <div><dt>Automatización</dt><dd><ul class="chips"><li>n8n</li><li>Docker</li><li>launchd</li><li>tareas programadas</li></ul></dd></div>
+      <div><dt>Automatización</dt><dd><ul class="chips"><li>n8n</li><li>Docker</li><li>launchd</li><li>GitHub Actions</li><li>tareas programadas</li></ul></dd></div>
       <div><dt>Video</dt><dd><ul class="chips"><li>Remotion</li><li>ffmpeg</li><li>Whisper</li><li>Apple Vision (Swift)</li></ul></dd></div>
-      <div><dt>Web</dt><dd><ul class="chips"><li>Next.js</li><li>TypeScript</li><li>HTML y CSS estáticos</li><li>GSAP</li><li>Cloudflare Workers</li><li>Vercel</li><li>Stripe</li><li>Resend</li><li>Web3Forms</li></ul></dd></div>
+      <div><dt>Web</dt><dd><ul class="chips"><li>Next.js</li><li>TypeScript</li><li>HTML y CSS estáticos</li><li>GSAP</li><li>Cloudflare Workers</li><li>Vercel</li><li>GitHub Pages</li><li>Stripe</li><li>Resend</li><li>Web3Forms</li></ul></dd></div>
       <div><dt>Marketing y analítica</dt><dd><ul class="chips"><li>GA4</li><li>Microsoft Clarity</li><li>Vercel Analytics</li><li>Google Ads</li><li>Pixel de Meta</li><li>Google Search Console</li></ul></dd></div>
       <div><dt>Documentos</dt><dd><ul class="chips"><li>Markdown</li><li>pandoc</li><li>Typst</li><li>Word con control de cambios</li></ul></dd></div>
       <div><dt>Conocimiento</dt><dd><ul class="chips"><li>Obsidian</li></ul></dd></div>
@@ -821,6 +890,7 @@
     <ul class="contact__links">
       <li><a href="https://pivotek.mx" rel="noopener">pivotek.mx</a></li>
       <li><a href="https://www.linkedin.com/in/benjamin-esponda-garc%C3%ADa-a743051b2" rel="me noopener">LinkedIn</a></li>
+      <li><a href="https://github.com/BEG-lag" rel="me noopener">GitHub: BEG-lag</a></li>
       <li><a href="https://github.com/BEG-lag/portafolio-ia" rel="noopener">GitHub: BEG-lag/portafolio-ia</a></li>
       <li><a href="https://concriterio.mx" rel="noopener">concriterio.mx</a></li>
       <li><a href="/pdf/portafolio-BEG-es.pdf" type="application/pdf">Portafolio en PDF</a></li>

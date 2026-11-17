@@ -2,7 +2,7 @@
 
 **Mexican corporate lawyer (energy, hydrocarbons and mining, about 8 years of practice) who builds with AI.** I write the legal analysis, and I build the systems around it and beyond it: Claude Code plugins and agents, retrieval over legal text, n8n workflows, Python data pipelines, websites, video and AI agents for marketing.
 
-Mexico City · beg.empleos@gmail.com · [pivotek.mx](https://pivotek.mx) · [LinkedIn](https://www.linkedin.com/in/benjamin-esponda-garc%C3%ADa-a743051b2) · Spanish (native), English (professional) · [Versión en español](README.es.md) · PDF in [`pdf/`](pdf/)
+Mexico City · beg.empleos@gmail.com · [pivotek.mx](https://pivotek.mx) · [LinkedIn](https://www.linkedin.com/in/benjamin-esponda-garc%C3%ADa-a743051b2) · [GitHub](https://github.com/BEG-lag) · Spanish (native), English (professional) · [Versión en español](README.es.md) · PDF in [`pdf/`](pdf/)
 
 > **I use AI every day.** This portfolio is a sample, not a complete list: some projects are confidential and others haven't been released yet. Client work is anonymized: names, figures and identifying details were removed. Nothing in this repository is legal advice.
 
@@ -20,11 +20,12 @@ Mexico City · beg.empleos@gmail.com · [pivotek.mx](https://pivotek.mx) · [Lin
 8. [Legal and regulatory work built with AI](#8-legal-and-regulatory-work-built-with-ai)
 9. [Websites, video and digital marketing with AI](#9-websites-video-and-digital-marketing-with-ai)
 10. [Connectors: how I automate, query and generate](#10-connectors-how-i-automate-query-and-generate)
-11. [Tools and systems](#11-tools-and-systems)
-12. [Feasibility studies](#12-feasibility-studies)
-13. [Learning and community](#13-learning-and-community)
-14. [How I work with AI](#14-how-i-work-with-ai)
-15. [Stack](#15-stack)
+11. [Open source](#11-open-source)
+12. [Tools and systems](#12-tools-and-systems)
+13. [Feasibility studies](#13-feasibility-studies)
+14. [Learning and community](#14-learning-and-community)
+15. [How I work with AI](#15-how-i-work-with-ai)
+16. [Stack](#16-stack)
 
 <p align="center"><img src="assets/ornamento.svg" width="220" alt=""></p>
 
@@ -36,6 +37,7 @@ Mexico City · beg.empleos@gmail.com · [pivotek.mx](https://pivotek.mx) · [Lin
 - **Retrieval over legal text:** 374 energy-law instruments split into 11,112 chunks along the hierarchy of Mexican statutes, with hybrid search and a regression test set.
 - **Data at scale:** a pipeline over more than 560,000 public procurement contracts to show oil and gas suppliers where the money goes.
 - **Websites, video and marketing:** four sites live ([concriterio.mx](https://concriterio.mx), [pivotek.mx](https://pivotek.mx), [casalegado.mx](https://casalegado.mx) and [carocomunicando.com](https://carocomunicando.com)), a stage-entrance video for a speaker, an automated Reels pipeline, and social media run by AI agents (Grok Bot and Meta's Muse).
+- **Open source:** eight public repositories on [GitHub](https://github.com/BEG-lag), including an MCP server for the Official Gazette, 36 federal laws versioned in git and calculators with automated tests ([§11](#11-open-source)).
 - **Connected tools:** Stripe, Gmail, Google Calendar and Drive, Vercel, Higgsfield, Apify, Canva and browser automation, all driven from Claude Code.
 - **Automation with judgment:** every workflow keeps a person in the loop where signatures, money or legal judgment are involved.
 
@@ -45,18 +47,18 @@ Mexico City · beg.empleos@gmail.com · [pivotek.mx](https://pivotek.mx) · [Lin
 
 | Skill | What I have built with it |
 |:-----|:-------------|
-| AI agents and agentic workflows | Claude Code plugins, skills and subagents for seven areas of Mexican law ([§3](#3-featured-con-criterio-an-ai-toolkit-for-mexican-lawyers)); a nine-role multi-agent system with typed handoffs ([§11](#11-tools-and-systems)); social media run by Grok Bot and Meta's Muse ([§9.4](#94-social-media-run-by-ai-agents)) |
+| AI agents and agentic workflows | Claude Code plugins, skills and subagents for seven areas of Mexican law ([§3](#3-featured-con-criterio-an-ai-toolkit-for-mexican-lawyers)); a nine-role multi-agent system with typed handoffs ([§12](#12-tools-and-systems)); social media run by Grok Bot and Meta's Muse ([§9.4](#94-social-media-run-by-ai-agents)) |
 | Retrieval over documents (RAG) | Legal RAG with law-specific embeddings, pgvector and hybrid ranking over 374 energy-law instruments ([§4](#4-featured-retrieval-engine-over-mexican-energy-law-rag)) |
-| Data engineering | A pipeline over more than 560,000 public procurement contracts with weekly updates and audits ([§5](#5-featured-public-procurement-intelligence-for-oil-and-gas)); financial models in Python and Excel ([§12](#12-feasibility-studies)) |
-| Workflow automation | n8n designs for a 20-step real-estate closing and a daily regulatory digest ([§6](#6-featured-real-estate-closing-automation-in-n8n), [§7](#7-daily-regulatory-digest-from-the-official-gazette-n8n)); scheduled tasks for monthly regulatory reviews and a weekly second-brain review ([§3](#3-featured-con-criterio-an-ai-toolkit-for-mexican-lawyers), [§11](#11-tools-and-systems)) |
+| Data engineering | A pipeline over more than 560,000 public procurement contracts with weekly updates and audits ([§5](#5-featured-public-procurement-intelligence-for-oil-and-gas)); financial models in Python and Excel ([§13](#13-feasibility-studies)) |
+| Workflow automation | n8n designs for a 20-step real-estate closing and a daily regulatory digest ([§6](#6-featured-real-estate-closing-automation-in-n8n), [§7](#7-daily-regulatory-digest-from-the-official-gazette-n8n)); scheduled tasks for monthly regulatory reviews and a weekly second-brain review ([§3](#3-featured-con-criterio-an-ai-toolkit-for-mexican-lawyers), [§12](#12-tools-and-systems)) |
 | AI for legal work | Cross-border regulatory audits, contract and compliance reviews, opinions and letters, every data point with source and cut-off date ([§8](#8-legal-and-regulatory-work-built-with-ai)) |
 | Product building | Con Criterio, from content to payments, automated delivery and QA with simulated buyers ([§3](#3-featured-con-criterio-an-ai-toolkit-for-mexican-lawyers)) |
 | Web development | concriterio.mx, pivotek.mx, casalegado.mx and carocomunicando.com ([§9.1](#91-websites)) |
 | AI video and content | A stage-entrance video with AI voice-over and motion graphics, and an automated Reels pipeline with local transcription and computer vision ([§9.2](#92-speaker-intro-and-event-videos), [§9.3](#93-automated-reels-pipeline)) |
 | AI marketing | More than a dozen marketing and creative skills applied to real campaigns, SEO audits and ad copy ([§9.5](#95-marketing-skills-and-how-i-applied-them)) |
-| Integrations (MCP connectors) | Stripe, Gmail, Google Calendar and Drive, Vercel, Higgsfield, Apify, Canva and more than 10,000 browser actions ([§10](#10-connectors-how-i-automate-query-and-generate)) |
-| Judgment and quality | Human approval gates, anti-fraud rules, labeled uncertainty, golden test sets and reproducible builds ([§14](#14-how-i-work-with-ai)) |
-| Continuous learning and community | Law degree (Ibero), Master's in Business Law (Anáhuac) and MBA (EAE Madrid); daily use of AI and of new tools as soon as they launch; free courses from Anthropic and Harvey; live and pre-recorded courses from tech influencers and digital schools; Claude and Grok Bot talks and workshops; networking dinners with CTOs ([§13](#13-learning-and-community)) |
+| Integrations (MCP connectors) | Stripe, Gmail, Google Calendar and Drive, Vercel, Higgsfield, Apify, Canva and more than 10,000 browser actions ([§10](#10-connectors-how-i-automate-query-and-generate)), plus my own MCP server for the Official Gazette ([§11](#11-open-source)) |
+| Judgment and quality | Human approval gates, anti-fraud rules, labeled uncertainty, golden test sets and reproducible builds ([§15](#15-how-i-work-with-ai)) |
+| Continuous learning and community | Law degree (Ibero), Master's in Business Law (Anáhuac) and MBA (EAE Madrid); daily use of AI and of new tools as soon as they launch; free courses from Anthropic and Harvey; live and pre-recorded courses from tech influencers and digital schools; Claude and Grok Bot talks and workshops; networking dinners with CTOs ([§14](#14-learning-and-community)) |
 
 <p align="center"><img src="assets/ornamento.svg" width="220" alt=""></p>
 
@@ -259,9 +261,24 @@ Plus two external agents (Grok Bot and Muse, [§9.4](#94-social-media-run-by-ai-
 
 <p align="center"><img src="assets/ornamento.svg" width="220" alt=""></p>
 
-## 11. Tools and systems
+## 11. Open source
 
-- **Second brain on Obsidian and Claude Code.** One note per project, person and official document; every working session leaves a log entry; a scheduled task reads my calendar and email every Sunday (read-only) and updates the vault; hourly backup with launchd. This portfolio was assembled from it.
+Eight public repositories at [github.com/BEG-lag](https://github.com/BEG-lag), built with Claude Code. Seven run their tests on GitHub Actions with every change and five have a live site. Figures taken from each repository's README on November 17, 2026.
+
+- **[mcp-dof](https://github.com/BEG-lag/mcp-dof)** · Python · 78 tests. An MCP server that lets Claude read Mexico's Official Gazette (Diario Oficial de la Federación): any day's edition, the full text of every notice, title search, and the FIX exchange rate, UDIS and TIIE, from the official SIDOF API.
+- **[dof-diario](https://github.com/BEG-lag/dof-diario)** · Python. An archive of the Official Gazette's table of contents since January 2025: 484 days and 43,994 notices. It updates itself twice a day with GitHub Actions and has a search page with filters. Data in the public domain (CC0). [Live site](https://beg-lag.github.io/dof-diario/).
+- **[leyes-mx](https://github.com/BEG-lag/leyes-mx)** · Python. 36 Mexican federal laws as Markdown in git, with 375 historical versions recovered from archived copies of the Chamber of Deputies' files. Every reform is a commit dated on its publication in the Gazette, so every law has a history, `blame` and `diff`. 13,370 articles with validated numbering. [Live site](https://beg-lag.github.io/leyes-mx/).
+- **[finiquito-mx](https://github.com/BEG-lag/finiquito-mx)** · TypeScript · 123 tests. Calculates severance (finiquito and liquidación) under Mexico's Federal Labor Law, line by line and citing the article behind each item; library and web app. It is a calculation tool, not legal advice. [Live site](https://beg-lag.github.io/finiquito-mx/).
+- **[hoy-circulo](https://github.com/BEG-lag/hoy-circulo)** · TypeScript · 101 tests. Driving restrictions (Hoy No Circula), emissions checks and environmental contingencies from CAMe in Mexico City and the State of Mexico; it checks the official announcements every 30 minutes. Installable app that works offline and exports to your calendar (.ics). Unofficial; every rule cites its source. [Live site](https://beg-lag.github.io/hoy-circulo/).
+- **[facturas-cfdi](https://github.com/BEG-lag/facturas-cfdi)** · TypeScript · 79 unit tests and 13 browser tests. Organizes CFDI e-invoices (XML files or the SAT bulk-download ZIP) in the browser without uploading anything, and flags the ones that could be personal tax deductions. It is an organizing tool, not tax advice. [Live site](https://beg-lag.github.io/facturas-cfdi/).
+- **[segundo-cerebro](https://github.com/BEG-lag/segundo-cerebro)**. An installable Obsidian vault template with the rules that make Claude Code read it before working and update it afterwards, weekly review included. It is the public version, without my data, of the system in [§12](#12-tools-and-systems).
+- **[tema-clawds](https://github.com/BEG-lag/tema-clawds)**. A light theme for the Claude Code app with 64 Clawds, Claude Code's mascot, playing in 20 SVG scenes.
+
+<p align="center"><img src="assets/ornamento.svg" width="220" alt=""></p>
+
+## 12. Tools and systems
+
+- **Second brain on Obsidian and Claude Code.** One note per project, person and official document; every working session leaves a log entry; a scheduled task reads my calendar and email every Sunday (read-only) and updates the vault; hourly backup with launchd. This portfolio was assembled from it. The template, without my data, is public: [segundo-cerebro](https://github.com/BEG-lag/segundo-cerebro).
 - **Personal multi-agent system.** Nine specialist roles read one shared record, pass typed signals instead of prose and follow a declared precedence rule when they disagree. Personal use; no data shown.
 - **My own internal CRMs.** Built on the architecture of [auto-crm](https://github.com/Hainrixz/auto-crm), an open-source local CRM with Next.js, SQLite and Claude Code that adapts to each business.
 
@@ -285,13 +302,13 @@ BeCa is my cat turned into a sticker-style companion that lives in a small float
 
 <p align="center"><img src="assets/ornamento.svg" width="220" alt=""></p>
 
-## 12. Feasibility studies
+## 13. Feasibility studies
 
 Own ventures and services of PIVOTEK, my consultancy, each with a go or no-go verdict and traffic lights by phase. Thanks to artificial intelligence tools and our own custom skills, we have produced many business plans, all with conclusions I have validated personally.
 
 <p align="center"><img src="assets/ornamento.svg" width="220" alt=""></p>
 
-## 13. Learning and community
+## 14. Learning and community
 
 ### Academic background
 
@@ -315,7 +332,7 @@ I use AI every day and I stay at the forefront of new AI tools and features: I t
 
 <p align="center"><img src="assets/ornamento.svg" width="220" alt=""></p>
 
-## 14. How I work with AI
+## 15. How I work with AI
 
 1. **Sources first.** Official texts are downloaded into the project, and each data point carries its source and cut-off date.
 2. **Uncertainty is labeled.** Every deliverable marks [ESTIMATE], [ASSUMPTION] and [DATA GAP].
@@ -327,13 +344,13 @@ I use AI every day and I stay at the forefront of new AI tools and features: I t
 
 <p align="center"><img src="assets/ornamento.svg" width="220" alt=""></p>
 
-## 15. Stack
+## 16. Stack
 
 - **AI:** Claude Code (skills, plugins, subagents, MCP connectors, hooks, scheduled tasks), Claude API, Voyage AI embeddings, ChatGPT and Codex, Higgsfield (image, video, voice and music), Grok Bot and Meta's Muse.
 - **Data:** Python, PostgreSQL with pgvector, Playwright, pdfplumber and OCR, Excel.
-- **Automation:** n8n, Docker, launchd and scheduled tasks.
+- **Automation:** n8n, Docker, launchd, GitHub Actions and scheduled tasks.
 - **Video:** Remotion, ffmpeg, Whisper, Apple Vision (Swift).
-- **Web:** Next.js, TypeScript, static HTML and CSS, GSAP, Cloudflare Workers, Vercel, Stripe, Resend, Web3Forms.
+- **Web:** Next.js, TypeScript, static HTML and CSS, GSAP, Cloudflare Workers, Vercel, GitHub Pages, Stripe, Resend, Web3Forms.
 - **Marketing and analytics:** GA4, Microsoft Clarity, Vercel Analytics, Google Ads, Meta Pixel, Google Search Console.
 - **Documents:** Markdown, pandoc, Typst, Word with tracked changes.
 - **Knowledge:** Obsidian.

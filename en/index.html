@@ -288,7 +288,7 @@
       <li class="skill"><span class="skill__k">07</span><h3>Web development</h3><p>concriterio.mx, pivotek.mx, casalegado.mx and carocomunicando.com.</p></li>
       <li class="skill"><span class="skill__k">08</span><h3>AI video and content</h3><p>A stage-entrance video with AI voice-over and motion graphics, and an automated Reels pipeline with local transcription and computer vision.</p></li>
       <li class="skill"><span class="skill__k">09</span><h3>AI marketing</h3><p>More than a dozen marketing and creative skills applied to real campaigns, SEO audits and ad copy.</p></li>
-      <li class="skill"><span class="skill__k">10</span><h3>Integrations (MCP connectors)</h3><p>Stripe, Gmail, Google Calendar and Drive, Vercel, Higgsfield, Apify, Canva and more than 10,000 browser actions.</p></li>
+      <li class="skill"><span class="skill__k">10</span><h3>Integrations (MCP connectors)</h3><p>Stripe, Gmail, Google Calendar and Drive, Vercel, Higgsfield, Apify, Canva and more than 10,000 browser actions, plus my own MCP server for the Official Gazette.</p></li>
       <li class="skill"><span class="skill__k">11</span><h3>Judgment and quality</h3><p>Human approval gates, anti-fraud rules, labeled uncertainty, golden test sets and reproducible builds.</p></li>
       <li class="skill"><span class="skill__k">12</span><h3>Continuous learning and community</h3><p>Daily use of AI and of new tools as soon as they launch; free courses from Anthropic and Harvey; live and pre-recorded courses from tech influencers and digital schools; Claude and Grok Bot talks and workshops; networking dinners with CTOs.</p></li>
     </ul>
@@ -672,11 +672,80 @@
   </div>
 </section>
 
+<!-- ============ CODIGO ABIERTO ============ -->
+<section class="oss" id="codigo">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">11 · Open source</p>
+      <h2 data-reveal>Eight public repositories: <em>the code, in plain sight.</em></h2>
+      <p class="lead" data-reveal>Built with Claude Code and open for anyone to read the code. Seven run their tests on GitHub Actions with every change and five have a live site.</p>
+    </div>
+    <div class="oss__term" aria-hidden="true">
+      <p class="oss__line"><span class="oss__ps">$</span> <span class="oss__type">gh repo list BEG-lag</span><i class="oss__caret"></i></p>
+      <p class="oss__out">8 repositories · 7 with tests in CI · 5 live sites</p>
+    </div>
+    <ul class="oss__grid" aria-label="Public repositories">
+      <li class="repo">
+        <p class="repo__meta"><span class="repo__lang" style="--c:var(--cyan)">Python</span><span class="repo__ci"><i></i><b data-n="78">78</b> tests</span></p>
+        <h3><a href="https://github.com/BEG-lag/mcp-dof" rel="noopener"><span class="repo__owner">BEG-lag/</span>mcp-dof</a></h3>
+        <p class="repo__d">An MCP server that lets Claude read Mexico's Official Gazette: any day's edition, the full text of every notice, title search, and FIX, UDIS and TIIE, from the official SIDOF API.</p>
+        <p class="repo__links"><a href="https://github.com/BEG-lag/mcp-dof" rel="noopener">Code</a></p>
+      </li>
+      <li class="repo">
+        <p class="repo__meta"><span class="repo__lang" style="--c:var(--cyan)">Python</span><span class="repo__ci"><i></i><b>CI</b></span></p>
+        <h3><a href="https://github.com/BEG-lag/dof-diario" rel="noopener"><span class="repo__owner">BEG-lag/</span>dof-diario</a></h3>
+        <p class="repo__d">An archive of the Official Gazette's table of contents since January 2025: 484 days and 43,994 notices. It updates itself twice a day and has a search page with filters. CC0 data.</p>
+        <p class="repo__links"><a href="https://github.com/BEG-lag/dof-diario" rel="noopener">Code</a><a href="https://beg-lag.github.io/dof-diario/" rel="noopener"><span class="live" aria-hidden="true"></span>Live site</a></p>
+      </li>
+      <li class="repo">
+        <p class="repo__meta"><span class="repo__lang" style="--c:var(--cyan)">Python</span><span class="repo__ci"><i></i><b>CI</b></span></p>
+        <h3><a href="https://github.com/BEG-lag/leyes-mx" rel="noopener"><span class="repo__owner">BEG-lag/</span>leyes-mx</a></h3>
+        <p class="repo__d">36 federal laws as Markdown with 375 historical versions: every reform is a commit, so each law has a history, blame and diff. 13,370 articles with validated numbering.</p>
+        <p class="repo__links"><a href="https://github.com/BEG-lag/leyes-mx" rel="noopener">Code</a><a href="https://beg-lag.github.io/leyes-mx/" rel="noopener"><span class="live" aria-hidden="true"></span>Live site</a></p>
+      </li>
+      <li class="repo">
+        <p class="repo__meta"><span class="repo__lang" style="--c:var(--paper)">TypeScript</span><span class="repo__ci"><i></i><b data-n="123">123</b> tests</span></p>
+        <h3><a href="https://github.com/BEG-lag/finiquito-mx" rel="noopener"><span class="repo__owner">BEG-lag/</span>finiquito-mx</a></h3>
+        <p class="repo__d">Calculates severance (finiquito and liquidación) under the Federal Labor Law, line by line, citing the article behind each item. Library and web app. A calculation tool, not legal advice.</p>
+        <p class="repo__links"><a href="https://github.com/BEG-lag/finiquito-mx" rel="noopener">Code</a><a href="https://beg-lag.github.io/finiquito-mx/" rel="noopener"><span class="live" aria-hidden="true"></span>Live site</a></p>
+      </li>
+      <li class="repo">
+        <p class="repo__meta"><span class="repo__lang" style="--c:var(--paper)">TypeScript</span><span class="repo__ci"><i></i><b data-n="101">101</b> tests</span></p>
+        <h3><a href="https://github.com/BEG-lag/hoy-circulo" rel="noopener"><span class="repo__owner">BEG-lag/</span>hoy-circulo</a></h3>
+        <p class="repo__d">Hoy No Circula driving restrictions, emissions checks and CAMe contingencies in Mexico City and the State of Mexico, checked every 30 minutes. Installable, works offline, exports to your calendar.</p>
+        <p class="repo__links"><a href="https://github.com/BEG-lag/hoy-circulo" rel="noopener">Code</a><a href="https://beg-lag.github.io/hoy-circulo/" rel="noopener"><span class="live" aria-hidden="true"></span>Live site</a></p>
+      </li>
+      <li class="repo">
+        <p class="repo__meta"><span class="repo__lang" style="--c:var(--paper)">TypeScript</span><span class="repo__ci"><i></i><b data-n="92">92</b> tests</span></p>
+        <h3><a href="https://github.com/BEG-lag/facturas-cfdi" rel="noopener"><span class="repo__owner">BEG-lag/</span>facturas-cfdi</a></h3>
+        <p class="repo__d">Organizes CFDI e-invoices (XML files or the SAT ZIP) in your browser without uploading anything, and flags possible personal deductions. An organizing tool, not tax advice.</p>
+        <p class="repo__links"><a href="https://github.com/BEG-lag/facturas-cfdi" rel="noopener">Code</a><a href="https://beg-lag.github.io/facturas-cfdi/" rel="noopener"><span class="live" aria-hidden="true"></span>Live site</a></p>
+      </li>
+      <li class="repo">
+        <p class="repo__meta"><span class="repo__lang" style="--c:var(--lime)">Obsidian</span><span class="repo__ci"><i></i><b>CI</b></span></p>
+        <h3><a href="https://github.com/BEG-lag/segundo-cerebro" rel="noopener"><span class="repo__owner">BEG-lag/</span>segundo-cerebro</a></h3>
+        <p class="repo__d">An installable Obsidian vault template with the rules that make Claude Code read it before working and update it afterwards. The public version, without my data.</p>
+        <p class="repo__links"><a href="https://github.com/BEG-lag/segundo-cerebro" rel="noopener">Code</a></p>
+      </li>
+      <li class="repo">
+        <p class="repo__meta"><span class="repo__lang" style="--c:var(--amber)">SVG</span></p>
+        <h3><a href="https://github.com/BEG-lag/tema-clawds" rel="noopener"><span class="repo__owner">BEG-lag/</span>tema-clawds</a></h3>
+        <p class="repo__d">A light theme for the Claude Code app with 64 Clawds, Claude Code's mascot, playing in 20 SVG scenes.</p>
+        <p class="repo__links"><a href="https://github.com/BEG-lag/tema-clawds" rel="noopener">Code</a></p>
+      </li>
+    </ul>
+    <div class="oss__foot">
+      <p class="fine" data-reveal>Figures taken from each repository's README on November 17, 2026. finiquito-mx and facturas-cfdi are calculation and organizing tools; they are not legal or tax advice.</p>
+      <a class="oss__all" href="https://github.com/BEG-lag" rel="me noopener" data-reveal>See the full GitHub profile <span aria-hidden="true">→</span></a>
+    </div>
+  </div>
+</section>
+
 <!-- ============ BECA ============ -->
 <section class="beca" id="beca">
   <div class="wrap">
     <div class="sec-head">
-      <p class="eyebrow">11 · Desktop companion</p>
+      <p class="eyebrow">12 · Desktop companion</p>
       <h2 data-reveal>BeCa: my cat knows <em>what Claude is doing.</em></h2>
       <p class="lead" data-reveal>BeCa is my cat turned into a sticker-style companion that lives in a small floating window on my Mac. It listens to Claude Code's lifecycle hooks, so I can tell at a glance what Claude is doing without looking at the terminal. <span class="beca__why">Why BeCa? To bring a sense of humor to my day-to-day work with AI.</span></p>
     </div>
@@ -709,11 +778,11 @@
 <section class="systems" id="sistemas">
   <div class="wrap systems__grid">
     <div>
-      <p class="eyebrow">12 · Tools and systems</p>
+      <p class="eyebrow">13 · Tools and systems</p>
       <h2 data-reveal>Systems that <em>work while I work.</em></h2>
       <div class="sys" data-reveal>
         <h3>Second brain on Obsidian and Claude Code</h3>
-        <p>One note per project, person and official document; every working session leaves a log entry; a scheduled task reads my calendar and email every Sunday (read-only) and updates the vault; hourly backup with launchd. This portfolio was assembled from it.</p>
+        <p>One note per project, person and official document; every working session leaves a log entry; a scheduled task reads my calendar and email every Sunday (read-only) and updates the vault; hourly backup with launchd. This portfolio was assembled from it. The template, without my data, is public: <a href="https://github.com/BEG-lag/segundo-cerebro" rel="noopener">segundo-cerebro</a>.</p>
       </div>
       <div class="sys" data-reveal>
         <h3>Personal multi-agent system</h3>
@@ -744,7 +813,7 @@
   <div class="wrap viab__grid">
     <div class="viab__copy">
       <div class="sec-head">
-        <p class="eyebrow">13 · Feasibility studies</p>
+        <p class="eyebrow">14 · Feasibility studies</p>
         <h2 data-reveal>Every study, with a verdict and <em>traffic lights by phase.</em></h2>
         <p class="lead" data-reveal>Own ventures and services of PIVOTEK, my consultancy.</p>
       </div>
@@ -774,7 +843,7 @@
 <section class="method paper" id="metodo">
   <div class="wrap method__grid">
     <div class="method__left">
-      <p class="eyebrow">14 · How I work with AI</p>
+      <p class="eyebrow">15 · How I work with AI</p>
       <h2 data-reveal>Seven rules, <em>none of them negotiable.</em></h2>
       <p class="method__count" aria-hidden="true"><span class="method__cur">1</span><span class="method__tot">/7</span></p>
     </div>
@@ -793,13 +862,13 @@
 <!-- ============ STACK ============ -->
 <section class="learn learn--stack" id="stack">
   <div class="wrap">
-    <p class="eyebrow">15 · Stack</p>
+    <p class="eyebrow">16 · Stack</p>
     <dl class="tech">
       <div><dt>AI</dt><dd><ul class="chips"><li>Claude Code (skills, plugins, subagents, MCP connectors, hooks, scheduled tasks)</li><li>Claude API</li><li>Voyage AI embeddings</li><li>ChatGPT and Codex</li><li>Higgsfield (image, video, voice and music)</li><li>Grok Bot</li><li>Meta's Muse</li></ul></dd></div>
       <div><dt>Data</dt><dd><ul class="chips"><li>Python</li><li>PostgreSQL with pgvector</li><li>Playwright</li><li>pdfplumber and OCR</li><li>Excel</li></ul></dd></div>
-      <div><dt>Automation</dt><dd><ul class="chips"><li>n8n</li><li>Docker</li><li>launchd</li><li>scheduled tasks</li></ul></dd></div>
+      <div><dt>Automation</dt><dd><ul class="chips"><li>n8n</li><li>Docker</li><li>launchd</li><li>GitHub Actions</li><li>scheduled tasks</li></ul></dd></div>
       <div><dt>Video</dt><dd><ul class="chips"><li>Remotion</li><li>ffmpeg</li><li>Whisper</li><li>Apple Vision (Swift)</li></ul></dd></div>
-      <div><dt>Web</dt><dd><ul class="chips"><li>Next.js</li><li>TypeScript</li><li>static HTML and CSS</li><li>GSAP</li><li>Cloudflare Workers</li><li>Vercel</li><li>Stripe</li><li>Resend</li><li>Web3Forms</li></ul></dd></div>
+      <div><dt>Web</dt><dd><ul class="chips"><li>Next.js</li><li>TypeScript</li><li>static HTML and CSS</li><li>GSAP</li><li>Cloudflare Workers</li><li>Vercel</li><li>GitHub Pages</li><li>Stripe</li><li>Resend</li><li>Web3Forms</li></ul></dd></div>
       <div><dt>Marketing and analytics</dt><dd><ul class="chips"><li>GA4</li><li>Microsoft Clarity</li><li>Vercel Analytics</li><li>Google Ads</li><li>Meta Pixel</li><li>Google Search Console</li></ul></dd></div>
       <div><dt>Documents</dt><dd><ul class="chips"><li>Markdown</li><li>pandoc</li><li>Typst</li><li>Word with tracked changes</li></ul></dd></div>
       <div><dt>Knowledge</dt><dd><ul class="chips"><li>Obsidian</li></ul></dd></div>
@@ -819,6 +888,7 @@
     <ul class="contact__links">
       <li><a href="https://pivotek.mx" rel="noopener">pivotek.mx</a></li>
       <li><a href="https://www.linkedin.com/in/benjamin-esponda-garc%C3%ADa-a743051b2" rel="me noopener">LinkedIn</a></li>
+      <li><a href="https://github.com/BEG-lag" rel="me noopener">GitHub: BEG-lag</a></li>
       <li><a href="https://github.com/BEG-lag/portafolio-ia" rel="noopener">GitHub: BEG-lag/portafolio-ia</a></li>
       <li><a href="https://concriterio.mx" rel="noopener">concriterio.mx</a></li>
       <li><a href="/pdf/portfolio-BEG-en.pdf" type="application/pdf">Portfolio as PDF</a></li>
