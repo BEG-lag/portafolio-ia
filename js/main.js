@@ -273,6 +273,11 @@
         Array.prototype.forEach.call(all[i - 1].children, function (c) { bot = Math.max(bot, c.getBoundingClientRect().bottom + y0); });
         if (!bot || bot > top) bot = top - 96;
         var cy = Math.round((bot + top) / 2);
+        /* si la sección anterior no deja franja vacía (termina con una cinta), el cruce va en el margen superior de la marcada */
+        if (top - bot < 48) {
+          var first = s.firstElementChild ? s.firstElementChild.getBoundingClientRect().top + y0 : top + 96;
+          cy = Math.round(top + Math.max(24, (first - top) / 2));
+        }
         if (cy > docTop && cy < docEnd) cross.push({ y: cy });
       });
       pts = [[xL, docTop]];

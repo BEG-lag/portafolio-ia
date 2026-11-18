@@ -11,16 +11,16 @@ Ciudad de México · beg.empleos@gmail.com · [pivotek.mx](https://pivotek.mx) �
 ## Contenido
 
 1. [En breve](#1-en-breve)
-2. [Mapa de habilidades de IA](#2-mapa-de-habilidades-de-ia)
-3. [Destacado: Con Criterio, kit de IA para abogados mexicanos](#3-destacado-con-criterio-kit-de-ia-para-abogados-mexicanos)
-4. [Destacado: motor de búsqueda sobre derecho energético mexicano (RAG)](#4-destacado-motor-de-búsqueda-sobre-derecho-energético-mexicano-rag)
-5. [Destacado: inteligencia de compras públicas para petróleo y gas](#5-destacado-inteligencia-de-compras-públicas-para-petróleo-y-gas)
-6. [Destacado: automatización del cierre inmobiliario en n8n](#6-destacado-automatización-del-cierre-inmobiliario-en-n8n)
-7. [Resumen diario del DOF para el sector energético (n8n)](#7-resumen-diario-del-dof-para-el-sector-energético-n8n)
-8. [Trabajo legal y regulatorio hecho con IA](#8-trabajo-legal-y-regulatorio-hecho-con-ia)
-9. [Sitios web, video y marketing digital con IA](#9-sitios-web-video-y-marketing-digital-con-ia)
-10. [Mis herramientas](#10-mis-herramientas)
-11. [Código abierto](#11-código-abierto)
+2. [Código abierto](#2-código-abierto)
+3. [Mapa de habilidades de IA](#3-mapa-de-habilidades-de-ia)
+4. [Destacado: Con Criterio, kit de IA para abogados mexicanos](#4-destacado-con-criterio-kit-de-ia-para-abogados-mexicanos)
+5. [Destacado: motor de búsqueda sobre derecho energético mexicano (RAG)](#5-destacado-motor-de-búsqueda-sobre-derecho-energético-mexicano-rag)
+6. [Destacado: inteligencia de compras públicas para petróleo y gas](#6-destacado-inteligencia-de-compras-públicas-para-petróleo-y-gas)
+7. [Destacado: automatización del cierre inmobiliario en n8n](#7-destacado-automatización-del-cierre-inmobiliario-en-n8n)
+8. [Resumen diario del DOF para el sector energético (n8n)](#8-resumen-diario-del-dof-para-el-sector-energético-n8n)
+9. [Trabajo legal y regulatorio hecho con IA](#9-trabajo-legal-y-regulatorio-hecho-con-ia)
+10. [Sitios web, video y marketing digital con IA](#10-sitios-web-video-y-marketing-digital-con-ia)
+11. [Mis herramientas](#11-mis-herramientas)
 12. [Estudios de viabilidad](#12-estudios-de-viabilidad)
 13. [Cómo trabajo con IA](#13-cómo-trabajo-con-ia)
 14. [Formación y comunidad](#14-formación-y-comunidad)
@@ -35,32 +35,74 @@ Ciudad de México · beg.empleos@gmail.com · [pivotek.mx](https://pivotek.mx) �
 - **Búsqueda sobre texto legal:** 374 instrumentos de derecho energético divididos en 11,112 fragmentos según la jerarquía de la norma mexicana, con búsqueda híbrida y un juego de pruebas de regresión.
 - **Datos a escala:** un pipeline sobre más de 560,000 contratos de compras públicas para mostrar a proveedores de petróleo y gas dónde está el dinero.
 - **Sitios, video y marketing:** cuatro sitios en vivo ([concriterio.mx](https://concriterio.mx), [pivotek.mx](https://pivotek.mx), [casalegado.mx](https://casalegado.mx) y [carocomunicando.com](https://carocomunicando.com)), un video de entrada a escenario para una conferencista, un pipeline automático de Reels y redes sociales operadas por agentes de IA (Grok Bot y Muse de Meta).
-- **Código abierto:** 16 repositorios públicos en [GitHub](https://github.com/BEG-lag), entre ellos un agente que aplica al día las reformas del DOF a la ley, 36 leyes federales versionadas en git, un radar diario del sector energético y calculadoras de finiquito, renta y pensión con pruebas automáticas ([§11](#11-código-abierto)).
+- **Código abierto:** 16 repositorios públicos en [GitHub](https://github.com/BEG-lag), entre ellos un agente que aplica al día las reformas del DOF a la ley, 36 leyes federales versionadas en git, un radar diario del sector energético y calculadoras de finiquito, renta y pensión con pruebas automáticas ([§2](#2-código-abierto)).
 - **Herramientas conectadas:** Stripe, Gmail, Google Calendar y Drive, Vercel, Higgsfield, Apify, Canva y automatización del navegador, todo desde Claude Code.
 - **Automatización con criterio:** todo flujo deja a una persona en el circuito cuando hay firmas, dinero o juicio legal de por medio.
 
 <p align="center"><img src="assets/ornamento.svg" width="220" alt=""></p>
 
-## 2. Mapa de habilidades de IA
+## 2. Código abierto
+
+16 repositorios públicos en [github.com/BEG-lag](https://github.com/BEG-lag), hechos con Claude Code y ordenados en los mismos cuatro bloques de mi perfil de GitHub. Quince se verifican en GitHub Actions con cada cambio (pruebas, tipos o datos) y doce tienen sitio en vivo. Cifras tomadas de cada repositorio (su README y sus pruebas en GitHub Actions) el 17 de noviembre de 2026.
+
+### 2.1 Derecho, compilado
+
+Herramientas abiertas que leen, aplican y auditan la ley mexicana.
+
+- **[reforma-al-dia](https://github.com/BEG-lag/reforma-al-dia)** · Python · 84 pruebas. El día que el DOF publica una reforma, un agente de IA la aplica a leyes-mx y abre un pull request para que una persona lo revise antes de integrarlo; después se audita contra el texto oficial. Probado con 34 decretos reales publicados entre abril de 2019 y octubre de 2026, en 16 leyes: 90.7% de los artículos aplicados quedaron idénticos al texto oficial y 95.8% iguales salvo formato. [Sitio en vivo](https://beg-lag.github.io/reforma-al-dia/).
+- **[leyes-mx](https://github.com/BEG-lag/leyes-mx)** · Python. 36 leyes federales en Markdown dentro de git, con 375 versiones históricas recuperadas de copias archivadas de los archivos de la Cámara de Diputados. Cada reforma es un commit con la fecha de su publicación en el DOF, así que cada ley tiene historial, `blame` y `diff`. 13,370 artículos con la numeración validada. [Sitio en vivo](https://beg-lag.github.io/leyes-mx/).
+- **[mcp-leyes](https://github.com/BEG-lag/mcp-leyes)** · Python · 117 pruebas. Servidor MCP con la ley federal mexicana en cualquier fecha: el texto exacto de cada artículo, su historia de reformas, diferencias palabra por palabra y búsqueda, sobre el historial de leyes-mx. No es oficial ni asesoría legal.
+- **[mcp-dof](https://github.com/BEG-lag/mcp-dof)** · Python · 87 pruebas · versión 1.0.0. Servidor MCP para que Claude consulte el Diario Oficial de la Federación: la edición de cualquier día, el texto íntegro de cada nota, búsqueda por título y el tipo de cambio FIX, las UDIS y la TIIE, desde la API oficial del SIDOF. También se publica como imagen de Docker.
+
+### 2.2 Datos abiertos
+
+Registros públicos convertidos en datos vivos, APIs e historias visuales.
+
+- **[radar-energia](https://github.com/BEG-lag/radar-energia)** · Python · 53 pruebas. Radar diario del sector energético en México: el DOF por subsector, CNE, SENER, ASEA y CENACE, más el FIX y los precios eléctricos y de combustibles, cada dato con su fuente oficial y con un feed por subsector. Lo firmo como PIVOTEK. [Sitio en vivo](https://beg-lag.github.io/radar-energia/).
+- **[constitucion-viva](https://github.com/BEG-lag/constitucion-viva)** · TypeScript. La Constitución de 1917, viva: 285 decretos de reforma y 857 reformas a artículos, con máquina del tiempo, el crecimiento del texto, los cambios palabra por palabra desde 2006 y la red de citas de 36 leyes federales. [Sitio en vivo](https://beg-lag.github.io/constitucion-viva/).
+- **[indicadores-mx](https://github.com/BEG-lag/indicadores-mx)** · Python · 102 pruebas. 37,372 valores oficiales en 17 series (FIX desde 1991, UDIS, TIIE, INPC, salario mínimo y UMA), cada uno ligado a su nota del DOF, como API estática gratuita en JSON y CSV. Datos en dominio público (CC0). [Sitio en vivo](https://beg-lag.github.io/indicadores-mx/).
+- **[dof-diario](https://github.com/BEG-lag/dof-diario)** · Python. Archivo del sumario del DOF desde enero de 2025: 484 días y 43,994 notas. Se actualiza solo dos veces al día con GitHub Actions y tiene un buscador con filtros. Datos en dominio público (CC0). [Sitio en vivo](https://beg-lag.github.io/dof-diario/).
+
+### 2.3 Para el día a día
+
+Pequeñas, privadas y útiles todos los días.
+
+- **[hoy-circulo](https://github.com/BEG-lag/hoy-circulo)** · TypeScript · 101 pruebas. Hoy No Circula, verificación y contingencias ambientales de la CAMe en la Ciudad de México y el Estado de México; revisa los comunicados cada 30 minutos. App instalable que funciona sin conexión y exporta al calendario (.ics). No es oficial; cada regla cita su fuente. [Sitio en vivo](https://beg-lag.github.io/hoy-circulo/).
+- **[aumento-renta](https://github.com/BEG-lag/aumento-renta)** · TypeScript · 91 pruebas · versión 1.0.0. Calcula cuánto puede subir una renta: la actualiza entre dos fechas con el INPC del INEGI o con UDIS, paso por paso y con la liga a la nota del DOF de cada valor. Para vivienda en la Ciudad de México revisa el tope del art. 2448 D del Código Civil para el Distrito Federal con las dos lecturas posibles de "la inflación del año anterior", y redacta el mensaje para el arrendador o el inquilino. App instalable que funciona sin conexión, sin cookies ni analítica; los datos oficiales (INPC desde 2003 y UDIS desde 1995) se actualizan solos desde el DOF. Es una herramienta de cálculo, no asesoría legal; liga a [Con Criterio](https://concriterio.mx). [Sitio en vivo](https://beg-lag.github.io/aumento-renta/).
+- **[pension-imss](https://github.com/BEG-lag/pension-imss)** · TypeScript · 92 pruebas. Estima la pensión de vejez y cesantía del IMSS por Ley 73 y Ley 97 (con la reforma de 2020), con el artículo de cada paso y los criterios de la SCJN; donde los criterios difieren (UMA o salario mínimo, tope de 10 o 25 veces) deja elegir. Es una estimación informativa, no asesoría. [Sitio en vivo](https://beg-lag.github.io/pension-imss/).
+- **[finiquito-mx](https://github.com/BEG-lag/finiquito-mx)** · TypeScript · 123 pruebas. Calcula finiquito y liquidación conforme a la Ley Federal del Trabajo, renglón por renglón y con el artículo de cada concepto; librería y web. Es una herramienta de cálculo, no asesoría legal. [Sitio en vivo](https://beg-lag.github.io/finiquito-mx/).
+- **[facturas-cfdi](https://github.com/BEG-lag/facturas-cfdi)** · TypeScript · 79 pruebas unitarias y 13 de navegador. Organiza facturas CFDI (XML o el ZIP de descarga masiva del SAT) en el navegador, sin subir nada, y marca las que podrían ser deducciones personales. Es una herramienta de organización, no asesoría fiscal. [Sitio en vivo](https://beg-lag.github.io/facturas-cfdi/).
+- **[mis-laboratorios](https://github.com/BEG-lag/mis-laboratorios)** · TypeScript · 127 pruebas unitarias y 16 de navegador. Organiza y grafica tus análisis clínicos en el navegador, sin subir nada: confirmas cada valor y ves cada indicador en el tiempo contra el rango del laboratorio. No interpreta, no diagnostica y no sustituye al médico; los ejemplos usan datos sintéticos. [Sitio en vivo](https://beg-lag.github.io/mis-laboratorios/).
+
+### 2.4 Para Claude Code
+
+Cómo trabajo, empaquetado para cualquiera.
+
+- **[segundo-cerebro](https://github.com/BEG-lag/segundo-cerebro)**. Plantilla instalable de bóveda de Obsidian con las reglas para que Claude Code la lea antes de trabajar y la actualice después, con revisión semanal incluida. Es la versión pública, sin mis datos, del sistema de la [§11](#11-mis-herramientas).
+- **[tema-clawds](https://github.com/BEG-lag/tema-clawds)**. Tema claro para la app de Claude Code con 64 Clawds, la mascota de Claude Code, jugando en 20 escenas SVG.
+
+<p align="center"><img src="assets/ornamento.svg" width="220" alt=""></p>
+
+## 3. Mapa de habilidades de IA
 
 | Habilidad | Qué he construido con ella |
 |:-----|:-------------|
-| Agentes de IA y flujos agénticos | Plugins, skills y subagentes de Claude Code para siete materias del derecho mexicano ([§3](#3-destacado-con-criterio-kit-de-ia-para-abogados-mexicanos)); un sistema multiagente de nueve roles con señales tipadas ([§10](#10-mis-herramientas)); redes sociales operadas por Grok Bot y Muse de Meta ([§9](#9-sitios-web-video-y-marketing-digital-con-ia)) |
-| Búsqueda sobre documentos (RAG) | RAG legal con embeddings especializados en derecho, pgvector y ranking híbrido sobre 374 instrumentos de energía ([§4](#4-destacado-motor-de-búsqueda-sobre-derecho-energético-mexicano-rag)) |
-| Ingeniería de datos | Un pipeline sobre más de 560,000 contratos de compras públicas con actualización semanal y auditorías ([§5](#5-destacado-inteligencia-de-compras-públicas-para-petróleo-y-gas)); modelos financieros en Python y Excel ([§12](#12-estudios-de-viabilidad)) |
-| Automatización de procesos | Diseños en n8n para un cierre inmobiliario de 20 pasos y un resumen diario del DOF ([§6](#6-destacado-automatización-del-cierre-inmobiliario-en-n8n), [§7](#7-resumen-diario-del-dof-para-el-sector-energético-n8n)); tareas programadas para la revisión regulatoria mensual y la revisión semanal del segundo cerebro ([§3](#3-destacado-con-criterio-kit-de-ia-para-abogados-mexicanos), [§10](#10-mis-herramientas)) |
-| IA para el trabajo legal | Auditorías regulatorias internacionales, revisiones de contratos y de cumplimiento, dictámenes y cartas, cada dato con fuente y fecha de corte ([§8](#8-trabajo-legal-y-regulatorio-hecho-con-ia)) |
-| Construcción de productos | Con Criterio, del contenido al cobro, la entrega automática y las pruebas con compradores simulados ([§3](#3-destacado-con-criterio-kit-de-ia-para-abogados-mexicanos)) |
-| Desarrollo web | concriterio.mx, pivotek.mx, casalegado.mx y carocomunicando.com ([§9](#9-sitios-web-video-y-marketing-digital-con-ia)) |
-| Video y contenido con IA | Un video de entrada a escenario con locución de IA y motion graphics, y un pipeline automático de Reels con transcripción local y visión por computadora ([§9](#9-sitios-web-video-y-marketing-digital-con-ia)) |
-| Marketing con IA | Más de una docena de skills de marketing y creatividad aplicados a campañas reales, auditorías SEO y textos de anuncios ([§9](#9-sitios-web-video-y-marketing-digital-con-ia)) |
-| Integraciones (conectores MCP) | Stripe, Gmail, Google Calendar y Drive, Vercel, Higgsfield, Apify, Canva y más de 10,000 acciones de navegador ([§10](#10-mis-herramientas)), además de servidores MCP propios para el DOF y para la ley federal ([§11](#11-código-abierto)) |
+| Agentes de IA y flujos agénticos | Plugins, skills y subagentes de Claude Code para siete materias del derecho mexicano ([§4](#4-destacado-con-criterio-kit-de-ia-para-abogados-mexicanos)); un sistema multiagente de nueve roles con señales tipadas ([§11](#11-mis-herramientas)); redes sociales operadas por Grok Bot y Muse de Meta ([§10](#10-sitios-web-video-y-marketing-digital-con-ia)) |
+| Búsqueda sobre documentos (RAG) | RAG legal con embeddings especializados en derecho, pgvector y ranking híbrido sobre 374 instrumentos de energía ([§5](#5-destacado-motor-de-búsqueda-sobre-derecho-energético-mexicano-rag)) |
+| Ingeniería de datos | Un pipeline sobre más de 560,000 contratos de compras públicas con actualización semanal y auditorías ([§6](#6-destacado-inteligencia-de-compras-públicas-para-petróleo-y-gas)); modelos financieros en Python y Excel ([§12](#12-estudios-de-viabilidad)) |
+| Automatización de procesos | Diseños en n8n para un cierre inmobiliario de 20 pasos y un resumen diario del DOF ([§7](#7-destacado-automatización-del-cierre-inmobiliario-en-n8n), [§8](#8-resumen-diario-del-dof-para-el-sector-energético-n8n)); tareas programadas para la revisión regulatoria mensual y la revisión semanal del segundo cerebro ([§4](#4-destacado-con-criterio-kit-de-ia-para-abogados-mexicanos), [§11](#11-mis-herramientas)) |
+| IA para el trabajo legal | Auditorías regulatorias internacionales, revisiones de contratos y de cumplimiento, dictámenes y cartas, cada dato con fuente y fecha de corte ([§9](#9-trabajo-legal-y-regulatorio-hecho-con-ia)) |
+| Construcción de productos | Con Criterio, del contenido al cobro, la entrega automática y las pruebas con compradores simulados ([§4](#4-destacado-con-criterio-kit-de-ia-para-abogados-mexicanos)) |
+| Desarrollo web | concriterio.mx, pivotek.mx, casalegado.mx y carocomunicando.com ([§10](#10-sitios-web-video-y-marketing-digital-con-ia)) |
+| Video y contenido con IA | Un video de entrada a escenario con locución de IA y motion graphics, y un pipeline automático de Reels con transcripción local y visión por computadora ([§10](#10-sitios-web-video-y-marketing-digital-con-ia)) |
+| Marketing con IA | Más de una docena de skills de marketing y creatividad aplicados a campañas reales, auditorías SEO y textos de anuncios ([§10](#10-sitios-web-video-y-marketing-digital-con-ia)) |
+| Integraciones (conectores MCP) | Stripe, Gmail, Google Calendar y Drive, Vercel, Higgsfield, Apify, Canva y más de 10,000 acciones de navegador ([§11](#11-mis-herramientas)), además de servidores MCP propios para el DOF y para la ley federal ([§2](#2-código-abierto)) |
 | Criterio y calidad | Compuertas de aprobación humana, reglas antifraude, incertidumbre etiquetada, pruebas golden y construcción reproducible ([§13](#13-cómo-trabajo-con-ia)) |
 | Aprendizaje continuo y comunidad | Licenciatura en Derecho (Ibero), Maestría en Derecho de la Empresa (Anáhuac) y MBA (EAE Madrid); uso diario de la IA y de las herramientas nuevas en cuanto salen; cursos gratuitos de Anthropic y Harvey; cursos en vivo y pregrabados de tech influencers y escuelas digitales; pláticas y workshops de Claude y Grok Bot; cenas de networking con CTOs ([§14](#14-formación-y-comunidad)) |
 
 <p align="center"><img src="assets/ornamento.svg" width="220" alt=""></p>
 
-## 3. Destacado: Con Criterio, kit de IA para abogados mexicanos
+## 4. Destacado: Con Criterio, kit de IA para abogados mexicanos
 
 **Qué es.** Un kit práctico de IA para abogados en México: una guía (116 páginas en la edición Claude y 134 en la edición ChatGPT), 7 plugins por materia y 7 skills de redacción. A la venta en [concriterio.mx](https://concriterio.mx) desde el 5 de noviembre de 2026. Desde el 11 de noviembre también ofrece una guía de IA para principiantes, para el público general.
 
@@ -76,11 +118,11 @@ Ciudad de México · beg.empleos@gmail.com · [pivotek.mx](https://pivotek.mx) �
 - Venta y entrega: página de venta, ligas de pago y webhook de Stripe, y un Worker de Cloudflare que entrega los archivos y opera el boletín (101 pruebas automáticas sin fallas).
 - Su propia capa legal: términos y condiciones, aviso de privacidad y licencia de uso.
 - Pruebas como comprador: una ronda simulada con 20 compradores dio 118 hallazgos distintos y cero bloqueantes; 114 de los 115 hallazgos abiertos se cerraron el mismo día.
-- Marketing: contenido producido con Claude Code y publicado por agentes de IA ([§9](#9-sitios-web-video-y-marketing-digital-con-ia)), auditoría SEO, dos campañas de Google Ads preparadas y el Pixel de Meta conectado al flujo de pago.
+- Marketing: contenido producido con Claude Code y publicado por agentes de IA ([§10](#10-sitios-web-video-y-marketing-digital-con-ia)), auditoría SEO, dos campañas de Google Ads preparadas y el Pixel de Meta conectado al flujo de pago.
 
 <p align="center"><img src="assets/ornamento.svg" width="220" alt=""></p>
 
-## 4. Destacado: motor de búsqueda sobre derecho energético mexicano (RAG)
+## 5. Destacado: motor de búsqueda sobre derecho energético mexicano (RAG)
 
 **Problema.** Las reglas de energía en México están dispersas entre el DOF y los sitios de ocho autoridades, y la reforma de 2025 sustituyó buena parte del marco. Encontrar el instrumento que de verdad aplica, y saber si sigue aplicando, toma horas.
 
@@ -101,7 +143,7 @@ Ciudad de México · beg.empleos@gmail.com · [pivotek.mx](https://pivotek.mx) �
 
 <p align="center"><img src="assets/ornamento.svg" width="220" alt=""></p>
 
-## 5. Destacado: inteligencia de compras públicas para petróleo y gas
+## 6. Destacado: inteligencia de compras públicas para petróleo y gas
 
 **Problema.** Los proveedores del sector de petróleo y gas en México licitan a ciegas: no saben quién compra lo que venden, a qué precio ni cuándo.
 
@@ -114,7 +156,7 @@ Ciudad de México · beg.empleos@gmail.com · [pivotek.mx](https://pivotek.mx) �
 
 <p align="center"><img src="assets/ornamento.svg" width="220" alt=""></p>
 
-## 6. Destacado: automatización del cierre inmobiliario en n8n
+## 7. Destacado: automatización del cierre inmobiliario en n8n
 
 ![Arquitectura del cierre inmobiliario automatizado en n8n](assets/arquitectura-cierre-n8n-es.svg)
 
@@ -146,7 +188,7 @@ Ciudad de México · beg.empleos@gmail.com · [pivotek.mx](https://pivotek.mx) �
 
 <p align="center"><img src="assets/ornamento.svg" width="220" alt=""></p>
 
-## 7. Resumen diario del DOF para el sector energético (n8n)
+## 8. Resumen diario del DOF para el sector energético (n8n)
 
 **Problema.** Cada mañana revisaba el DOF a mano para ver si salió algo que afectara a mis clientes de energía: unos 30 minutos al día [ESTIMADO].
 
@@ -159,7 +201,7 @@ Schedule (lun a vie, 8:30) → HTTP Request (índice del día) → HTML (título
 
 <p align="center"><img src="assets/ornamento.svg" width="220" alt=""></p>
 
-## 8. Trabajo legal y regulatorio hecho con IA
+## 9. Trabajo legal y regulatorio hecho con IA
 
 Por confidencialidad no detallo cada asunto ni a sus clientes.
 
@@ -168,7 +210,7 @@ Por confidencialidad no detallo cada asunto ni a sus clientes.
 
 <p align="center"><img src="assets/ornamento.svg" width="220" alt=""></p>
 
-## 9. Sitios web, video y marketing digital con IA
+## 10. Sitios web, video y marketing digital con IA
 
 - **Sitios:** [concriterio.mx](https://concriterio.mx) (venta y entrega automática de Con Criterio), [pivotek.mx](https://pivotek.mx) (este portafolio), [casalegado.mx](https://casalegado.mx) (mi marca de documentales biográficos) y [carocomunicando.com](https://carocomunicando.com) (una capacitadora en oratoria).
 - **Video:** una intro de entrada a escenario para la capacitadora, con motion graphics en Remotion y voz de IA, y videos de sus eventos.
@@ -178,7 +220,7 @@ Por confidencialidad no detallo cada asunto ni a sus clientes.
 
 <p align="center"><img src="assets/ornamento.svg" width="220" alt=""></p>
 
-## 10. Mis herramientas
+## 11. Mis herramientas
 
 **Conectores.** Claude Code llega a mis herramientas mediante conectores (MCP): el navegador (más de 10,000 acciones), el uso de computadora (más de 900), Stripe (unas 800 llamadas), Gmail, Google Calendar y Drive, tareas programadas, Vercel, Apify, Wispr Flow, Higgsfield (más de 1,000 llamadas), Canva y los Artifacts de Claude. Las cifras salen de los registros de mis sesiones.
 
@@ -187,48 +229,6 @@ Por confidencialidad no detallo cada asunto ni a sus clientes.
 - **BeCa:** mi gato convertido en acompañante de escritorio. Una app de macOS en Swift que escucha los hooks de Claude Code y me dice con su postura qué está haciendo Claude: saluda, teclea, revisa y salta al terminar. ¿Por qué BeCa? Para darle un sentido del humor a mi día a día con la IA mientras trabajo.
 
 ![BeCa jugando con Clawd, la mascota de Claude Code](assets/beca-jugando-con-clawd-animado.png)
-
-<p align="center"><img src="assets/ornamento.svg" width="220" alt=""></p>
-
-## 11. Código abierto
-
-16 repositorios públicos en [github.com/BEG-lag](https://github.com/BEG-lag), hechos con Claude Code y ordenados en los mismos cuatro bloques de mi perfil de GitHub. Quince se verifican en GitHub Actions con cada cambio (pruebas, tipos o datos) y doce tienen sitio en vivo. Cifras tomadas de cada repositorio (su README y sus pruebas en GitHub Actions) el 17 de noviembre de 2026.
-
-### 11.1 Derecho, compilado
-
-Herramientas abiertas que leen, aplican y auditan la ley mexicana.
-
-- **[reforma-al-dia](https://github.com/BEG-lag/reforma-al-dia)** · Python · 84 pruebas. El día que el DOF publica una reforma, un agente de IA la aplica a leyes-mx y abre un pull request para que una persona lo revise antes de integrarlo; después se audita contra el texto oficial. Probado con 34 decretos reales publicados entre abril de 2019 y octubre de 2026, en 16 leyes: 90.7% de los artículos aplicados quedaron idénticos al texto oficial y 95.8% iguales salvo formato. [Sitio en vivo](https://beg-lag.github.io/reforma-al-dia/).
-- **[leyes-mx](https://github.com/BEG-lag/leyes-mx)** · Python. 36 leyes federales en Markdown dentro de git, con 375 versiones históricas recuperadas de copias archivadas de los archivos de la Cámara de Diputados. Cada reforma es un commit con la fecha de su publicación en el DOF, así que cada ley tiene historial, `blame` y `diff`. 13,370 artículos con la numeración validada. [Sitio en vivo](https://beg-lag.github.io/leyes-mx/).
-- **[mcp-leyes](https://github.com/BEG-lag/mcp-leyes)** · Python · 117 pruebas. Servidor MCP con la ley federal mexicana en cualquier fecha: el texto exacto de cada artículo, su historia de reformas, diferencias palabra por palabra y búsqueda, sobre el historial de leyes-mx. No es oficial ni asesoría legal.
-- **[mcp-dof](https://github.com/BEG-lag/mcp-dof)** · Python · 87 pruebas · versión 1.0.0. Servidor MCP para que Claude consulte el Diario Oficial de la Federación: la edición de cualquier día, el texto íntegro de cada nota, búsqueda por título y el tipo de cambio FIX, las UDIS y la TIIE, desde la API oficial del SIDOF. También se publica como imagen de Docker.
-
-### 11.2 Datos abiertos
-
-Registros públicos convertidos en datos vivos, APIs e historias visuales.
-
-- **[radar-energia](https://github.com/BEG-lag/radar-energia)** · Python · 53 pruebas. Radar diario del sector energético en México: el DOF por subsector, CNE, SENER, ASEA y CENACE, más el FIX y los precios eléctricos y de combustibles, cada dato con su fuente oficial y con un feed por subsector. Lo firmo como PIVOTEK. [Sitio en vivo](https://beg-lag.github.io/radar-energia/).
-- **[constitucion-viva](https://github.com/BEG-lag/constitucion-viva)** · TypeScript. La Constitución de 1917, viva: 285 decretos de reforma y 857 reformas a artículos, con máquina del tiempo, el crecimiento del texto, los cambios palabra por palabra desde 2006 y la red de citas de 36 leyes federales. [Sitio en vivo](https://beg-lag.github.io/constitucion-viva/).
-- **[indicadores-mx](https://github.com/BEG-lag/indicadores-mx)** · Python · 102 pruebas. 37,372 valores oficiales en 17 series (FIX desde 1991, UDIS, TIIE, INPC, salario mínimo y UMA), cada uno ligado a su nota del DOF, como API estática gratuita en JSON y CSV. Datos en dominio público (CC0). [Sitio en vivo](https://beg-lag.github.io/indicadores-mx/).
-- **[dof-diario](https://github.com/BEG-lag/dof-diario)** · Python. Archivo del sumario del DOF desde enero de 2025: 484 días y 43,994 notas. Se actualiza solo dos veces al día con GitHub Actions y tiene un buscador con filtros. Datos en dominio público (CC0). [Sitio en vivo](https://beg-lag.github.io/dof-diario/).
-
-### 11.3 Para el día a día
-
-Pequeñas, privadas y útiles todos los días.
-
-- **[hoy-circulo](https://github.com/BEG-lag/hoy-circulo)** · TypeScript · 101 pruebas. Hoy No Circula, verificación y contingencias ambientales de la CAMe en la Ciudad de México y el Estado de México; revisa los comunicados cada 30 minutos. App instalable que funciona sin conexión y exporta al calendario (.ics). No es oficial; cada regla cita su fuente. [Sitio en vivo](https://beg-lag.github.io/hoy-circulo/).
-- **[aumento-renta](https://github.com/BEG-lag/aumento-renta)** · TypeScript · 91 pruebas · versión 1.0.0. Calcula cuánto puede subir una renta: la actualiza entre dos fechas con el INPC del INEGI o con UDIS, paso por paso y con la liga a la nota del DOF de cada valor. Para vivienda en la Ciudad de México revisa el tope del art. 2448 D del Código Civil para el Distrito Federal con las dos lecturas posibles de "la inflación del año anterior", y redacta el mensaje para el arrendador o el inquilino. App instalable que funciona sin conexión, sin cookies ni analítica; los datos oficiales (INPC desde 2003 y UDIS desde 1995) se actualizan solos desde el DOF. Es una herramienta de cálculo, no asesoría legal; liga a [Con Criterio](https://concriterio.mx). [Sitio en vivo](https://beg-lag.github.io/aumento-renta/).
-- **[pension-imss](https://github.com/BEG-lag/pension-imss)** · TypeScript · 92 pruebas. Estima la pensión de vejez y cesantía del IMSS por Ley 73 y Ley 97 (con la reforma de 2020), con el artículo de cada paso y los criterios de la SCJN; donde los criterios difieren (UMA o salario mínimo, tope de 10 o 25 veces) deja elegir. Es una estimación informativa, no asesoría. [Sitio en vivo](https://beg-lag.github.io/pension-imss/).
-- **[finiquito-mx](https://github.com/BEG-lag/finiquito-mx)** · TypeScript · 123 pruebas. Calcula finiquito y liquidación conforme a la Ley Federal del Trabajo, renglón por renglón y con el artículo de cada concepto; librería y web. Es una herramienta de cálculo, no asesoría legal. [Sitio en vivo](https://beg-lag.github.io/finiquito-mx/).
-- **[facturas-cfdi](https://github.com/BEG-lag/facturas-cfdi)** · TypeScript · 79 pruebas unitarias y 13 de navegador. Organiza facturas CFDI (XML o el ZIP de descarga masiva del SAT) en el navegador, sin subir nada, y marca las que podrían ser deducciones personales. Es una herramienta de organización, no asesoría fiscal. [Sitio en vivo](https://beg-lag.github.io/facturas-cfdi/).
-- **[mis-laboratorios](https://github.com/BEG-lag/mis-laboratorios)** · TypeScript · 127 pruebas unitarias y 16 de navegador. Organiza y grafica tus análisis clínicos en el navegador, sin subir nada: confirmas cada valor y ves cada indicador en el tiempo contra el rango del laboratorio. No interpreta, no diagnostica y no sustituye al médico; los ejemplos usan datos sintéticos. [Sitio en vivo](https://beg-lag.github.io/mis-laboratorios/).
-
-### 11.4 Para Claude Code
-
-Cómo trabajo, empaquetado para cualquiera.
-
-- **[segundo-cerebro](https://github.com/BEG-lag/segundo-cerebro)**. Plantilla instalable de bóveda de Obsidian con las reglas para que Claude Code la lea antes de trabajar y la actualice después, con revisión semanal incluida. Es la versión pública, sin mis datos, del sistema de la [§10](#10-mis-herramientas).
-- **[tema-clawds](https://github.com/BEG-lag/tema-clawds)**. Tema claro para la app de Claude Code con 64 Clawds, la mascota de Claude Code, jugando en 20 escenas SVG.
 
 <p align="center"><img src="assets/ornamento.svg" width="220" alt=""></p>
 
@@ -281,6 +281,6 @@ Uso la IA todos los días y me mantengo a la vanguardia de las herramientas y fu
 - **Pláticas y workshops de Claude en México**, como Claude for AI Engineering (Claude Community CDMX, octubre de 2026), Claude for Legal, Claude for Finance, Claude Community House, Claude for Revenue, Claude for Games, Claude en la Cámara de Diputados y Claude en el Senado de la República, entre otros. En Claude for AI Engineering resumí las cinco ponencias (uso de herramientas, MCP, ingeniería de contexto) y convertí las notas en un agente que responde como lo haría cada ponente.
 - **Pláticas y workshops de Grok Bot.**
 - **Cenas de networking con CTOs** de empresas grandes y medianas.
-- **Curso de automatización con n8n** (en curso): el resumen diario del DOF de la [§7](#7-resumen-diario-del-dof-para-el-sector-energético-n8n) fue la primera entrega.
+- **Curso de automatización con n8n** (en curso): el resumen diario del DOF de la [§8](#8-resumen-diario-del-dof-para-el-sector-energético-n8n) fue la primera entrega.
 
 <p align="center"><img src="assets/ornamento.svg" width="220" alt=""></p>

@@ -120,7 +120,7 @@ def con_criterio():
              '<path d="M%d %d l11 11 l20 -22" fill="none" stroke="%s" stroke-width="7" stroke-linecap="square"/>' % (sx - 16, sy + 1, INK) +
              '</g>')
     s.append('<line x1="56" x2="544" y1="653" y2="653" stroke="%s" stroke-width="4"/>' % INK)
-    return marco('03', T['cc_lab'], ('CON', 'CRITERIO'), LIME, T['cc_pie'], T['cc_meta'], ''.join(s))
+    return marco('04', T['cc_lab'], ('CON', 'CRITERIO'), LIME, T['cc_pie'], T['cc_meta'], ''.join(s))
 
 
 # ---------------------------------------------------------------- 04 · RAG
@@ -176,7 +176,7 @@ def rag():
     s.append('<path d="M%s %s A%d %d 0 0 1 %s %s" fill="none" stroke="%s" stroke-width="5" stroke-linecap="round" opacity=".9"/>'
              % (r(cx - (R - 22) * math.cos(math.radians(30))), r(cy - (R - 22) * math.sin(math.radians(30))), R - 22, R - 22,
                 r(cx - (R - 22) * math.cos(math.radians(75))), r(cy - (R - 22) * math.sin(math.radians(75))), CYAN))
-    return marco('04', 'RAG', T['rag_tit'], CYAN, T['rag_pie'], T['rag_meta'], ''.join(s))
+    return marco('05', 'RAG', T['rag_tit'], CYAN, T['rag_pie'], T['rag_meta'], ''.join(s))
 
 
 # ---------------------------------------------------------------- 05 · SupplySense
@@ -224,7 +224,7 @@ def supply():
     s.append('<g transform="rotate(28 %d %d)"><path d="M%d %d a42 42 0 0 1 0 84 z" fill="%s" stroke="%s" stroke-width="4" transform="rotate(-90 %d %d)"/></g>'
              % (cxw, cyw, cxw, cyw - 42, CORAL, INK, cxw, cyw))
     s.append('<circle cx="%d" cy="%d" r="10" fill="%s"/>' % (cxw, cyw, INK))
-    return marco('05', T['ss_lab'], ('SUPPLY', 'SENSE'), AMBER, T['ss_pie'], T['ss_meta'], ''.join(s))
+    return marco('06', T['ss_lab'], ('SUPPLY', 'SENSE'), AMBER, T['ss_pie'], T['ss_meta'], ''.join(s))
 
 
 # ---------------------------------------------------------------- 06 · El cierre
@@ -263,7 +263,7 @@ def cierre():
     s.append('<line x1="%d" x2="%d" y1="%d" y2="%d" stroke="%s" stroke-width="13" stroke-linecap="round"/>' % (bx - 6, bx + 34, by + 8, by - 92, INK))
     s.append('<rect x="%d" y="%d" width="24" height="52" rx="11" fill="%s" stroke="%s" stroke-width="4" transform="rotate(22 %d %d)"/>' % (bx + 22, by - 140, LIME, INK, bx + 34, by - 114))
     s.append('<text x="%d" y="%d" %s font-size="11.5" letter-spacing="2.4" text-anchor="middle" fill="%s">%s</text>' % (bx, by + 26, MONO, PAPER, T['freno']))
-    return marco('06', 'N8N', T['ci_tit'], CORAL, T['ci_pie'], T['ci_meta'], ''.join(s))
+    return marco('07', 'N8N', T['ci_tit'], CORAL, T['ci_pie'], T['ci_meta'], ''.join(s))
 
 
 SITIO = os.path.join(AQUI, '..', '..', 'img', 'carteles') + '/'
