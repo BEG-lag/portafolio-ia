@@ -639,13 +639,13 @@
         <p class="fine">It runs locally, uses no network and stores no content. The hooks are global, so BeCa works in every project.</p>
       </div>
       <ol class="beca__states">
-        <li data-anim="greet"><p class="st__cc">Claude Code starts a session</p><p class="st__hook"><code>SessionStart</code></p><p class="st__beca">Waves twice, then rests</p></li>
-        <li data-anim="type"><p class="st__cc">Works on a request or runs a tool</p><p class="st__hook"><code>UserPromptSubmit</code> <code>PreToolUse</code> <code>PostToolUse</code></p><p class="st__beca">Types in the air</p></li>
-        <li data-anim="review"><p class="st__cc">Edits or writes a file</p><p class="st__hook"><code>PostToolUse</code> of <code>Edit</code> or <code>Write</code></p><p class="st__beca">Inspects the work, paw on chin</p></li>
-        <li data-anim="jump"><p class="st__cc">Finishes its turn</p><p class="st__hook"><code>Stop</code></p><p class="st__beca">Jumps four times and waves</p></li>
-        <li data-anim="ask"><p class="st__cc">Waits for my permission or answer</p><p class="st__hook"><code>PermissionRequest</code> <code>Notification</code></p><p class="st__beca">Asks with its paws together</p></li>
-        <li data-anim="deflate"><p class="st__cc">Hits an API error</p><p class="st__hook"><code>StopFailure</code></p><p class="st__beca">Deflates once</p></li>
-        <li data-anim="rest"><p class="st__cc">Closes the session</p><p class="st__hook"><code>SessionEnd</code></p><p class="st__beca">Rests</p></li>
+        <li data-anim="greet"><p class="st__beca">Waves</p><p class="st__cc">when a session opens</p></li>
+        <li data-anim="type"><p class="st__beca">Types in the air</p><p class="st__cc">while Claude works</p></li>
+        <li data-anim="review"><p class="st__beca">Reviews, paw on chin</p><p class="st__cc">when it edits a file</p></li>
+        <li data-anim="jump"><p class="st__beca">Jumps</p><p class="st__cc">when its turn ends</p></li>
+        <li data-anim="ask"><p class="st__beca">Begs, paws together</p><p class="st__cc">when it waits for my permission</p></li>
+        <li data-anim="deflate"><p class="st__beca">Deflates</p><p class="st__cc">on an API error</p></li>
+        <li data-anim="rest"><p class="st__beca">Rests</p><p class="st__cc">when the session closes</p></li>
       </ol>
     </div>
     </div>

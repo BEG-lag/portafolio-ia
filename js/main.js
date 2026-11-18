@@ -782,7 +782,7 @@
     states.classList.add('is-live');
     function setState(li) {
       stateItems.forEach(function (o) { o.classList.toggle('is-active', o === li); });
-      hookEl.textContent = $$('code', li).map(function (cd) { return cd.textContent; }).join(' · ');
+      hookEl.textContent = $('.st__cc', li).textContent;
       doesEl.textContent = $('.st__beca', li).textContent;
       petAnim(li.dataset.anim);
     }
