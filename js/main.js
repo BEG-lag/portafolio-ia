@@ -183,6 +183,98 @@
     measure();
   })();
 
+  /* ---------- flecha guía: la flecha de PIVOTEK sale del nombre y recorre la página ----------
+     Escritorio: se suelta del nombre, gira hacia abajo y baja por el margen izquierdo dejando una línea;
+     al pasar por la etiqueta de cada sección gira para señalarla. Sobre fondos claros cambia a tinta.
+     Celular: cada etiqueta lleva su flechita que gira al llegar. Movimiento reducido: se queda junto al nombre. */
+  (function () {
+    var slot = $('.hero__slot'), hero = $('.hero');
+    if (!slot || !hero) return;
+    var secs = $$('main > section, footer.contact').filter(function (s) { return s !== hero && $('.eyebrow', s); });
+    var eyes = secs.map(function (s) { return $('.eyebrow', s); });
+    var isLight = function (s) { return s.classList.contains('fill') || s.classList.contains('paper') || s.classList.contains('contact'); };
+    eyes.forEach(function (e) { e.classList.add('has-arrow'); });
+    if ('IntersectionObserver' in window) {
+      var io = new IntersectionObserver(function (es) { es.forEach(function (e) { e.target.classList.toggle('is-on', e.isIntersecting); }); }, { rootMargin: '-35% 0px -45% 0px' });
+      eyes.forEach(function (e) { io.observe(e); });
+    }
+    if (reduceMQ.matches) { slot.classList.add('is-static'); return; }
+
+    var guide = document.createElement('div'); guide.className = 'guide'; guide.setAttribute('aria-hidden', 'true');
+    guide.appendChild(document.createElement('i'));
+    var trail = document.createElement('div'); trail.className = 'trail'; trail.setAttribute('aria-hidden', 'true');
+    var fill = document.createElement('i'); trail.appendChild(fill);
+    var ticks = eyes.map(function () { var t = document.createElement('i'); t.className = 'tick'; t.setAttribute('aria-hidden', 'true'); return t; });
+    document.body.appendChild(trail);
+    ticks.forEach(function (t) { document.body.appendChild(t); });
+    document.body.appendChild(guide);
+
+    var gx = 40, docTop = 0, docEnd = 0, rot = 0, curY = null, W1 = 22, deskMQ = window.matchMedia('(min-width: 900px)');
+    var lerp = function (a, b, t) { return a + (b - a) * t; };
+    function measure() {
+      if (!deskMQ.matches) return;
+      var wrap = $('.wrap', hero).getBoundingClientRect(), y0 = window.scrollY, vh = window.innerHeight;
+      gx = Math.max(16, wrap.left / 2);
+      docTop = hero.offsetHeight * 0.6 + vh * 0.5;
+      var last = eyes[eyes.length - 1].getBoundingClientRect();
+      docEnd = last.top + y0 + last.height / 2;
+      var H = Math.max(1, docEnd - docTop);
+      trail.style.left = gx + 'px'; trail.style.top = docTop + 'px'; trail.style.height = H + 'px';
+      var fg = [], bg = [];
+      secs.forEach(function (sec, i) {
+        var e = eyes[i].getBoundingClientRect(), r = sec.getBoundingClientRect(), L = isLight(sec);
+        ticks[i].style.left = gx + 'px';
+        ticks[i].style.top = (e.top + y0 + e.height / 2) + 'px';
+        ticks[i].classList.toggle('on-light', L);
+        var a = Math.max(0, r.top + y0 - docTop), b = Math.min(H, r.bottom + y0 - docTop);
+        if (b <= a) return;
+        var c1 = L ? '#0a0c10' : '#cfff45', c2 = L ? 'rgba(10,12,16,.25)' : 'rgba(236,238,230,.12)';
+        fg.push(c1 + ' ' + a + 'px', c1 + ' ' + b + 'px'); bg.push(c2 + ' ' + a + 'px', c2 + ' ' + b + 'px');
+      });
+      if (fg.length) {
+        fill.style.backgroundImage = 'linear-gradient(to bottom,' + fg.join(',') + ')';
+        fill.style.backgroundSize = '100% ' + H + 'px';
+        trail.style.backgroundImage = 'linear-gradient(to bottom,' + bg.join(',') + ')';
+      }
+    }
+    function frame() {
+      requestAnimationFrame(frame);
+      if (!deskMQ.matches) return;
+      var vh = window.innerHeight, y = window.scrollY, center = vh * 0.5;
+      var s = slot.getBoundingClientRect();
+      var p = Math.max(0, Math.min(1, y / (hero.offsetHeight * 0.6))), e = p * p * (3 - 2 * p);
+      var target = center, point = false, light = false;
+      for (var i = 0; i < eyes.length; i++) {
+        var r = eyes[i].getBoundingClientRect(), cy = r.top + r.height / 2;
+        if (Math.abs(cy - center) < vh * 0.16) { target = cy; point = true; }
+        ticks[i].classList.toggle('is-on', cy < center + 2);
+        var sr = secs[i].getBoundingClientRect();
+        if (sr.top <= center && sr.bottom > center) light = isLight(secs[i]);
+      }
+      if (y + center > docEnd) {
+        var lr = eyes[eyes.length - 1].getBoundingClientRect();
+        target = lr.top + lr.height / 2; point = true; light = true;
+      }
+      curY = curY === null ? target : lerp(curY, target, 0.18);
+      var w = lerp(s.width, W1, e), h = w * 171 / 154;
+      var x = lerp(s.left + s.width / 2, gx, e), yy = lerp(s.top + s.height / 2, curY, e);
+      rot = e < 1 ? -90 * e : lerp(rot, point ? -180 : -90, 0.14);
+      guide.style.width = w + 'px';
+      guide.style.height = h + 'px';
+      guide.style.transform = 'translate3d(' + (x - w / 2).toFixed(1) + 'px,' + (yy - h / 2).toFixed(1) + 'px,0) rotate(' + rot.toFixed(1) + 'deg)';
+      guide.style.color = e < 0.5 ? 'var(--fg)' : (light ? 'var(--ink)' : 'var(--lime)');
+      fill.style.height = Math.max(0, Math.min(docEnd, y + curY) - docTop) + 'px';
+      trail.style.opacity = e;
+      for (var k = 0; k < ticks.length; k++) ticks[k].style.opacity = e;
+    }
+    window.addEventListener('resize', measure);
+    window.addEventListener('load', measure);
+    if (document.fonts && document.fonts.ready) document.fonts.ready.then(measure);
+    if (window.ScrollTrigger) window.ScrollTrigger.addEventListener('refresh', measure);
+    measure();
+    requestAnimationFrame(frame);
+  })();
+
   /* ---------- sin GSAP o con movimiento reducido: todo estático ---------- */
   var hasGSAP = !!(window.gsap && window.ScrollTrigger);
   drawDots();
