@@ -441,28 +441,41 @@
     /* 12. CONECTORES: barras que crecen */
     gsap.from('.bar__fill', { scaleX: 0, duration: 1.5, ease: 'power3.out', stagger: 0.15, scrollTrigger: once('.bars', 'top 80%') });
 
-    /* 12b. CÓDIGO ABIERTO: se teclea el comando, los repos entran en cascada y su CI pasa de ámbar a verde */
+    /* 12b. CÓDIGO ABIERTO: se teclea el comando; cada bloque entra en cascada y su CI pasa de ámbar a verde
+       (en celular, tarjeta por tarjeta) */
     if ($('.oss')) {
       var ossType = $('.oss__type');
       var ossChars = $('.ch', ossType) ? $$('.ch', ossType) : splitChars(ossType);
-      var ossCards = $$('.repo'), ossStep = desk ? 0.09 : 0.06;
-      var ot = gsap.timeline({ scrollTrigger: once('.oss__term', 'top 84%') });
-      ot.fromTo(ossChars, { opacity: 0 }, { opacity: 1, duration: 0.01, stagger: 0.045, ease: 'none' }, 0)
+      gsap.timeline({ scrollTrigger: once('.oss__term', 'top 84%') })
+        .fromTo(ossChars, { opacity: 0 }, { opacity: 1, duration: 0.01, stagger: 0.045, ease: 'none' }, 0)
         .fromTo('.oss__out', { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.4, ease: 'power2.out' }, '+=0.15');
-      var ossAt = ot.duration() - 0.1;
-      ot.fromTo(ossCards, { opacity: 0, y: 46, rotationX: desk ? -14 : 0, transformOrigin: '50% 0%' },
-        { opacity: 1, y: 0, rotationX: 0, duration: 0.75, stagger: ossStep, ease: 'power3.out' }, ossAt);
-      $$('.repo__ci').forEach(function (ci) {
-        var idx = ossCards.indexOf(ci.closest('.repo')), b = $('b', ci), n = +(b.dataset.n || 0), o = { v: 0 };
-        var start = ossAt + idx * ossStep + 0.25, run = 0.9 + ((idx * 37) % 5) * 0.16;
-        ci.classList.add('is-run');
-        if (n) {
-          b.textContent = '0';
-          ot.to(o, { v: n, duration: run, ease: 'power1.inOut', onUpdate: function () { b.textContent = Math.round(o.v); } }, start);
-        }
-        ot.call(function () { ci.classList.remove('is-run'); }, null, start + run)
-          .fromTo(ci, { scale: 1 }, { scale: 1.12, duration: 0.14, yoyo: true, repeat: 1, ease: 'power2.out' }, start + run);
-        undo.push(function () { ci.classList.remove('is-run'); if (n) b.textContent = String(n); });
+      var ossRun = function (items, trigger, head) {
+        var step = desk ? 0.09 : 0.06, at = head ? 0.2 : 0;
+        var gt = gsap.timeline({ scrollTrigger: once(trigger, desk ? 'top 80%' : 'top 88%') });
+        if (head) gt.fromTo(head, { opacity: 0, x: -24 }, { opacity: 1, x: 0, duration: 0.6, ease: 'power3.out' }, 0);
+        if (!items.length) return;
+        gt.fromTo(items, { opacity: 0, y: 46, rotationX: desk ? -14 : 0, transformOrigin: '50% 0%' },
+          { opacity: 1, y: 0, rotationX: 0, duration: 0.75, stagger: step, ease: 'power3.out' }, at);
+        items.forEach(function (item, idx) {
+          var ci = $('.repo__ci', item);
+          if (!ci) return;
+          var b = $('b', ci), n = +(b.dataset.n || 0), o = { v: 0 };
+          var start = at + idx * step + 0.25, run = 0.9 + ((idx * 37) % 5) * 0.16;
+          ci.classList.add('is-run');
+          if (n) {
+            b.textContent = '0';
+            gt.to(o, { v: n, duration: run, ease: 'power1.inOut', onUpdate: function () { b.textContent = Math.round(o.v); } }, start);
+          }
+          gt.call(function () { ci.classList.remove('is-run'); }, null, start + run)
+            .fromTo(ci, { scale: 1 }, { scale: 1.12, duration: 0.14, yoyo: true, repeat: 1, ease: 'power2.out' }, start + run);
+          undo.push(function () { ci.classList.remove('is-run'); if (n) b.textContent = String(n); });
+        });
+      };
+      $$('.oss__group').forEach(function (g) {
+        var head = $('.oss__gh', g), items = $$('.oss__grid > li', g);
+        if (desk) { ossRun(items, g, head); return; }
+        ossRun([], head, head);
+        items.forEach(function (item) { ossRun([item], item, null); });
       });
     }
 

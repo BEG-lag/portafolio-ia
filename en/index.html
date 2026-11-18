@@ -297,7 +297,7 @@
       <li class="skill"><span class="skill__k">07</span><h3>Web development</h3><p>concriterio.mx, pivotek.mx, casalegado.mx and carocomunicando.com.</p></li>
       <li class="skill"><span class="skill__k">08</span><h3>AI video and content</h3><p>A stage-entrance video with AI voice-over and motion graphics, and an automated Reels pipeline with local transcription and computer vision.</p></li>
       <li class="skill"><span class="skill__k">09</span><h3>AI marketing</h3><p>More than a dozen marketing and creative skills applied to real campaigns, SEO audits and ad copy.</p></li>
-      <li class="skill"><span class="skill__k">10</span><h3>Integrations (MCP connectors)</h3><p>Stripe, Gmail, Google Calendar and Drive, Vercel, Higgsfield, Apify, Canva and more than 10,000 browser actions, plus my own MCP server for the Official Gazette.</p></li>
+      <li class="skill"><span class="skill__k">10</span><h3>Integrations (MCP connectors)</h3><p>Stripe, Gmail, Google Calendar and Drive, Vercel, Higgsfield, Apify, Canva and more than 10,000 browser actions, plus my own MCP servers for the Official Gazette and for federal law.</p></li>
       <li class="skill"><span class="skill__k">11</span><h3>Judgment and quality</h3><p>Human approval gates, anti-fraud rules, labeled uncertainty, golden test sets and reproducible builds.</p></li>
       <li class="skill"><span class="skill__k">12</span><h3>Continuous learning and community</h3><p>Daily use of AI and of new tools as soon as they launch; free courses from Anthropic and Harvey; live and pre-recorded courses from tech influencers and digital schools; Claude and Grok Bot talks and workshops; networking dinners with CTOs.</p></li>
     </ul>
@@ -686,73 +686,131 @@
   <div class="wrap">
     <div class="sec-head">
       <p class="eyebrow">11 · Open source</p>
-      <h2 data-reveal>Nine public repositories: <em>the code, in plain sight.</em></h2>
-      <p class="lead" data-reveal>Built with Claude Code and open for anyone to read the code. Eight run their tests on GitHub Actions with every change and six have a live site.</p>
+      <h2 data-reveal>16 public repositories: <em>the code, in plain sight.</em></h2>
+      <p class="lead" data-reveal>Built with Claude Code and open for anyone to read the code, in the same four groups as my GitHub profile. Fifteen are checked on GitHub Actions with every change and twelve have a live site.</p>
     </div>
     <div class="oss__term" aria-hidden="true">
       <p class="oss__line"><span class="oss__ps">$</span> <span class="oss__type">gh repo list BEG-lag</span><i class="oss__caret"></i></p>
-      <p class="oss__out">9 repositories · 8 with tests in CI · 6 live sites</p>
+      <p class="oss__out">16 repositories · 15 with CI · 12 live sites</p>
     </div>
-    <ul class="oss__grid" aria-label="Public repositories">
-      <li class="repo">
-        <p class="repo__meta"><span class="repo__lang" style="--c:var(--cyan)">Python</span><span class="repo__ci"><i></i><b data-n="87">87</b> tests</span></p>
-        <h3><a href="https://github.com/BEG-lag/mcp-dof" rel="noopener"><span class="repo__owner">BEG-lag/</span>mcp-dof</a></h3>
-        <p class="repo__d">An MCP server that lets Claude read Mexico's Official Gazette: any day's edition, the full text of every notice, title search, and FIX, UDIS and TIIE, from the official SIDOF API. Version 1.0.0, also as a Docker image.</p>
-        <p class="repo__links"><a href="https://github.com/BEG-lag/mcp-dof" rel="noopener">Code</a></p>
-      </li>
-      <li class="repo">
-        <p class="repo__meta"><span class="repo__lang" style="--c:var(--cyan)">Python</span><span class="repo__ci"><i></i><b>CI</b></span></p>
-        <h3><a href="https://github.com/BEG-lag/dof-diario" rel="noopener"><span class="repo__owner">BEG-lag/</span>dof-diario</a></h3>
-        <p class="repo__d">An archive of the Official Gazette's table of contents since January 2025: 484 days and 43,994 notices. It updates itself twice a day and has a search page with filters. CC0 data.</p>
-        <p class="repo__links"><a href="https://github.com/BEG-lag/dof-diario" rel="noopener">Code</a><a href="https://beg-lag.github.io/dof-diario/" rel="noopener"><span class="live" aria-hidden="true"></span>Live site</a></p>
-      </li>
-      <li class="repo">
-        <p class="repo__meta"><span class="repo__lang" style="--c:var(--cyan)">Python</span><span class="repo__ci"><i></i><b>CI</b></span></p>
-        <h3><a href="https://github.com/BEG-lag/leyes-mx" rel="noopener"><span class="repo__owner">BEG-lag/</span>leyes-mx</a></h3>
-        <p class="repo__d">36 federal laws as Markdown with 375 historical versions: every reform is a commit, so each law has a history, blame and diff. 13,370 articles with validated numbering.</p>
-        <p class="repo__links"><a href="https://github.com/BEG-lag/leyes-mx" rel="noopener">Code</a><a href="https://beg-lag.github.io/leyes-mx/" rel="noopener"><span class="live" aria-hidden="true"></span>Live site</a></p>
-      </li>
-      <li class="repo">
-        <p class="repo__meta"><span class="repo__lang" style="--c:var(--paper)">TypeScript</span><span class="repo__ci"><i></i><b data-n="123">123</b> tests</span></p>
-        <h3><a href="https://github.com/BEG-lag/finiquito-mx" rel="noopener"><span class="repo__owner">BEG-lag/</span>finiquito-mx</a></h3>
-        <p class="repo__d">Calculates severance (finiquito and liquidación) under the Federal Labor Law, line by line, citing the article behind each item. Library and web app. A calculation tool, not legal advice.</p>
-        <p class="repo__links"><a href="https://github.com/BEG-lag/finiquito-mx" rel="noopener">Code</a><a href="https://beg-lag.github.io/finiquito-mx/" rel="noopener"><span class="live" aria-hidden="true"></span>Live site</a></p>
-      </li>
-      <li class="repo">
-        <p class="repo__meta"><span class="repo__lang" style="--c:var(--paper)">TypeScript</span><span class="repo__ci"><i></i><b data-n="91">91</b> tests</span></p>
-        <h3><a href="https://github.com/BEG-lag/aumento-renta" rel="noopener"><span class="repo__owner">BEG-lag/</span>aumento-renta</a></h3>
-        <p class="repo__d">How much can your rent go up? It updates a rent with the INPC or UDIS, step by step with the Gazette notice behind each value, and in Mexico City checks the art. 2448 D cap under both of its readings. A calculation tool, not legal advice.</p>
-        <p class="repo__links"><a href="https://github.com/BEG-lag/aumento-renta" rel="noopener">Code</a><a href="https://beg-lag.github.io/aumento-renta/" rel="noopener"><span class="live" aria-hidden="true"></span>Live site</a><a href="https://concriterio.mx" rel="noopener">Con Criterio</a></p>
-      </li>
-      <li class="repo">
-        <p class="repo__meta"><span class="repo__lang" style="--c:var(--paper)">TypeScript</span><span class="repo__ci"><i></i><b data-n="101">101</b> tests</span></p>
-        <h3><a href="https://github.com/BEG-lag/hoy-circulo" rel="noopener"><span class="repo__owner">BEG-lag/</span>hoy-circulo</a></h3>
-        <p class="repo__d">Hoy No Circula driving restrictions, emissions checks and CAMe contingencies in Mexico City and the State of Mexico, checked every 30 minutes. Installable, works offline, exports to your calendar.</p>
-        <p class="repo__links"><a href="https://github.com/BEG-lag/hoy-circulo" rel="noopener">Code</a><a href="https://beg-lag.github.io/hoy-circulo/" rel="noopener"><span class="live" aria-hidden="true"></span>Live site</a></p>
-      </li>
-      <li class="repo">
-        <p class="repo__meta"><span class="repo__lang" style="--c:var(--paper)">TypeScript</span><span class="repo__ci"><i></i><b data-n="92">92</b> tests</span></p>
-        <h3><a href="https://github.com/BEG-lag/facturas-cfdi" rel="noopener"><span class="repo__owner">BEG-lag/</span>facturas-cfdi</a></h3>
-        <p class="repo__d">Organizes CFDI e-invoices (XML files or the SAT ZIP) in your browser without uploading anything, and flags possible personal deductions. An organizing tool, not tax advice.</p>
-        <p class="repo__links"><a href="https://github.com/BEG-lag/facturas-cfdi" rel="noopener">Code</a><a href="https://beg-lag.github.io/facturas-cfdi/" rel="noopener"><span class="live" aria-hidden="true"></span>Live site</a></p>
-      </li>
-      <li class="repo">
-        <p class="repo__meta"><span class="repo__lang" style="--c:var(--lime)">Obsidian</span><span class="repo__ci"><i></i><b>CI</b></span></p>
-        <h3><a href="https://github.com/BEG-lag/segundo-cerebro" rel="noopener"><span class="repo__owner">BEG-lag/</span>segundo-cerebro</a></h3>
-        <p class="repo__d">An installable Obsidian vault template with the rules that make Claude Code read it before working and update it afterwards. The public version, without my data.</p>
-        <p class="repo__links"><a href="https://github.com/BEG-lag/segundo-cerebro" rel="noopener">Code</a></p>
-      </li>
-      <li class="repo">
-        <p class="repo__meta"><span class="repo__lang" style="--c:var(--amber)">SVG</span></p>
-        <h3><a href="https://github.com/BEG-lag/tema-clawds" rel="noopener"><span class="repo__owner">BEG-lag/</span>tema-clawds</a></h3>
-        <p class="repo__d">A light theme for the Claude Code app with 64 Clawds, Claude Code's mascot, playing in 20 SVG scenes.</p>
-        <p class="repo__links"><a href="https://github.com/BEG-lag/tema-clawds" rel="noopener">Code</a></p>
-      </li>
-    </ul>
-    <div class="oss__foot">
-      <p class="fine" data-reveal>Figures taken from each repository (its README and its test runs on GitHub Actions) on November 17, 2026. finiquito-mx, aumento-renta and facturas-cfdi are calculation and organizing tools; they are not legal or tax advice.</p>
-      <a class="oss__all" href="https://github.com/BEG-lag" rel="me noopener" data-reveal>See the full GitHub profile <span aria-hidden="true">→</span></a>
+    <div class="oss__group">
+      <div class="oss__gh"><p class="oss__gk">01</p><h3 class="oss__gt">Law, compiled <span class="oss__gn">4</span></h3><p class="oss__gd">Open-source tools that read, apply and audit Mexican law.</p></div>
+      <ul class="oss__grid oss__grid--4" aria-label="Repositories: Law, compiled">
+        <li class="repo">
+          <p class="repo__meta"><span class="repo__lang" style="--c:var(--cyan)">Python</span><span class="repo__ci"><i></i><b data-n="84">84</b> tests</span></p>
+          <h4><a href="https://github.com/BEG-lag/reforma-al-dia" rel="noopener"><span class="repo__owner">BEG-lag/</span>reforma-al-dia</a></h4>
+          <p class="repo__d">The day the Gazette publishes a reform, an AI agent applies it to leyes-mx and opens a pull request for a person to review. Tested on 34 real decrees: 90.7% of articles identical to the official text, 95.8% apart from formatting.</p>
+          <p class="repo__links"><a href="https://github.com/BEG-lag/reforma-al-dia" rel="noopener">Code</a><a href="https://beg-lag.github.io/reforma-al-dia/" rel="noopener"><span class="live" aria-hidden="true"></span>Live site</a></p>
+        </li>
+        <li class="repo">
+          <p class="repo__meta"><span class="repo__lang" style="--c:var(--cyan)">Python</span><span class="repo__ci"><i></i><b>CI</b></span></p>
+          <h4><a href="https://github.com/BEG-lag/leyes-mx" rel="noopener"><span class="repo__owner">BEG-lag/</span>leyes-mx</a></h4>
+          <p class="repo__d">36 federal laws as Markdown with 375 historical versions: every reform is a commit, so each law has a history, blame and diff. 13,370 articles with validated numbering.</p>
+          <p class="repo__links"><a href="https://github.com/BEG-lag/leyes-mx" rel="noopener">Code</a><a href="https://beg-lag.github.io/leyes-mx/" rel="noopener"><span class="live" aria-hidden="true"></span>Live site</a></p>
+        </li>
+        <li class="repo">
+          <p class="repo__meta"><span class="repo__lang" style="--c:var(--cyan)">Python</span><span class="repo__ci"><i></i><b data-n="117">117</b> tests</span></p>
+          <h4><a href="https://github.com/BEG-lag/mcp-leyes" rel="noopener"><span class="repo__owner">BEG-lag/</span>mcp-leyes</a></h4>
+          <p class="repo__d">An MCP server with federal law at any date: the exact text of each article, its reform history, word-level diffs and search, built on the leyes-mx history. Unofficial; not legal advice.</p>
+          <p class="repo__links"><a href="https://github.com/BEG-lag/mcp-leyes" rel="noopener">Code</a></p>
+        </li>
+        <li class="repo">
+          <p class="repo__meta"><span class="repo__lang" style="--c:var(--cyan)">Python</span><span class="repo__ci"><i></i><b data-n="87">87</b> tests</span></p>
+          <h4><a href="https://github.com/BEG-lag/mcp-dof" rel="noopener"><span class="repo__owner">BEG-lag/</span>mcp-dof</a></h4>
+          <p class="repo__d">An MCP server that lets Claude read Mexico's Official Gazette: any day's edition, the full text of every notice, title search, and FIX, UDIS and TIIE, from the official SIDOF API. Version 1.0.0, also as a Docker image.</p>
+          <p class="repo__links"><a href="https://github.com/BEG-lag/mcp-dof" rel="noopener">Code</a></p>
+        </li>
+      </ul>
     </div>
+    <div class="oss__group">
+      <div class="oss__gh"><p class="oss__gk">02</p><h3 class="oss__gt">Open data <span class="oss__gn">4</span></h3><p class="oss__gd">Public records turned into living datasets, APIs and visual stories.</p></div>
+      <ul class="oss__grid oss__grid--4" aria-label="Repositories: Open data">
+        <li class="repo repo--feat">
+          <p class="repo__meta"><span class="repo__star">My sector</span><span class="repo__lang" style="--c:var(--cyan)">Python</span><span class="repo__ci"><i></i><b data-n="53">53</b> tests</span></p>
+          <h4><a href="https://github.com/BEG-lag/radar-energia" rel="noopener"><span class="repo__owner">BEG-lag/</span>radar-energia</a></h4>
+          <p class="repo__d">A daily radar of Mexico's energy sector: the Gazette by subsector, CNE, SENER, ASEA and CENACE, plus the FIX rate and power and fuel prices, each with its official source. With a feed per subsector.</p>
+          <p class="repo__links"><a href="https://github.com/BEG-lag/radar-energia" rel="noopener">Code</a><a href="https://beg-lag.github.io/radar-energia/" rel="noopener"><span class="live" aria-hidden="true"></span>Live site</a></p>
+        </li>
+        <li class="repo">
+          <p class="repo__meta"><span class="repo__lang" style="--c:var(--paper)">TypeScript</span><span class="repo__ci"><i></i><b>CI</b></span></p>
+          <h4><a href="https://github.com/BEG-lag/constitucion-viva" rel="noopener"><span class="repo__owner">BEG-lag/</span>constitucion-viva</a></h4>
+          <p class="repo__d">The 1917 Constitution, alive: 285 decrees and 857 article reforms, a time machine, how the text has grown, word-level changes since 2006 and the citation network of 36 federal laws.</p>
+          <p class="repo__links"><a href="https://github.com/BEG-lag/constitucion-viva" rel="noopener">Code</a><a href="https://beg-lag.github.io/constitucion-viva/" rel="noopener"><span class="live" aria-hidden="true"></span>Live site</a></p>
+        </li>
+        <li class="repo">
+          <p class="repo__meta"><span class="repo__lang" style="--c:var(--cyan)">Python</span><span class="repo__ci"><i></i><b data-n="102">102</b> tests</span></p>
+          <h4><a href="https://github.com/BEG-lag/indicadores-mx" rel="noopener"><span class="repo__owner">BEG-lag/</span>indicadores-mx</a></h4>
+          <p class="repo__d">37,372 official values in 17 series (FIX since 1991, UDIS, TIIE, INPC, minimum wage and UMA), each linked to its Gazette notice, as a static JSON and CSV API. CC0 data.</p>
+          <p class="repo__links"><a href="https://github.com/BEG-lag/indicadores-mx" rel="noopener">Code</a><a href="https://beg-lag.github.io/indicadores-mx/" rel="noopener"><span class="live" aria-hidden="true"></span>Live site</a></p>
+        </li>
+        <li class="repo">
+          <p class="repo__meta"><span class="repo__lang" style="--c:var(--cyan)">Python</span><span class="repo__ci"><i></i><b>CI</b></span></p>
+          <h4><a href="https://github.com/BEG-lag/dof-diario" rel="noopener"><span class="repo__owner">BEG-lag/</span>dof-diario</a></h4>
+          <p class="repo__d">An archive of the Official Gazette's table of contents since January 2025: 484 days and 43,994 notices. It updates itself twice a day and has a search page with filters. CC0 data.</p>
+          <p class="repo__links"><a href="https://github.com/BEG-lag/dof-diario" rel="noopener">Code</a><a href="https://beg-lag.github.io/dof-diario/" rel="noopener"><span class="live" aria-hidden="true"></span>Live site</a></p>
+        </li>
+      </ul>
+    </div>
+    <div class="oss__group">
+      <div class="oss__gh"><p class="oss__gk">03</p><h3 class="oss__gt">Everyday tools <span class="oss__gn">6</span></h3><p class="oss__gd">Small, private, useful every day.</p></div>
+      <ul class="oss__grid oss__grid--3" aria-label="Repositories: Everyday tools">
+        <li class="repo">
+          <p class="repo__meta"><span class="repo__lang" style="--c:var(--paper)">TypeScript</span><span class="repo__ci"><i></i><b data-n="101">101</b> tests</span></p>
+          <h4><a href="https://github.com/BEG-lag/hoy-circulo" rel="noopener"><span class="repo__owner">BEG-lag/</span>hoy-circulo</a></h4>
+          <p class="repo__d">Hoy No Circula driving restrictions, emissions checks and CAMe contingencies in Mexico City and the State of Mexico, checked every 30 minutes. Installable, works offline, exports to your calendar.</p>
+          <p class="repo__links"><a href="https://github.com/BEG-lag/hoy-circulo" rel="noopener">Code</a><a href="https://beg-lag.github.io/hoy-circulo/" rel="noopener"><span class="live" aria-hidden="true"></span>Live site</a></p>
+        </li>
+        <li class="repo">
+          <p class="repo__meta"><span class="repo__lang" style="--c:var(--paper)">TypeScript</span><span class="repo__ci"><i></i><b data-n="91">91</b> tests</span></p>
+          <h4><a href="https://github.com/BEG-lag/aumento-renta" rel="noopener"><span class="repo__owner">BEG-lag/</span>aumento-renta</a></h4>
+          <p class="repo__d">How much can your rent go up? It updates a rent with the INPC or UDIS, step by step with the Gazette notice behind each value, and in Mexico City checks the art. 2448 D cap under both of its readings. A calculation tool, not legal advice.</p>
+          <p class="repo__links"><a href="https://github.com/BEG-lag/aumento-renta" rel="noopener">Code</a><a href="https://beg-lag.github.io/aumento-renta/" rel="noopener"><span class="live" aria-hidden="true"></span>Live site</a><a href="https://concriterio.mx" rel="noopener">Con Criterio</a></p>
+        </li>
+        <li class="repo">
+          <p class="repo__meta"><span class="repo__lang" style="--c:var(--paper)">TypeScript</span><span class="repo__ci"><i></i><b data-n="92">92</b> tests</span></p>
+          <h4><a href="https://github.com/BEG-lag/pension-imss" rel="noopener"><span class="repo__owner">BEG-lag/</span>pension-imss</a></h4>
+          <p class="repo__d">How much will my pension be? Estimates the IMSS pension under the 1973 and 1997 laws, citing the article behind each step and Supreme Court criteria; where criteria differ, you choose. An informative estimate, not advice.</p>
+          <p class="repo__links"><a href="https://github.com/BEG-lag/pension-imss" rel="noopener">Code</a><a href="https://beg-lag.github.io/pension-imss/" rel="noopener"><span class="live" aria-hidden="true"></span>Live site</a></p>
+        </li>
+        <li class="repo">
+          <p class="repo__meta"><span class="repo__lang" style="--c:var(--paper)">TypeScript</span><span class="repo__ci"><i></i><b data-n="123">123</b> tests</span></p>
+          <h4><a href="https://github.com/BEG-lag/finiquito-mx" rel="noopener"><span class="repo__owner">BEG-lag/</span>finiquito-mx</a></h4>
+          <p class="repo__d">Calculates severance (finiquito and liquidación) under the Federal Labor Law, line by line, citing the article behind each item. Library and web app. A calculation tool, not legal advice.</p>
+          <p class="repo__links"><a href="https://github.com/BEG-lag/finiquito-mx" rel="noopener">Code</a><a href="https://beg-lag.github.io/finiquito-mx/" rel="noopener"><span class="live" aria-hidden="true"></span>Live site</a></p>
+        </li>
+        <li class="repo">
+          <p class="repo__meta"><span class="repo__lang" style="--c:var(--paper)">TypeScript</span><span class="repo__ci"><i></i><b data-n="92">92</b> tests</span></p>
+          <h4><a href="https://github.com/BEG-lag/facturas-cfdi" rel="noopener"><span class="repo__owner">BEG-lag/</span>facturas-cfdi</a></h4>
+          <p class="repo__d">Organizes CFDI e-invoices (XML files or the SAT ZIP) in your browser without uploading anything, and flags possible personal deductions. An organizing tool, not tax advice.</p>
+          <p class="repo__links"><a href="https://github.com/BEG-lag/facturas-cfdi" rel="noopener">Code</a><a href="https://beg-lag.github.io/facturas-cfdi/" rel="noopener"><span class="live" aria-hidden="true"></span>Live site</a></p>
+        </li>
+        <li class="repo">
+          <p class="repo__meta"><span class="repo__lang" style="--c:var(--paper)">TypeScript</span><span class="repo__ci"><i></i><b data-n="143">143</b> tests</span></p>
+          <h4><a href="https://github.com/BEG-lag/mis-laboratorios" rel="noopener"><span class="repo__owner">BEG-lag/</span>mis-laboratorios</a></h4>
+          <p class="repo__d">Organizes and charts your lab results in your browser without uploading anything: you confirm each value and see each marker over time against the lab's range. It does not interpret or diagnose.</p>
+          <p class="repo__links"><a href="https://github.com/BEG-lag/mis-laboratorios" rel="noopener">Code</a><a href="https://beg-lag.github.io/mis-laboratorios/" rel="noopener"><span class="live" aria-hidden="true"></span>Live site</a></p>
+        </li>
+      </ul>
+    </div>
+    <div class="oss__group">
+      <div class="oss__gh"><p class="oss__gk">04</p><h3 class="oss__gt">For Claude Code <span class="oss__gn">2</span></h3><p class="oss__gd">How I work, packaged for anyone.</p></div>
+      <ul class="oss__grid oss__grid--4" aria-label="Repositories: For Claude Code">
+        <li class="repo">
+          <p class="repo__meta"><span class="repo__lang" style="--c:var(--lime)">Obsidian</span><span class="repo__ci"><i></i><b>CI</b></span></p>
+          <h4><a href="https://github.com/BEG-lag/segundo-cerebro" rel="noopener"><span class="repo__owner">BEG-lag/</span>segundo-cerebro</a></h4>
+          <p class="repo__d">An installable Obsidian vault template with the rules that make Claude Code read it before working and update it afterwards. The public version, without my data.</p>
+          <p class="repo__links"><a href="https://github.com/BEG-lag/segundo-cerebro" rel="noopener">Code</a></p>
+        </li>
+        <li class="repo">
+          <p class="repo__meta"><span class="repo__lang" style="--c:var(--amber)">SVG</span></p>
+          <h4><a href="https://github.com/BEG-lag/tema-clawds" rel="noopener"><span class="repo__owner">BEG-lag/</span>tema-clawds</a></h4>
+          <p class="repo__d">A light theme for the Claude Code app with 64 Clawds, Claude Code's mascot, playing in 20 SVG scenes.</p>
+          <p class="repo__links"><a href="https://github.com/BEG-lag/tema-clawds" rel="noopener">Code</a></p>
+        </li>
+        <li class="oss__cta"><a href="https://github.com/BEG-lag" rel="me noopener"><b>16</b><p>public repositories, with their code, tests and sites.</p><span>See the full GitHub profile <span aria-hidden="true">→</span></span></a></li>
+      </ul>
+    </div>
+    <p class="fine fine--wide" data-reveal>Figures taken from each repository (its README and its test runs on GitHub Actions) on November 17, 2026. finiquito-mx, aumento-renta, pension-imss and facturas-cfdi are calculation, estimation and organizing tools: they are not legal, tax or financial advice. mis-laboratorios does not interpret or diagnose.</p>
   </div>
 </section>
 
