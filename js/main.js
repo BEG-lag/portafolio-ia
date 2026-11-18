@@ -262,10 +262,15 @@
     undo.push(function () { top.classList.remove('is-hidden'); });
 
     /* 1. HERO: letras que suben + líneas que se separan con el scroll */
-    var lines = $$('.hero__line');
-    lines.forEach(function (l) { if (!l.querySelector('.ch')) splitChars(l); });
+    var lines = $$('.hero__line'), glyphs = $$('.hero__svg .g');
     var intro = gsap.timeline({ defaults: { ease: 'power4.out' } });
-    intro.from('.hero__line .ch', { yPercent: 115, duration: 1.1, stagger: 0.028 }, 0.1)
+    /* cada letra del nombre (trazos de Neue Haas) sube desde abajo de su renglón */
+    if (glyphs.length) intro.from(glyphs, { y: 1100, duration: 1.1, stagger: 0.028 }, 0.1);
+    else {
+      lines.forEach(function (l) { if (!l.querySelector('.ch')) splitChars(l); });
+      intro.from('.hero__line .ch', { yPercent: 115, duration: 1.1, stagger: 0.028 }, 0.1);
+    }
+    intro
       .from('.hero__eyebrow', { opacity: 0, y: 14, duration: 0.8 }, 0.2)
       /* sin opacity: el texto del hero se pinta desde el primer cuadro (LCP) y sólo se acomoda */
       .from('.hero__row > *', { y: 22, duration: 1, stagger: 0.08 }, 0.15)
