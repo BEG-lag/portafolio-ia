@@ -191,26 +191,76 @@
 </section>
 
 <!-- ============ ESTE SOY YO ============ -->
-<section class="yo yo--uno" id="yo" aria-labelledby="yo-h">
-  <div class="wrap yo__grid">
+<section class="yo" id="yo" aria-labelledby="yo-h">
+  <div class="yo__pin">
     <figure class="yo__frame">
-        <picture>
-          <source type="image/webp" srcset="img/benjamin-760.webp 760w, img/benjamin-1200.webp 1200w" sizes="(min-width: 900px) 46vw, 100vw">
-          <img class="yo__img" src="img/benjamin-1200.jpg" srcset="img/benjamin-760.jpg 760w, img/benjamin-1200.jpg 1200w" sizes="(min-width: 900px) 46vw, 100vw" width="1200" height="1600" loading="lazy" alt="Benjamín Esponda García de espaldas en su escritorio, con audífonos, un flujo de n8n en un monitor y código en el otro">
-        </picture>
-      </figure>
+      <picture>
+        <source type="image/webp" srcset="img/benjamin-760.webp 760w, img/benjamin-1200.webp 1200w" sizes="100vw">
+        <img class="yo__img" src="img/benjamin-1200.jpg" srcset="img/benjamin-760.jpg 760w, img/benjamin-1200.jpg 1200w" sizes="100vw" width="1200" height="1600" loading="lazy" alt="Benjamín Esponda García de espaldas en su escritorio, con audífonos, un flujo de n8n en un monitor y código en el otro">
+      </picture>
+    </figure>
     <div class="yo__txt">
       <p class="eyebrow">Este soy yo</p>
       <h2 id="yo-h">Aquí se construye <em>todo esto.</em></h2>
       <p class="yo__cap">Mi escritorio: un flujo de n8n en una pantalla y código en la otra.</p>
-      <div class="yo__pvk" id="pivotek">
-        <img class="yo__logo" src="img/pivotek-logotipo.png" width="1200" height="388" loading="lazy" decoding="async" alt="Logotipo de PIVOTEK: tu socio estratégico">
-        <p><b>PIVOTEK</b> es mi marca personal y consultoría. <em>Pivot</em> por giro estratégico y <em>tek</em> por tecnología: la abogacía no será lo que era antes de la IA, y hay que estar a la vanguardia de la tecnología y de las buenas prácticas.</p>
-      </div>
-      <div class="yo__form" id="formacion">
-        <h3 class="mini">Formación</h3>
-        <ul class="yo__acad"><li><b>Maestría en Derecho de la Empresa</b><span>Universidad Anáhuac · 2023 a 2025</span></li><li><b>MBA</b><span>EAE Business School, Madrid · 2023 a 2024</span></li><li><b>Licenciatura en Derecho</b><span>Universidad Iberoamericana · 2015 a 2020</span></li></ul>
-        <p class="yo__cursos">Cursos de Anthropic Academy y de Harvey sobre IA para el trabajo legal; pláticas y workshops de Claude en México, como Claude for AI Engineering y Claude for Legal; curso de automatización con n8n, en curso.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FORMACIÓN ============ -->
+<section class="learn" id="formacion">
+  <div class="wrap learn__grid">
+    <div>
+      <p class="eyebrow">Formación y comunidad</p>
+      <h2 data-reveal>A la vanguardia: <em>lo nuevo se prueba en trabajo real.</em></h2>
+      <p class="lead" data-reveal>Uso la IA todos los días y me mantengo a la vanguardia de las herramientas y funciones nuevas de IA: las pruebo en trabajo real en cuanto salen.</p>
+      <figure class="learn__foto" data-reveal>
+        <picture>
+          <source type="image/webp" srcset="img/benjamin-traje-600.webp 600w, img/benjamin-traje-870.webp 870w" sizes="(min-width: 900px) 420px, calc(100vw - 40px)">
+          <img src="img/benjamin-traje-870.jpg" srcset="img/benjamin-traje-600.jpg 600w, img/benjamin-traje-870.jpg 870w" sizes="(min-width: 900px) 420px, calc(100vw - 40px)" width="870" height="1160" loading="lazy" decoding="async" alt="Benjamín Esponda García de traje y corbata, sonriendo frente a su laptop, con un cuadro abstracto detrás">
+        </picture>
+      </figure>
+    </div>
+    <ul class="learn__list" data-stagger>
+      <li><b>Cursos gratuitos en línea de Anthropic</b> (Anthropic Academy).</li>
+      <li><b>Cursos gratuitos en línea de Harvey</b> sobre IA para el trabajo legal.</li>
+      <li><b>Cursos en vivo y pregrabados</b> de la comunidad de tech influencers como Juan Lombana y Enrique Rocha, así como de escuelas digitales como Coderhouse y OrangutanAI.</li>
+      <li><b>Pláticas y workshops de Claude en México</b>, como Claude for AI Engineering (Claude Community CDMX, octubre de 2026), Claude for Legal, Claude for Finance, Claude Community House, Claude for Revenue, Claude for Games, Claude en la Cámara de Diputados y Claude en el Senado de la República, entre otros. En Claude for AI Engineering resumí las cinco ponencias (uso de herramientas, MCP, ingeniería de contexto) y convertí las notas en un agente que responde como lo haría cada ponente.</li>
+      <li><b>Pláticas y workshops de Grok Bot.</b></li>
+      <li><b>Cenas de networking con CTOs</b> de empresas grandes y medianas.</li>
+      <li><b>Curso de automatización con n8n</b> (en curso): el resumen diario del DOF fue la primera entrega.</li>
+    </ul>
+  </div>
+
+  <div class="wrap acad" id="academica">
+    <h3 class="mini">Formación académica</h3>
+    <ol class="acad__list" data-stagger>
+      <li><div class="acad__logo acad__logo--anahuac" aria-hidden="true"><img src="img/logo-anahuac-claro.png" width="330" height="305" alt="" loading="lazy" decoding="async"></div><p class="acad__y">2023 a 2025</p><h4>Maestría en Derecho de la Empresa</h4><p class="acad__u">Universidad Anáhuac</p><p class="acad__d">Disciplina: Derecho Corporativo</p></li>
+      <li><div class="acad__logo acad__logo--eae" aria-hidden="true"><img src="img/logo-eae-claro.png" width="496" height="106" alt="" loading="lazy" decoding="async"></div><p class="acad__y">2023 a 2024</p><h4>Master of Business Administration (MBA)</h4><p class="acad__u">EAE Business School (Madrid, España)</p><p class="acad__d">Disciplina: Administración de Empresas</p></li>
+      <li><div class="acad__logo acad__logo--ibero" aria-hidden="true"><img src="img/logo-ibero-claro.png" width="345" height="134" alt="" loading="lazy" decoding="async"></div><p class="acad__y">2015 a 2020</p><h4>Licenciatura en Derecho</h4><p class="acad__u">Universidad Iberoamericana (CDMX)</p><p class="acad__d">Disciplina: Derecho</p></li>
+    </ol>
+  </div>
+</section>
+
+<!-- ============ PIVOTEK ============ -->
+<section class="pvk" id="pivotek" aria-labelledby="pvk-h">
+  <div class="pvk__pin">
+    <div class="wrap">
+      <p class="eyebrow">Mi marca personal y consultoría · pivotek.mx</p>
+      <div class="pvk__stage">
+        <div class="pvk__iso" role="img" aria-label="Isotipo de PIVOTEK: una P cuya flecha gira hacia la izquierda">
+          <img class="pvk__arrow" src="img/pivotek-flecha.png" width="169" height="560" loading="lazy" decoding="async" alt="">
+          <img class="pvk__p" src="img/pivotek-p.png" width="314" height="560" loading="lazy" decoding="async" alt="">
+        </div>
+        <div class="pvk__copy">
+          <h2 id="pvk-h" class="pvk__word" aria-label="Pivotek"><span class="pvk__pivo" aria-hidden="true">pivo</span><span class="pvk__t" aria-hidden="true">t</span><span class="pvk__ek" aria-hidden="true">ek</span></h2>
+          <div class="pvk__defs">
+            <div class="pvk__def pvk__def--pivot"><p class="pvk__term">Pivot</p><p>Giro estratégico: un cambio fundamental y deliberado en la estrategia de un negocio (en su producto, su mercado objetivo o su modelo de ingresos) cuando se detecta que la dirección actual no está funcionando, con el fin de sobrevivir y crecer.</p></div>
+            <div class="pvk__def pvk__def--tek"><p class="pvk__term">Tek</p><p>De <em>tech</em>: tecnología.</p></div>
+          </div>
+          <p class="pvk__why">Le puse así porque sé que en unos años la abogacía no será lo que es hoy, ni lo que era antes de que llegara la IA. <span class="pvk__lema">Hay que estar a la vanguardia de la tecnología y de las buenas prácticas.</span></p>
+          <img class="pvk__logo" src="img/pivotek-logotipo.png" width="1200" height="388" loading="lazy" alt="Logotipo de PIVOTEK: tu socio estratégico">
+        </div>
       </div>
     </div>
   </div>
