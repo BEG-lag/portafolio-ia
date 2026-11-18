@@ -150,7 +150,7 @@
      Los tonos viven en el CSS (--bg de cada sección oscura); aquí sólo se mezclan con el scroll.
      Es cambio de color, no de movimiento, así que también corre con movimiento reducido. */
   (function () {
-    var root = document.documentElement, secs = $$('main > section:not(.paper)');
+    var root = document.documentElement, secs = $$('main > section:not(.paper):not(.fill)');
     if (!secs.length) return;
     var stops = [], last = '', queued = 0;
     var toRgb = function (v) {

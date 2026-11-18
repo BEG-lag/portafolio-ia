@@ -481,13 +481,12 @@ h4{font-size:1.05rem;line-height:1.25;font-weight:650;letter-spacing:-.01em}
    Cada sección oscura tiene su tono (--bg). Sin JavaScript se ven como bloques; con JavaScript
    (html.tone-on) las secciones se vuelven transparentes y el fondo de la página (--tone) pasa
    de un tono al siguiente con el scroll. Las tarjetas toman el matiz del tono. */
-#concriterio,#codigo{--bg:#13210d}
 #rag,#conectores{--bg:#08192a}
 #supplysense,#beca{--bg:#24170a}
 #cierre,#estudio{--bg:#2a110f}
 #dof,#sistemas{--bg:#11141b}
-main > section:not(.paper){--card:color-mix(in srgb,var(--bg),#fff 5.5%)}
-.tone-on main > section:not(.paper){background:transparent;--card:color-mix(in srgb,var(--tone),#fff 5.5%)}
+main > section:not(.paper):not(.fill){--card:color-mix(in srgb,var(--bg),#fff 5.5%)}
+.tone-on main > section:not(.paper):not(.fill){background:transparent;--card:color-mix(in srgb,var(--tone),#fff 5.5%)}
 .tone-on .beca{background:radial-gradient(90% 60% at 20% 45%,rgba(58,66,98,.45) 0%,rgba(58,66,98,0) 70%)}
 body::after{content:"";position:fixed;inset:-120px;z-index:58;pointer-events:none;background:url(../img/grano.png) 0 0/160px 160px;opacity:.5;will-change:transform;animation:grano 1.2s steps(1) infinite}
 @keyframes grano{0%{transform:translate(0,0)}17%{transform:translate(-37px,22px)}33%{transform:translate(29px,-41px)}50%{transform:translate(-18px,-27px)}67%{transform:translate(44px,13px)}83%{transform:translate(-26px,39px)}}
@@ -495,6 +494,26 @@ body::after{content:"";position:fixed;inset:-120px;z-index:58;pointer-events:non
 
 /* ---------- TEXTO EDITORIAL (SplitText): las máscaras dejan aire para acentos y descendentes ---------- */
 .sl-mask,.sc-mask{overflow-clip-margin:.2em}
+
+/* ---------- SECCIONES CON COLOR LLENO (como Contacto): Con Criterio en lima y Código abierto en ámbar.
+   Texto en tinta; las piezas oscuras (tarjetas de repos, terminal) conservan su paleta propia. ---------- */
+.fill{--fg:var(--ink);--line:rgba(10,12,16,.22);--acc:var(--ink);background:var(--bg);color:var(--fg)}
+.fill--lime{--bg:var(--lime);--mut:#2c3a08}
+.fill--amber{--bg:var(--amber);--mut:#4d3207}
+.fill .live{background:var(--ink);box-shadow:none;animation:none}
+.fill .stat__n{color:var(--ink)}
+.fill--lime .stack-card:nth-child(3n+1) .stack-card__in{background:var(--ink);color:var(--paper)}
+.fill--lime .stack-card:nth-child(3n+1) .stack-card__in p:last-child{color:#b9bfca}
+.fill--lime .stack-card:nth-child(3n+1) .stack-card__law{border-color:rgba(236,238,230,.35)}
+.fill .oss__term{color:var(--paper)}
+.fill .oss__out{color:#969dab}
+.fill .oss__gk{color:var(--ink)}
+.fill .repo{--fg:#eceee6;--mut:#969dab;--line:rgba(236,238,230,.14);--acc:var(--lime);--card:var(--ink-2);color:var(--fg)}
+.fill .repo:hover{background:#141822}
+.fill .oss__cta a{border-color:rgba(10,12,16,.5);color:var(--ink)}
+.fill .oss__cta a:hover{background:rgba(10,12,16,.07);color:var(--ink)}
+.fill .oss__cta b,.fill .oss__cta a > span{color:var(--ink)}
+.fill .oss__cta p{color:var(--mut)}
 
 /* ---------- CÓDIGO ABIERTO ---------- */
 .oss{padding:clamp(5rem,12vh,10rem) 0}
