@@ -503,7 +503,8 @@
     var top = $('.top');
     ScrollTrigger.create({
       start: 200, end: 'max',
-      onUpdate: function (self) { top.classList.toggle('is-hidden', self.direction === 1 && self.scroll() > 400); }
+      /* en celular la barra no se esconde: el Índice queda siempre a la mano */
+      onUpdate: function (self) { top.classList.toggle('is-hidden', desk && self.direction === 1 && self.scroll() > 400); }
     });
     undo.push(function () { top.classList.remove('is-hidden'); });
 
