@@ -184,7 +184,7 @@ Por confidencialidad no detallo cada asunto ni a sus clientes.
 
 - **Segundo cerebro en Obsidian:** una nota por proyecto, persona y documento oficial; cada sesión deja su entrada en la bitácora y una tarea semanal lee mi agenda y mi correo. La plantilla es pública: [segundo-cerebro](https://github.com/BEG-lag/segundo-cerebro).
 - **Sistema multiagente y CRMs:** nueve roles que leen un mismo expediente y se pasan señales tipadas, y CRMs internos sobre [auto-crm](https://github.com/Hainrixz/auto-crm).
-- **BeCa:** mi gato convertido en acompañante de escritorio. Una app de macOS en Swift que escucha los hooks de Claude Code y me dice con su postura qué está haciendo Claude: saluda, teclea, revisa y salta al terminar.
+- **BeCa:** mi gato convertido en acompañante de escritorio. Una app de macOS en Swift que escucha los hooks de Claude Code y me dice con su postura qué está haciendo Claude: saluda, teclea, revisa y salta al terminar. ¿Por qué BeCa? Para darle un sentido del humor a mi día a día con la IA mientras trabajo.
 
 ![BeCa jugando con Clawd, la mascota de Claude Code](assets/beca-jugando-con-clawd-animado.png)
 
