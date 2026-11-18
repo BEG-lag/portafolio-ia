@@ -62,6 +62,41 @@
     io.observe(fila);
   })();
 
+  /* ÍNDICE: el botón de la barra abre la lista completa de secciones; Esc, "Cerrar", un clic afuera o un enlace la cierran */
+  (function () {
+    var btn = $('.top__idx'), panel = $('#indice');
+    if (!btn || !panel) return;
+    var box = $('.idx__box', panel);
+    function abrir() {
+      panel.hidden = false;
+      btn.setAttribute('aria-expanded', 'true');
+      if (lenis) lenis.stop();
+      var f = $('a', box);
+      if (f) f.focus({ preventScroll: true });
+    }
+    function cerrar(volver) {
+      if (panel.hidden) return;
+      panel.hidden = true;
+      btn.setAttribute('aria-expanded', 'false');
+      if (lenis) lenis.start();
+      if (volver) btn.focus({ preventScroll: true });
+    }
+    btn.addEventListener('click', function () { if (panel.hidden) abrir(); else cerrar(true); });
+    $('.idx__close', box).addEventListener('click', function () { cerrar(true); });
+    panel.addEventListener('click', function (e) {
+      if (e.target === panel) { cerrar(true); return; }
+      if (e.target.closest && e.target.closest('a')) cerrar(false);
+    });
+    document.addEventListener('keydown', function (e) {
+      if (panel.hidden) return;
+      if (e.key === 'Escape') { e.preventDefault(); cerrar(true); return; }
+      if (e.key !== 'Tab') return;
+      var f = $$('a, button', box), primero = f[0], ultimo = f[f.length - 1];
+      if (e.shiftKey && document.activeElement === primero) { e.preventDefault(); ultimo.focus(); }
+      else if (!e.shiftKey && document.activeElement === ultimo) { e.preventDefault(); primero.focus(); }
+    });
+  })();
+
   // Diagrama de nueve roles
   var orbit = $('.orbit svg');
   var orbitPts = [];
