@@ -515,6 +515,18 @@ body::after{content:"";position:fixed;inset:-120px;z-index:58;pointer-events:non
 .fill .oss__cta b,.fill .oss__cta a > span{color:var(--ink)}
 .fill .oss__cta p{color:var(--mut)}
 
+/* ---------- ISOTIPO CON VOLUMEN (sección PIVOTEK): la P y la flecha son placas con canto lima.
+   La cara es la imagen de siempre; el JS apila capas detrás (.ly) recortadas con la misma imagen.
+   Nada aquí debe aplanar el 3D: sin opacity < 1, clip-path, filter ni mix-blend-mode en los contenedores. ---------- */
+.pvk__iso{perspective:1100px;perspective-origin:50% 45%}
+.iso3d{position:relative;width:100%;height:100%;transform-style:preserve-3d;transform:rotateX(var(--rx,8deg)) rotateY(var(--ry,-24deg));--d:2.1}
+.iso3d__part{position:absolute;top:0;height:100%;transform-style:preserve-3d}
+.iso3d .pvk__arrow{left:0;width:calc(169 / 483 * 100%)}
+.iso3d .pvk__p{left:calc(169 / 483 * 100%);width:calc(314 / 483 * 100%)}
+.pvk__iso .iso3d__part img{position:absolute;inset:0;width:100%;height:100%;display:block}
+.iso3d .ly{position:absolute;inset:0;transform:translateZ(calc(var(--k) * var(--d) * -1px));-webkit-mask:var(--m) center/100% 100% no-repeat;mask:var(--m) center/100% 100% no-repeat}
+.iso3d .ly--glare{background:radial-gradient(circle at var(--gx,30%) var(--gy,25%),rgba(255,255,255,.5),rgba(255,255,255,0) 45%);transform:translateZ(.6px)}
+
 /* ---------- CÓDIGO ABIERTO ---------- */
 .oss{padding:clamp(5rem,12vh,10rem) 0}
 .oss__term{font-family:var(--mono);font-size:clamp(.82rem,1.15vw,.98rem);border:1px solid var(--line);border-radius:14px;background:#07090c;padding:1rem 1.2rem;margin-bottom:clamp(1.2rem,2.5vw,1.8rem);max-width:640px}
