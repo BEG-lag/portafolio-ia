@@ -137,32 +137,6 @@
   window.addEventListener('resize', function () { drawDots(); if (!hero.on) drawHero(2600); });
 
   // BeCa: un clic saluda
-  /* ---------- isotipo de PIVOTEK con volumen: capas detrás de la cara, de lima a oscuro ---------- */
-  (function () {
-    var iso = $('.iso3d');
-    if (!iso) return;
-    var n = window.innerWidth < 900 ? 18 : 26;
-    iso.style.setProperty('--d', (52 / n).toFixed(2));
-    iso.dataset.d = (52 / n).toFixed(2);
-    $$('.iso3d__part', iso).forEach(function (part) {
-      var img = $('img', part);
-      part.style.setProperty('--m', 'url("' + img.src + '")');
-      for (var k = n; k >= 1; k--) {
-        var t = k / n, ly = document.createElement('i');
-        ly.className = 'ly';
-        ly.setAttribute('aria-hidden', 'true');
-        ly.style.setProperty('--k', k);
-        ly.style.background = 'rgb(' + Math.round(207 + (34 - 207) * t) + ',' + Math.round(255 + (46 - 255) * t) + ',' + Math.round(69 + (12 - 69) * t) + ')';
-        part.insertBefore(ly, img);
-      }
-      var gl = document.createElement('i');
-      gl.className = 'ly ly--glare';
-      gl.setAttribute('aria-hidden', 'true');
-      gl.style.setProperty('--k', 0);
-      part.appendChild(gl);
-    });
-  })();
-
   var pet = $('.beca__pet');
   function petAnim(name) {
     if (!pet) return;
@@ -340,33 +314,10 @@
 
     /* 2c. PIVOTEK (va después de ESTE SOY YO; los pines se crean en el orden de la página): la P aparece, la flecha hace el giro y el nombre se parte en pivot + tek */
     if ($('.pvk')) {
-      /* el isotipo sigue al mouse (en táctiles se mece solo); siempre ladeado para que se vea el canto */
-      var iso = $('.iso3d'), isoD = parseFloat(iso.dataset.d || 2), isoSt = { ry: -34, rx: 8, base: desk ? -48 : -24 };
-      var imx = 0, imy = 0, touch = window.matchMedia('(hover: none)').matches;
-      var isoMove = function (e) {
-        imx = e.clientX / window.innerWidth - 0.5; imy = e.clientY / window.innerHeight - 0.5;
-        iso.style.setProperty('--gx', (30 + imx * 60) + '%'); iso.style.setProperty('--gy', (25 + imy * 50) + '%');
-      };
-      var isoTick = function (time) {
-        var ty = isoSt.base + (touch ? Math.sin(time * 0.8) * 10 : imx * 30);
-        var tx = 8 + (touch ? Math.sin(time * 0.6) * 4 : -imy * 16);
-        isoSt.ry += (ty - isoSt.ry) * 0.08; isoSt.rx += (tx - isoSt.rx) * 0.08;
-        iso.style.setProperty('--ry', isoSt.ry.toFixed(2) + 'deg');
-        iso.style.setProperty('--rx', isoSt.rx.toFixed(2) + 'deg');
-      };
-      window.addEventListener('pointermove', isoMove, { passive: true });
-      gsap.ticker.add(isoTick);
-      undo.push(function () {
-        window.removeEventListener('pointermove', isoMove);
-        gsap.ticker.remove(isoTick);
-        iso.style.removeProperty('--ry'); iso.style.removeProperty('--rx');
-      });
       if (desk) {
         gsap.timeline({ scrollTrigger: { trigger: '.pvk', start: 'top top', end: '+=170%', scrub: 0.6, pin: '.pvk__pin', anticipatePin: 1 } })
-          .fromTo('.pvk__p', { y: 90, opacity: 0 }, { y: 0, opacity: 1, ease: 'power2.out', duration: 0.26 }, 0)
-          .fromTo(iso, { '--d': 0 }, { '--d': isoD, ease: 'power2.inOut', duration: 0.34 }, 0.06)
-          .fromTo(isoSt, { base: -48 }, { base: -24, ease: 'none', duration: 1 }, 0)
-          .fromTo('.pvk__arrow', { x: 240, rotation: 180, rotationY: -180, opacity: 0 }, { x: 0, rotation: 0, rotationY: 0, opacity: 1, ease: 'power2.inOut', duration: 0.38 }, 0.18)
+          .fromTo('.pvk__p', { clipPath: 'inset(100% 0% 0% 0%)' }, { clipPath: 'inset(0% 0% 0% 0%)', ease: 'none', duration: 0.3 }, 0)
+          .fromTo('.pvk__arrow', { x: 240, rotation: 180, opacity: 0 }, { x: 0, rotation: 0, opacity: 1, ease: 'power2.inOut', duration: 0.38 }, 0.18)
           .fromTo('.pvk__pivo', { xPercent: -35, opacity: 0 }, { xPercent: 0, opacity: 1, ease: 'power2.out', duration: 0.2 }, 0.46)
           .fromTo('.pvk__ek', { xPercent: 70, opacity: 0 }, { xPercent: 0, opacity: 1, ease: 'power2.out', duration: 0.2 }, 0.46)
           .fromTo('.pvk__t', { scale: 2.4, opacity: 0 }, { scale: 1, opacity: 1, ease: 'power2.out', duration: 0.2 }, 0.52)
@@ -375,10 +326,8 @@
           .from('.pvk__why', { y: 34, opacity: 0, ease: 'power2.out', duration: 0.14 }, 0.84)
           .from('.pvk__logo', { y: 30, opacity: 0, ease: 'power2.out', duration: 0.12 }, 0.92);
       } else {
-        var isoTrig = once('.pvk__iso');
-        gsap.fromTo('.pvk__p', { y: 60, opacity: 0 }, { y: 0, opacity: 1, duration: 0.9, ease: 'power3.out', scrollTrigger: isoTrig });
-        gsap.fromTo(iso, { '--d': 0 }, { '--d': isoD, duration: 1.2, ease: 'power2.inOut', scrollTrigger: once('.pvk__iso') });
-        gsap.fromTo('.pvk__arrow', { x: 110, rotation: 180, rotationY: -180, opacity: 0 }, { x: 0, rotation: 0, rotationY: 0, opacity: 1, duration: 1.2, delay: 0.35, ease: 'back.out(1.4)', scrollTrigger: once('.pvk__iso') });
+        gsap.fromTo('.pvk__p', { clipPath: 'inset(100% 0% 0% 0%)' }, { clipPath: 'inset(0% 0% 0% 0%)', duration: 0.9, ease: 'power3.out', scrollTrigger: once('.pvk__iso') });
+        gsap.fromTo('.pvk__arrow', { x: 110, rotation: 180, opacity: 0 }, { x: 0, rotation: 0, opacity: 1, duration: 1.1, delay: 0.35, ease: 'back.out(1.4)', scrollTrigger: once('.pvk__iso') });
         gsap.from(['.pvk__word', '.pvk__def--pivot', '.pvk__def--tek', '.pvk__why', '.pvk__logo'], { y: 30, opacity: 0, duration: 0.7, stagger: 0.12, ease: 'power3.out', scrollTrigger: once('.pvk__copy') });
       }
     }
