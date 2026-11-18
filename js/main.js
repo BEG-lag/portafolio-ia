@@ -146,6 +146,43 @@
   }
   if (pet) pet.addEventListener('click', function () { petAnim('greet'); });
 
+  /* ---------- recorrido de color: el fondo pasa del tono de una sección al de la siguiente ----------
+     Los tonos viven en el CSS (--bg de cada sección oscura); aquí sólo se mezclan con el scroll.
+     Es cambio de color, no de movimiento, así que también corre con movimiento reducido. */
+  (function () {
+    var root = document.documentElement, secs = $$('main > section:not(.paper)');
+    if (!secs.length) return;
+    var stops = [], last = '', queued = 0;
+    var toRgb = function (v) {
+      var m = /#([0-9a-f]{2})([0-9a-f]{2})([0-9a-f]{2})/i.exec(v) || /(\d+)\D+(\d+)\D+(\d+)/.exec(v);
+      if (!m) return [10, 12, 16];
+      return m[0].charAt(0) === '#' ? [parseInt(m[1], 16), parseInt(m[2], 16), parseInt(m[3], 16)] : [+m[1], +m[2], +m[3]];
+    };
+    secs.forEach(function (s) { stops.push({ el: s, c: toRgb(getComputedStyle(s).getPropertyValue('--bg')), top: 0 }); });
+    var measure = function () {
+      stops.forEach(function (st) { st.top = st.el.getBoundingClientRect().top + window.scrollY; });
+      paint();
+    };
+    var paint = function () {
+      queued = 0;
+      var vh = window.innerHeight, y = window.scrollY, c = stops[0].c.slice();
+      for (var i = 1; i < stops.length; i++) {
+        var p = (y + vh * 0.8 - stops[i].top) / (vh * 0.55);
+        if (p <= 0) break;
+        p = p >= 1 ? 1 : p * p * (3 - 2 * p);
+        for (var k = 0; k < 3; k++) c[k] += (stops[i].c[k] - c[k]) * p;
+      }
+      var v = 'rgb(' + Math.round(c[0]) + ',' + Math.round(c[1]) + ',' + Math.round(c[2]) + ')';
+      if (v !== last) { root.style.setProperty('--tone', v); last = v; }
+    };
+    root.classList.add('tone-on');
+    window.addEventListener('scroll', function () { if (!queued) queued = requestAnimationFrame(paint); }, { passive: true });
+    window.addEventListener('resize', measure);
+    window.addEventListener('load', measure);
+    if (window.ScrollTrigger) window.ScrollTrigger.addEventListener('refresh', measure);
+    measure();
+  })();
+
   /* ---------- sin GSAP o con movimiento reducido: todo estático ---------- */
   var hasGSAP = !!(window.gsap && window.ScrollTrigger);
   drawDots();
