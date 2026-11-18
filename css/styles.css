@@ -522,22 +522,25 @@ body::after{content:"";position:fixed;inset:-120px;z-index:58;pointer-events:non
 .fill .oss__cta b,.fill .oss__cta a > span{color:var(--ink)}
 .fill .oss__cta p{color:var(--mut)}
 
-/* ---------- FLECHA GUÍA (la flecha de PIVOTEK): sale del nombre, baja por el margen izquierdo dejando
-   una línea y gira para señalar cada sección. En celular, cada etiqueta lleva su flechita que gira al llegar. ---------- */
+/* ---------- FLECHA GUÍA (la flecha de PIVOTEK): sale del nombre, baja por un margen dejando una línea, cruza la
+   página a 90° antes de Con Criterio, Legal, Código abierto y Contacto, y gira para señalar cada sección.
+   En celular, cada etiqueta lleva su flechita que gira al llegar. ---------- */
 .hero__line:has(.hero__slot){display:flex;align-items:center;gap:.05em}
 .hero__slot{flex:none;height:.36em;aspect-ratio:154/171;margin-top:.16em;background:var(--fg);-webkit-mask:url(../img/flecha-guia.png) center/contain no-repeat;mask:url(../img/flecha-guia.png) center/contain no-repeat}
 @media (min-width:900px){.guide-on .hero__slot{background:transparent}}
 .hero__slot.is-static{background:var(--fg);-webkit-mask:url(../img/flecha-guia.png) center/contain no-repeat;mask:url(../img/flecha-guia.png) center/contain no-repeat}
 .guide{position:fixed;left:0;top:0;z-index:45;pointer-events:none;will-change:transform;color:var(--fg);transition:color .35s}
 .guide i{display:block;width:100%;height:100%;background:currentColor;-webkit-mask:url(../img/flecha-guia.png) center/contain no-repeat;mask:url(../img/flecha-guia.png) center/contain no-repeat}
-.trail{position:absolute;left:0;top:0;width:2px;margin-left:-1px;z-index:44;pointer-events:none;background-repeat:no-repeat}
-.trail i{position:absolute;left:0;top:0;width:100%;background-repeat:no-repeat}
+.path{position:absolute;left:0;top:0;z-index:44;pointer-events:none;overflow:visible}
+.path path{fill:none;stroke-width:2;stroke-linejoin:miter}
+.p-base.p-dark{stroke:rgba(236,238,230,.12)}.p-base.p-light{stroke:rgba(10,12,16,.25)}
+.p-prog.p-dark{stroke:var(--lime)}.p-prog.p-light{stroke:var(--ink)}
 .tick{position:absolute;z-index:44;width:9px;height:9px;margin:-4.5px 0 0 -4.5px;border-radius:50%;border:1.5px solid rgba(236,238,230,.35);background:var(--ink);pointer-events:none;transition:background .3s,border-color .3s}
 .tick.is-on{background:var(--lime);border-color:var(--lime)}
 .tick.on-light{border-color:rgba(10,12,16,.45);background:transparent}
 .tick.on-light.is-on{background:var(--ink);border-color:var(--ink)}
 @media (max-width:899.98px){
-  .guide,.trail,.tick{display:none}
+  .guide,.path,.tick{display:none}
   .hero__slot{background:var(--fg);-webkit-mask:url(../img/flecha-guia.png) center/contain no-repeat;mask:url(../img/flecha-guia.png) center/contain no-repeat}
   .eyebrow.has-arrow::before{content:"";flex:none;width:11px;height:12px;background:var(--acc);-webkit-mask:url(../img/flecha-guia.png) center/contain no-repeat;mask:url(../img/flecha-guia.png) center/contain no-repeat;transform:rotate(-90deg);transition:transform .7s cubic-bezier(.2,.8,.2,1)}
   .eyebrow.has-arrow.is-on::before{transform:rotate(-180deg)}
