@@ -2,6 +2,8 @@
 
 **Abogado corporativo mexicano (energía, hidrocarburos y minería, unos 8 años de práctica) que construye con inteligencia artificial.** Escribo el análisis legal y armo los sistemas alrededor de él y más allá: plugins y agentes en Claude Code, búsqueda sobre texto legal, flujos en n8n, pipelines de datos en Python, sitios web, video y agentes de IA para marketing.
 
+**Un abogado que construye.** Derecho, negocios y tecnología aplicada: escribo el análisis legal en energía, corporativo y regulatorio, y construyo mis propias herramientas para hacerlo mejor.
+
 Ciudad de México · beg.empleos@gmail.com · [pivotek.mx](https://pivotek.mx) · [LinkedIn](https://www.linkedin.com/in/benjamin-esponda-garc%C3%ADa-a743051b2) · [GitHub](https://github.com/BEG-lag) · Español (nativo), inglés (profesional) · [English version](README.md) · PDF en [`pdf/`](pdf/)
 
 > **Uso la IA todos los días.** Este portafolio es una muestra, no una lista completa: hay proyectos confidenciales y otros que todavía no salen. El trabajo para clientes está anonimizado: se quitaron nombres, cifras y datos que los identifiquen. Nada en este repositorio constituye opinión legal.
@@ -31,6 +33,7 @@ Ciudad de México · beg.empleos@gmail.com · [pivotek.mx](https://pivotek.mx) �
 
 - **IA todos los días:** la uso a diario en trabajo legal, productos, automatización y contenido, y me mantengo a la vanguardia de las herramientas y funciones nuevas. Lo que sigue es una muestra; hay proyectos confidenciales y otros que todavía no salen.
 - **Más de 30 proyectos en 2026**, desde auditorías regulatorias internacionales hasta un producto legal-tech a la venta.
+- **Impacto:** más de 40 asuntos legales hechos con IA y cerrados satisfactoriamente; 90.7% de artículos idénticos al texto oficial cuando un agente de IA aplicó 34 reformas reales del DOF ([reforma-al-dia](https://github.com/BEG-lag/reforma-al-dia)); y un producto en vivo, Con Criterio.
 - **Un producto en vivo:** Con Criterio, guía con 7 plugins y 7 skills para abogados en México, en ediciones para Claude y ChatGPT, a la venta en [concriterio.mx](https://concriterio.mx) desde el 5 de noviembre de 2026.
 - **Búsqueda sobre texto legal:** 374 instrumentos de derecho energético divididos en 11,112 fragmentos según la jerarquía de la norma mexicana, con búsqueda híbrida y un juego de pruebas de regresión.
 - **Datos a escala:** un pipeline sobre más de 560,000 contratos de compras públicas para mostrar a proveedores de petróleo y gas dónde está el dinero.
@@ -42,6 +45,10 @@ Ciudad de México · beg.empleos@gmail.com · [pivotek.mx](https://pivotek.mx) �
 <p align="center"><img src="assets/ornamento.svg" width="220" alt=""></p>
 
 ## 2. Código abierto
+
+**Estatus.** Los 12 con sitio en vivo están en operación; mcp-leyes, mcp-dof, segundo-cerebro y tema-clawds son productos publicados.
+
+**Problema.** Buena parte del trabajo legal y administrativo diario depende de saber qué dice hoy la ley y de cálculos que nadie verifica; estas herramientas lo resuelven con el código a la vista.
 
 16 repositorios públicos en [github.com/BEG-lag](https://github.com/BEG-lag), hechos con Claude Code y ordenados en los mismos cuatro bloques de mi perfil de GitHub. Quince se verifican en GitHub Actions con cada cambio (pruebas, tipos o datos) y doce tienen sitio en vivo. Cifras tomadas de cada repositorio (su README y sus pruebas en GitHub Actions) el 17 de noviembre de 2026.
 
@@ -98,13 +105,17 @@ Cómo trabajo, empaquetado para cualquiera.
 | Marketing con IA | Más de una docena de skills de marketing y creatividad aplicados a campañas reales, auditorías SEO y textos de anuncios ([§10](#10-sitios-web-video-y-marketing-digital-con-ia)) |
 | Integraciones (conectores MCP) | Stripe, Gmail, Google Calendar y Drive, Vercel, Higgsfield, Apify, Canva y más de 10,000 acciones de navegador ([§11](#11-mis-herramientas)), además de servidores MCP propios para el DOF y para la ley federal ([§2](#2-código-abierto)) |
 | Criterio y calidad | Compuertas de aprobación humana, reglas antifraude, incertidumbre etiquetada, pruebas golden y construcción reproducible ([§13](#13-cómo-trabajo-con-ia)) |
-| Aprendizaje continuo y comunidad | Licenciatura en Derecho (Ibero), Maestría en Derecho de la Empresa (Anáhuac) y MBA (EAE Madrid); uso diario de la IA y de las herramientas nuevas en cuanto salen; cursos gratuitos de Anthropic y Harvey; cursos en vivo y pregrabados de tech influencers y escuelas digitales; pláticas y workshops de Claude y Grok Bot; cenas de networking con CTOs ([§14](#14-formación-y-comunidad)) |
+| Aprendizaje continuo y comunidad | Licenciatura en Derecho (Ibero), Maestría en Derecho de la Empresa (Anáhuac) y MBA (EAE Madrid); uso diario de la IA y de las herramientas nuevas en cuanto salen; cursos gratuitos de Anthropic y Harvey; certificaciones en Platzi; cursos en vivo y pregrabados de tech influencers y escuelas digitales; pláticas y workshops de Claude en México ([§14](#14-formación-y-comunidad)) |
 
 <p align="center"><img src="assets/ornamento.svg" width="220" alt=""></p>
 
 ## 4. Destacado: Con Criterio, kit de IA para abogados mexicanos
 
+**Estatus.** Producto publicado.
+
 **Qué es.** Un kit práctico de IA para abogados en México: una guía (116 páginas en la edición Claude y 134 en la edición ChatGPT), 7 plugins por materia y 7 skills de redacción. A la venta en [concriterio.mx](https://concriterio.mx) desde el 5 de noviembre de 2026. Desde el 11 de noviembre también ofrece una guía de IA para principiantes, para el público general.
+
+**Problema.** Los abogados en México quieren usar IA, pero no pueden confiar en respuestas sin fuente: la ley cambia y una cita inventada es un riesgo profesional.
 
 **7 plugins por materia:** protección de datos (LFPDPPP), corporativo (LGSM), marcas (LFPPI), derecho de autor (LFDA), contratos mercantiles (Código de Comercio y LGTOC), energía (leyes de 2025) y notariado CDMX (Ley del Notariado y Ley Registral).
 
@@ -123,6 +134,8 @@ Cómo trabajo, empaquetado para cualquiera.
 <p align="center"><img src="assets/ornamento.svg" width="220" alt=""></p>
 
 ## 5. Destacado: motor de búsqueda sobre derecho energético mexicano (RAG)
+
+**Estatus.** Prototipo.
 
 **Problema.** Las reglas de energía en México están dispersas entre el DOF y los sitios de ocho autoridades, y la reforma de 2025 sustituyó buena parte del marco. Encontrar el instrumento que de verdad aplica, y saber si sigue aplicando, toma horas.
 
@@ -145,6 +158,8 @@ Cómo trabajo, empaquetado para cualquiera.
 
 ## 6. Destacado: inteligencia de compras públicas para petróleo y gas
 
+**Estatus.** Prototipo.
+
 **Problema.** Los proveedores del sector de petróleo y gas en México licitan a ciegas: no saben quién compra lo que venden, a qué precio ni cuándo.
 
 **Qué construí.** SupplySense, una herramienta de inteligencia de precios con datos de compras públicas.
@@ -166,7 +181,7 @@ Cómo trabajo, empaquetado para cualquiera.
 
 - Un expediente único por operación alimenta todos los correos, documentos y avisos.
 - 11 de los 20 pasos pueden correr casi solos, 7 quedan asistidos y 2 siguen siendo humanos: la revisión jurídica del proyecto de escritura y la firma ante notario.
-- Los pasos 4 a 7 (permiso de la SRE, proyecto de escritura, avalúo y certificados) arrancan en paralelo en cuanto se abre el escrow, lo que podría ahorrar de 7 a 10 días por cierre [ESTIMADO].
+- Los pasos 4 a 7 (permiso de la SRE, proyecto de escritura, avalúo y certificados) arrancan en paralelo en cuanto se abre el escrow, lo que podría ahorrar de 7 a 10 días por cierre (estimado).
 - La IA documental lee pasaportes y certificados y compara el proyecto de escritura con el expediente, siempre con aprobación humana.
 - Una compuerta de firma impide agendar el cierre hasta que se cumplen seis condiciones, entre ellas que los certificados sigan vigentes a la fecha propuesta y no sólo a hoy.
 - Antifraude: ningún flujo envía cuentas bancarias, y cualquier correo sobre cambio de instrucciones de pago lanza una alerta roja y exige llamada de verificación.
@@ -184,20 +199,22 @@ Cómo trabajo, empaquetado para cualquiera.
 | Tablero del socio director | Operaciones por etapa, días en cada paso, quién está atorando, alertas | Google Sheets o Looker Studio |
 | Bitácora y errores | Registro de cada ejecución y aviso inmediato si un flujo falla | n8n |
 
-**Estatus.** Etapa de diseño (noviembre de 2026). Propuesta entregada; decisiones en un registro de decisiones; implementación planeada en 4 fases de 10 a 13 semanas [ESTIMADO], empezando con un piloto en un solo desarrollo. Ahorro esperado: de 50% a 70% de las horas de talacha por cierre [ESTIMADO], a medir en el diagnóstico.
+**Estatus.** Etapa de diseño (noviembre de 2026). Propuesta entregada; decisiones en un registro de decisiones; implementación planeada en 4 fases de 10 a 13 semanas (estimado), empezando con un piloto en un solo desarrollo. Ahorro esperado: de 50% a 70% de las horas de talacha por cierre (estimado), a medir en el diagnóstico.
 
 <p align="center"><img src="assets/ornamento.svg" width="220" alt=""></p>
 
 ## 8. Resumen diario del DOF para el sector energético (n8n)
 
-**Problema.** Cada mañana revisaba el DOF a mano para ver si salió algo que afectara a mis clientes de energía: unos 30 minutos al día [ESTIMADO].
+**Estatus.** En operación.
+
+**Problema.** Cada mañana revisaba el DOF a mano para ver si salió algo que afectara a mis clientes de energía: unos 30 minutos al día (estimado).
 
 ```text
 Schedule (lun a vie, 8:30) → HTTP Request (índice del día) → HTML (título, dependencia, liga)
   → Filter (palabras y dependencias de energía) → Aggregate → LLM (una frase + prioridad) → Gmail
 ```
 
-**Resultado.** Un correo diario con las publicaciones de energía ordenadas por prioridad, unas 100 horas al año de ahorro [ESTIMADO]. El flujo me dice qué leer; leerlo sigue siendo mi trabajo. Se hizo como primera entrega de un curso de automatización con n8n, con el prompt documentado y un plan de manejo de errores.
+**Resultado.** Un correo diario con las publicaciones de energía ordenadas por prioridad, unas 100 horas al año de ahorro (estimado). El flujo me dice qué leer; leerlo sigue siendo mi trabajo. Se hizo como primera entrega de un curso de automatización con n8n, con el prompt documentado y un plan de manejo de errores.
 
 <p align="center"><img src="assets/ornamento.svg" width="220" alt=""></p>
 
@@ -205,12 +222,18 @@ Schedule (lun a vie, 8:30) → HTTP Request (índice del día) → HTML (título
 
 Por confidencialidad no detallo cada asunto ni a sus clientes.
 
+**Problema.** Entregar análisis regulatorios en menos tiempo sin perder rigor: cada dato con su fuente y su fecha de corte.
+
 - **Qué tipo de asuntos.** Rutas de entrada a mercados extranjeros, mapas de obligaciones de contratos de energía, due diligence de permisos, revisiones de cumplimiento sanitario y publicitario, dictámenes de marca, cartas institucionales y notas técnicas. Para contratistas de energía, comercializadoras de combustibles, empresas de consumo, despachos y dependencias de gobierno, en México y en el extranjero.
 - **Cómo uso la IA.** Trabajo con Claude y Claude Code sobre un corpus de fuentes oficiales descargadas y convertidas a texto plano para cotejo literal; cada dato lleva cita y fecha de corte. Extraigo los contratos de forma estructurada a un archivo de contexto (obligaciones, plazos, alertas), reutilizo marcos regulatorios entre expedientes y escribo las reglas de redacción como restricciones verificables. Cuando aplica, uso mis propios plugins con el texto vigente de la ley. Los entregables (Word, PDF y HTML) salen de scripts generadores, con semáforo por sección. Esto es sólo un ejemplo, no todo lo que hago con IA. El análisis y el criterio son míos.
 
 <p align="center"><img src="assets/ornamento.svg" width="220" alt=""></p>
 
 ## 10. Sitios web, video y marketing digital con IA
+
+**Estatus.** Sitios, video y redes con agentes: en operación. Reels automáticos: experimental.
+
+**Problema.** Lanzar y vender un producto sin agencia: sitio, cobro, contenido y anuncios, hechos en casa.
 
 - **Sitios:** [concriterio.mx](https://concriterio.mx) (venta y entrega automática de Con Criterio), [pivotek.mx](https://pivotek.mx) (este portafolio), [casalegado.mx](https://casalegado.mx) (mi marca de documentales biográficos) y [carocomunicando.com](https://carocomunicando.com) (una capacitadora en oratoria).
 - **Video:** una intro de entrada a escenario para la capacitadora, con motion graphics en Remotion y voz de IA, y videos de sus eventos.
@@ -221,6 +244,10 @@ Por confidencialidad no detallo cada asunto ni a sus clientes.
 <p align="center"><img src="assets/ornamento.svg" width="220" alt=""></p>
 
 ## 11. Mis herramientas
+
+**Estatus.** Segundo cerebro y BeCa: en operación. Sistema multiagente y CRMs: experimental.
+
+**Problema.** Que una práctica de una sola persona opere como un equipo: agenda, correo, cobros y seguimiento, conectados.
 
 **Conectores.** Claude Code llega a mis herramientas mediante conectores (MCP): el navegador (más de 10,000 acciones), el uso de computadora (más de 900), Stripe (unas 800 llamadas), Gmail, Google Calendar y Drive, tareas programadas, Vercel, Apify, Wispr Flow, Higgsfield (más de 1,000 llamadas), Canva y los Artifacts de Claude. Las cifras salen de los registros de mis sesiones.
 
@@ -233,6 +260,10 @@ Por confidencialidad no detallo cada asunto ni a sus clientes.
 <p align="center"><img src="assets/ornamento.svg" width="220" alt=""></p>
 
 ## 12. Estudios de viabilidad
+
+**Estatus.** Propuesta entregada.
+
+**Problema.** Decidir si un negocio vale la pena antes de invertir en él.
 
 Proyectos propios y servicios de PIVOTEK, mi consultoría, cada uno con veredicto y semáforo por fase. Gracias a herramientas de inteligencia artificial y al uso de skills propios, hemos hecho muchos planes de negocio, todos con conclusiones validadas por mí.
 
@@ -277,10 +308,8 @@ Uso la IA todos los días y me mantengo a la vanguardia de las herramientas y fu
 
 - **Cursos gratuitos en línea de Anthropic** (Anthropic Academy).
 - **Cursos gratuitos en línea de Harvey** sobre IA para el trabajo legal.
+- **Certificaciones en la plataforma Platzi.**
 - **Cursos en vivo y pregrabados** de la comunidad de tech influencers como Juan Lombana y Enrique Rocha, así como de escuelas digitales como Coderhouse y OrangutanAI.
 - **Pláticas y workshops de Claude en México**, como Claude for AI Engineering (Claude Community CDMX, octubre de 2026), Claude for Legal, Claude for Finance, Claude Community House, Claude for Revenue, Claude for Games, Claude en la Cámara de Diputados y Claude en el Senado de la República, entre otros. En Claude for AI Engineering resumí las cinco ponencias (uso de herramientas, MCP, ingeniería de contexto) y convertí las notas en un agente que responde como lo haría cada ponente.
-- **Pláticas y workshops de Grok Bot.**
-- **Cenas de networking con CTOs** de empresas grandes y medianas.
-- **Curso de automatización con n8n** (en curso): el resumen diario del DOF de la [§8](#8-resumen-diario-del-dof-para-el-sector-energético-n8n) fue la primera entrega.
 
 <p align="center"><img src="assets/ornamento.svg" width="220" alt=""></p>

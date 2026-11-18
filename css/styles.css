@@ -901,3 +901,27 @@ body::after{content:"";position:fixed;inset:-120px;z-index:58;pointer-events:non
 @keyframes baja{0%,100%{transform:translateY(-3px)}50%{transform:translateY(5px)}}
 @media (max-width:600px){.scrollhint{border-radius:18px}.scrollhint__txt span{font-size:.8rem}}
 @media (prefers-reduced-motion:reduce){.scrollhint{transition:opacity .2s ease}.scrollhint__ico i,.scrollhint__ico::after{animation:none}}
+
+/* ---------- PAQUETE DE MENSAJE (18-11-2026): estatus por proyecto, línea de problema, capacidad técnica e impacto, formación curada ---------- */
+.status{display:inline-flex;align-items:center;gap:.5em;font-family:var(--mono);font-size:.7rem;letter-spacing:.08em;text-transform:uppercase;color:var(--fg);border:1px solid var(--line);border-radius:999px;padding:.32rem .75rem;margin:0 0 1.3rem;width:max-content;max-width:100%}
+.status::before{content:"";flex:none;width:7px;height:7px;border-radius:50%;background:var(--st,var(--lime))}
+.status[data-st="op"]{--st:#7be08a}
+.status[data-st="pub"]{--st:var(--lime)}
+.status[data-st="proto"]{--st:var(--amber)}
+.status[data-st="prop"]{--st:var(--cyan)}
+.status[data-st="exp"]{--st:var(--coral)}
+.fill .status{border-color:rgba(10,12,16,.35)}
+.fill--lime .status[data-st="pub"]{--st:var(--ink)}
+.status--sm{font-size:.62rem;padding:.24rem .6rem;margin:0 0 .8rem}
+.carteles .status{margin:1.3rem 0 0}
+.problema{color:var(--mut)}
+.problema strong{color:var(--fg)}
+.est-n{font-family:var(--mono);font-size:.62em;letter-spacing:.04em;color:var(--mut);font-weight:400;white-space:nowrap}
+.figures__gh{margin:clamp(2rem,4vw,3rem) 0 1rem}
+.figures__grid--imp{margin-bottom:clamp(2rem,4vw,3rem)}
+.learn__grid--ia{margin-top:clamp(3rem,6vw,5rem)}
+.figures__grid--imp{grid-template-columns:repeat(3,1fr)}
+@media (max-width:900px){.figures__grid--imp{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:520px){.figures__grid--imp{grid-template-columns:1fr}}
+.problema{margin-top:1rem}
+

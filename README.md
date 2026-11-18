@@ -2,6 +2,8 @@
 
 **Mexican corporate lawyer (energy, hydrocarbons and mining, about 8 years of practice) who builds with AI.** I write the legal analysis, and I build the systems around it and beyond it: Claude Code plugins and agents, retrieval over legal text, n8n workflows, Python data pipelines, websites, video and AI agents for marketing.
 
+**A lawyer who builds.** Law, business and applied technology: I write the legal analysis in energy, corporate and regulatory work, and I build my own tools to do it better.
+
 Mexico City · beg.empleos@gmail.com · [pivotek.mx](https://pivotek.mx) · [LinkedIn](https://www.linkedin.com/in/benjamin-esponda-garc%C3%ADa-a743051b2) · [GitHub](https://github.com/BEG-lag) · Spanish (native), English (professional) · [Versión en español](README.es.md) · PDF in [`pdf/`](pdf/)
 
 > **I use AI every day.** This portfolio is a sample, not a complete list: some projects are confidential and others haven't been released yet. Client work is anonymized: names, figures and identifying details were removed. Nothing in this repository is legal advice.
@@ -31,6 +33,7 @@ Mexico City · beg.empleos@gmail.com · [pivotek.mx](https://pivotek.mx) · [Lin
 
 - **AI every day:** I use it daily for legal work, products, automation and content, and I stay at the forefront of new tools and features. What follows is a sample; some projects are confidential and others haven't been released yet.
 - **More than 30 projects in 2026**, from cross-border regulatory audits to a legal-tech product that is on sale.
+- **Impact:** more than 40 legal matters done with AI and closed successfully; 90.7% of articles identical to the official text when an AI agent applied 34 real reforms from the Official Gazette ([reforma-al-dia](https://github.com/BEG-lag/reforma-al-dia)); and one live product, Con Criterio.
 - **One product live:** Con Criterio, a guide plus 7 plugins and 7 skills for Mexican lawyers, sold in Claude and ChatGPT editions at [concriterio.mx](https://concriterio.mx) since November 5, 2026.
 - **Retrieval over legal text:** 374 energy-law instruments split into 11,112 chunks along the hierarchy of Mexican statutes, with hybrid search and a regression test set.
 - **Data at scale:** a pipeline over more than 560,000 public procurement contracts to show oil and gas suppliers where the money goes.
@@ -42,6 +45,10 @@ Mexico City · beg.empleos@gmail.com · [pivotek.mx](https://pivotek.mx) · [Lin
 <p align="center"><img src="assets/ornamento.svg" width="220" alt=""></p>
 
 ## 2. Open source
+
+**Status.** The 12 with a live site are in operation; mcp-leyes, mcp-dof, segundo-cerebro and tema-clawds are published products.
+
+**Problem.** Much of day-to-day legal and administrative work depends on knowing what the law says today and on calculations nobody checks; these tools solve that with the code in the open.
 
 16 public repositories at [github.com/BEG-lag](https://github.com/BEG-lag), built with Claude Code and arranged in the same four groups as my GitHub profile. Fifteen are checked on GitHub Actions with every change (tests, types or data) and twelve have a live site. Figures taken from each repository (its README and its test runs on GitHub Actions) on November 17, 2026.
 
@@ -98,13 +105,17 @@ How I work, packaged for anyone.
 | AI marketing | More than a dozen marketing and creative skills applied to real campaigns, SEO audits and ad copy ([§10](#10-websites-video-and-digital-marketing-with-ai)) |
 | Integrations (MCP connectors) | Stripe, Gmail, Google Calendar and Drive, Vercel, Higgsfield, Apify, Canva and more than 10,000 browser actions ([§11](#11-my-tools)), plus my own MCP servers for the Official Gazette and for federal law ([§2](#2-open-source)) |
 | Judgment and quality | Human approval gates, anti-fraud rules, labeled uncertainty, golden test sets and reproducible builds ([§13](#13-how-i-work-with-ai)) |
-| Continuous learning and community | Law degree (Ibero), Master's in Business Law (Anáhuac) and MBA (EAE Madrid); daily use of AI and of new tools as soon as they launch; free courses from Anthropic and Harvey; live and pre-recorded courses from tech influencers and digital schools; Claude and Grok Bot talks and workshops; networking dinners with CTOs ([§14](#14-learning-and-community)) |
+| Continuous learning and community | Law degree (Ibero), Master's in Business Law (Anáhuac) and MBA (EAE Madrid); daily use of AI and of new tools as soon as they launch; free courses from Anthropic and Harvey; Platzi certifications; live and pre-recorded courses from tech influencers and digital schools; Claude talks and workshops in Mexico ([§14](#14-learning-and-community)) |
 
 <p align="center"><img src="assets/ornamento.svg" width="220" alt=""></p>
 
 ## 4. Featured: Con Criterio, an AI toolkit for Mexican lawyers
 
+**Status.** Published product.
+
 **What it is.** A practical AI toolkit for lawyers in Mexico: a guide (116 pages in the Claude edition, 134 in the ChatGPT edition), 7 plugins by practice area and 7 drafting skills. On sale at [concriterio.mx](https://concriterio.mx) since November 5, 2026. Since November 11 it also offers a beginners' guide to everyday AI for the general public.
+
+**Problem.** Lawyers in Mexico want to use AI, but can't rely on answers without sources: the law changes, and a made-up citation is a professional risk.
 
 **7 plugins by practice area:** data protection (federal data protection law), corporate (General Law of Commercial Companies), trademarks (Industrial Property Law), copyright (Federal Copyright Law), commercial contracts (Commercial Code and negotiable instruments law), energy (Mexico's 2025 energy laws) and notarial practice in Mexico City (notarial and registry law).
 
@@ -123,6 +134,8 @@ How I work, packaged for anyone.
 <p align="center"><img src="assets/ornamento.svg" width="220" alt=""></p>
 
 ## 5. Featured: retrieval engine over Mexican energy law (RAG)
+
+**Status.** Prototype.
 
 **Problem.** Mexico's energy rules are scattered across the Official Gazette and the websites of eight energy authorities, and the 2025 reform replaced much of the framework. Finding the instrument that actually applies, and knowing whether it still applies, takes hours.
 
@@ -145,6 +158,8 @@ How I work, packaged for anyone.
 
 ## 6. Featured: public procurement intelligence for oil and gas
 
+**Status.** Prototype.
+
 **Problem.** Suppliers to the oil and gas sector in Mexico bid blind: they don't know who buys what they sell, at what price, or when.
 
 **What I built.** SupplySense, a price-intelligence tool built on public procurement data.
@@ -166,7 +181,7 @@ How I work, packaged for anyone.
 
 - One deal record feeds every email, document and notice.
 - 11 of the 20 steps can run almost on their own, 7 are assisted, and 2 stay human: the legal review of the deed draft and the signing before the notary.
-- Steps 4 to 7 (foreign-affairs permit, deed draft, appraisal and certificates) start in parallel the moment escrow opens, which could cut 7 to 10 days per closing [ESTIMATE].
+- Steps 4 to 7 (foreign-affairs permit, deed draft, appraisal and certificates) start in parallel the moment escrow opens, which could cut 7 to 10 days per closing (estimate).
 - Document AI reads passports and certificates and compares the deed draft against the record, always with human approval.
 - A signing gate blocks booking the closing until six conditions are met, including certificates that are still valid on the proposed date, not just today.
 - Anti-fraud: no workflow ever sends bank details, and any incoming email about new wiring instructions raises a red alert and requires a phone call.
@@ -184,20 +199,22 @@ How I work, packaged for anyone.
 | Partner dashboard | Deals by stage, days per step, who is blocking, alerts | Google Sheets or Looker Studio |
 | Logs and errors | Record of every run and an instant alert if a flow fails | n8n |
 
-**Status.** Design stage (November 2026). Proposal delivered; decisions kept in a decision register; rollout planned in 4 phases over 10 to 13 weeks [ESTIMATE], starting with a pilot on one development. Expected savings: 50% to 70% of busywork hours per closing [ESTIMATE], to be measured in the diagnosis.
+**Status.** Design stage (November 2026). Proposal delivered; decisions kept in a decision register; rollout planned in 4 phases over 10 to 13 weeks (estimate), starting with a pilot on one development. Expected savings: 50% to 70% of busywork hours per closing (estimate), to be measured in the diagnosis.
 
 <p align="center"><img src="assets/ornamento.svg" width="220" alt=""></p>
 
 ## 8. Daily regulatory digest from the Official Gazette (n8n)
 
-**Problem.** Every morning I reviewed the Official Gazette by hand for anything affecting my energy clients: about 30 minutes a day [ESTIMATE].
+**Status.** In operation.
+
+**Problem.** Every morning I reviewed the Official Gazette by hand for anything affecting my energy clients: about 30 minutes a day (estimate).
 
 ```text
 Schedule (Mon to Fri, 8:30) → HTTP Request (today's index) → HTML (title, agency, link)
   → Filter (energy keywords and agencies) → Aggregate → LLM (one line + priority) → Gmail
 ```
 
-**Result.** One email a day with the energy publications sorted by priority, about 100 hours a year saved [ESTIMATE]. The workflow tells me what to read; reading it is still my job. Built as the first deliverable of an n8n automation course, with a documented prompt and an error-handling plan.
+**Result.** One email a day with the energy publications sorted by priority, about 100 hours a year saved (estimate). The workflow tells me what to read; reading it is still my job. Built as the first deliverable of an n8n automation course, with a documented prompt and an error-handling plan.
 
 <p align="center"><img src="assets/ornamento.svg" width="220" alt=""></p>
 
@@ -205,12 +222,18 @@ Schedule (Mon to Fri, 8:30) → HTTP Request (today's index) → HTML (title, ag
 
 For confidentiality, I don't detail each matter or its clients.
 
+**Problem.** Delivering regulatory analysis faster without losing rigor: every fact with its source and cut-off date.
+
 - **What kind of matters.** Market entry routes, obligation maps for energy contracts, permit due diligence, health and advertising compliance reviews, trademark opinions, institutional letters and technical notes. For energy contractors, fuel traders, consumer goods companies, law firms and government agencies, in Mexico and abroad.
 - **How I use AI.** I work with Claude and Claude Code on a corpus of official sources, downloaded and converted to plain text for verbatim cross-checking; every data point carries a citation and a cut-off date. I extract contracts in structured form into a context file (obligations, deadlines, alerts), reuse regulatory frameworks across files and write drafting rules as verifiable constraints. Where it applies, I use my own plugins with the current text of the law. Deliverables (Word, PDF and HTML) come out of generator scripts, with a traffic light per section. This is only an example, not everything I do with AI. The analysis and the judgment are mine.
 
 <p align="center"><img src="assets/ornamento.svg" width="220" alt=""></p>
 
 ## 10. Websites, video and digital marketing with AI
+
+**Status.** Websites, video and social media run by agents: in operation. Automated Reels: experimental.
+
+**Problem.** Launching and selling a product without an agency: site, payments, content and ads, built in-house.
 
 - **Websites:** [concriterio.mx](https://concriterio.mx) (sales and automated delivery for Con Criterio), [pivotek.mx](https://pivotek.mx) (this portfolio), [casalegado.mx](https://casalegado.mx) (my biographical documentary brand) and [carocomunicando.com](https://carocomunicando.com) (a public speaking coach).
 - **Video:** a stage-entrance intro for the speaking coach, with motion graphics in Remotion and an AI voice, plus videos of her events.
@@ -221,6 +244,10 @@ For confidentiality, I don't detail each matter or its clients.
 <p align="center"><img src="assets/ornamento.svg" width="220" alt=""></p>
 
 ## 11. My tools
+
+**Status.** Second brain and BeCa: in operation. Multi-agent system and CRMs: experimental.
+
+**Problem.** Making a one-person practice run like a team: calendar, email, payments and follow-up, connected.
 
 **Connectors.** Claude Code reaches my tools through connectors (MCP): the browser (more than 10,000 actions), computer use (more than 900), Stripe (about 800 calls), Gmail, Google Calendar and Drive, scheduled tasks, Vercel, Apify, Wispr Flow, Higgsfield (more than 1,000 calls), Canva and Claude Artifacts. Counts come from my own session logs.
 
@@ -233,6 +260,10 @@ For confidentiality, I don't detail each matter or its clients.
 <p align="center"><img src="assets/ornamento.svg" width="220" alt=""></p>
 
 ## 12. Feasibility studies
+
+**Status.** Proposal delivered.
+
+**Problem.** Deciding whether a business is worth it before investing in it.
 
 Own ventures and services of PIVOTEK, my consultancy, each with a go or no-go verdict and traffic lights by phase. Thanks to artificial intelligence tools and our own custom skills, we have produced many business plans, all with conclusions I have validated personally.
 
@@ -277,10 +308,8 @@ I use AI every day and I stay at the forefront of new AI tools and features: I t
 
 - **Anthropic's free online courses** (Anthropic Academy).
 - **Harvey's free online courses** on AI for legal work.
+- **Certifications on the Platzi platform.**
 - **Live and pre-recorded courses** from the community of tech influencers such as Juan Lombana and Enrique Rocha, and from digital schools such as Coderhouse and OrangutanAI.
 - **Claude talks and workshops in Mexico**, such as Claude for AI Engineering (Claude Community CDMX, October 2026), Claude for Legal, Claude for Finance, Claude Community House, Claude for Revenue, Claude for Games, Claude at the Chamber of Deputies and Claude at the Mexican Senate, among others. At Claude for AI Engineering I summarized the five talks (tool use, MCP, context engineering) and turned the notes into an agent that answers as each speaker would.
-- **Grok Bot talks and workshops.**
-- **Networking dinners with CTOs** of large and mid-size companies.
-- **n8n automation course** (in progress): the daily regulatory digest in [§8](#8-daily-regulatory-digest-from-the-official-gazette-n8n) was the first deliverable.
 
 <p align="center"><img src="assets/ornamento.svg" width="220" alt=""></p>
