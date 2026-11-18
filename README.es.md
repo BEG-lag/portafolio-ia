@@ -19,13 +19,11 @@ Ciudad de México · beg.empleos@gmail.com · [pivotek.mx](https://pivotek.mx) �
 7. [Resumen diario del DOF para el sector energético (n8n)](#7-resumen-diario-del-dof-para-el-sector-energético-n8n)
 8. [Trabajo legal y regulatorio hecho con IA](#8-trabajo-legal-y-regulatorio-hecho-con-ia)
 9. [Sitios web, video y marketing digital con IA](#9-sitios-web-video-y-marketing-digital-con-ia)
-10. [Conectores: cómo automatizo, consulto y genero](#10-conectores-cómo-automatizo-consulto-y-genero)
+10. [Mis herramientas](#10-mis-herramientas)
 11. [Código abierto](#11-código-abierto)
-12. [Herramientas y sistemas](#12-herramientas-y-sistemas)
-13. [Estudios de viabilidad](#13-estudios-de-viabilidad)
+12. [Estudios de viabilidad](#12-estudios-de-viabilidad)
+13. [Cómo trabajo con IA](#13-cómo-trabajo-con-ia)
 14. [Formación y comunidad](#14-formación-y-comunidad)
-15. [Cómo trabajo con IA](#15-cómo-trabajo-con-ia)
-16. [Herramientas técnicas](#16-herramientas-técnicas)
 
 <p align="center"><img src="assets/ornamento.svg" width="220" alt=""></p>
 
@@ -47,18 +45,18 @@ Ciudad de México · beg.empleos@gmail.com · [pivotek.mx](https://pivotek.mx) �
 
 | Habilidad | Qué he construido con ella |
 |:-----|:-------------|
-| Agentes de IA y flujos agénticos | Plugins, skills y subagentes de Claude Code para siete materias del derecho mexicano ([§3](#3-destacado-con-criterio-kit-de-ia-para-abogados-mexicanos)); un sistema multiagente de nueve roles con señales tipadas ([§12](#12-herramientas-y-sistemas)); redes sociales operadas por Grok Bot y Muse de Meta ([§9.4](#94-redes-sociales-operadas-por-agentes-de-ia)) |
+| Agentes de IA y flujos agénticos | Plugins, skills y subagentes de Claude Code para siete materias del derecho mexicano ([§3](#3-destacado-con-criterio-kit-de-ia-para-abogados-mexicanos)); un sistema multiagente de nueve roles con señales tipadas ([§10](#10-mis-herramientas)); redes sociales operadas por Grok Bot y Muse de Meta ([§9](#9-sitios-web-video-y-marketing-digital-con-ia)) |
 | Búsqueda sobre documentos (RAG) | RAG legal con embeddings especializados en derecho, pgvector y ranking híbrido sobre 374 instrumentos de energía ([§4](#4-destacado-motor-de-búsqueda-sobre-derecho-energético-mexicano-rag)) |
-| Ingeniería de datos | Un pipeline sobre más de 560,000 contratos de compras públicas con actualización semanal y auditorías ([§5](#5-destacado-inteligencia-de-compras-públicas-para-petróleo-y-gas)); modelos financieros en Python y Excel ([§13](#13-estudios-de-viabilidad)) |
-| Automatización de procesos | Diseños en n8n para un cierre inmobiliario de 20 pasos y un resumen diario del DOF ([§6](#6-destacado-automatización-del-cierre-inmobiliario-en-n8n), [§7](#7-resumen-diario-del-dof-para-el-sector-energético-n8n)); tareas programadas para la revisión regulatoria mensual y la revisión semanal del segundo cerebro ([§3](#3-destacado-con-criterio-kit-de-ia-para-abogados-mexicanos), [§12](#12-herramientas-y-sistemas)) |
+| Ingeniería de datos | Un pipeline sobre más de 560,000 contratos de compras públicas con actualización semanal y auditorías ([§5](#5-destacado-inteligencia-de-compras-públicas-para-petróleo-y-gas)); modelos financieros en Python y Excel ([§12](#12-estudios-de-viabilidad)) |
+| Automatización de procesos | Diseños en n8n para un cierre inmobiliario de 20 pasos y un resumen diario del DOF ([§6](#6-destacado-automatización-del-cierre-inmobiliario-en-n8n), [§7](#7-resumen-diario-del-dof-para-el-sector-energético-n8n)); tareas programadas para la revisión regulatoria mensual y la revisión semanal del segundo cerebro ([§3](#3-destacado-con-criterio-kit-de-ia-para-abogados-mexicanos), [§10](#10-mis-herramientas)) |
 | IA para el trabajo legal | Auditorías regulatorias internacionales, revisiones de contratos y de cumplimiento, dictámenes y cartas, cada dato con fuente y fecha de corte ([§8](#8-trabajo-legal-y-regulatorio-hecho-con-ia)) |
 | Construcción de productos | Con Criterio, del contenido al cobro, la entrega automática y las pruebas con compradores simulados ([§3](#3-destacado-con-criterio-kit-de-ia-para-abogados-mexicanos)) |
-| Desarrollo web | concriterio.mx, pivotek.mx, casalegado.mx y carocomunicando.com ([§9.1](#91-sitios-web)) |
-| Video y contenido con IA | Un video de entrada a escenario con locución de IA y motion graphics, y un pipeline automático de Reels con transcripción local y visión por computadora ([§9.2](#92-video-de-entrada-de-la-conferencista-y-videos-de-eventos), [§9.3](#93-pipeline-automático-de-reels)) |
-| Marketing con IA | Más de una docena de skills de marketing y creatividad aplicados a campañas reales, auditorías SEO y textos de anuncios ([§9.5](#95-skills-de-marketing-y-cómo-los-apliqué)) |
-| Integraciones (conectores MCP) | Stripe, Gmail, Google Calendar y Drive, Vercel, Higgsfield, Apify, Canva y más de 10,000 acciones de navegador ([§10](#10-conectores-cómo-automatizo-consulto-y-genero)), además de servidores MCP propios para el DOF y para la ley federal ([§11](#11-código-abierto)) |
-| Criterio y calidad | Compuertas de aprobación humana, reglas antifraude, incertidumbre etiquetada, pruebas golden y construcción reproducible ([§15](#15-cómo-trabajo-con-ia)) |
-| Aprendizaje continuo y comunidad | Licenciatura en Derecho (Ibero), Maestría en Derecho de la Empresa (Anáhuac) y MBA (EAE Madrid); uso diario de la IA y de las herramientas nuevas en cuanto salen; cursos gratuitos de Anthropic y Harvey; cursos en vivo y pregrabados de tech influencers y escuelas digitales; pláticas y workshops de Claude y Grok Bot; cenas de networking con CTOs ([§14](#14-formación-y-comunidad)) |
+| Desarrollo web | concriterio.mx, pivotek.mx, casalegado.mx y carocomunicando.com ([§9](#9-sitios-web-video-y-marketing-digital-con-ia)) |
+| Video y contenido con IA | Un video de entrada a escenario con locución de IA y motion graphics, y un pipeline automático de Reels con transcripción local y visión por computadora ([§9](#9-sitios-web-video-y-marketing-digital-con-ia)) |
+| Marketing con IA | Más de una docena de skills de marketing y creatividad aplicados a campañas reales, auditorías SEO y textos de anuncios ([§9](#9-sitios-web-video-y-marketing-digital-con-ia)) |
+| Integraciones (conectores MCP) | Stripe, Gmail, Google Calendar y Drive, Vercel, Higgsfield, Apify, Canva y más de 10,000 acciones de navegador ([§10](#10-mis-herramientas)), además de servidores MCP propios para el DOF y para la ley federal ([§11](#11-código-abierto)) |
+| Criterio y calidad | Compuertas de aprobación humana, reglas antifraude, incertidumbre etiquetada, pruebas golden y construcción reproducible ([§13](#13-cómo-trabajo-con-ia)) |
+| Aprendizaje continuo y comunidad | Licenciatura en Derecho (Ibero), Maestría en Derecho de la Empresa (Anáhuac) y MBA (EAE Madrid); cursos de Anthropic y Harvey; pláticas y workshops de Claude en México ([§14](#14-formación-y-comunidad)) |
 
 <p align="center"><img src="assets/ornamento.svg" width="220" alt=""></p>
 
@@ -66,15 +64,7 @@ Ciudad de México · beg.empleos@gmail.com · [pivotek.mx](https://pivotek.mx) �
 
 **Qué es.** Un kit práctico de IA para abogados en México: una guía (116 páginas en la edición Claude y 134 en la edición ChatGPT), 7 plugins por materia y 7 skills de redacción. A la venta en [concriterio.mx](https://concriterio.mx) desde el 5 de noviembre de 2026. Desde el 11 de noviembre también ofrece una guía de IA para principiantes, para el público general.
 
-| Plugin | Qué cubre |
-|:----|:------------|
-| Protección de datos | LFPDPPP: avisos de privacidad, contratos de encargo, transferencias, riesgo de infracción, defensa ante la autoridad |
-| Corporativo | LGSM: actas de asamblea, auditoría de estatutos, poderes, due diligence societaria, reestructuras paso a paso |
-| Marcas | LFPPI: registrabilidad, oposiciones, nulidad y caducidad, infracciones, plazos ante el IMPI |
-| Derecho de autor | LFDA: dictámenes de titularidad, cláusulas de transmisión, limitaciones, aviso y retiro, obras hechas con IA |
-| Contratos mercantiles | Código de Comercio y LGTOC: redacción y revisión, pagarés, operaciones de crédito y fideicomiso, intereses y usura, rutas de cobro |
-| Energía | Leyes de energía de 2025: ruta de permisos, proyectos eléctricos y de hidrocarburos, sanciones, comparativo 2014 contra 2025 |
-| Notariado CDMX | Ley del Notariado y Ley Registral: requisitos de la escritura, testamentos y voluntad anticipada, sucesión ante notario |
+**7 plugins por materia:** protección de datos (LFPDPPP), corporativo (LGSM), marcas (LFPPI), derecho de autor (LFDA), contratos mercantiles (Código de Comercio y LGTOC), energía (leyes de 2025) y notariado CDMX (Ley del Notariado y Ley Registral).
 
 **Skills de redacción:** arrendamiento en CDMX, NDA bilateral, comisión mercantil, servicios profesionales, carta de intención, carta poder simple y calculadora de finiquito.
 
@@ -86,7 +76,7 @@ Ciudad de México · beg.empleos@gmail.com · [pivotek.mx](https://pivotek.mx) �
 - Venta y entrega: página de venta, ligas de pago y webhook de Stripe, y un Worker de Cloudflare que entrega los archivos y opera el boletín (101 pruebas automáticas sin fallas).
 - Su propia capa legal: términos y condiciones, aviso de privacidad y licencia de uso.
 - Pruebas como comprador: una ronda simulada con 20 compradores dio 118 hallazgos distintos y cero bloqueantes; 114 de los 115 hallazgos abiertos se cerraron el mismo día.
-- Marketing: contenido producido con Claude Code y publicado por agentes de IA ([§9.4](#94-redes-sociales-operadas-por-agentes-de-ia)), auditoría SEO, dos campañas de Google Ads preparadas y el Pixel de Meta conectado al flujo de pago.
+- Marketing: contenido producido con Claude Code y publicado por agentes de IA ([§9](#9-sitios-web-video-y-marketing-digital-con-ia)), auditoría SEO, dos campañas de Google Ads preparadas y el Pixel de Meta conectado al flujo de pago.
 
 <p align="center"><img src="assets/ornamento.svg" width="220" alt=""></p>
 
@@ -180,84 +170,23 @@ Por confidencialidad no detallo cada asunto ni a sus clientes.
 
 ## 9. Sitios web, video y marketing digital con IA
 
-### 9.1 Sitios web
-
-| Sitio | Qué es | Cómo se hizo |
-|:----|:------|:---------|
-| [concriterio.mx](https://concriterio.mx) | Sitio de venta de Con Criterio: página para abogados y [/para-todos](https://concriterio.mx/para-todos/) para principiantes, con panel "Arma tu compra" | Páginas y textos legales (términos, aviso de privacidad, licencia) generados con scripts de Python; ligas de pago de Stripe y un Worker de Cloudflare para el cobro y la entrega; Cloudflare Pages, DNS y Web Analytics; Pixel de Meta y dos campañas de búsqueda en Google Ads configuradas |
-| [pivotek.mx](https://pivotek.mx) | Casa de este portafolio. Sustituyó el sitio anterior en Next.js de PIVOTEK, mi marca personal y consultoría, que también construí (TypeScript, formulario con Resend, SEO técnico) | Diseñado y construido por Fable 5.2 (Claude) a partir del texto de este README, bajo mi dirección: paleta tinta y semáforo, 20 secciones con animaciones de scroll propias (texto que se revela palabra por palabra, cartas que se apilan, un cierre de 20 pasos que se voltea bloque por bloque, los estados de BeCa), GSAP, ScrollTrigger y Lenis auto-hospedados con política de seguridad estricta; desplegado en Vercel |
-| [casalegado.mx](https://casalegado.mx) | Mi marca de documentales biográficos: sitio de cinco páginas, más brandbook, dossier y presentación de ventas | HTML y CSS estáticos con un sistema de marca estricto (dos familias tipográficas, paleta cálida y reglas de voz), imágenes ilustrativas generadas con Higgsfield, aviso de privacidad, sitemap, textos para el Perfil de Negocio de Google, etiquetas de Google Ads y política de seguridad de contenido, desplegado en Vercel |
-| [carocomunicando.com](https://carocomunicando.com) | Sitio de una capacitadora en oratoria y comunicación: home con portada animada, su método, su charla TEDx, casos y la marca | Sitio estático con GSAP, ScrollTrigger y Lenis auto-hospedados; guía PDF descargable con captura opcional de correo; GA4, Microsoft Clarity y Vercel Analytics declarados en el aviso de privacidad y el banner de cookies; redirecciones 301, encabezados de seguridad y política de seguridad de contenido; auditoría SEO y artículos de blog |
-
-### 9.2 Video de entrada de la conferencista y videos de eventos
-
-- **Intro de entrada a escenario (102 segundos)** para la capacitadora, que se proyecta antes de que suba. Cinco versiones; la vigente combina motion graphics hechos en Remotion, locución con voz de IA (ElevenLabs v4 a través de Higgsfield), música y efectos originales, y sus fotos. Incluye un loop de espera para la pantalla y tres Reels cortos para Instagram con el mismo material. Cada versión se regenera con scripts (Python, Node y ffmpeg).
-- **Resumen de evento (40 segundos)** de su papel como conductora y moderadora de una cumbre universitaria de emprendimiento: 9:16 para Reels, TikTok y LinkedIn y 16:9 para YouTube, con música original sincronizada con el momento en que se encienden las luces del escenario.
-- **Loop para la presentación de su libro:** pantalla animada con frases que rotan cada 10 segundos y códigos QR verificados a su Instagram y a su sitio.
-
-### 9.3 Pipeline automático de Reels
-
-Se deja un video crudo en Descargas y sale un Reel terminado:
-
-1. **Transcripción** palabra por palabra, local, con Whisper.
-2. **Reglas de estilo** aprendidas de una creadora de referencia: cuatro Reels analizados cuadro por cuadro, con medición del ritmo de corte (corte a material de apoyo cada 5 a 9 segundos, pastillas de título, pregunta de cierre).
-3. **Apoyos visuales:** fotos reales con licencia libre de Wikimedia Commons y Openverse, con crédito, o material de apoyo generado con Higgsfield.
-4. **Recorte de la persona y seguimiento de la cara** con el framework Vision de Apple (Swift).
-5. **Edición automática** en Python: formato, subtítulos, pastillas, tarjetas, créditos de fotos y recuadro de la conferencista; un historial evita repetir formatos.
-
-Seis Reels listos para publicar en noviembre de 2026, un juego mensual de guiones y una guía técnica para publicar con la API Graph de Instagram y n8n.
-
-### 9.4 Redes sociales operadas por agentes de IA
-
-En Con Criterio, el trabajo se reparte entre Claude Code y dos agentes externos:
-
-| Quién | Qué hace |
-|:-----|:-------------|
-| Claude Code | Produce el contenido y el calendario de publicación, escribe los prompts de los agentes y las listas para verificar su trabajo |
-| Grok Bot (agente que opera mi Mac) | Publica dos Reels diarios en TikTok y lleva la prospección y los mensajes directos de Instagram; si la Mac está dormida o pide un código, se detiene y avisa |
-| Muse (agente de marketing con IA de Meta) | Publica tres piezas diarias en Instagram y Facebook, opera las campañas y sigue la conversación cuando un prospecto contesta |
-
-El etiquetado de contenido generado con IA se revisó con Muse, y hay prompts de verificación que auditan lo que de verdad hizo cada agente.
-
-### 9.5 Skills de marketing y cómo los apliqué
-
-| Skill | Qué hace | Dónde lo apliqué |
-|:----|:-------|:-------|
-| humanizalo-es | Quita los delatores de escritura de IA en español y conserva una voz humana o de marca | Textos de carocomunicando.com y sus Reels, páginas y publicaciones de Con Criterio, entregables del curso |
-| social-content | Publicaciones, calendarios y guiones de video corto | Guiones y calendario de Reels de la capacitadora; estrategia de redes de Con Criterio |
-| content-strategy | Qué publicar y por qué: pilares, temas y calendario | Estrategia de contenido de Con Criterio para Instagram, Facebook y TikTok |
-| copywriting | Textos de página y de oferta | Planes de negocio y sitio de la capacitadora |
-| marketing-psychology | Principios de comportamiento como anclaje, prueba social y encuadre | Oferta y páginas de la capacitadora; planes de negocio |
-| pricing-strategy | Empaque y precio | Precios en planes de negocio y propuestas de la capacitadora |
-| ad-creative | Titulares y textos de anuncios a escala, dentro de los límites de cada plataforma | Variaciones de anuncios para las campañas de la capacitadora |
-| campaign-plan | Brief de campaña: objetivos, audiencia, canales, calendario y métricas | Plan de tráfico y contactos de la capacitadora (noviembre de 2026) |
-| seo-audit | Auditoría SEO con mejoras rápidas y acciones de fondo | Auditorías de carocomunicando.com y concriterio.mx |
-| Skills de Higgsfield (generate, art director, brand kit, video explainer) | Imágenes, video, locución y música | Intro de la conferencista, material de apoyo y loop del libro; imágenes de Casa Legado; piezas explicativas de Con Criterio |
-| frontend-design y emil-design-eng | Diseño de interfaz y pulido de animaciones | Página de venta de Con Criterio |
-| apify-lead-gen | Listas de prospectos desde fuentes públicas | Base de prospectos para un servicio de sitios web en Los Cabos |
-| abogado-el-diablo | Pone a prueba un plan antes de actuar | Estrategia de lanzamiento de Con Criterio |
+- **Sitios:** [concriterio.mx](https://concriterio.mx) (venta y entrega automática de Con Criterio), [pivotek.mx](https://pivotek.mx) (este portafolio), [casalegado.mx](https://casalegado.mx) (mi marca de documentales biográficos) y [carocomunicando.com](https://carocomunicando.com) (una capacitadora en oratoria).
+- **Video:** una intro de entrada a escenario para la capacitadora, con motion graphics en Remotion y voz de IA, y videos de sus eventos.
+- **Reels automáticos:** de un video crudo a un Reel terminado, con transcripción local en Whisper, apoyos visuales y edición en Python.
+- **Redes con agentes:** en Con Criterio, Claude Code produce el contenido y lo publican dos agentes: Grok Bot en TikTok y Muse de Meta en Instagram y Facebook.
+- **Marketing:** más de una docena de skills de marketing aplicadas a casos reales: textos, anuncios, campañas y auditorías SEO.
 
 <p align="center"><img src="assets/ornamento.svg" width="220" alt=""></p>
 
-## 10. Conectores: cómo automatizo, consulto y genero
+## 10. Mis herramientas
 
-Claude Code llega a mis herramientas mediante conectores (MCP). Las cifras salen de los registros de mis propias sesiones.
+**Conectores.** Claude Code llega a mis herramientas mediante conectores (MCP): el navegador (más de 10,000 acciones), el uso de computadora (más de 900), Stripe (unas 800 llamadas), Gmail, Google Calendar y Drive, tareas programadas, Vercel, Apify, Wispr Flow, Higgsfield (más de 1,000 llamadas), Canva y los Artifacts de Claude. Las cifras salen de los registros de mis sesiones.
 
-| Uso | Conector | Qué hago con él |
-|:--|:-------|:---------|
-| Automatizar | Claude in Chrome y el navegador integrado (más de 10,000 acciones) | Operar paneles web, probar mis sitios de punta a punta, subir archivos y comprobar lo que está en vivo |
-| Automatizar | Uso de computadora (más de 900 acciones) | Manejar apps nativas de la Mac cuando no hay API |
-| Automatizar | Stripe (unas 800 llamadas) | Productos, precios, ligas de pago y webhooks de Con Criterio |
-| Automatizar | Gmail, Google Calendar y Google Drive | Revisión semanal de agenda y correo, borradores y seguimientos, búsqueda de archivos |
-| Automatizar | Tareas programadas | Revisión semanal del segundo cerebro, revisión regulatoria mensual, seguimiento de campañas |
-| Automatizar | Vercel | Proyectos, dominios y analítica web de mis sitios |
-| Consultar | Apify | Extracción de datos web, listas de prospectos y navegación para investigar |
-| Consultar | Wispr Flow | Búsqueda en mis notas de reuniones |
-| Generar | Higgsfield (más de 1,000 llamadas) | Imágenes, video, locución y música para sitios, Reels y la intro de la conferencista |
-| Generar | Canva | Diseños a partir de kits de marca |
-| Generar | Artifacts de Claude | Páginas para compartir |
+- **Segundo cerebro en Obsidian:** una nota por proyecto, persona y documento oficial; cada sesión deja su entrada en la bitácora y una tarea semanal lee mi agenda y mi correo. La plantilla es pública: [segundo-cerebro](https://github.com/BEG-lag/segundo-cerebro).
+- **Sistema multiagente y CRMs:** nueve roles que leen un mismo expediente y se pasan señales tipadas, y CRMs internos sobre [auto-crm](https://github.com/Hainrixz/auto-crm).
+- **BeCa:** mi gato convertido en acompañante de escritorio. Una app de macOS en Swift que escucha los hooks de Claude Code y me dice con su postura qué está haciendo Claude: saluda, teclea, revisa y salta al terminar.
 
-Además, dos agentes externos (Grok Bot y Muse, [§9.4](#94-redes-sociales-operadas-por-agentes-de-ia)) y herramientas locales de línea de comandos: Obsidian, GitHub, Whisper y ffmpeg.
+![BeCa jugando con Clawd, la mascota de Claude Code](assets/beca-jugando-con-clawd-animado.png)
 
 <p align="center"><img src="assets/ornamento.svg" width="220" alt=""></p>
 
@@ -298,68 +227,18 @@ Pequeñas, privadas y útiles todos los días.
 
 Cómo trabajo, empaquetado para cualquiera.
 
-- **[segundo-cerebro](https://github.com/BEG-lag/segundo-cerebro)**. Plantilla instalable de bóveda de Obsidian con las reglas para que Claude Code la lea antes de trabajar y la actualice después, con revisión semanal incluida. Es la versión pública, sin mis datos, del sistema de la [§12](#12-herramientas-y-sistemas).
+- **[segundo-cerebro](https://github.com/BEG-lag/segundo-cerebro)**. Plantilla instalable de bóveda de Obsidian con las reglas para que Claude Code la lea antes de trabajar y la actualice después, con revisión semanal incluida. Es la versión pública, sin mis datos, del sistema de la [§10](#10-mis-herramientas).
 - **[tema-clawds](https://github.com/BEG-lag/tema-clawds)**. Tema claro para la app de Claude Code con 64 Clawds, la mascota de Claude Code, jugando en 20 escenas SVG.
 
 <p align="center"><img src="assets/ornamento.svg" width="220" alt=""></p>
 
-## 12. Herramientas y sistemas
-
-- **Segundo cerebro en Obsidian y Claude Code.** Una nota por proyecto, persona y documento oficial; cada sesión de trabajo deja su entrada en la bitácora; una tarea programada lee mi calendario y mi correo cada domingo (sólo lectura) y actualiza la bóveda; respaldo cada hora con launchd. Este portafolio se armó a partir de ahí. La plantilla, sin mis datos, es pública: [segundo-cerebro](https://github.com/BEG-lag/segundo-cerebro).
-- **Sistema multiagente personal.** Nueve roles especializados leen un mismo expediente, se pasan señales tipadas en lugar de prosa y siguen una regla de precedencia declarada cuando se contradicen. Uso personal; no se muestran datos.
-- **CRMs internos propios.** Los armé sobre la arquitectura de [auto-crm](https://github.com/Hainrixz/auto-crm), un CRM local y open-source con Next.js, SQLite y Claude Code que se adapta a cada negocio.
-
-### BeCa, mi acompañante de escritorio
-
-![BeCa jugando con Clawd, la mascota de Claude Code](assets/beca-jugando-con-clawd-animado.png)
-
-BeCa es mi gato convertido en un acompañante en estilo sticker que vive en una ventanita flotante de mi Mac. Escucha los hooks del ciclo de vida de Claude Code, así que de un vistazo sé qué está haciendo Claude sin mirar la terminal. Con un clic saluda; con otro juega unos cuatro segundos con Clawd, la mascota de Claude Code. Corre en local, sin red y sin guardar contenido. ¿Por qué BeCa? Para darle un sentido del humor a mi día a día con la IA mientras trabajo.
-
-| Qué hace Claude Code | Hook | Qué hace BeCa |
-|:-------|:------|:--------|
-| Abre una sesión | SessionStart | Saluda dos veces y se queda en reposo |
-| Trabaja en una petición o usa una herramienta | UserPromptSubmit, PreToolUse, PostToolUse | Teclea en el aire |
-| Edita o escribe un archivo | PostToolUse de Edit o Write | Revisa con la pata en el mentón |
-| Termina su turno | Stop | Salta cuatro veces y saluda |
-| Espera mi permiso o mi respuesta | PermissionRequest, Notification | Pide con las patas juntas |
-| Choca con un error de la API | StopFailure | Se desinfla una vez |
-| Cierra la sesión | SessionEnd | Reposa |
-
-**Cómo se hizo:** app nativa de macOS en Swift, hecha con Claude Code; el arte se generó con Higgsfield a partir de tres fotos de mi gato y se cortó en tiras de animación con scripts de Python; los sonidos se extrajeron de clips de video generados con IA; los hooks son globales, así que BeCa funciona en todos los proyectos.
-
-<p align="center"><img src="assets/ornamento.svg" width="220" alt=""></p>
-
-## 13. Estudios de viabilidad
+## 12. Estudios de viabilidad
 
 Proyectos propios y servicios de PIVOTEK, mi consultoría, cada uno con veredicto y semáforo por fase. Gracias a herramientas de inteligencia artificial y al uso de skills propios, hemos hecho muchos planes de negocio, todos con conclusiones validadas por mí.
 
 <p align="center"><img src="assets/ornamento.svg" width="220" alt=""></p>
 
-## 14. Formación y comunidad
-
-### Formación académica
-
-| Título | Institución | Años |
-|:--------|:-------|:----|
-| Maestría en Derecho de la Empresa (Derecho Corporativo) | Universidad Anáhuac | 2023 a 2025 |
-| Master of Business Administration (MBA), Administración de Empresas | EAE Business School, Madrid, España | 2023 a 2024 |
-| Licenciatura en Derecho | Universidad Iberoamericana, CDMX | 2015 a 2020 |
-
-### Cursos y comunidad
-
-Uso la IA todos los días y me mantengo a la vanguardia de las herramientas y funciones nuevas de IA: las pruebo en trabajo real en cuanto salen.
-
-- **Cursos gratuitos en línea de Anthropic** (Anthropic Academy).
-- **Cursos gratuitos en línea de Harvey** sobre IA para el trabajo legal.
-- **Cursos en vivo y pregrabados** de la comunidad de tech influencers como Juan Lombana y Enrique Rocha, así como de escuelas digitales como Coderhouse y OrangutanAI.
-- **Pláticas y workshops de Claude en México**, como Claude for AI Engineering (Claude Community CDMX, octubre de 2026), Claude for Legal, Claude for Finance, Claude Community House, Claude for Revenue, Claude for Games, Claude en la Cámara de Diputados y Claude en el Senado de la República, entre otros. En Claude for AI Engineering resumí las cinco ponencias (uso de herramientas, MCP, ingeniería de contexto) y convertí las notas en un agente que responde como lo haría cada ponente.
-- **Pláticas y workshops de Grok Bot.**
-- **Cenas de networking con CTOs** de empresas grandes y medianas.
-- **Curso de automatización con n8n** (en curso): el resumen diario del DOF de la [§7](#7-resumen-diario-del-dof-para-el-sector-energético-n8n) fue la primera entrega.
-
-<p align="center"><img src="assets/ornamento.svg" width="220" alt=""></p>
-
-## 15. Cómo trabajo con IA
+## 13. Cómo trabajo con IA
 
 1. **Primero la fuente.** Los textos oficiales se descargan al proyecto y cada dato lleva su fuente y fecha de corte.
 2. **La incertidumbre se etiqueta.** Todo entregable marca [ESTIMADO], [SUPUESTO] y [BRECHA DE DATO].
@@ -369,9 +248,7 @@ Uso la IA todos los días y me mantengo a la vanguardia de las herramientas y fu
 6. **Se prueba como usuario.** Compradores simulados, juegos de pruebas golden, pruebas automáticas y verificación contra el sitio en vivo.
 7. **La validación es explícita.** Los estudios dicen qué debe confirmarse con la autoridad competente y no constituyen opinión legal.
 
-<p align="center"><img src="assets/ornamento.svg" width="220" alt=""></p>
-
-## 16. Herramientas técnicas
+### Herramientas técnicas
 
 - **IA:** Claude Code (skills, plugins, subagentes, conectores MCP, hooks, tareas programadas), API de Claude, embeddings de Voyage AI, ChatGPT y Codex, Higgsfield (imagen, video, voz y música), Grok Bot y Muse de Meta.
 - **Datos:** Python, PostgreSQL con pgvector, Playwright, pdfplumber y OCR, Excel.
@@ -381,5 +258,14 @@ Uso la IA todos los días y me mantengo a la vanguardia de las herramientas y fu
 - **Marketing y analítica:** GA4, Microsoft Clarity, Vercel Analytics, Google Ads, Pixel de Meta, Google Search Console.
 - **Documentos:** Markdown, pandoc, Typst, Word con control de cambios.
 - **Conocimiento:** Obsidian.
+
+<p align="center"><img src="assets/ornamento.svg" width="220" alt=""></p>
+
+## 14. Formación y comunidad
+
+- **Maestría en Derecho de la Empresa** (Derecho Corporativo), Universidad Anáhuac, 2023 a 2025.
+- **MBA**, EAE Business School, Madrid, 2023 a 2024.
+- **Licenciatura en Derecho**, Universidad Iberoamericana, CDMX, 2015 a 2020.
+- **Cursos y comunidad:** cursos de Anthropic Academy y de Harvey sobre IA para el trabajo legal; pláticas y workshops de Claude en México, como Claude for AI Engineering y Claude for Legal; curso de automatización con n8n, en curso (el resumen diario del DOF de la [§7](#7-resumen-diario-del-dof-para-el-sector-energético-n8n) fue la primera entrega).
 
 <p align="center"><img src="assets/ornamento.svg" width="220" alt=""></p>

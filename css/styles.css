@@ -489,9 +489,9 @@ h4{font-size:1.05rem;line-height:1.25;font-weight:650;letter-spacing:-.01em}
    (html.tone-on) las secciones se vuelven transparentes y el fondo de la página (--tone) pasa
    de un tono al siguiente con el scroll. Las tarjetas toman el matiz del tono. */
 #rag,#conectores{--bg:#08192a}
-#supplysense,#beca{--bg:#24170a}
+#supplysense{--bg:#24170a}
 #cierre,#estudio{--bg:#2a110f}
-#dof,#sistemas{--bg:#11141b}
+#dof{--bg:#11141b}
 main > section:not(.paper):not(.fill){--card:color-mix(in srgb,var(--bg),#fff 5.5%)}
 .tone-on main > section:not(.paper):not(.fill){background:transparent;--card:color-mix(in srgb,var(--tone),#fff 5.5%)}
 .tone-on .beca{background:radial-gradient(90% 60% at 20% 45%,rgba(58,66,98,.45) 0%,rgba(58,66,98,0) 70%)}
@@ -521,6 +521,38 @@ body::after{content:"";position:fixed;inset:-120px;z-index:58;pointer-events:non
 .fill .oss__cta a:hover{background:rgba(10,12,16,.07);color:var(--ink)}
 .fill .oss__cta b,.fill .oss__cta a > span{color:var(--ink)}
 .fill .oss__cta p{color:var(--mut)}
+
+/* ---------- RECORTE (17-11-2026): Quién soy con PIVOTEK y Formación, Con Criterio compacto, §9 corto, Mis herramientas y Cómo trabajo ---------- */
+.yo--uno{padding:clamp(6rem,14vh,11rem) 0}
+.yo__grid{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:clamp(2rem,6vw,6rem);align-items:start}
+.yo--uno .yo__frame{position:relative;inset:auto;aspect-ratio:4/5;border-radius:var(--r);overflow:hidden}
+.yo--uno .yo__txt{position:static;max-width:none}
+.yo__pvk{margin-top:clamp(2rem,4vw,3rem);padding-top:1.6rem;border-top:1px solid var(--line);display:grid;gap:1rem}
+.yo__logo{width:min(260px,70%);height:auto}
+.yo__pvk p,.yo__cursos{color:var(--mut);max-width:58ch}
+.yo__pvk b{color:var(--fg)}
+.yo__form{margin-top:clamp(2rem,4vw,3rem)}
+.yo__acad li{border-top:1px solid var(--line);padding:.9rem 0;display:grid;gap:.15rem}
+.yo__acad li:last-child{border-bottom:1px solid var(--line)}
+.yo__acad b{font-size:1.15rem;letter-spacing:-.02em}
+.yo__acad span{font-family:var(--mono);font-size:.74rem;letter-spacing:.06em;color:var(--mut)}
+.yo__cursos{margin-top:1.2rem;font-size:.95rem}
+.cc__laws{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 clamp(1.5rem,3vw,3rem)}
+.cc__laws li{border-top:1px solid var(--line);padding:1rem 0;display:grid;gap:.3rem}
+.cc__laws span{font-family:var(--mono);font-size:.72rem;letter-spacing:.06em;color:var(--mut)}
+.cc__laws b{font-size:clamp(1.2rem,2vw,1.6rem);font-weight:650;letter-spacing:-.035em;line-height:1.1}
+.studio__more{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 clamp(2rem,4vw,4rem);margin-top:clamp(3rem,6vw,5rem)}
+.studio__more li{border-top:1px solid var(--line);padding:1.3rem 0}
+.studio__more h3{font-size:1.35rem;letter-spacing:-.03em;margin-bottom:.4rem}
+.studio__more p{color:var(--mut);max-width:52ch}
+.tools__sys{margin-top:clamp(4rem,8vw,7rem)}
+.tools__beca{margin-top:clamp(4rem,8vw,7rem);padding-top:clamp(3rem,6vw,5rem);border-top:1px solid var(--line)}
+.tools__h{font-size:clamp(2rem,4.2vw,3.6rem);font-weight:650;letter-spacing:-.045em;line-height:1;max-width:17ch;text-wrap:balance}
+.tools__beca .lead{margin-bottom:clamp(2rem,4vw,3rem)}
+.method__tech{margin-top:clamp(4rem,8vw,7rem)}
+@media (max-width:899.98px){
+  .yo__grid,.cc__laws,.studio__more{grid-template-columns:1fr}
+}
 
 /* ---------- DESTACADOS: cuatro carteles ilustrados (SVG propios, con la flecha de la marca) que llevan a cada proyecto.
    Se cargan como SVG en línea al acercarse; antes, cada uno es un rectángulo de su color. En celular van en carrusel. ---------- */

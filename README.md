@@ -19,13 +19,11 @@ Mexico City · beg.empleos@gmail.com · [pivotek.mx](https://pivotek.mx) · [Lin
 7. [Daily regulatory digest from the Official Gazette (n8n)](#7-daily-regulatory-digest-from-the-official-gazette-n8n)
 8. [Legal and regulatory work built with AI](#8-legal-and-regulatory-work-built-with-ai)
 9. [Websites, video and digital marketing with AI](#9-websites-video-and-digital-marketing-with-ai)
-10. [Connectors: how I automate, query and generate](#10-connectors-how-i-automate-query-and-generate)
+10. [My tools](#10-my-tools)
 11. [Open source](#11-open-source)
-12. [Tools and systems](#12-tools-and-systems)
-13. [Feasibility studies](#13-feasibility-studies)
+12. [Feasibility studies](#12-feasibility-studies)
+13. [How I work with AI](#13-how-i-work-with-ai)
 14. [Learning and community](#14-learning-and-community)
-15. [How I work with AI](#15-how-i-work-with-ai)
-16. [Stack](#16-stack)
 
 <p align="center"><img src="assets/ornamento.svg" width="220" alt=""></p>
 
@@ -47,18 +45,18 @@ Mexico City · beg.empleos@gmail.com · [pivotek.mx](https://pivotek.mx) · [Lin
 
 | Skill | What I have built with it |
 |:-----|:-------------|
-| AI agents and agentic workflows | Claude Code plugins, skills and subagents for seven areas of Mexican law ([§3](#3-featured-con-criterio-an-ai-toolkit-for-mexican-lawyers)); a nine-role multi-agent system with typed handoffs ([§12](#12-tools-and-systems)); social media run by Grok Bot and Meta's Muse ([§9.4](#94-social-media-run-by-ai-agents)) |
+| AI agents and agentic workflows | Claude Code plugins, skills and subagents for seven areas of Mexican law ([§3](#3-featured-con-criterio-an-ai-toolkit-for-mexican-lawyers)); a nine-role multi-agent system with typed handoffs ([§10](#10-my-tools)); social media run by Grok Bot and Meta's Muse ([§9](#9-websites-video-and-digital-marketing-with-ai)) |
 | Retrieval over documents (RAG) | Legal RAG with law-specific embeddings, pgvector and hybrid ranking over 374 energy-law instruments ([§4](#4-featured-retrieval-engine-over-mexican-energy-law-rag)) |
-| Data engineering | A pipeline over more than 560,000 public procurement contracts with weekly updates and audits ([§5](#5-featured-public-procurement-intelligence-for-oil-and-gas)); financial models in Python and Excel ([§13](#13-feasibility-studies)) |
-| Workflow automation | n8n designs for a 20-step real-estate closing and a daily regulatory digest ([§6](#6-featured-real-estate-closing-automation-in-n8n), [§7](#7-daily-regulatory-digest-from-the-official-gazette-n8n)); scheduled tasks for monthly regulatory reviews and a weekly second-brain review ([§3](#3-featured-con-criterio-an-ai-toolkit-for-mexican-lawyers), [§12](#12-tools-and-systems)) |
+| Data engineering | A pipeline over more than 560,000 public procurement contracts with weekly updates and audits ([§5](#5-featured-public-procurement-intelligence-for-oil-and-gas)); financial models in Python and Excel ([§12](#12-feasibility-studies)) |
+| Workflow automation | n8n designs for a 20-step real-estate closing and a daily regulatory digest ([§6](#6-featured-real-estate-closing-automation-in-n8n), [§7](#7-daily-regulatory-digest-from-the-official-gazette-n8n)); scheduled tasks for monthly regulatory reviews and a weekly second-brain review ([§3](#3-featured-con-criterio-an-ai-toolkit-for-mexican-lawyers), [§10](#10-my-tools)) |
 | AI for legal work | Cross-border regulatory audits, contract and compliance reviews, opinions and letters, every data point with source and cut-off date ([§8](#8-legal-and-regulatory-work-built-with-ai)) |
 | Product building | Con Criterio, from content to payments, automated delivery and QA with simulated buyers ([§3](#3-featured-con-criterio-an-ai-toolkit-for-mexican-lawyers)) |
-| Web development | concriterio.mx, pivotek.mx, casalegado.mx and carocomunicando.com ([§9.1](#91-websites)) |
-| AI video and content | A stage-entrance video with AI voice-over and motion graphics, and an automated Reels pipeline with local transcription and computer vision ([§9.2](#92-speaker-intro-and-event-videos), [§9.3](#93-automated-reels-pipeline)) |
-| AI marketing | More than a dozen marketing and creative skills applied to real campaigns, SEO audits and ad copy ([§9.5](#95-marketing-skills-and-how-i-applied-them)) |
-| Integrations (MCP connectors) | Stripe, Gmail, Google Calendar and Drive, Vercel, Higgsfield, Apify, Canva and more than 10,000 browser actions ([§10](#10-connectors-how-i-automate-query-and-generate)), plus my own MCP servers for the Official Gazette and for federal law ([§11](#11-open-source)) |
-| Judgment and quality | Human approval gates, anti-fraud rules, labeled uncertainty, golden test sets and reproducible builds ([§15](#15-how-i-work-with-ai)) |
-| Continuous learning and community | Law degree (Ibero), Master's in Business Law (Anáhuac) and MBA (EAE Madrid); daily use of AI and of new tools as soon as they launch; free courses from Anthropic and Harvey; live and pre-recorded courses from tech influencers and digital schools; Claude and Grok Bot talks and workshops; networking dinners with CTOs ([§14](#14-learning-and-community)) |
+| Web development | concriterio.mx, pivotek.mx, casalegado.mx and carocomunicando.com ([§9](#9-websites-video-and-digital-marketing-with-ai)) |
+| AI video and content | A stage-entrance video with AI voice-over and motion graphics, and an automated Reels pipeline with local transcription and computer vision ([§9](#9-websites-video-and-digital-marketing-with-ai)) |
+| AI marketing | More than a dozen marketing and creative skills applied to real campaigns, SEO audits and ad copy ([§9](#9-websites-video-and-digital-marketing-with-ai)) |
+| Integrations (MCP connectors) | Stripe, Gmail, Google Calendar and Drive, Vercel, Higgsfield, Apify, Canva and more than 10,000 browser actions ([§10](#10-my-tools)), plus my own MCP servers for the Official Gazette and for federal law ([§11](#11-open-source)) |
+| Judgment and quality | Human approval gates, anti-fraud rules, labeled uncertainty, golden test sets and reproducible builds ([§13](#13-how-i-work-with-ai)) |
+| Continuous learning and community | Law degree (Ibero), Master's in Business Law (Anáhuac) and MBA (EAE Madrid); courses from Anthropic and Harvey; Claude talks and workshops in Mexico ([§14](#14-learning-and-community)) |
 
 <p align="center"><img src="assets/ornamento.svg" width="220" alt=""></p>
 
@@ -66,15 +64,7 @@ Mexico City · beg.empleos@gmail.com · [pivotek.mx](https://pivotek.mx) · [Lin
 
 **What it is.** A practical AI toolkit for lawyers in Mexico: a guide (116 pages in the Claude edition, 134 in the ChatGPT edition), 7 plugins by practice area and 7 drafting skills. On sale at [concriterio.mx](https://concriterio.mx) since November 5, 2026. Since November 11 it also offers a beginners' guide to everyday AI for the general public.
 
-| Plugin | What it covers |
-|:----|:------------|
-| Data protection | Federal data protection law: privacy notices, processor agreements, transfers, infringement risk, defense before the authority |
-| Corporate | General Law of Commercial Companies: shareholder minutes, bylaws audits, powers of attorney, corporate due diligence, step-by-step restructurings |
-| Trademarks | Industrial Property Law: registrability, oppositions, nullity and lapse, infringement, deadlines before the trademark office |
-| Copyright | Federal Copyright Law: ownership opinions, transfer clauses, exceptions, notice and takedown, works made with AI |
-| Commercial contracts | Commercial Code and negotiable instruments law: drafting and review, promissory notes, credit operations and trusts, interest and usury, collection routes |
-| Energy | Mexico's 2025 energy laws: permit roadmaps, power and hydrocarbons projects, sanctions, a 2014 versus 2025 comparison |
-| Notarial practice (Mexico City) | Notarial and registry law: deed requirements, wills and advance directives, probate before a notary |
+**7 plugins by practice area:** data protection (federal data protection law), corporate (General Law of Commercial Companies), trademarks (Industrial Property Law), copyright (Federal Copyright Law), commercial contracts (Commercial Code and negotiable instruments law), energy (Mexico's 2025 energy laws) and notarial practice in Mexico City (notarial and registry law).
 
 **Drafting skills:** residential lease (Mexico City), mutual NDA, commercial agency, professional services, letter of intent, simple power of attorney and a severance calculator.
 
@@ -86,7 +76,7 @@ Mexico City · beg.empleos@gmail.com · [pivotek.mx](https://pivotek.mx) · [Lin
 - Sales and delivery: sales page, Stripe payment links and webhook, and a Cloudflare Worker that delivers the files and runs the newsletter (101 automated tests passing).
 - Its own legal layer: terms and conditions, privacy notice and license of use.
 - QA like a buyer: a simulated round with 20 buyers produced 118 distinct findings and zero blockers; 114 of the 115 open findings were closed the same day.
-- Marketing: content produced with Claude Code and published by AI agents ([§9.4](#94-social-media-run-by-ai-agents)), SEO audit, two Google Ads campaigns prepared and the Meta Pixel connected to the payment flow.
+- Marketing: content produced with Claude Code and published by AI agents ([§9](#9-websites-video-and-digital-marketing-with-ai)), SEO audit, two Google Ads campaigns prepared and the Meta Pixel connected to the payment flow.
 
 <p align="center"><img src="assets/ornamento.svg" width="220" alt=""></p>
 
@@ -180,84 +170,23 @@ For confidentiality, I don't detail each matter or its clients.
 
 ## 9. Websites, video and digital marketing with AI
 
-### 9.1 Websites
-
-| Site | What it is | How it was built |
-|:----|:------|:---------|
-| [concriterio.mx](https://concriterio.mx) | Sales site of Con Criterio: a page for lawyers and [/para-todos](https://concriterio.mx/para-todos/) for beginners, with a build-your-purchase panel | Pages and legal texts (terms, privacy notice, license) generated with Python scripts; Stripe payment links and a Cloudflare Worker for checkout and delivery; Cloudflare Pages, DNS and Web Analytics; Meta Pixel and two Google Ads search campaigns set up |
-| [pivotek.mx](https://pivotek.mx) | Home of this portfolio. It replaced the previous Next.js site of PIVOTEK, my personal brand and consultancy, which I also built (TypeScript, contact form with Resend, technical SEO) | Designed and built by Fable 5.2 (Claude) from the plain text of this README, under my direction: ink and traffic-light palette, 20 sections with their own scroll animations (word-by-word reveals, stacking cards, a 20-step closing that flips block by block, BeCa's states), GSAP, ScrollTrigger and Lenis self-hosted under a strict content security policy; deployed on Vercel |
-| [casalegado.mx](https://casalegado.mx) | My biographical documentary brand: five-page site plus brandbook, sales dossier and sales presentation | Static HTML and CSS under a strict brand system (two typefaces, a warm palette and voice rules), illustrative images generated with Higgsfield, privacy notice, sitemap, Google Business Profile copy, Google Ads tags and a content security policy, deployed on Vercel |
-| [carocomunicando.com](https://carocomunicando.com) | Site of a public-speaking and communication trainer: home with an animated cover, her method, her TEDx talk, cases and brand pages | Static site with self-hosted GSAP, ScrollTrigger and Lenis; a downloadable PDF guide with optional email capture; GA4, Microsoft Clarity and Vercel Analytics declared in the privacy notice and cookie banner; 301 redirects, security headers and a content security policy; SEO audit and blog articles |
-
-### 9.2 Speaker intro and event videos
-
-- **Stage-entrance intro (102 seconds)** for the trainer, projected before she walks on stage. Five versions; the current one combines motion graphics built in Remotion, an AI voice-over (ElevenLabs v4 through Higgsfield), original music and sound effects, and her photos. It comes with a waiting loop for the screen and three short Instagram Reels cut from the same material. Every version can be rebuilt from scripts (Python, Node and ffmpeg).
-- **Event highlight (40 seconds)** of her role as host and moderator of a university entrepreneurship summit: 9:16 for Reels, TikTok and LinkedIn and 16:9 for YouTube, with original music timed to the moment the stage lights come on.
-- **Book launch loop:** an animated screen for the presentation of her book, with quotes that rotate every 10 seconds and verified QR codes to her Instagram and website.
-
-### 9.3 Automated Reels pipeline
-
-Drop a raw video in Downloads and get a finished Reel:
-
-1. **Transcription** word by word, locally, with Whisper.
-2. **Style rules** learned from a reference creator: four Reels analyzed frame by frame, with cut-rate measurements (a hard cut to B-roll every 5 to 9 seconds, title pills, a closing question).
-3. **Supporting visuals:** licensed real photos from Wikimedia Commons and Openverse, with credits, or B-roll generated with Higgsfield.
-4. **Subject cut-out and face tracking** with Apple's Vision framework (Swift).
-5. **Automatic edit** in Python: format, subtitles, pills, cards, photo credits and the speaker's frame; a history file avoids repeating formats.
-
-Six Reels ready to publish in November 2026, a monthly set of scripts, and a technical guide to publish through the Instagram Graph API with n8n.
-
-### 9.4 Social media run by AI agents
-
-For Con Criterio, the work is split between Claude Code and two external agents:
-
-| Who | What it does |
-|:-----|:-------------|
-| Claude Code | Produces the content and the publishing calendar, writes the prompts for the agents and the checklists to verify their work |
-| Grok Bot (an agent that operates my Mac) | Publishes two TikTok Reels a day and handles Instagram prospecting and direct messages; if the Mac is asleep or asks for a code, it stops and warns |
-| Muse (Meta's AI marketing agent) | Publishes three posts a day on Instagram and Facebook, runs the campaigns and continues the conversation when a prospect answers |
-
-The labeling of AI-generated content was reviewed with Muse, and verification prompts audit what each agent actually did.
-
-### 9.5 Marketing skills and how I applied them
-
-| Skill | What it does | Where I applied it |
-|:----|:-------|:-------|
-| humanizalo-es | Removes the tells of AI writing in Spanish and keeps a human or brand voice | Copy for carocomunicando.com and its Reels, Con Criterio pages and posts, course deliverables |
-| social-content | Social posts, calendars and short-video scripts | Reels scripts and calendar for the trainer; Con Criterio's social strategy |
-| content-strategy | What to publish and why: pillars, topics and calendar | Con Criterio's content strategy for Instagram, Facebook and TikTok |
-| copywriting | Page and offer copy | Business plans and the trainer's site |
-| marketing-psychology | Behavioral principles such as anchoring, social proof and framing | The trainer's offer and pages; business plans |
-| pricing-strategy | Packaging and price | Pricing in business plans and the trainer's proposals |
-| ad-creative | Ad headlines and copy at scale, within each platform's limits | Ad variations for the trainer's campaigns |
-| campaign-plan | Campaign brief: goals, audience, channels, calendar and metrics | Traffic and contacts plan for the trainer (November 2026) |
-| seo-audit | SEO audit with quick wins and strategic actions | Audits of carocomunicando.com and concriterio.mx |
-| Higgsfield skills (generate, art director, brand kit, video explainer) | Images, video, voice-over and music | Speaker intro, B-roll and book loop; Casa Legado images; Con Criterio explainer pieces |
-| frontend-design and emil-design-eng | Interface design and motion polish | Con Criterio's sales page |
-| apify-lead-gen | Lead lists from public sources | Prospect base for a website service in Los Cabos |
-| abogado-el-diablo | Stress-tests a plan before acting | Con Criterio's launch strategy |
+- **Websites:** [concriterio.mx](https://concriterio.mx) (sales and automated delivery for Con Criterio), [pivotek.mx](https://pivotek.mx) (this portfolio), [casalegado.mx](https://casalegado.mx) (my biographical documentary brand) and [carocomunicando.com](https://carocomunicando.com) (a public speaking coach).
+- **Video:** a stage-entrance intro for the speaking coach, with motion graphics in Remotion and an AI voice, plus videos of her events.
+- **Automated Reels:** from a raw video to a finished Reel, with local transcription in Whisper, supporting visuals and editing in Python.
+- **Social media run by agents:** for Con Criterio, Claude Code produces the content and two agents publish it: Grok Bot on TikTok and Meta's Muse on Instagram and Facebook.
+- **Marketing:** more than a dozen marketing skills applied to real cases: copy, ads, campaigns and SEO audits.
 
 <p align="center"><img src="assets/ornamento.svg" width="220" alt=""></p>
 
-## 10. Connectors: how I automate, query and generate
+## 10. My tools
 
-Claude Code reaches my tools through connectors (MCP). Counts come from my own session logs.
+**Connectors.** Claude Code reaches my tools through connectors (MCP): the browser (more than 10,000 actions), computer use (more than 900), Stripe (about 800 calls), Gmail, Google Calendar and Drive, scheduled tasks, Vercel, Apify, Wispr Flow, Higgsfield (more than 1,000 calls), Canva and Claude Artifacts. Counts come from my own session logs.
 
-| Use | Connector | What I do with it |
-|:--|:-------|:---------|
-| Automate | Claude in Chrome and the built-in browser (more than 10,000 actions) | Operate web dashboards, test my sites end to end, upload files and check what is live |
-| Automate | Computer use (more than 900 actions) | Drive native Mac apps when there is no API |
-| Automate | Stripe (about 800 calls) | Products, prices, payment links and webhooks for Con Criterio |
-| Automate | Gmail, Google Calendar and Google Drive | Weekly review of calendar and inbox, drafts and follow-ups, file search |
-| Automate | Scheduled tasks | Weekly second-brain review, monthly regulatory review, follow-ups on campaign setup |
-| Automate | Vercel | Projects, domains and web analytics of my sites |
-| Query | Apify | Web scraping, lead lists and web browsing for research |
-| Query | Wispr Flow | Search across my meeting notes |
-| Generate | Higgsfield (more than 1,000 calls) | Images, video, voice-over and music for sites, Reels and the speaker intro |
-| Generate | Canva | Designs from brand kits |
-| Generate | Claude artifacts | Shareable pages |
+- **Second brain on Obsidian:** one note per project, person and official document; every working session leaves a log entry and a weekly task reads my calendar and email. The template is public: [segundo-cerebro](https://github.com/BEG-lag/segundo-cerebro).
+- **Multi-agent system and CRMs:** nine roles that read one shared record and pass typed signals, and internal CRMs built on [auto-crm](https://github.com/Hainrixz/auto-crm).
+- **BeCa:** my cat turned into a desktop companion. A native macOS app in Swift that listens to Claude Code's hooks and shows with its pose what Claude is doing: it waves, types, reviews and jumps when a turn ends.
 
-Plus two external agents (Grok Bot and Muse, [§9.4](#94-social-media-run-by-ai-agents)) and local command-line tools: Obsidian, GitHub, Whisper and ffmpeg.
+![BeCa playing with Clawd, the Claude Code mascot](assets/beca-jugando-con-clawd-animado.png)
 
 <p align="center"><img src="assets/ornamento.svg" width="220" alt=""></p>
 
@@ -298,68 +227,18 @@ Small, private, useful every day.
 
 How I work, packaged for anyone.
 
-- **[segundo-cerebro](https://github.com/BEG-lag/segundo-cerebro)**. An installable Obsidian vault template with the rules that make Claude Code read it before working and update it afterwards, weekly review included. It is the public version, without my data, of the system in [§12](#12-tools-and-systems).
+- **[segundo-cerebro](https://github.com/BEG-lag/segundo-cerebro)**. An installable Obsidian vault template with the rules that make Claude Code read it before working and update it afterwards, weekly review included. It is the public version, without my data, of the system in [§10](#10-my-tools).
 - **[tema-clawds](https://github.com/BEG-lag/tema-clawds)**. A light theme for the Claude Code app with 64 Clawds, Claude Code's mascot, playing in 20 SVG scenes.
 
 <p align="center"><img src="assets/ornamento.svg" width="220" alt=""></p>
 
-## 12. Tools and systems
-
-- **Second brain on Obsidian and Claude Code.** One note per project, person and official document; every working session leaves a log entry; a scheduled task reads my calendar and email every Sunday (read-only) and updates the vault; hourly backup with launchd. This portfolio was assembled from it. The template, without my data, is public: [segundo-cerebro](https://github.com/BEG-lag/segundo-cerebro).
-- **Personal multi-agent system.** Nine specialist roles read one shared record, pass typed signals instead of prose and follow a declared precedence rule when they disagree. Personal use; no data shown.
-- **My own internal CRMs.** Built on the architecture of [auto-crm](https://github.com/Hainrixz/auto-crm), an open-source local CRM with Next.js, SQLite and Claude Code that adapts to each business.
-
-### BeCa, my desktop companion
-
-![BeCa playing with Clawd, the Claude Code mascot](assets/beca-jugando-con-clawd-animado.png)
-
-BeCa is my cat turned into a sticker-style companion that lives in a small floating window on my Mac. It listens to Claude Code's lifecycle hooks, so I can tell at a glance what Claude is doing without looking at the terminal. Click it once and it waves; click again and it plays with Clawd, Claude Code's mascot, for about four seconds. It runs locally, uses no network and stores no content. Why BeCa? To bring a sense of humor to my day-to-day work with AI.
-
-| What Claude Code is doing | Hook | What BeCa does |
-|:-------|:------|:--------|
-| Starting a session | SessionStart | Waves twice, then rests |
-| Working on a request or running a tool | UserPromptSubmit, PreToolUse, PostToolUse | Types in the air |
-| Editing or writing a file | PostToolUse of Edit or Write | Inspects the work, paw on chin |
-| Finished its turn | Stop | Jumps four times and waves |
-| Waiting for my permission or answer | PermissionRequest, Notification | Asks with its paws together |
-| Hit an API error | StopFailure | Deflates once |
-| Session closed | SessionEnd | Rests |
-
-**How it was built:** a native macOS app in Swift, made with Claude Code; the art was generated with Higgsfield from three photos of my cat and cut into animation strips with Python scripts; the sounds were extracted from AI-generated video clips; the hooks are global, so BeCa works in every project.
-
-<p align="center"><img src="assets/ornamento.svg" width="220" alt=""></p>
-
-## 13. Feasibility studies
+## 12. Feasibility studies
 
 Own ventures and services of PIVOTEK, my consultancy, each with a go or no-go verdict and traffic lights by phase. Thanks to artificial intelligence tools and our own custom skills, we have produced many business plans, all with conclusions I have validated personally.
 
 <p align="center"><img src="assets/ornamento.svg" width="220" alt=""></p>
 
-## 14. Learning and community
-
-### Academic background
-
-| Degree | School | Years |
-|:--------|:-------|:----|
-| Master's in Business Law (Maestría en Derecho de la Empresa), corporate law | Universidad Anáhuac | 2023 to 2025 |
-| Master of Business Administration (MBA), business administration | EAE Business School, Madrid, Spain | 2023 to 2024 |
-| Law degree (Licenciatura en Derecho) | Universidad Iberoamericana, Mexico City | 2015 to 2020 |
-
-### Courses and community
-
-I use AI every day and I stay at the forefront of new AI tools and features: I test them on real work as soon as they come out.
-
-- **Anthropic's free online courses** (Anthropic Academy).
-- **Harvey's free online courses** on AI for legal work.
-- **Live and pre-recorded courses** from the community of tech influencers such as Juan Lombana and Enrique Rocha, and from digital schools such as Coderhouse and OrangutanAI.
-- **Claude talks and workshops in Mexico**, such as Claude for AI Engineering (Claude Community CDMX, October 2026), Claude for Legal, Claude for Finance, Claude Community House, Claude for Revenue, Claude for Games, Claude at the Chamber of Deputies and Claude at the Mexican Senate, among others. At Claude for AI Engineering I summarized the five talks (tool use, MCP, context engineering) and turned the notes into an agent that answers as each speaker would.
-- **Grok Bot talks and workshops.**
-- **Networking dinners with CTOs** of large and mid-size companies.
-- **n8n automation course** (in progress): the daily regulatory digest in [§7](#7-daily-regulatory-digest-from-the-official-gazette-n8n) was the first deliverable.
-
-<p align="center"><img src="assets/ornamento.svg" width="220" alt=""></p>
-
-## 15. How I work with AI
+## 13. How I work with AI
 
 1. **Sources first.** Official texts are downloaded into the project, and each data point carries its source and cut-off date.
 2. **Uncertainty is labeled.** Every deliverable marks [ESTIMATE], [ASSUMPTION] and [DATA GAP].
@@ -369,9 +248,7 @@ I use AI every day and I stay at the forefront of new AI tools and features: I t
 6. **Test like a user.** Simulated buyers, golden test sets, automated tests and checks against the live site.
 7. **Validation is explicit.** Studies state what must be confirmed with the competent authority and are not legal advice.
 
-<p align="center"><img src="assets/ornamento.svg" width="220" alt=""></p>
-
-## 16. Stack
+### Stack
 
 - **AI:** Claude Code (skills, plugins, subagents, MCP connectors, hooks, scheduled tasks), Claude API, Voyage AI embeddings, ChatGPT and Codex, Higgsfield (image, video, voice and music), Grok Bot and Meta's Muse.
 - **Data:** Python, PostgreSQL with pgvector, Playwright, pdfplumber and OCR, Excel.
@@ -381,5 +258,14 @@ I use AI every day and I stay at the forefront of new AI tools and features: I t
 - **Marketing and analytics:** GA4, Microsoft Clarity, Vercel Analytics, Google Ads, Meta Pixel, Google Search Console.
 - **Documents:** Markdown, pandoc, Typst, Word with tracked changes.
 - **Knowledge:** Obsidian.
+
+<p align="center"><img src="assets/ornamento.svg" width="220" alt=""></p>
+
+## 14. Learning and community
+
+- **Master's in Business Law** (Maestría en Derecho de la Empresa, corporate law), Universidad Anáhuac, 2023 to 2025.
+- **MBA**, EAE Business School, Madrid, 2023 to 2024.
+- **Law degree** (Licenciatura en Derecho), Universidad Iberoamericana, Mexico City, 2015 to 2020.
+- **Courses and community:** Anthropic Academy courses and Harvey's courses on AI for legal work; Claude talks and workshops in Mexico, such as Claude for AI Engineering and Claude for Legal; an n8n automation course, in progress (the daily regulatory digest in [§7](#7-daily-regulatory-digest-from-the-official-gazette-n8n) was the first deliverable).
 
 <p align="center"><img src="assets/ornamento.svg" width="220" alt=""></p>

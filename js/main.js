@@ -507,40 +507,12 @@
         .to(w, { color: mbase, ease: 'power1.in', duration: 0.7 }, t + 0.7);
     });
 
-    /* 2b. ESTE SOY YO: la foto se abre desde un recuadro hasta llenar la pantalla */
-    if ($('.yo')) {
-      if (desk) {
-        gsap.timeline({ scrollTrigger: { trigger: '.yo', start: 'top top', end: '+=150%', scrub: 0.6, pin: '.yo__pin', anticipatePin: 1 } })
-          .fromTo('.yo__frame', { clipPath: 'inset(24% 37% 24% 37% round 28px)' }, { clipPath: 'inset(0% 0% 0% 0% round 0px)', ease: 'none', duration: 1 }, 0)
-          .fromTo('.yo__img', { scale: 1.4 }, { scale: 1, ease: 'none', duration: 1 }, 0)
-          .from('.yo__txt > *', { y: 44, opacity: 0, ease: 'power2.out', duration: 0.3, stagger: 0.08 }, 0.62);
-      } else {
-        gsap.fromTo('.yo__frame', { clipPath: 'inset(20% 14% 20% 14% round 18px)' }, { clipPath: 'inset(0% 0% 0% 0% round 18px)', ease: 'none',
-          scrollTrigger: { trigger: '.yo__frame', start: 'top 92%', end: 'center 55%', scrub: 0.6 } });
-        gsap.fromTo('.yo__img', { scale: 1.3 }, { scale: 1, ease: 'none',
-          scrollTrigger: { trigger: '.yo__frame', start: 'top bottom', end: 'bottom top', scrub: true } });
-        gsap.from('.yo__txt > *', { y: 28, opacity: 0, duration: 0.7, ease: 'power3.out', stagger: 0.08, scrollTrigger: once('.yo__txt') });
-      }
-    }
-
-    /* 2c. PIVOTEK (va después de ESTE SOY YO; los pines se crean en el orden de la página): la P aparece, la flecha hace el giro y el nombre se parte en pivot + tek */
-    if ($('.pvk')) {
-      if (desk) {
-        gsap.timeline({ scrollTrigger: { trigger: '.pvk', start: 'top top', end: '+=170%', scrub: 0.6, pin: '.pvk__pin', anticipatePin: 1 } })
-          .fromTo('.pvk__p', { clipPath: 'inset(100% 0% 0% 0%)' }, { clipPath: 'inset(0% 0% 0% 0%)', ease: 'none', duration: 0.3 }, 0)
-          .fromTo('.pvk__arrow', { x: 240, rotation: 180, opacity: 0 }, { x: 0, rotation: 0, opacity: 1, ease: 'power2.inOut', duration: 0.38 }, 0.18)
-          .fromTo('.pvk__pivo', { xPercent: -35, opacity: 0 }, { xPercent: 0, opacity: 1, ease: 'power2.out', duration: 0.2 }, 0.46)
-          .fromTo('.pvk__ek', { xPercent: 70, opacity: 0 }, { xPercent: 0, opacity: 1, ease: 'power2.out', duration: 0.2 }, 0.46)
-          .fromTo('.pvk__t', { scale: 2.4, opacity: 0 }, { scale: 1, opacity: 1, ease: 'power2.out', duration: 0.2 }, 0.52)
-          .from('.pvk__def--pivot', { y: 40, opacity: 0, ease: 'power2.out', duration: 0.16 }, 0.68)
-          .from('.pvk__def--tek', { y: 40, opacity: 0, ease: 'power2.out', duration: 0.16 }, 0.76)
-          .from('.pvk__why', { y: 34, opacity: 0, ease: 'power2.out', duration: 0.14 }, 0.84)
-          .from('.pvk__logo', { y: 30, opacity: 0, ease: 'power2.out', duration: 0.12 }, 0.92);
-      } else {
-        gsap.fromTo('.pvk__p', { clipPath: 'inset(100% 0% 0% 0%)' }, { clipPath: 'inset(0% 0% 0% 0%)', duration: 0.9, ease: 'power3.out', scrollTrigger: once('.pvk__iso') });
-        gsap.fromTo('.pvk__arrow', { x: 110, rotation: 180, opacity: 0 }, { x: 0, rotation: 0, opacity: 1, duration: 1.1, delay: 0.35, ease: 'back.out(1.4)', scrollTrigger: once('.pvk__iso') });
-        gsap.from(['.pvk__word', '.pvk__def--pivot', '.pvk__def--tek', '.pvk__why', '.pvk__logo'], { y: 30, opacity: 0, duration: 0.7, stagger: 0.12, ease: 'power3.out', scrollTrigger: once('.pvk__copy') });
-      }
+    /* 2b. QUIÉN SOY: la foto se abre desde un recuadro al entrar (sin fijar la página) */
+    if ($('.yo__frame')) {
+      gsap.fromTo('.yo__frame', { clipPath: 'inset(12% 10% 12% 10% round 18px)' }, { clipPath: 'inset(0% 0% 0% 0% round 18px)', ease: 'none',
+        scrollTrigger: { trigger: '.yo__frame', start: 'top 92%', end: 'center 55%', scrub: 0.6 } });
+      gsap.fromTo('.yo__img', { scale: 1.2 }, { scale: 1, ease: 'none',
+        scrollTrigger: { trigger: '.yo__frame', start: 'top bottom', end: 'bottom top', scrub: true } });
     }
 
     /* genéricos: títulos, bloques y grupos.
@@ -655,13 +627,7 @@
     if (desk) gsap.from('.carteles li', { y: 110, rotation: function (i) { return [-6, 5, -4, 6][i % 4]; }, duration: 1.1, stagger: 0.09,
       ease: 'power3.out', scrollTrigger: once('.carteles', 'top 88%') });
 
-    /* 5. CON CRITERIO: tarjetas pegajosas que se apilan */
-    var cards = $$('.stack-card');
-    cards.forEach(function (card, n) {
-      if (n === cards.length - 1) return;
-      gsap.to($('.stack-card__in', card), { scale: 1 - (cards.length - 1 - n) * 0.022, ease: 'none',
-        scrollTrigger: { trigger: cards[n + 1], start: 'top bottom', end: 'top top+=110', scrub: true } });
-    });
+    /* 5. CON CRITERIO: cifras que entran */
     gsap.from('.cc__stats li', { opacity: 0, y: 40, duration: 0.8, stagger: 0.1, ease: 'power3.out', scrollTrigger: once('.cc__stats') });
 
     /* 6. RAG: línea que avanza y etapas que se encienden */
@@ -721,7 +687,7 @@
     /* 10. LEGAL: filas con barrido */
     gsap.from('.legal__gen > div', { opacity: 0, x: 60, duration: 0.8, ease: 'power3.out', stagger: 0.1, scrollTrigger: once('.legal__gen', 'top 80%') });
 
-    /* 11. ESTUDIO: parallax de sitios, cabezal del video, pasos de Reels */
+    /* 11. ESTUDIO: parallax de sitios */
     if (desk) {
       $$('.site').forEach(function (st) {
         var sp = parseFloat(st.dataset.speed || 0);
@@ -729,9 +695,6 @@
       });
     }
     gsap.from('.site__bar', { scaleX: 0, transformOrigin: '0 50%', duration: 0.9, ease: 'power3.out', stagger: 0.12, scrollTrigger: once('.sites') });
-    gsap.fromTo('.video__play', { scaleX: 0 }, { scaleX: 1, ease: 'none', scrollTrigger: { trigger: '.videos', start: 'top 85%', end: 'top 25%', scrub: 0.4 } });
-    gsap.from('.video', { opacity: 0, y: 50, duration: 0.8, stagger: 0.1, ease: 'power3.out', scrollTrigger: once('.videos') });
-    gsap.from('.reels__steps li', { opacity: 0, x: desk ? -40 : 0, y: desk ? 0 : 30, duration: 0.6, stagger: 0.14, ease: 'power3.out', scrollTrigger: once('.reels__steps', 'top 82%') });
 
     /* 12. CONECTORES: barras que crecen */
     gsap.from('.bar__fill', { scaleX: 0, duration: 1.5, ease: 'power3.out', stagger: 0.15, scrollTrigger: once('.bars', 'top 80%') });
