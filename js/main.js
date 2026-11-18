@@ -795,7 +795,7 @@
       var chLead = document.createElement('span');
       chLead.textContent = ch.firstChild.nodeValue;
       ch.replaceChild(chLead, ch.firstChild);
-      var chSplit = Split.create(chLead, { type: 'chars', mask: 'chars', charsClass: 'sc' });
+      var chSplit = Split.create(chLead, { type: 'chars', mask: 'chars', charsClass: 'sc', aria: 'none' });
       var chTxt = cem.textContent;
       ch.style.minHeight = ch.offsetHeight + 'px';
       cem.textContent = '';
