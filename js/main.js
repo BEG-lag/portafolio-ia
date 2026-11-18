@@ -191,6 +191,11 @@
 
   var gsap = window.gsap, ScrollTrigger = window.ScrollTrigger;
   gsap.registerPlugin(ScrollTrigger);
+  /* GSAP 3.13: SplitText (renglones y letras con máscara) y ScrambleText (texto que se descifra) */
+  var Split = window.SplitText || null, canScramble = !!window.ScrambleTextPlugin;
+  if (Split) gsap.registerPlugin(Split);
+  if (canScramble) gsap.registerPlugin(window.ScrambleTextPlugin);
+  var SCRAMBLE = '●○•·';
 
   /* ---------- divisiones de texto (una sola vez) ---------- */
   function splitWords(el) {
@@ -327,9 +332,38 @@
       }
     }
 
-    /* genéricos: títulos, bloques y grupos */
+    /* genéricos: títulos, bloques y grupos.
+       Títulos (h2) y párrafos de entrada (.lead): cada renglón sale desde su máscara, uno tras otro;
+       al terminar se deshace la división y queda el texto original. Lo demás sube y aparece. */
     $$('[data-reveal]').forEach(function (el) {
+      var isH = el.tagName === 'H2', isLead = el.classList.contains('lead');
+      if (Split && (isH || isLead)) {
+        Split.create(el, { type: 'lines', mask: 'lines', linesClass: 'sl', autoSplit: true, onSplit: function (self) {
+          if (el.dataset.splitDone) { self.revert(); return; }
+          return gsap.from(self.lines, {
+            yPercent: isH ? 135 : 125, opacity: isH ? 1 : 0, duration: isH ? 1.1 : 0.8, stagger: isH ? 0.1 : 0.06, ease: 'power4.out',
+            scrollTrigger: once(el, 'top 90%'),
+            onComplete: function () { el.dataset.splitDone = '1'; self.revert(); }
+          });
+        } });
+        undo.push(function () { delete el.dataset.splitDone; });
+        return;
+      }
       gsap.from(el, { y: 46, opacity: 0, duration: 1, ease: 'power3.out', scrollTrigger: once(el, 'top 90%') });
+    });
+
+    /* etiquetas de sección (.eyebrow): se descifran letra por letra al entrar.
+       Se respeta su alto mientras están vacías para que nada brinque. */
+    if (canScramble) $$('.eyebrow').forEach(function (el) {
+      if (el.classList.contains('hero__eyebrow') || el.children.length) return;
+      var txt = el.textContent;
+      el.style.minHeight = el.offsetHeight + 'px';
+      el.textContent = '';
+      gsap.to(el, { duration: Math.min(1.4, 0.5 + txt.length * 0.022), ease: 'none',
+        scrambleText: { text: txt, chars: SCRAMBLE, speed: 0.6 },
+        scrollTrigger: once(el, 'top 92%'),
+        onComplete: function () { el.style.minHeight = ''; } });
+      undo.push(function () { el.textContent = txt; el.style.minHeight = ''; });
     });
     $$('[data-stagger]').forEach(function (el) {
       gsap.from(el.children, { y: 28, opacity: 0, duration: 0.7, ease: 'power3.out', stagger: 0.07, scrollTrigger: once(el) });
@@ -483,9 +517,18 @@
     if ($('.oss')) {
       var ossType = $('.oss__type');
       var ossChars = $('.ch', ossType) ? $$('.ch', ossType) : splitChars(ossType);
-      gsap.timeline({ scrollTrigger: once('.oss__term', 'top 84%') })
-        .fromTo(ossChars, { opacity: 0 }, { opacity: 1, duration: 0.01, stagger: 0.045, ease: 'none' }, 0)
-        .fromTo('.oss__out', { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.4, ease: 'power2.out' }, '+=0.15');
+      var ossTl = gsap.timeline({ scrollTrigger: once('.oss__term', 'top 84%') })
+        .fromTo(ossChars, { opacity: 0 }, { opacity: 1, duration: 0.01, stagger: 0.045, ease: 'none' }, 0);
+      var ossOut = $('.oss__out');
+      if (canScramble && ossOut) {
+        var ossTxt = ossOut.textContent;
+        ossOut.style.minHeight = ossOut.offsetHeight + 'px';
+        ossOut.textContent = '';
+        ossTl.to(ossOut, { duration: 1, ease: 'none', scrambleText: { text: ossTxt, chars: SCRAMBLE, speed: 0.6 } }, '+=0.15');
+        undo.push(function () { ossOut.textContent = ossTxt; ossOut.style.minHeight = ''; });
+      } else {
+        ossTl.fromTo('.oss__out', { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.4, ease: 'power2.out' }, '+=0.15');
+      }
       var ossRun = function (items, trigger, head) {
         var step = desk ? 0.09 : 0.06, at = head ? 0.2 : 0;
         var gt = gsap.timeline({ scrollTrigger: once(trigger, desk ? 'top 80%' : 'top 88%') });
@@ -636,7 +679,24 @@
     });
 
     /* 18. CONTACTO */
-    gsap.from('.contact__h', { yPercent: 40, opacity: 0, duration: 1, ease: 'power3.out', scrollTrigger: once('.contact', 'top 70%') });
+    /* título de contacto: cada letra sube desde su máscara y luego se descifra la cursiva */
+    var ch = $('.contact__h'), cem = ch && $('em', ch);
+    if (Split && canScramble && cem && ch.firstChild && ch.firstChild.nodeType === 3) {
+      var chLead = document.createElement('span');
+      chLead.textContent = ch.firstChild.nodeValue;
+      ch.replaceChild(chLead, ch.firstChild);
+      var chSplit = Split.create(chLead, { type: 'chars', mask: 'chars', charsClass: 'sc' });
+      var chTxt = cem.textContent;
+      ch.style.minHeight = ch.offsetHeight + 'px';
+      cem.textContent = '';
+      gsap.timeline({ scrollTrigger: once('.contact', 'top 70%'),
+        onComplete: function () { chSplit.revert(); ch.style.minHeight = ''; } })
+        .from(chSplit.chars, { yPercent: 130, duration: 0.9, stagger: 0.03, ease: 'power4.out' }, 0)
+        .to(cem, { duration: 1.1, ease: 'none', scrambleText: { text: chTxt, chars: SCRAMBLE, speed: 0.6 } }, 0.55);
+      undo.push(function () { chSplit.revert(); cem.textContent = chTxt; ch.style.minHeight = ''; });
+    } else {
+      gsap.from('.contact__h', { yPercent: 40, opacity: 0, duration: 1, ease: 'power3.out', scrollTrigger: once('.contact', 'top 70%') });
+    }
     gsap.from('.contact__mail span', { yPercent: 100, opacity: 0, duration: 1, stagger: 0.12, ease: 'power4.out', scrollTrigger: once('.contact__mail', 'top 88%') });
     gsap.from('.contact__links li', { opacity: 0, y: 20, stagger: 0.08, duration: 0.6, scrollTrigger: once('.contact__links', 'top 95%') });
     gsap.from('.contact__beca', { y: 60, rotation: 14, opacity: 0, duration: 1.1, ease: 'elastic.out(1,0.6)', scrollTrigger: once('.contact__end', 'top 96%') });

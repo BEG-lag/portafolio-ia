@@ -493,6 +493,9 @@ body::after{content:"";position:fixed;inset:-120px;z-index:58;pointer-events:non
 @keyframes grano{0%{transform:translate(0,0)}17%{transform:translate(-37px,22px)}33%{transform:translate(29px,-41px)}50%{transform:translate(-18px,-27px)}67%{transform:translate(44px,13px)}83%{transform:translate(-26px,39px)}}
 @media (prefers-reduced-motion:reduce){body::after{animation:none}}
 
+/* ---------- TEXTO EDITORIAL (SplitText): las máscaras dejan aire para acentos y descendentes ---------- */
+.sl-mask,.sc-mask{overflow-clip-margin:.2em}
+
 /* ---------- CÓDIGO ABIERTO ---------- */
 .oss{padding:clamp(5rem,12vh,10rem) 0}
 .oss__term{font-family:var(--mono);font-size:clamp(.82rem,1.15vw,.98rem);border:1px solid var(--line);border-radius:14px;background:#07090c;padding:1rem 1.2rem;margin-bottom:clamp(1.2rem,2.5vw,1.8rem);max-width:640px}
