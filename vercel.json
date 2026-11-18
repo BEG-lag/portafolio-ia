@@ -24,21 +24,6 @@
       ],
       "destination": "https://pivotek.mx/:path*",
       "permanent": true
-    },
-    {
-      "source": "/servicios",
-      "destination": "/",
-      "permanent": true
-    },
-    {
-      "source": "/servicios/:path*",
-      "destination": "/",
-      "permanent": true
-    },
-    {
-      "source": "/firma",
-      "destination": "/",
-      "permanent": true
     }
   ],
   "headers": [
