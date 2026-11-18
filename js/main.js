@@ -210,12 +210,14 @@
     document.body.appendChild(guide);
 
     var gx = 40, docTop = 0, docEnd = 0, rot = 0, curY = null, W1 = 22, deskMQ = window.matchMedia('(min-width: 900px)');
+    var heroH = 1, eyeY = [], secA = [], secB = [], ready = false, slotR = null;
     var lerp = function (a, b, t) { return a + (b - a) * t; };
     function measure() {
       if (!deskMQ.matches) return;
       var wrap = $('.wrap', hero).getBoundingClientRect(), y0 = window.scrollY, vh = window.innerHeight;
       gx = Math.max(16, wrap.left / 2);
-      docTop = hero.offsetHeight * 0.6 + vh * 0.5;
+      heroH = hero.offsetHeight;
+      docTop = heroH * 0.6 + vh * 0.5;
       var last = eyes[eyes.length - 1].getBoundingClientRect();
       docEnd = last.top + y0 + last.height / 2;
       var H = Math.max(1, docEnd - docTop);
@@ -223,6 +225,7 @@
       var fg = [], bg = [];
       secs.forEach(function (sec, i) {
         var e = eyes[i].getBoundingClientRect(), r = sec.getBoundingClientRect(), L = isLight(sec);
+        eyeY[i] = e.top + y0 + e.height / 2; secA[i] = r.top + y0; secB[i] = r.bottom + y0;
         ticks[i].style.left = gx + 'px';
         ticks[i].style.top = (e.top + y0 + e.height / 2) + 'px';
         ticks[i].classList.toggle('on-light', L);
@@ -236,24 +239,26 @@
         fill.style.backgroundSize = '100% ' + H + 'px';
         trail.style.backgroundImage = 'linear-gradient(to bottom,' + bg.join(',') + ')';
       }
+      ready = true;
+      document.documentElement.classList.add('guide-on');
     }
     function frame() {
       requestAnimationFrame(frame);
-      if (!deskMQ.matches) return;
+      if (!ready || !deskMQ.matches) return;
       var vh = window.innerHeight, y = window.scrollY, center = vh * 0.5;
-      var s = slot.getBoundingClientRect();
-      var p = Math.max(0, Math.min(1, y / (hero.offsetHeight * 0.6))), e = p * p * (3 - 2 * p);
+      var p = Math.max(0, Math.min(1, y / (heroH * 0.6))), e = p * p * (3 - 2 * p);
+      /* sólo se lee el hueco del nombre mientras la flecha sigue en la portada */
+      if (e < 1 || !slotR) slotR = slot.getBoundingClientRect();
+      var s = slotR;
       var target = center, point = false, light = false;
       for (var i = 0; i < eyes.length; i++) {
-        var r = eyes[i].getBoundingClientRect(), cy = r.top + r.height / 2;
+        var cy = eyeY[i] - y;
         if (Math.abs(cy - center) < vh * 0.16) { target = cy; point = true; }
         ticks[i].classList.toggle('is-on', cy < center + 2);
-        var sr = secs[i].getBoundingClientRect();
-        if (sr.top <= center && sr.bottom > center) light = isLight(secs[i]);
+        if (secA[i] - y <= center && secB[i] - y > center) light = isLight(secs[i]);
       }
       if (y + center > docEnd) {
-        var lr = eyes[eyes.length - 1].getBoundingClientRect();
-        target = lr.top + lr.height / 2; point = true; light = true;
+        target = docEnd - y; point = true; light = true;
       }
       curY = curY === null ? target : lerp(curY, target, 0.18);
       var w = lerp(s.width, W1, e), h = w * 171 / 154;
@@ -268,11 +273,10 @@
       for (var k = 0; k < ticks.length; k++) ticks[k].style.opacity = e;
     }
     window.addEventListener('resize', measure);
-    window.addEventListener('load', measure);
-    if (document.fonts && document.fonts.ready) document.fonts.ready.then(measure);
     if (window.ScrollTrigger) window.ScrollTrigger.addEventListener('refresh', measure);
-    measure();
-    requestAnimationFrame(frame);
+    /* se arma cuando la página ya cargó y el navegador está libre, para no competir con la carga */
+    var start = function () { (window.requestIdleCallback || function (f) { setTimeout(f, 200); })(function () { measure(); requestAnimationFrame(frame); }, { timeout: 1500 }); };
+    if (document.readyState === 'complete') start(); else window.addEventListener('load', start);
   })();
 
   /* ---------- sin GSAP o con movimiento reducido: todo estático ---------- */
@@ -435,12 +439,18 @@
     $$('[data-reveal]').forEach(function (el) {
       var isH = el.tagName === 'H2', isLead = el.classList.contains('lead');
       if (Split && (isH || isLead)) {
-        Split.create(el, { type: 'lines', mask: 'lines', linesClass: 'sl', autoSplit: true, onSplit: function (self) {
-          if (el.dataset.splitDone) { self.revert(); return; }
-          return gsap.from(self.lines, {
-            yPercent: isH ? 135 : 125, opacity: isH ? 1 : 0, duration: isH ? 1.1 : 0.8, stagger: isH ? 0.1 : 0.06, ease: 'power4.out',
-            scrollTrigger: once(el, 'top 90%'),
-            onComplete: function () { el.dataset.splitDone = '1'; self.revert(); }
+        /* la división se arma justo antes de que el texto llegue a la pantalla, no al cargar la página;
+           aria: 'none' porque aria-label no se permite en <p> y el texto dividido sigue siendo texto */
+        ScrollTrigger.create({ trigger: el, start: 'top 115%', once: true, onEnter: function () {
+          ctx.add(function () {
+            Split.create(el, { type: 'lines', mask: 'lines', linesClass: 'sl', aria: 'none', autoSplit: true, onSplit: function (self) {
+              if (el.dataset.splitDone) { self.revert(); return; }
+              return gsap.from(self.lines, {
+                yPercent: isH ? 135 : 125, opacity: isH ? 1 : 0, duration: isH ? 1.1 : 0.8, stagger: isH ? 0.1 : 0.06, ease: 'power4.out',
+                scrollTrigger: once(el, 'top 90%'),
+                onComplete: function () { el.dataset.splitDone = '1'; self.revert(); }
+              });
+            } });
           });
         } });
         undo.push(function () { delete el.dataset.splitDone; });
@@ -454,12 +464,15 @@
     if (canScramble) $$('.eyebrow').forEach(function (el) {
       if (el.classList.contains('hero__eyebrow') || el.children.length) return;
       var txt = el.textContent;
-      el.style.minHeight = el.offsetHeight + 'px';
-      el.textContent = '';
-      gsap.to(el, { duration: Math.min(1.4, 0.5 + txt.length * 0.022), ease: 'none',
-        scrambleText: { text: txt, chars: SCRAMBLE, speed: 0.6 },
-        scrollTrigger: once(el, 'top 92%'),
-        onComplete: function () { el.style.minHeight = ''; } });
+      ScrollTrigger.create({ trigger: el, start: 'top 96%', once: true, onEnter: function () {
+        ctx.add(function () {
+          el.style.minHeight = el.offsetHeight + 'px';
+          el.textContent = '';
+          gsap.to(el, { duration: Math.min(1.4, 0.5 + txt.length * 0.022), ease: 'none',
+            scrambleText: { text: txt, chars: SCRAMBLE, speed: 0.6 },
+            onComplete: function () { el.style.minHeight = ''; } });
+        });
+      } });
       undo.push(function () { el.textContent = txt; el.style.minHeight = ''; });
     });
     $$('[data-stagger]').forEach(function (el) {
