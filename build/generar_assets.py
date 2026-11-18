@@ -75,12 +75,12 @@ PORTADA = {
                linea="Corporate and energy lawyer who builds with AI",
                lema="Claude Code plugins · legal RAG · n8n workflows · data pipelines · websites and video",
                cifras=[("1", "legal-tech product on sale"), ("374", "energy-law instruments indexed"),
-                       ("560K+", "public contracts analyzed"), ("25+", "projects built in 2026")]),
+                       ("560K+", "public contracts analyzed"), ("30+", "projects built in 2026")]),
     "es": dict(etiqueta="PORTAFOLIO DE INTELIGENCIA ARTIFICIAL",
                linea="Abogado corporativo y de energía que construye con IA",
                lema="Plugins de Claude Code · RAG legal · flujos en n8n · pipelines de datos · sitios y video",
                cifras=[("1", "producto legal-tech a la venta"), ("374", "instrumentos de energía indexados"),
-                       ("560 mil+", "contratos públicos analizados"), ("25+", "proyectos en 2026")]),
+                       ("560 mil+", "contratos públicos analizados"), ("30+", "proyectos en 2026")]),
 }
 for L, d in PORTADA.items():
     W, H = 1200, 430
