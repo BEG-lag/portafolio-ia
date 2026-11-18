@@ -38,6 +38,30 @@
     }
   })();
 
+  // Carteles de los destacados: cada SVG se inserta en línea al acercarse (así su flecha se mueve al pasar el cursor)
+  (function () {
+    var links = $$('.cartel[data-svg]');
+    if (!links.length || !window.fetch || !window.DOMParser) return;
+    function load(a) {
+      var url = a.getAttribute('data-svg');
+      a.removeAttribute('data-svg');
+      fetch(url).then(function (r) { return r.ok ? r.text() : Promise.reject(r.status); }).then(function (t) {
+        var svg = new DOMParser().parseFromString(t, 'image/svg+xml').documentElement;
+        if (!svg || svg.nodeName !== 'svg') return;
+        svg.setAttribute('aria-hidden', 'true');
+        svg.setAttribute('focusable', 'false');
+        a.insertBefore(document.importNode(svg, true), a.firstChild);
+      }).catch(function () {});
+    }
+    /* los cuatro se cargan juntos al acercarse la fila (en el carrusel del celular, los de la derecha quedan fuera de vista) */
+    var fila = links[0].closest('.carteles') || links[0];
+    if (!('IntersectionObserver' in window)) { links.forEach(load); return; }
+    var io = new IntersectionObserver(function (es) {
+      if (es.some(function (e) { return e.isIntersecting; })) { io.disconnect(); links.forEach(load); }
+    }, { rootMargin: '700px 0px' });
+    io.observe(fila);
+  })();
+
   // Diagrama de nueve roles
   var orbit = $('.orbit svg');
   var orbitPts = [];
@@ -626,6 +650,10 @@
         gsap.from(el, { x: n % 2 ? 60 : -60, rotation: n % 2 ? 5 : -5, opacity: 0, duration: 0.8, ease: 'power3.out', scrollTrigger: once(el, 'top 92%') });
       });
     }
+
+    /* DESTACADOS: los cuatro carteles suben y se acomodan uno tras otro (en celular van en carrusel, sin entrada) */
+    if (desk) gsap.from('.carteles li', { y: 110, rotation: function (i) { return [-6, 5, -4, 6][i % 4]; }, duration: 1.1, stagger: 0.09,
+      ease: 'power3.out', scrollTrigger: once('.carteles', 'top 88%') });
 
     /* 5. CON CRITERIO: tarjetas pegajosas que se apilan */
     var cards = $$('.stack-card');

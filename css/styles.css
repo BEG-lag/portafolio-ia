@@ -522,6 +522,29 @@ body::after{content:"";position:fixed;inset:-120px;z-index:58;pointer-events:non
 .fill .oss__cta b,.fill .oss__cta a > span{color:var(--ink)}
 .fill .oss__cta p{color:var(--mut)}
 
+/* ---------- DESTACADOS: cuatro carteles ilustrados (SVG propios, con la flecha de la marca) que llevan a cada proyecto.
+   Se cargan como SVG en línea al acercarse; antes, cada uno es un rectángulo de su color. En celular van en carrusel. ---------- */
+.destacados{padding:clamp(6rem,14vh,11rem) 0}
+.carteles{list-style:none;margin:clamp(40px,5vw,72px) 0 0;padding:0 14px 14px 0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:clamp(18px,2.6vw,40px)}
+.cartel{display:block;aspect-ratio:3/4;background:var(--c);color:var(--ink);transform:rotate(var(--r));box-shadow:9px 9px 0 var(--ink);transition:transform .7s cubic-bezier(.2,.8,.2,1),box-shadow .5s cubic-bezier(.2,.8,.2,1)}
+.cartel svg,.cartel img{display:block;width:100%;height:100%}
+.carteles li:nth-child(1) .cartel{--r:-2.2deg;--c:var(--lime)}
+.carteles li:nth-child(2) .cartel{--r:1.6deg;--c:var(--cyan)}
+.carteles li:nth-child(3) .cartel{--r:-1.2deg;--c:var(--amber)}
+.carteles li:nth-child(4) .cartel{--r:2.4deg;--c:var(--coral)}
+.cartel:hover,.cartel:focus-visible{transform:translateY(-10px) rotate(0deg);box-shadow:14px 16px 0 var(--ink)}
+.cartel:focus-visible{outline:3px solid var(--acc);outline-offset:6px}
+.cartel .c-fl{transition:transform .45s cubic-bezier(.2,.8,.2,1)}
+.cartel:hover .c-fl[data-d="l"],.cartel:focus-visible .c-fl[data-d="l"]{transform:translateX(-7px)}
+.cartel:hover .c-fl[data-d="r"],.cartel:focus-visible .c-fl[data-d="r"]{transform:translateX(7px)}
+.cartel:hover .c-fl[data-d="u"],.cartel:focus-visible .c-fl[data-d="u"]{transform:translateY(-7px)}
+@media (max-width:899.98px){
+  .carteles{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:20px;padding:12px 18px 22px 4px;margin-inline:-4px;scrollbar-width:none}
+  .carteles::-webkit-scrollbar{display:none}
+  .carteles li{flex:0 0 min(74%,340px);scroll-snap-align:start}
+}
+@media (prefers-reduced-motion:reduce){.cartel,.cartel .c-fl{transition:none}}
+
 /* ---------- FLECHA GUÍA (la flecha de PIVOTEK): sale del nombre, baja por un margen dejando una línea, cruza la
    página a 90° antes de Con Criterio, Legal, Código abierto y Contacto, y gira para señalar cada sección.
    En celular, cada etiqueta lleva su flechita que gira al llegar. ---------- */
