@@ -56,7 +56,7 @@ Ciudad de México · beg.empleos@gmail.com · [pivotek.mx](https://pivotek.mx) �
 | Marketing con IA | Más de una docena de skills de marketing y creatividad aplicados a campañas reales, auditorías SEO y textos de anuncios ([§9](#9-sitios-web-video-y-marketing-digital-con-ia)) |
 | Integraciones (conectores MCP) | Stripe, Gmail, Google Calendar y Drive, Vercel, Higgsfield, Apify, Canva y más de 10,000 acciones de navegador ([§10](#10-mis-herramientas)), además de servidores MCP propios para el DOF y para la ley federal ([§11](#11-código-abierto)) |
 | Criterio y calidad | Compuertas de aprobación humana, reglas antifraude, incertidumbre etiquetada, pruebas golden y construcción reproducible ([§13](#13-cómo-trabajo-con-ia)) |
-| Aprendizaje continuo y comunidad | Licenciatura en Derecho (Ibero), Maestría en Derecho de la Empresa (Anáhuac) y MBA (EAE Madrid); cursos de Anthropic y Harvey; pláticas y workshops de Claude en México ([§14](#14-formación-y-comunidad)) |
+| Aprendizaje continuo y comunidad | Licenciatura en Derecho (Ibero), Maestría en Derecho de la Empresa (Anáhuac) y MBA (EAE Madrid); uso diario de la IA y de las herramientas nuevas en cuanto salen; cursos gratuitos de Anthropic y Harvey; cursos en vivo y pregrabados de tech influencers y escuelas digitales; pláticas y workshops de Claude y Grok Bot; cenas de networking con CTOs ([§14](#14-formación-y-comunidad)) |
 
 <p align="center"><img src="assets/ornamento.svg" width="220" alt=""></p>
 
@@ -263,9 +263,24 @@ Proyectos propios y servicios de PIVOTEK, mi consultoría, cada uno con veredict
 
 ## 14. Formación y comunidad
 
-- **Maestría en Derecho de la Empresa** (Derecho Corporativo), Universidad Anáhuac, 2023 a 2025.
-- **MBA**, EAE Business School, Madrid, 2023 a 2024.
-- **Licenciatura en Derecho**, Universidad Iberoamericana, CDMX, 2015 a 2020.
-- **Cursos y comunidad:** cursos de Anthropic Academy y de Harvey sobre IA para el trabajo legal; pláticas y workshops de Claude en México, como Claude for AI Engineering y Claude for Legal; curso de automatización con n8n, en curso (el resumen diario del DOF de la [§7](#7-resumen-diario-del-dof-para-el-sector-energético-n8n) fue la primera entrega).
+### Formación académica
+
+| Título | Institución | Años |
+|:--------|:-------|:----|
+| Maestría en Derecho de la Empresa (Derecho Corporativo) | Universidad Anáhuac | 2023 a 2025 |
+| Master of Business Administration (MBA), Administración de Empresas | EAE Business School, Madrid, España | 2023 a 2024 |
+| Licenciatura en Derecho | Universidad Iberoamericana, CDMX | 2015 a 2020 |
+
+### Cursos y comunidad
+
+Uso la IA todos los días y me mantengo a la vanguardia de las herramientas y funciones nuevas de IA: las pruebo en trabajo real en cuanto salen.
+
+- **Cursos gratuitos en línea de Anthropic** (Anthropic Academy).
+- **Cursos gratuitos en línea de Harvey** sobre IA para el trabajo legal.
+- **Cursos en vivo y pregrabados** de la comunidad de tech influencers como Juan Lombana y Enrique Rocha, así como de escuelas digitales como Coderhouse y OrangutanAI.
+- **Pláticas y workshops de Claude en México**, como Claude for AI Engineering (Claude Community CDMX, octubre de 2026), Claude for Legal, Claude for Finance, Claude Community House, Claude for Revenue, Claude for Games, Claude en la Cámara de Diputados y Claude en el Senado de la República, entre otros. En Claude for AI Engineering resumí las cinco ponencias (uso de herramientas, MCP, ingeniería de contexto) y convertí las notas en un agente que responde como lo haría cada ponente.
+- **Pláticas y workshops de Grok Bot.**
+- **Cenas de networking con CTOs** de empresas grandes y medianas.
+- **Curso de automatización con n8n** (en curso): el resumen diario del DOF de la [§7](#7-resumen-diario-del-dof-para-el-sector-energético-n8n) fue la primera entrega.
 
 <p align="center"><img src="assets/ornamento.svg" width="220" alt=""></p>

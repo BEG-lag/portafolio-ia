@@ -56,7 +56,7 @@ Mexico City · beg.empleos@gmail.com · [pivotek.mx](https://pivotek.mx) · [Lin
 | AI marketing | More than a dozen marketing and creative skills applied to real campaigns, SEO audits and ad copy ([§9](#9-websites-video-and-digital-marketing-with-ai)) |
 | Integrations (MCP connectors) | Stripe, Gmail, Google Calendar and Drive, Vercel, Higgsfield, Apify, Canva and more than 10,000 browser actions ([§10](#10-my-tools)), plus my own MCP servers for the Official Gazette and for federal law ([§11](#11-open-source)) |
 | Judgment and quality | Human approval gates, anti-fraud rules, labeled uncertainty, golden test sets and reproducible builds ([§13](#13-how-i-work-with-ai)) |
-| Continuous learning and community | Law degree (Ibero), Master's in Business Law (Anáhuac) and MBA (EAE Madrid); courses from Anthropic and Harvey; Claude talks and workshops in Mexico ([§14](#14-learning-and-community)) |
+| Continuous learning and community | Law degree (Ibero), Master's in Business Law (Anáhuac) and MBA (EAE Madrid); daily use of AI and of new tools as soon as they launch; free courses from Anthropic and Harvey; live and pre-recorded courses from tech influencers and digital schools; Claude and Grok Bot talks and workshops; networking dinners with CTOs ([§14](#14-learning-and-community)) |
 
 <p align="center"><img src="assets/ornamento.svg" width="220" alt=""></p>
 
@@ -263,9 +263,24 @@ Own ventures and services of PIVOTEK, my consultancy, each with a go or no-go ve
 
 ## 14. Learning and community
 
-- **Master's in Business Law** (Maestría en Derecho de la Empresa, corporate law), Universidad Anáhuac, 2023 to 2025.
-- **MBA**, EAE Business School, Madrid, 2023 to 2024.
-- **Law degree** (Licenciatura en Derecho), Universidad Iberoamericana, Mexico City, 2015 to 2020.
-- **Courses and community:** Anthropic Academy courses and Harvey's courses on AI for legal work; Claude talks and workshops in Mexico, such as Claude for AI Engineering and Claude for Legal; an n8n automation course, in progress (the daily regulatory digest in [§7](#7-daily-regulatory-digest-from-the-official-gazette-n8n) was the first deliverable).
+### Academic background
+
+| Degree | School | Years |
+|:--------|:-------|:----|
+| Master's in Business Law (Maestría en Derecho de la Empresa), corporate law | Universidad Anáhuac | 2023 to 2025 |
+| Master of Business Administration (MBA), business administration | EAE Business School, Madrid, Spain | 2023 to 2024 |
+| Law degree (Licenciatura en Derecho) | Universidad Iberoamericana, Mexico City | 2015 to 2020 |
+
+### Courses and community
+
+I use AI every day and I stay at the forefront of new AI tools and features: I test them on real work as soon as they come out.
+
+- **Anthropic's free online courses** (Anthropic Academy).
+- **Harvey's free online courses** on AI for legal work.
+- **Live and pre-recorded courses** from the community of tech influencers such as Juan Lombana and Enrique Rocha, and from digital schools such as Coderhouse and OrangutanAI.
+- **Claude talks and workshops in Mexico**, such as Claude for AI Engineering (Claude Community CDMX, October 2026), Claude for Legal, Claude for Finance, Claude Community House, Claude for Revenue, Claude for Games, Claude at the Chamber of Deputies and Claude at the Mexican Senate, among others. At Claude for AI Engineering I summarized the five talks (tool use, MCP, context engineering) and turned the notes into an agent that answers as each speaker would.
+- **Grok Bot talks and workshops.**
+- **Networking dinners with CTOs** of large and mid-size companies.
+- **n8n automation course** (in progress): the daily regulatory digest in [§7](#7-daily-regulatory-digest-from-the-official-gazette-n8n) was the first deliverable.
 
 <p align="center"><img src="assets/ornamento.svg" width="220" alt=""></p>
