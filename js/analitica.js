@@ -45,7 +45,8 @@
 
   // Clics que importan. Nunca se manda un correo ni una URL mailto; el mailto del aviso no se mide.
   // clic_correo reconoce el correo nuevo (hola@pivotek.mx, desde el 24-11) y el anterior, para no perder
-  // clics mientras cambia el enlace de Contacto.
+  // clics mientras cambia el enlace de Contacto. El aviso (página completa y aviso simplificado del pie,
+  // .contact__priv) usa el mismo correo y no se mide.
   var correo = /^mailto:(hola@pivotek\.mx|beg\.empleos@)/i;
   var enAviso = location.pathname.indexOf('/aviso-de-privacidad') === 0;
   document.addEventListener('click', function (e) {
@@ -54,7 +55,7 @@
     var href = a.getAttribute('href') || '';
     var host = (a.hostname || '').replace(/^www\./, '');
     var ruta = (a.pathname || '').toLowerCase();
-    if (correo.test(href) && !enAviso) {
+    if (correo.test(href) && !enAviso && !a.closest('.contact__priv')) {
       medir('clic_correo', { idioma: idioma });
     } else if (host === 'linkedin.com' && ruta.indexOf('/in/') === 0) {
       medir('clic_linkedin', { idioma: idioma });
