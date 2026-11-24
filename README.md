@@ -1,6 +1,6 @@
 <p align="center"><img src="assets/portada-en.svg" alt="Benjamín Esponda García · AI portfolio" width="100%"></p>
 
-**Mexican corporate lawyer (energy, hydrocarbons and mining, about 8 years of practice) who builds with AI.** I write the legal analysis, and I build the systems around it and beyond it: Claude Code plugins and agents, retrieval over legal text, n8n workflows, Python data pipelines, websites, video and AI agents for marketing.
+**Legal Engineer: Mexican corporate lawyer (energy, hydrocarbons and mining, about 8 years of practice) who builds with AI.** I write the legal analysis, and I build the systems around it and beyond it: Claude Code plugins and agents, retrieval over legal text, n8n workflows, Python data pipelines, websites, video and AI agents for marketing.
 
 **A lawyer who builds.** Law, business and applied technology: I write the legal analysis in energy, corporate and regulatory work, and I build my own tools to do it better.
 

@@ -1,6 +1,6 @@
 <p align="center"><img src="assets/portada-es.svg" alt="Benjamín Esponda García · Portafolio de inteligencia artificial" width="100%"></p>
 
-**Abogado corporativo mexicano (energía, hidrocarburos y minería, unos 8 años de práctica) que construye con inteligencia artificial.** Escribo el análisis legal y armo los sistemas alrededor de él y más allá: plugins y agentes en Claude Code, búsqueda sobre texto legal, flujos en n8n, pipelines de datos en Python, sitios web, video y agentes de IA para marketing.
+**Legal Engineer: abogado corporativo mexicano (energía, hidrocarburos y minería, unos 8 años de práctica) que construye con inteligencia artificial.** Escribo el análisis legal y armo los sistemas alrededor de él y más allá: plugins y agentes en Claude Code, búsqueda sobre texto legal, flujos en n8n, pipelines de datos en Python, sitios web, video y agentes de IA para marketing.
 
 **Un abogado que construye.** Derecho, negocios y tecnología aplicada: escribo el análisis legal en energía, corporativo y regulatorio, y construyo mis propias herramientas para hacerlo mejor.
 
