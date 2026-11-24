@@ -38,7 +38,7 @@ Mexico City · beg.empleos@gmail.com · [pivotek.mx](https://pivotek.mx) · [Lin
 - **Retrieval over legal text:** 374 energy-law instruments split into 11,112 chunks along the hierarchy of Mexican statutes, with hybrid search and a regression test set.
 - **Data at scale:** a pipeline over more than 560,000 public procurement contracts to show oil and gas suppliers where the money goes.
 - **Websites, video and marketing:** four sites live ([concriterio.mx](https://concriterio.mx), [pivotek.mx](https://pivotek.mx), [casalegado.mx](https://casalegado.mx) and [carocomunicando.com](https://carocomunicando.com)), a stage-entrance video for a speaker, an automated Reels pipeline, and social media run by AI agents (Grok Bot and Meta's Muse).
-- **Open source:** 16 public repositories on [GitHub](https://github.com/BEG-lag), including an agent that applies Official Gazette reforms to the law the same day, 36 federal laws versioned in git, a daily energy-sector radar, and severance, rent and pension calculators with automated tests ([§2](#2-open-source)).
+- **Open source:** 19 public repositories on [GitHub](https://github.com/BEG-lag), including an agent that applies Official Gazette reforms to the law the same day, 36 federal laws versioned in git, a daily energy-sector radar, and severance, rent and pension calculators with automated tests ([§2](#2-open-source)).
 - **Connected tools:** Stripe, Gmail, Google Calendar and Drive, Vercel, Higgsfield, Apify, Canva and browser automation, all driven from Claude Code.
 - **Automation with judgment:** every workflow keeps a person in the loop where signatures, money or legal judgment are involved.
 
@@ -50,7 +50,7 @@ Mexico City · beg.empleos@gmail.com · [pivotek.mx](https://pivotek.mx) · [Lin
 
 **Problem.** Much of day-to-day legal and administrative work depends on knowing what the law says today and on calculations nobody checks; these tools solve that with the code in the open.
 
-16 public repositories at [github.com/BEG-lag](https://github.com/BEG-lag), built with Claude Code and arranged in the same four groups as my GitHub profile. Fifteen are checked on GitHub Actions with every change (tests, types or data) and twelve have a live site. Figures taken from each repository (its README and its test runs on GitHub Actions) on November 17, 2026.
+19 public repositories at [github.com/BEG-lag](https://github.com/BEG-lag), built with Claude Code. Here are 16, arranged in the same four groups as my GitHub profile; fifteen are checked on GitHub Actions with every change (tests, types or data) and twelve have a live site. Figures taken from each repository (its README and its test runs on GitHub Actions) on November 17, 2026. More on [my GitHub profile](https://github.com/BEG-lag).
 
 ### 2.1 Law, compiled
 

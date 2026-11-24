@@ -38,7 +38,7 @@ Ciudad de México · beg.empleos@gmail.com · [pivotek.mx](https://pivotek.mx) �
 - **Búsqueda sobre texto legal:** 374 instrumentos de derecho energético divididos en 11,112 fragmentos según la jerarquía de la norma mexicana, con búsqueda híbrida y un juego de pruebas de regresión.
 - **Datos a escala:** un pipeline sobre más de 560,000 contratos de compras públicas para mostrar a proveedores de petróleo y gas dónde está el dinero.
 - **Sitios, video y marketing:** cuatro sitios en vivo ([concriterio.mx](https://concriterio.mx), [pivotek.mx](https://pivotek.mx), [casalegado.mx](https://casalegado.mx) y [carocomunicando.com](https://carocomunicando.com)), un video de entrada a escenario para una conferencista, un pipeline automático de Reels y redes sociales operadas por agentes de IA (Grok Bot y Muse de Meta).
-- **Código abierto:** 16 repositorios públicos en [GitHub](https://github.com/BEG-lag), entre ellos un agente que aplica al día las reformas del DOF a la ley, 36 leyes federales versionadas en git, un radar diario del sector energético y calculadoras de finiquito, renta y pensión con pruebas automáticas ([§2](#2-código-abierto)).
+- **Código abierto:** 19 repositorios públicos en [GitHub](https://github.com/BEG-lag), entre ellos un agente que aplica al día las reformas del DOF a la ley, 36 leyes federales versionadas en git, un radar diario del sector energético y calculadoras de finiquito, renta y pensión con pruebas automáticas ([§2](#2-código-abierto)).
 - **Herramientas conectadas:** Stripe, Gmail, Google Calendar y Drive, Vercel, Higgsfield, Apify, Canva y automatización del navegador, todo desde Claude Code.
 - **Automatización con criterio:** todo flujo deja a una persona en el circuito cuando hay firmas, dinero o juicio legal de por medio.
 
@@ -50,7 +50,7 @@ Ciudad de México · beg.empleos@gmail.com · [pivotek.mx](https://pivotek.mx) �
 
 **Problema.** Buena parte del trabajo legal y administrativo diario depende de saber qué dice hoy la ley y de cálculos que nadie verifica; estas herramientas lo resuelven con el código a la vista.
 
-16 repositorios públicos en [github.com/BEG-lag](https://github.com/BEG-lag), hechos con Claude Code y ordenados en los mismos cuatro bloques de mi perfil de GitHub. Quince se verifican en GitHub Actions con cada cambio (pruebas, tipos o datos) y doce tienen sitio en vivo. Cifras tomadas de cada repositorio (su README y sus pruebas en GitHub Actions) el 17 de noviembre de 2026.
+19 repositorios públicos en [github.com/BEG-lag](https://github.com/BEG-lag), hechos con Claude Code. Aquí van 16, ordenados en los mismos cuatro bloques de mi perfil de GitHub; quince se verifican en GitHub Actions con cada cambio (pruebas, tipos o datos) y doce tienen sitio en vivo. Cifras tomadas de cada repositorio (su README y sus pruebas en GitHub Actions) el 17 de noviembre de 2026. Más en [mi perfil de GitHub](https://github.com/BEG-lag).
 
 ### 2.1 Derecho, compilado
 
