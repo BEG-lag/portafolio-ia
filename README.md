@@ -42,7 +42,7 @@ Mexico City · hola@pivotek.mx · [pivotek.mx](https://pivotek.mx) · [LinkedIn]
 - **Retrieval over legal text:** 374 energy-law instruments split into 11,112 chunks along the hierarchy of Mexican statutes, with hybrid search and a regression test set.
 - **Data at scale:** a pipeline over more than 560,000 public procurement contracts to show oil and gas suppliers where the money goes.
 - **Websites, video and marketing:** four sites live ([concriterio.mx](https://concriterio.mx), [pivotek.mx](https://pivotek.mx), [casalegado.mx](https://casalegado.mx) and [carocomunicando.com](https://carocomunicando.com)), a stage-entrance video for a speaker, an automated Reels pipeline, and social media run by AI agents (Grok Bot and Meta's Muse).
-- **Open source:** 19 public repositories on [GitHub](https://github.com/BEG-lag), including an agent that applies Official Gazette reforms to the law the same day, 36 federal laws versioned in git, a daily energy-sector radar, and severance, rent and pension calculators with automated tests ([§2](#2-open-source)).
+- **Open source:** 21 public repositories on [GitHub](https://github.com/BEG-lag), including an agent that applies Official Gazette reforms to the law the same day, 36 federal laws versioned in git, a daily energy-sector radar, and severance, rent and pension calculators with automated tests ([§2](#2-open-source)).
 - **Connected tools:** Stripe, Gmail, Google Calendar and Drive, Vercel, Higgsfield, Apify, Canva and browser automation, all driven from Claude Code.
 - **Automation with judgment:** every workflow keeps a person in the loop where signatures, money or legal judgment are involved.
 
@@ -50,11 +50,11 @@ Mexico City · hola@pivotek.mx · [pivotek.mx](https://pivotek.mx) · [LinkedIn]
 
 ## 2. Open source
 
-**Status.** The 12 with a live site are in operation; mcp-leyes, mcp-dof, segundo-cerebro and tema-clawds are published products.
+**Status.** The 13 with a live site are in operation; mcp-leyes, mcp-dof, segundo-cerebro and tema-clawds are published products.
 
 **Problem.** Much of day-to-day legal and administrative work depends on knowing what the law says today and on calculations nobody checks; these tools solve that with the code in the open.
 
-19 public repositories at [github.com/BEG-lag](https://github.com/BEG-lag), built with Claude Code. Here are 16, arranged in the same four groups as my GitHub profile; fifteen are checked on GitHub Actions with every change (tests, types or data) and twelve have a live site. Figures taken from each repository (its README and its test runs on GitHub Actions) on November 17, 2026. More on [my GitHub profile](https://github.com/BEG-lag).
+21 public repositories at [github.com/BEG-lag](https://github.com/BEG-lag), built with Claude Code. Here are 17, arranged in the same four groups as my GitHub profile; sixteen are checked on GitHub Actions with every change (tests, types or data) and thirteen have a live site. Figures taken from each repository (its README and its test runs on GitHub Actions) on November 17, 2026; those for ley-energia-mx, on November 25, 2026. More on [my GitHub profile](https://github.com/BEG-lag).
 
 ### 2.1 Law, compiled
 
@@ -64,6 +64,7 @@ Open-source tools that read, apply and audit Mexican law.
 - **[leyes-mx](https://github.com/BEG-lag/leyes-mx)** · Python. 36 Mexican federal laws as Markdown in git, with 375 historical versions recovered from archived copies of the Chamber of Deputies' files. Every reform is a commit dated on its publication in the Gazette, so every law has a history, `blame` and `diff`. 13,370 articles with validated numbering. [Live site](https://beg-lag.github.io/leyes-mx/).
 - **[mcp-leyes](https://github.com/BEG-lag/mcp-leyes)** · Python · 117 tests. An MCP server with Mexican federal law at any date: the exact text of each article, its reform history, word-level diffs and search, built on the leyes-mx history. Unofficial; not legal advice.
 - **[mcp-dof](https://github.com/BEG-lag/mcp-dof)** · Python · 87 tests · version 1.0.0. An MCP server that lets Claude read Mexico's Official Gazette (Diario Oficial de la Federación): any day's edition, the full text of every notice, title search, and the FIX exchange rate, UDIS and TIIE, from the official SIDOF API. Also published as a Docker image.
+- **[ley-energia-mx](https://github.com/BEG-lag/ley-energia-mx)** · Python · 41 tests. Mexico's energy regulation article by article, with validity, lineage and a link to the official publication: 35 documents as of November 25, 2026 (laws in force, regulations, CNE general administrative provisions and repealed rules linked to the ones that replaced them). Claude queries it over MCP with no API keys; search is hybrid and local, and passes 40 of 40 evaluation cases. The public version of the engine in [§5](#5-featured-retrieval-engine-over-mexican-energy-law-rag). Not legal advice. [Live site](https://beg-lag.github.io/ley-energia-mx/).
 
 ### 2.2 Open data
 
@@ -157,6 +158,8 @@ How I work, packaged for anyone.
 | Quality | A golden test set used as a regression guardrail (9 of 9 passing) and database audits for duplicates, validity and publication dates |
 
 **Scale (April 2026).** 374 documents and 11,112 chunks, all embedded: 352 in force and 22 repealed, from the Energy Regulatory Commission, the Energy Ministry, the grid operator, the hydrocarbons and gas regulators, the safety agency and Congress. No LangChain or LlamaIndex: plain Python and SQL.
+
+**Public version (November 2026).** [ley-energia-mx](https://github.com/BEG-lag/ley-energia-mx) is an open, narrower version rebuilt from scratch: Mexico's energy regulation article by article, with validity, lineage and a link to the official publication. It holds 35 documents as of November 25, 2026: 10 laws in force, 8 regulations, 8 general administrative provisions (DACG) of the Comisión Nacional de Energía and 9 repealed rules linked to the ones that replaced them. Claude queries it over MCP with no API keys (5 read-only tools and 3 prompts); search is hybrid and local (SQLite FTS5 and local embeddings) and passes 40 of 40 evaluation cases. Code under MIT, data under CC0. [Live site](https://beg-lag.github.io/ley-energia-mx/). The full 374-document pipeline remains private.
 
 <p align="center"><img src="assets/ornamento.svg" width="220" alt=""></p>
 

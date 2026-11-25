@@ -42,7 +42,7 @@ Ciudad de México · hola@pivotek.mx · [pivotek.mx](https://pivotek.mx) · [Lin
 - **Búsqueda sobre texto legal:** 374 instrumentos de derecho energético divididos en 11,112 fragmentos según la jerarquía de la norma mexicana, con búsqueda híbrida y un juego de pruebas de regresión.
 - **Datos a escala:** un pipeline sobre más de 560,000 contratos de compras públicas para mostrar a proveedores de petróleo y gas dónde está el dinero.
 - **Sitios, video y marketing:** cuatro sitios en vivo ([concriterio.mx](https://concriterio.mx), [pivotek.mx](https://pivotek.mx), [casalegado.mx](https://casalegado.mx) y [carocomunicando.com](https://carocomunicando.com)), un video de entrada a escenario para una conferencista, un pipeline automático de Reels y redes sociales operadas por agentes de IA (Grok Bot y Muse de Meta).
-- **Código abierto:** 19 repositorios públicos en [GitHub](https://github.com/BEG-lag), entre ellos un agente que aplica al día las reformas del DOF a la ley, 36 leyes federales versionadas en git, un radar diario del sector energético y calculadoras de finiquito, renta y pensión con pruebas automáticas ([§2](#2-código-abierto)).
+- **Código abierto:** 21 repositorios públicos en [GitHub](https://github.com/BEG-lag), entre ellos un agente que aplica al día las reformas del DOF a la ley, 36 leyes federales versionadas en git, un radar diario del sector energético y calculadoras de finiquito, renta y pensión con pruebas automáticas ([§2](#2-código-abierto)).
 - **Herramientas conectadas:** Stripe, Gmail, Google Calendar y Drive, Vercel, Higgsfield, Apify, Canva y automatización del navegador, todo desde Claude Code.
 - **Automatización con criterio:** todo flujo deja a una persona en el circuito cuando hay firmas, dinero o juicio legal de por medio.
 
@@ -50,11 +50,11 @@ Ciudad de México · hola@pivotek.mx · [pivotek.mx](https://pivotek.mx) · [Lin
 
 ## 2. Código abierto
 
-**Estatus.** Los 12 con sitio en vivo están en operación; mcp-leyes, mcp-dof, segundo-cerebro y tema-clawds son productos publicados.
+**Estatus.** Los 13 con sitio en vivo están en operación; mcp-leyes, mcp-dof, segundo-cerebro y tema-clawds son productos publicados.
 
 **Problema.** Buena parte del trabajo legal y administrativo diario depende de saber qué dice hoy la ley y de cálculos que nadie verifica; estas herramientas lo resuelven con el código a la vista.
 
-19 repositorios públicos en [github.com/BEG-lag](https://github.com/BEG-lag), hechos con Claude Code. Aquí van 16, ordenados en los mismos cuatro bloques de mi perfil de GitHub; quince se verifican en GitHub Actions con cada cambio (pruebas, tipos o datos) y doce tienen sitio en vivo. Cifras tomadas de cada repositorio (su README y sus pruebas en GitHub Actions) el 17 de noviembre de 2026. Más en [mi perfil de GitHub](https://github.com/BEG-lag).
+21 repositorios públicos en [github.com/BEG-lag](https://github.com/BEG-lag), hechos con Claude Code. Aquí van 17, ordenados en los mismos cuatro bloques de mi perfil de GitHub; dieciséis se verifican en GitHub Actions con cada cambio (pruebas, tipos o datos) y trece tienen sitio en vivo. Cifras tomadas de cada repositorio (su README y sus pruebas en GitHub Actions) el 17 de noviembre de 2026; las de ley-energia-mx, el 25 de noviembre de 2026. Más en [mi perfil de GitHub](https://github.com/BEG-lag).
 
 ### 2.1 Derecho, compilado
 
@@ -64,6 +64,7 @@ Herramientas abiertas que leen, aplican y auditan la ley mexicana.
 - **[leyes-mx](https://github.com/BEG-lag/leyes-mx)** · Python. 36 leyes federales en Markdown dentro de git, con 375 versiones históricas recuperadas de copias archivadas de los archivos de la Cámara de Diputados. Cada reforma es un commit con la fecha de su publicación en el DOF, así que cada ley tiene historial, `blame` y `diff`. 13,370 artículos con la numeración validada. [Sitio en vivo](https://beg-lag.github.io/leyes-mx/).
 - **[mcp-leyes](https://github.com/BEG-lag/mcp-leyes)** · Python · 117 pruebas. Servidor MCP con la ley federal mexicana en cualquier fecha: el texto exacto de cada artículo, su historia de reformas, diferencias palabra por palabra y búsqueda, sobre el historial de leyes-mx. No es oficial ni asesoría legal.
 - **[mcp-dof](https://github.com/BEG-lag/mcp-dof)** · Python · 87 pruebas · versión 1.0.0. Servidor MCP para que Claude consulte el Diario Oficial de la Federación: la edición de cualquier día, el texto íntegro de cada nota, búsqueda por título y el tipo de cambio FIX, las UDIS y la TIIE, desde la API oficial del SIDOF. También se publica como imagen de Docker.
+- **[ley-energia-mx](https://github.com/BEG-lag/ley-energia-mx)** · Python · 41 pruebas. La regulación energética de México artículo por artículo, con vigencia, linaje y liga a la publicación oficial: 35 documentos con corte al 25 de noviembre de 2026 (leyes vigentes, reglamentos, DACG de la CNE y normas abrogadas ligadas a la que las sustituyó). Claude la consulta por MCP, sin llaves de API; la búsqueda es híbrida y local, y pasa 40 de 40 casos de evaluación. Es la versión pública del motor de la [§5](#5-destacado-motor-de-búsqueda-sobre-derecho-energético-mexicano-rag). No es asesoría legal. [Sitio en vivo](https://beg-lag.github.io/ley-energia-mx/).
 
 ### 2.2 Datos abiertos
 
@@ -157,6 +158,8 @@ Cómo trabajo, empaquetado para cualquiera.
 | Calidad | Juego de pruebas "golden" como barrera de regresión (9 de 9) y auditorías de la base por duplicados, vigencia y fechas de publicación |
 
 **Escala (abril de 2026).** 374 documentos y 11,112 fragmentos, todos con embedding: 352 vigentes y 22 abrogados, de la CRE, la SENER, el CENACE, la CNH, el CENAGAS, la CNE, la ASEA y el Congreso. Sin LangChain ni LlamaIndex: Python y SQL directos.
+
+**Versión pública (noviembre de 2026).** [ley-energia-mx](https://github.com/BEG-lag/ley-energia-mx) es una versión abierta y más acotada, reconstruida desde cero: la regulación energética de México artículo por artículo, con vigencia, linaje y liga a la publicación oficial. Son 35 documentos con corte al 25 de noviembre de 2026: 10 leyes vigentes, 8 reglamentos, 8 DACG de la CNE y 9 normas abrogadas ligadas a la que las sustituyó. Claude la consulta por MCP, sin llaves de API (5 herramientas de sólo lectura y 3 prompts); la búsqueda es híbrida y local (SQLite FTS5 y embeddings locales) y pasa 40 de 40 casos de evaluación. Código MIT, datos CC0. [Sitio en vivo](https://beg-lag.github.io/ley-energia-mx/). El pipeline completo de 374 documentos sigue siendo privado.
 
 <p align="center"><img src="assets/ornamento.svg" width="220" alt=""></p>
 
