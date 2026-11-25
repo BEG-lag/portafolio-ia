@@ -1,3 +1,7 @@
+<p align="center">
+  <a href="https://pivotek.mx"><img src="assets/pivotek-logo.svg" alt="PIVOTEK" width="200"></a>
+</p>
+
 <p align="center"><img src="assets/portada-en.svg" alt="Benjamín Esponda García · AI portfolio" width="100%"></p>
 
 **Legal Engineer: Mexican corporate lawyer (energy, hydrocarbons and mining, about 8 years of practice) who builds with AI.** I write the legal analysis, and I build the systems around it and beyond it: Claude Code plugins and agents, retrieval over legal text, n8n workflows, Python data pipelines, websites, video and AI agents for marketing.

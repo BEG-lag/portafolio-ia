@@ -1,3 +1,7 @@
+<p align="center">
+  <a href="https://pivotek.mx"><img src="assets/pivotek-logo.svg" alt="PIVOTEK" width="200"></a>
+</p>
+
 <p align="center"><img src="assets/portada-es.svg" alt="Benjamín Esponda García · Portafolio de inteligencia artificial" width="100%"></p>
 
 **Legal Engineer: abogado corporativo mexicano (energía, hidrocarburos y minería, unos 8 años de práctica) que construye con inteligencia artificial.** Escribo el análisis legal y armo los sistemas alrededor de él y más allá: plugins y agentes en Claude Code, búsqueda sobre texto legal, flujos en n8n, pipelines de datos en Python, sitios web, video y agentes de IA para marketing.
