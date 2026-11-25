@@ -135,7 +135,7 @@ How I work, packaged for anyone.
 
 ## 5. Featured: retrieval engine over Mexican energy law (RAG)
 
-**Status.** Prototype.
+**Status.** Live.
 
 **Problem.** Mexico's energy rules are scattered across the Official Gazette and the websites of eight energy authorities, and the 2025 reform replaced much of the framework. Finding the instrument that actually applies, and knowing whether it still applies, takes hours.
 
@@ -158,7 +158,7 @@ How I work, packaged for anyone.
 
 ## 6. Featured: public procurement intelligence for oil and gas
 
-**Status.** Prototype.
+**Status.** Live.
 
 **Problem.** Suppliers to the oil and gas sector in Mexico bid blind: they don't know who buys what they sell, at what price, or when.
 

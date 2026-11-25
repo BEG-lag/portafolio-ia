@@ -135,7 +135,7 @@ Cómo trabajo, empaquetado para cualquiera.
 
 ## 5. Destacado: motor de búsqueda sobre derecho energético mexicano (RAG)
 
-**Estatus.** Prototipo.
+**Estatus.** En vivo.
 
 **Problema.** Las reglas de energía en México están dispersas entre el DOF y los sitios de ocho autoridades, y la reforma de 2025 sustituyó buena parte del marco. Encontrar el instrumento que de verdad aplica, y saber si sigue aplicando, toma horas.
 
@@ -158,7 +158,7 @@ Cómo trabajo, empaquetado para cualquiera.
 
 ## 6. Destacado: inteligencia de compras públicas para petróleo y gas
 
-**Estatus.** Prototipo.
+**Estatus.** En vivo.
 
 **Problema.** Los proveedores del sector de petróleo y gas en México licitan a ciegas: no saben quién compra lo que venden, a qué precio ni cuándo.
 
