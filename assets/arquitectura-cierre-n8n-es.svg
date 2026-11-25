@@ -18,20 +18,20 @@
 <text x="56" y="300" font-family="'Avenir Next', Avenir, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="10.5" font-weight="normal" font-style="normal" fill="#6E5D50" text-anchor="start">Notaría, banco, escrow, valuador</text>
 <line x1="250" y1="286" x2="288" y2="286" stroke="#6E5D50" stroke-width="1.5" marker-end="url(#ar)"/>
 <rect x="40" y="332" width="210" height="56" rx="10" fill="#FBF7F0" stroke="#D9C4A3" stroke-width="1.2"/>
-<text x="56" y="356" font-family="'Avenir Next', Avenir, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="13" font-weight="600" font-style="normal" fill="#2E241D" text-anchor="start">WhatsApp del cliente</text>
-<text x="56" y="374" font-family="'Avenir Next', Avenir, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="10.5" font-weight="normal" font-style="normal" fill="#6E5D50" text-anchor="start">“¿Cómo va mi cierre?”</text>
+<text x="56" y="356" font-family="'Avenir Next', Avenir, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="13" font-weight="600" font-style="normal" fill="#2E241D" text-anchor="start">DocuSign</text>
+<text x="56" y="374" font-family="'Avenir Next', Avenir, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="10.5" font-weight="normal" font-style="normal" fill="#6E5D50" text-anchor="start">Aviso por webhook al firmar</text>
 <line x1="250" y1="360" x2="288" y2="360" stroke="#6E5D50" stroke-width="1.5" marker-end="url(#ar)"/>
 <rect x="750" y="110" width="210" height="56" rx="10" fill="#FBF7F0" stroke="#D9C4A3" stroke-width="1.2"/>
 <text x="766" y="134" font-family="'Avenir Next', Avenir, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="13" font-weight="600" font-style="normal" fill="#2E241D" text-anchor="start">Carpeta por operación</text>
 <text x="766" y="152" font-family="'Avenir Next', Avenir, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="10.5" font-weight="normal" font-style="normal" fill="#6E5D50" text-anchor="start">Drive: 01 Cliente … 08 Post-cierre</text>
 <line x1="712" y1="138" x2="748" y2="138" stroke="#6E5D50" stroke-width="1.5" marker-end="url(#ar)"/>
 <rect x="750" y="184" width="210" height="56" rx="10" fill="#FBF7F0" stroke="#D9C4A3" stroke-width="1.2"/>
-<text x="766" y="208" font-family="'Avenir Next', Avenir, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="13" font-weight="600" font-style="normal" fill="#2E241D" text-anchor="start">Correo saliente bilingüe</text>
-<text x="766" y="226" font-family="'Avenir Next', Avenir, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="10.5" font-weight="normal" font-style="normal" fill="#6E5D50" text-anchor="start">Plantillas desde el expediente</text>
+<text x="766" y="208" font-family="'Avenir Next', Avenir, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="13" font-weight="600" font-style="normal" fill="#2E241D" text-anchor="start">Correo con aprobación</text>
+<text x="766" y="226" font-family="'Avenir Next', Avenir, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="10.5" font-weight="normal" font-style="normal" fill="#6E5D50" text-anchor="start">Claude redacta, el abogado aprueba</text>
 <line x1="712" y1="212" x2="748" y2="212" stroke="#6E5D50" stroke-width="1.5" marker-end="url(#ar)"/>
 <rect x="750" y="258" width="210" height="56" rx="10" fill="#FBF7F0" stroke="#D9C4A3" stroke-width="1.2"/>
-<text x="766" y="282" font-family="'Avenir Next', Avenir, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="13" font-weight="600" font-style="normal" fill="#2E241D" text-anchor="start">WhatsApp Business API</text>
-<text x="766" y="300" font-family="'Avenir Next', Avenir, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="10.5" font-weight="normal" font-style="normal" fill="#6E5D50" text-anchor="start">Avisos y bot de estatus</text>
+<text x="766" y="282" font-family="'Avenir Next', Avenir, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="13" font-weight="600" font-style="normal" fill="#2E241D" text-anchor="start">WhatsApp al gestor</text>
+<text x="766" y="300" font-family="'Avenir Next', Avenir, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="10.5" font-weight="normal" font-style="normal" fill="#6E5D50" text-anchor="start">Liga con el mensaje ya escrito</text>
 <line x1="712" y1="286" x2="748" y2="286" stroke="#6E5D50" stroke-width="1.5" marker-end="url(#ar)"/>
 <rect x="750" y="332" width="210" height="56" rx="10" fill="#FBF7F0" stroke="#D9C4A3" stroke-width="1.2"/>
 <text x="766" y="356" font-family="'Avenir Next', Avenir, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="13" font-weight="600" font-style="normal" fill="#2E241D" text-anchor="start">Tablero del socio director</text>
@@ -53,9 +53,9 @@
 <rect x="440" y="190" width="120" height="112" rx="10" fill="#FBF7F0" stroke="#D9C4A3" stroke-width="1.2"/>
 <text x="500" y="210" font-family="'Avenir Next', Avenir, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="12" font-weight="600" font-style="normal" fill="#2E241D" text-anchor="middle">IA documental</text>
 <text x="500" y="228" font-family="'Avenir Next', Avenir, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="10.5" font-weight="normal" font-style="normal" fill="#6E5D50" text-anchor="middle">Claude vía API</text>
-<text x="500" y="242" font-family="'Avenir Next', Avenir, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="10.5" font-weight="normal" font-style="normal" fill="#6E5D50" text-anchor="middle">lee pasaportes y</text>
-<text x="500" y="256" font-family="'Avenir Next', Avenir, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="10.5" font-weight="normal" font-style="normal" fill="#6E5D50" text-anchor="middle">compara la escritura</text>
-<text x="500" y="270" font-family="'Avenir Next', Avenir, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="10.5" font-weight="normal" font-style="normal" fill="#6E5D50" text-anchor="middle">con el expediente</text>
+<text x="500" y="242" font-family="'Avenir Next', Avenir, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="10.5" font-weight="normal" font-style="normal" fill="#6E5D50" text-anchor="middle">lee pasaportes,</text>
+<text x="500" y="256" font-family="'Avenir Next', Avenir, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="10.5" font-weight="normal" font-style="normal" fill="#6E5D50" text-anchor="middle">revisa la escritura</text>
+<text x="500" y="270" font-family="'Avenir Next', Avenir, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="10.5" font-weight="normal" font-style="normal" fill="#6E5D50" text-anchor="middle">y llena machotes</text>
 <rect x="450" y="280" width="100" height="16" rx="8" fill="#F4EBDD" stroke="#A3452E" stroke-width="1"/>
 <text x="500" y="292" font-family="'Avenir Next', Avenir, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="9.5" font-weight="600" font-style="normal" fill="#A3452E" text-anchor="middle">aprobación humana</text>
 <line x1="630" y1="172" x2="630" y2="188" stroke="#A3452E" stroke-width="1.5" marker-end="url(#ar)"/>
@@ -96,16 +96,18 @@
 <rect x="510" y="412" width="450" height="190" rx="10" fill="#FBF7F0" stroke="#D9C4A3" stroke-width="1.2"/>
 <text x="530" y="441" font-family="Baskerville, 'Libre Baskerville', 'Hoefler Text', Georgia, serif" font-size="15" font-weight="normal" font-style="normal" fill="#7C2F1E" text-anchor="start">Reglas de diseño</text>
 <path d="M534,459.7 L537.3,463 L534,466.3 L530.7,463 Z" fill="#A3452E"/>
-<text x="546" y="467" font-family="'Avenir Next', Avenir, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="11.5" font-weight="normal" font-style="normal" fill="#2E241D" text-anchor="start">20 pasos del cierre: 11 automáticos, 7 asistidos, 2 humanos</text>
-<path d="M534,480.7 L537.3,484 L534,487.3 L530.7,484 Z" fill="#A3452E"/>
-<text x="546" y="488" font-family="'Avenir Next', Avenir, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="11.5" font-weight="normal" font-style="normal" fill="#2E241D" text-anchor="start">Pasos 4 a 7 en paralelo en cuanto se abre el escrow</text>
-<path d="M534,501.7 L537.3,505 L534,508.3 L530.7,505 Z" fill="#A3452E"/>
-<text x="546" y="509" font-family="'Avenir Next', Avenir, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="11.5" font-weight="normal" font-style="normal" fill="#2E241D" text-anchor="start">Antifraude: ningún flujo envía cuentas bancarias; un correo</text>
-<text x="546" y="530" font-family="'Avenir Next', Avenir, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="11.5" font-weight="normal" font-style="normal" fill="#2E241D" text-anchor="start">con “cambio de cuenta” lanza alerta roja y exige llamada</text>
-<path d="M534,543.7 L537.3,547 L534,550.3 L530.7,547 Z" fill="#A3452E"/>
-<text x="546" y="551" font-family="'Avenir Next', Avenir, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="11.5" font-weight="normal" font-style="normal" fill="#2E241D" text-anchor="start">Demo con datos ficticios; producción en servidor del cliente</text>
-<path d="M534,564.7 L537.3,568 L534,571.3 L530.7,568 Z" fill="#A3452E"/>
-<text x="546" y="572" font-family="'Avenir Next', Avenir, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="11.5" font-weight="normal" font-style="normal" fill="#2E241D" text-anchor="start">Ahorro esperado: 50% a 70% de la talacha por cierre [ESTIMADO]</text>
+<text x="546" y="467" font-family="'Avenir Next', Avenir, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="11.5" font-weight="normal" font-style="normal" fill="#2E241D" text-anchor="start">20 pasos del cierre: 9 con un clic, 10 asistidos, 1 humano</text>
+<path d="M534,478.7 L537.3,482 L534,485.3 L530.7,482 Z" fill="#A3452E"/>
+<text x="546" y="486" font-family="'Avenir Next', Avenir, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="11.5" font-weight="normal" font-style="normal" fill="#2E241D" text-anchor="start">Pasos 4 a 7 en paralelo en cuanto se abre el escrow</text>
+<path d="M534,497.7 L537.3,501 L534,504.3 L530.7,501 Z" fill="#A3452E"/>
+<text x="546" y="505" font-family="'Avenir Next', Avenir, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="11.5" font-weight="normal" font-style="normal" fill="#2E241D" text-anchor="start">Datos duros tal cual; nada sale sin el clic del abogado</text>
+<path d="M534,516.7 L537.3,520 L534,523.3 L530.7,520 Z" fill="#A3452E"/>
+<text x="546" y="524" font-family="'Avenir Next', Avenir, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="11.5" font-weight="normal" font-style="normal" fill="#2E241D" text-anchor="start">Antifraude: ningún flujo envía cuentas bancarias; un correo</text>
+<text x="546" y="543" font-family="'Avenir Next', Avenir, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="11.5" font-weight="normal" font-style="normal" fill="#2E241D" text-anchor="start">con “cambio de cuenta” lanza alerta roja y exige llamada</text>
+<path d="M534,554.7 L537.3,558 L534,561.3 L530.7,558 Z" fill="#A3452E"/>
+<text x="546" y="562" font-family="'Avenir Next', Avenir, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="11.5" font-weight="normal" font-style="normal" fill="#2E241D" text-anchor="start">Demo con datos ficticios; producción en servidor del cliente</text>
+<path d="M534,573.7 L537.3,577 L534,580.3 L530.7,577 Z" fill="#A3452E"/>
+<text x="546" y="581" font-family="'Avenir Next', Avenir, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="11.5" font-weight="normal" font-style="normal" fill="#2E241D" text-anchor="start">Ahorro esperado: 50% a 70% de la talacha por cierre [ESTIMADO]</text>
 <line x1="810" y1="622" x2="858" y2="622" stroke="#A3452E" stroke-width="1.1"/>
 <line x1="902" y1="622" x2="950" y2="622" stroke="#A3452E" stroke-width="1.1"/>
 <circle cx="810" cy="622" r="2.4" fill="#A3452E"/>
@@ -114,5 +116,5 @@
 <path d="M895,618.8 L898.2,622 L895,625.2 L891.8,622 Z" fill="#A3452E"/>
 <path d="M880,613.5 L888.5,622 L880,630.5 L871.5,622 Z" fill="none" stroke="#A3452E" stroke-width="1.2"/>
 <path d="M880,617.8 L884.2,622 L880,626.2 L875.8,622 Z" fill="#A3452E"/>
-<text x="40" y="626" font-family="'Avenir Next', Avenir, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="10.5" font-weight="normal" font-style="normal" fill="#6E5D50" text-anchor="start">Herramientas: n8n · Gmail · Google Drive y Sheets · WhatsApp Business API · Claude API</text>
+<text x="40" y="626" font-family="'Avenir Next', Avenir, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="10.5" font-weight="normal" font-style="normal" fill="#6E5D50" text-anchor="start">Herramientas: n8n · Gmail · Google Drive, Docs y Sheets · WhatsApp (liga wa.me) · Claude API · DocuSign API</text>
 </svg>

@@ -190,9 +190,12 @@ Cómo trabajo, empaquetado para cualquiera.
 **Diseño.**
 
 - Un expediente único por operación alimenta todos los correos, documentos y avisos.
-- 11 de los 20 pasos pueden correr casi solos, 7 quedan asistidos y 2 siguen siendo humanos: la revisión jurídica del proyecto de escritura y la firma ante notario.
-- Los pasos 4 a 7 (permiso de la SRE, proyecto de escritura, avalúo y certificados) arrancan en paralelo en cuanto se abre el escrow, lo que podría ahorrar de 7 a 10 días por cierre (estimado).
-- La IA documental lee pasaportes y certificados y compara el proyecto de escritura con el expediente, siempre con aprobación humana.
+- En 9 de los 20 pasos, Claude y n8n hacen el trabajo y el abogado sólo da el clic; 10 quedan asistidos (además alguien revisa a fondo, decide o ejecuta) y 1 sigue siendo humano, con apoyo: la firma ante notario.
+- Los pasos 4 a 7 (aviso al fiduciario sobre el permiso de la SRE, proyecto de escritura, avalúo y certificados) arrancan en paralelo en cuanto se abre el escrow, lo que podría ahorrar de 7 a 10 días por cierre (estimado).
+- La IA documental (Claude) lee pasaportes y certificados y hace la primera revisión del proyecto de escritura contra el expediente y la lista de revisión del despacho, con un reporte de discrepancias; un abogado siempre aprueba.
+- Claude redacta los correos y llena los machotes, pero los datos duros (nombres, pasaportes, montos, superficies y fechas) los pega n8n tal cual del expediente, y ningún correo ni contrato sale sin el clic del abogado.
+- El contrato de escrow y la dispersión se firman en DocuSign, conectado por API: n8n crea el sobre como borrador y el abogado lo manda con un clic.
+- Al inicio no hay API de WhatsApp: al gestor se le escribe con una liga que abre WhatsApp con el mensaje ya escrito, y el abogado lo manda desde su número.
 - Una compuerta de firma impide agendar el cierre hasta que se cumplen seis condiciones, entre ellas que los certificados sigan vigentes a la fecha propuesta y no sólo a hoy.
 - Antifraude: ningún flujo envía cuentas bancarias, y cualquier correo sobre cambio de instrucciones de pago lanza una alerta roja y exige llamada de verificación.
 - Los datos del cliente nunca viven en mi infraestructura: la demo corre con datos ficticios y la producción va en el servidor propio del despacho.
@@ -201,15 +204,17 @@ Cómo trabajo, empaquetado para cualquiera.
 |:----|:-----------|:------|
 | Expediente único | Una fila por operación con compradores, unidad, banco, notaría, escrow, fechas de cada paso, vigencias y estatus | Google Sheets al inicio; base de datos propia si crece el volumen |
 | Carpeta por operación | Estructura fija creada sola: de 01 Cliente a 08 Post-cierre | Google Drive |
-| Correo saliente | Plantillas bilingües para cliente, notaría, banco, valuador, HOA y escrow, llenadas desde el expediente | Gmail |
+| Correo saliente | Claude redacta cada correo y n8n pega tal cual montos, nombres, pasaportes, superficies y fechas; el abogado lo edita y lo aprueba en Gmail, o pide que Claude lo rehaga, y queda registrado quién aprobó qué y cuándo | Gmail y Claude, con aprobación del abogado |
 | Lector de correo entrante | Clasifica los correos de terceros, los liga a la operación, guarda adjuntos y mueve el estatus | Gmail e IA |
-| WhatsApp | Avisos, recordatorios y un bot que contesta "¿cómo va mi cierre?" desde el expediente | WhatsApp Business API |
-| IA documental | Lee pasaportes y certificados, compara el proyecto de escritura, resume videollamadas y comentarios del banco | API de Claude, con aprobación humana |
+| WhatsApp | Al inicio, sin API: para el gestor, n8n arma el mensaje y da una liga que abre WhatsApp con el texto escrito; avisos y un bot de estatus para clientes, por definir | WhatsApp (liga wa.me); la API, después |
+| IA documental | Lee pasaportes y certificados, compara el proyecto de escritura, resume videollamadas y comentarios del banco; falta validar el plan y que no haya entrenamiento ni retención de datos | Claude (Anthropic), con aprobación humana |
+| Machotes | El maestro de cada documento vive en Google Docs, donde lo edita el despacho; n8n lo copia, Claude redacta sólo las variantes y marca [FALTA] lo que no está, n8n pega los datos duros tal cual y sale en Word | Google Docs y Drive |
+| Firma electrónica | El contrato de escrow y la dispersión se firman en DocuSign: n8n crea el sobre como borrador, el abogado lo manda con un clic y DocuSign avisa cuando todos firmaron | DocuSign por API (eSignature REST) |
 | Temporizadores y compuertas | Plazos por paso, vigencia de certificados y compuerta de firma | n8n |
 | Tablero del socio director | Operaciones por etapa, días en cada paso, quién está atorando, alertas | Google Sheets o Looker Studio |
 | Bitácora y errores | Registro de cada ejecución y aviso inmediato si un flujo falla | n8n |
 
-**Estatus.** Etapa de diseño (noviembre de 2026). Propuesta entregada; decisiones en un registro de decisiones; implementación planeada en 4 fases de 10 a 13 semanas (estimado), empezando con un piloto en un solo desarrollo. Ahorro esperado: de 50% a 70% de las horas de talacha por cierre (estimado), a medir en el diagnóstico.
+**Estatus.** Etapa de diseño (noviembre de 2026). Propuesta entregada y decisiones en un registro de decisiones. El diseño ya está dibujado en n8n: un lienzo de 52 nodos en 5 etapas, más los carriles de correo, no funcional a propósito (disparadores apagados y datos ficticios). Falta validar que el plan de DocuSign del despacho incluya la API y que el formato del machote no se mueva al exportar a Word. Implementación planeada en 4 fases de 10 a 13 semanas (estimado), empezando con un piloto en un solo desarrollo. Ahorro esperado: de 50% a 70% de las horas de talacha por cierre (estimado), a medir en el diagnóstico.
 
 <p align="center"><img src="assets/ornamento.svg" width="220" alt=""></p>
 

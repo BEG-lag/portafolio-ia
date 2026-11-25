@@ -18,20 +18,20 @@
 <text x="56" y="300" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="10.5" font-weight="normal" font-style="normal" fill="#969dab" text-anchor="start">Notaría, banco, escrow, valuador</text>
 <line x1="250" y1="286" x2="288" y2="286" stroke="#969dab" stroke-width="1.5" marker-end="url(#ar)"/>
 <rect x="40" y="332" width="210" height="56" rx="10" fill="#191d27" stroke="#33373f" stroke-width="1.2"/>
-<text x="56" y="356" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="600" font-style="normal" fill="#eceee6" text-anchor="start">WhatsApp del cliente</text>
-<text x="56" y="374" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="10.5" font-weight="normal" font-style="normal" fill="#969dab" text-anchor="start">“¿Cómo va mi cierre?”</text>
+<text x="56" y="356" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="600" font-style="normal" fill="#eceee6" text-anchor="start">DocuSign</text>
+<text x="56" y="374" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="10.5" font-weight="normal" font-style="normal" fill="#969dab" text-anchor="start">Aviso por webhook al firmar</text>
 <line x1="250" y1="360" x2="288" y2="360" stroke="#969dab" stroke-width="1.5" marker-end="url(#ar)"/>
 <rect x="750" y="110" width="210" height="56" rx="10" fill="#191d27" stroke="#33373f" stroke-width="1.2"/>
 <text x="766" y="134" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="600" font-style="normal" fill="#eceee6" text-anchor="start">Carpeta por operación</text>
 <text x="766" y="152" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="10.5" font-weight="normal" font-style="normal" fill="#969dab" text-anchor="start">Drive: 01 Cliente … 08 Post-cierre</text>
 <line x1="712" y1="138" x2="748" y2="138" stroke="#969dab" stroke-width="1.5" marker-end="url(#ar)"/>
 <rect x="750" y="184" width="210" height="56" rx="10" fill="#191d27" stroke="#33373f" stroke-width="1.2"/>
-<text x="766" y="208" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="600" font-style="normal" fill="#eceee6" text-anchor="start">Correo saliente bilingüe</text>
-<text x="766" y="226" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="10.5" font-weight="normal" font-style="normal" fill="#969dab" text-anchor="start">Plantillas desde el expediente</text>
+<text x="766" y="208" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="600" font-style="normal" fill="#eceee6" text-anchor="start">Correo con aprobación</text>
+<text x="766" y="226" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="10.5" font-weight="normal" font-style="normal" fill="#969dab" text-anchor="start">Claude redacta, el abogado aprueba</text>
 <line x1="712" y1="212" x2="748" y2="212" stroke="#969dab" stroke-width="1.5" marker-end="url(#ar)"/>
 <rect x="750" y="258" width="210" height="56" rx="10" fill="#191d27" stroke="#33373f" stroke-width="1.2"/>
-<text x="766" y="282" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="600" font-style="normal" fill="#eceee6" text-anchor="start">WhatsApp Business API</text>
-<text x="766" y="300" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="10.5" font-weight="normal" font-style="normal" fill="#969dab" text-anchor="start">Avisos y bot de estatus</text>
+<text x="766" y="282" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="600" font-style="normal" fill="#eceee6" text-anchor="start">WhatsApp al gestor</text>
+<text x="766" y="300" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="10.5" font-weight="normal" font-style="normal" fill="#969dab" text-anchor="start">Liga con el mensaje ya escrito</text>
 <line x1="712" y1="286" x2="748" y2="286" stroke="#969dab" stroke-width="1.5" marker-end="url(#ar)"/>
 <rect x="750" y="332" width="210" height="56" rx="10" fill="#191d27" stroke="#33373f" stroke-width="1.2"/>
 <text x="766" y="356" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="600" font-style="normal" fill="#eceee6" text-anchor="start">Tablero del socio director</text>
@@ -53,9 +53,9 @@
 <rect x="440" y="190" width="120" height="112" rx="10" fill="#191d27" stroke="#33373f" stroke-width="1.2"/>
 <text x="500" y="210" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="600" font-style="normal" fill="#eceee6" text-anchor="middle">IA documental</text>
 <text x="500" y="228" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="10.5" font-weight="normal" font-style="normal" fill="#969dab" text-anchor="middle">Claude vía API</text>
-<text x="500" y="242" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="10.5" font-weight="normal" font-style="normal" fill="#969dab" text-anchor="middle">lee pasaportes y</text>
-<text x="500" y="256" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="10.5" font-weight="normal" font-style="normal" fill="#969dab" text-anchor="middle">compara la escritura</text>
-<text x="500" y="270" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="10.5" font-weight="normal" font-style="normal" fill="#969dab" text-anchor="middle">con el expediente</text>
+<text x="500" y="242" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="10.5" font-weight="normal" font-style="normal" fill="#969dab" text-anchor="middle">lee pasaportes,</text>
+<text x="500" y="256" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="10.5" font-weight="normal" font-style="normal" fill="#969dab" text-anchor="middle">revisa la escritura</text>
+<text x="500" y="270" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="10.5" font-weight="normal" font-style="normal" fill="#969dab" text-anchor="middle">y llena machotes</text>
 <rect x="450" y="280" width="100" height="16" rx="8" fill="#222a17" stroke="#cfff45" stroke-width="1"/>
 <text x="500" y="292" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="9.5" font-weight="600" font-style="normal" fill="#cfff45" text-anchor="middle">aprobación humana</text>
 <line x1="630" y1="172" x2="630" y2="188" stroke="#cfff45" stroke-width="1.5" marker-end="url(#ar)"/>
@@ -96,18 +96,20 @@
 <rect x="510" y="412" width="450" height="190" rx="10" fill="#191d27" stroke="#33373f" stroke-width="1.2"/>
 <text x="530" y="441" font-family="'Cormorant Garamond', Georgia, serif" font-size="19" font-weight="normal" font-style="italic" fill="#cfff45" text-anchor="start">Reglas de diseño</text>
 <circle cx="534" cy="463" r="2.6" fill="#cfff45"/>
-<text x="546" y="467" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="11.5" font-weight="normal" font-style="normal" fill="#eceee6" text-anchor="start">20 pasos del cierre: 11 automáticos, 7 asistidos, 2 humanos</text>
-<circle cx="534" cy="484" r="2.6" fill="#cfff45"/>
-<text x="546" y="488" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="11.5" font-weight="normal" font-style="normal" fill="#eceee6" text-anchor="start">Pasos 4 a 7 en paralelo en cuanto se abre el escrow</text>
-<circle cx="534" cy="505" r="2.6" fill="#cfff45"/>
-<text x="546" y="509" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="11.5" font-weight="normal" font-style="normal" fill="#eceee6" text-anchor="start">Antifraude: ningún flujo envía cuentas bancarias; un correo</text>
-<text x="546" y="530" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="11.5" font-weight="normal" font-style="normal" fill="#eceee6" text-anchor="start">con “cambio de cuenta” lanza alerta roja y exige llamada</text>
-<circle cx="534" cy="547" r="2.6" fill="#cfff45"/>
-<text x="546" y="551" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="11.5" font-weight="normal" font-style="normal" fill="#eceee6" text-anchor="start">Demo con datos ficticios; producción en servidor del cliente</text>
-<circle cx="534" cy="568" r="2.6" fill="#cfff45"/>
-<text x="546" y="572" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="11.5" font-weight="normal" font-style="normal" fill="#eceee6" text-anchor="start">Ahorro esperado: 50% a 70% de la talacha por cierre [ESTIMADO]</text>
+<text x="546" y="467" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="11.5" font-weight="normal" font-style="normal" fill="#eceee6" text-anchor="start">20 pasos del cierre: 9 con un clic, 10 asistidos, 1 humano</text>
+<circle cx="534" cy="482" r="2.6" fill="#cfff45"/>
+<text x="546" y="486" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="11.5" font-weight="normal" font-style="normal" fill="#eceee6" text-anchor="start">Pasos 4 a 7 en paralelo en cuanto se abre el escrow</text>
+<circle cx="534" cy="501" r="2.6" fill="#cfff45"/>
+<text x="546" y="505" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="11.5" font-weight="normal" font-style="normal" fill="#eceee6" text-anchor="start">Datos duros tal cual; nada sale sin el clic del abogado</text>
+<circle cx="534" cy="520" r="2.6" fill="#cfff45"/>
+<text x="546" y="524" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="11.5" font-weight="normal" font-style="normal" fill="#eceee6" text-anchor="start">Antifraude: ningún flujo envía cuentas bancarias; un correo</text>
+<text x="546" y="543" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="11.5" font-weight="normal" font-style="normal" fill="#eceee6" text-anchor="start">con “cambio de cuenta” lanza alerta roja y exige llamada</text>
+<circle cx="534" cy="558" r="2.6" fill="#cfff45"/>
+<text x="546" y="562" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="11.5" font-weight="normal" font-style="normal" fill="#eceee6" text-anchor="start">Demo con datos ficticios; producción en servidor del cliente</text>
+<circle cx="534" cy="577" r="2.6" fill="#cfff45"/>
+<text x="546" y="581" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="11.5" font-weight="normal" font-style="normal" fill="#eceee6" text-anchor="start">Ahorro esperado: 50% a 70% de la talacha por cierre [ESTIMADO]</text>
 <circle cx="918" cy="622" r="4" fill="#cfff45"/>
 <circle cx="932" cy="622" r="4" fill="#ffb648"/>
 <circle cx="946" cy="622" r="4" fill="#ff5d47"/>
-<text x="40" y="626" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="10.5" font-weight="normal" font-style="normal" fill="#969dab" text-anchor="start">Herramientas: n8n · Gmail · Google Drive y Sheets · WhatsApp Business API · Claude API</text>
+<text x="40" y="626" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="10.5" font-weight="normal" font-style="normal" fill="#969dab" text-anchor="start">Herramientas: n8n · Gmail · Google Drive, Docs y Sheets · WhatsApp (liga wa.me) · Claude API · DocuSign API</text>
 </svg>

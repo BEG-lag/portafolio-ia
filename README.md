@@ -190,9 +190,12 @@ How I work, packaged for anyone.
 **Design.**
 
 - One deal record feeds every email, document and notice.
-- 11 of the 20 steps can run almost on their own, 7 are assisted, and 2 stay human: the legal review of the deed draft and the signing before the notary.
-- Steps 4 to 7 (foreign-affairs permit, deed draft, appraisal and certificates) start in parallel the moment escrow opens, which could cut 7 to 10 days per closing (estimate).
-- Document AI reads passports and certificates and compares the deed draft against the record, always with human approval.
+- In 9 of the 20 steps, Claude and n8n do the work and the lawyer only clicks; 10 are assisted (someone also reviews in depth, decides or acts) and 1 stays human, with support: the signing before the notary.
+- Steps 4 to 7 (notice to the trust bank about the foreign-affairs permit, deed draft, appraisal and certificates) start in parallel the moment escrow opens, which could cut 7 to 10 days per closing (estimate).
+- Document AI (Claude) reads passports and certificates and does the first review of the deed draft against the record and the firm's review checklist, with a discrepancy report; a lawyer always approves.
+- Claude drafts the emails and fills the templates, but n8n pastes the hard data (names, passports, amounts, areas and dates) exactly as recorded, and no email or contract goes out without the lawyer's click.
+- The escrow agreement and the disbursement are signed in DocuSign, connected over its API: n8n creates the envelope as a draft and the lawyer sends it with one click.
+- No WhatsApp API at first: the runner (gestor) gets a link that opens WhatsApp with the message already written, and the lawyer sends it from their own number.
 - A signing gate blocks booking the closing until six conditions are met, including certificates that are still valid on the proposed date, not just today.
 - Anti-fraud: no workflow ever sends bank details, and any incoming email about new wiring instructions raises a red alert and requires a phone call.
 - Client data never lives on my infrastructure: the demo runs on fictitious data and production goes on the firm's own server.
@@ -201,15 +204,17 @@ How I work, packaged for anyone.
 |:----|:-----------|:------|
 | Single deal record | One row per deal with buyers, unit, bank, notary, escrow, dates per step, validity periods and status | Google Sheets first; own database if volume grows |
 | Folder per deal | Fixed structure created automatically: 01 Client to 08 Post-closing | Google Drive |
-| Outgoing email | Bilingual templates for client, notary, bank, appraiser, HOA and escrow, filled from the record | Gmail |
+| Outgoing email | Claude drafts each email and n8n pastes amounts, names, passports, areas and dates exactly as recorded; the lawyer edits and approves it in Gmail, or asks Claude to redo it, and who approved what, and when, is logged | Gmail and Claude, approved by the lawyer |
 | Incoming email reader | Classifies third-party emails, links them to the deal, files attachments and moves the status | Gmail and AI |
-| WhatsApp | Notices, reminders and a bot that answers "what's my status?" from the record | WhatsApp Business API |
-| Document AI | Reads passports and certificates, compares the deed draft, summarizes calls and bank comments | Claude API, with human approval |
+| WhatsApp | No API at first: for the runner (gestor), n8n writes the message and gives a link that opens WhatsApp with the text ready; client notices and a status bot are still to be defined | WhatsApp (wa.me link); the API later |
+| Document AI | Reads passports and certificates, compares the deed draft, summarizes calls and bank comments; still to validate the plan, and that data is neither used for training nor retained | Claude (Anthropic), with human approval |
+| Templates | Each master document lives in Google Docs, where the firm edits it; n8n copies it, Claude drafts only the variants and marks what is missing with [FALTA], n8n pastes the hard data as is and it comes out in Word | Google Docs and Drive |
+| E-signature | The escrow agreement and the disbursement are signed in DocuSign: n8n creates the envelope as a draft, the lawyer sends it with one click and DocuSign reports back when everyone has signed | DocuSign API (eSignature REST) |
 | Timers and gates | Deadlines per step, certificate validity and the signing gate | n8n |
 | Partner dashboard | Deals by stage, days per step, who is blocking, alerts | Google Sheets or Looker Studio |
 | Logs and errors | Record of every run and an instant alert if a flow fails | n8n |
 
-**Status.** Design stage (November 2026). Proposal delivered; decisions kept in a decision register; rollout planned in 4 phases over 10 to 13 weeks (estimate), starting with a pilot on one development. Expected savings: 50% to 70% of busywork hours per closing (estimate), to be measured in the diagnosis.
+**Status.** Design stage (November 2026). Proposal delivered and decisions kept in a decision register. The design is already drawn in n8n: a 52-node canvas in 5 stages, plus the email lanes, non-functional on purpose (triggers off and fictitious data). Still to validate: that the firm's DocuSign plan includes API access and that the template formatting holds when exported to Word. Rollout planned in 4 phases over 10 to 13 weeks (estimate), starting with a pilot on one development. Expected savings: 50% to 70% of busywork hours per closing (estimate), to be measured in the diagnosis.
 
 <p align="center"><img src="assets/ornamento.svg" width="220" alt=""></p>
 

@@ -20,13 +20,13 @@ TX = {
            'rag_tit': ('EL', 'BUSCADOR'), 'rag_q': '¿qué permiso aplica hoy?', 'rag_pie': 'La ley de energía, en lenguaje natural.',
            'rag_meta': '35 DOCUMENTOS · 3,376 ARTÍCULOS', 'ss_lab': 'DATOS A ESCALA', 'ss_pie': 'Quién compra, a qué precio y cuándo.',
            'ss_meta': '300,000+ ADJUDICACIONES, AL DÍA', 'ci_tit': ('EL', 'CIERRE'), 'ci_pie': '20 pasos, con freno de mano.',
-           'ci_meta': '11 AUTOMÁTICOS · 7 ASISTIDOS · 2 HUMANOS', 'freno': 'FRENO'},
+           'ci_meta': '9 CON UN CLIC · 10 ASISTIDOS · 1 HUMANO', 'freno': 'FRENO'},
     'en': {'num': 'NO.', 'cc_lab': 'LIVE PRODUCT', 'cc_pie': 'A guide, 7 plugins and 7 skills.', 'cc_meta': 'ON SALE AT CONCRITERIO.MX',
            'cc_libros': ['NOTARIAL', 'ENERGY', 'COMMERCE'], 'guia': 'GUIDE', 'sello': 'VERIFIED · CON CRITERIO ·',
            'rag_tit': ('SEARCH', 'ENGINE'), 'rag_q': 'which permit applies today?', 'rag_pie': 'Energy law, in plain language.',
            'rag_meta': '35 DOCUMENTS · 3,376 ARTICLES', 'ss_lab': 'DATA AT SCALE', 'ss_pie': 'Who buys, at what price and when.',
            'ss_meta': '300,000+ AWARDS, UPDATED DAILY', 'ci_tit': ('THE', 'CLOSING'), 'ci_pie': '20 steps, with a hand on the brake.',
-           'ci_meta': '11 AUTOMATED · 7 ASSISTED · 2 HUMAN', 'freno': 'BRAKE'},
+           'ci_meta': '9 ONE-CLICK · 10 ASSISTED · 1 HUMAN', 'freno': 'BRAKE'},
 }
 T = TX['es']
 FLECHA = 'M0 128.5L128 0L163 35L137 61L233 61L233 196L137 196L163 222L128 257Z'   # flecha del isotipo, apunta a la izquierda
@@ -231,7 +231,7 @@ def supply():
 def cierre():
     s = []
     g = 560
-    tipos = 'auto asis asis asis auto auto auto hum asis auto auto asis asis auto hum asis auto auto auto auto'.split()
+    tipos = 'auto asis asis asis auto asis asis asis asis auto auto asis asis auto hum asis auto auto auto auto'.split()
     pos = [(52 + 25 * i, 646) for i in range(9)] + [(252, 621), (252, 596)] + [(277 + 25 * i, 596) for i in range(8)] + [(452, 571)]
     s.append(puntos_disco(506, 300, 50, 9, 3.6, LIME, luz=(-0.5, 0.5)))
     s.append('<line x1="40" x2="560" y1="%d" y2="%d" stroke="%s" stroke-width="4"/>' % (g, g, INK))

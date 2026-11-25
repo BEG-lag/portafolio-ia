@@ -18,20 +18,20 @@
 <text x="56" y="300" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="10.5" font-weight="normal" font-style="normal" fill="#969dab" text-anchor="start">Notary, bank, escrow, appraiser</text>
 <line x1="250" y1="286" x2="288" y2="286" stroke="#969dab" stroke-width="1.5" marker-end="url(#ar)"/>
 <rect x="40" y="332" width="210" height="56" rx="10" fill="#191d27" stroke="#33373f" stroke-width="1.2"/>
-<text x="56" y="356" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="600" font-style="normal" fill="#eceee6" text-anchor="start">Client WhatsApp</text>
-<text x="56" y="374" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="10.5" font-weight="normal" font-style="normal" fill="#969dab" text-anchor="start">“What’s my closing status?”</text>
+<text x="56" y="356" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="600" font-style="normal" fill="#eceee6" text-anchor="start">DocuSign</text>
+<text x="56" y="374" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="10.5" font-weight="normal" font-style="normal" fill="#969dab" text-anchor="start">Webhook when everyone has signed</text>
 <line x1="250" y1="360" x2="288" y2="360" stroke="#969dab" stroke-width="1.5" marker-end="url(#ar)"/>
 <rect x="750" y="110" width="210" height="56" rx="10" fill="#191d27" stroke="#33373f" stroke-width="1.2"/>
 <text x="766" y="134" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="600" font-style="normal" fill="#eceee6" text-anchor="start">Folder per deal</text>
 <text x="766" y="152" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="10.5" font-weight="normal" font-style="normal" fill="#969dab" text-anchor="start">Drive: 01 Client … 08 Post-closing</text>
 <line x1="712" y1="138" x2="748" y2="138" stroke="#969dab" stroke-width="1.5" marker-end="url(#ar)"/>
 <rect x="750" y="184" width="210" height="56" rx="10" fill="#191d27" stroke="#33373f" stroke-width="1.2"/>
-<text x="766" y="208" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="600" font-style="normal" fill="#eceee6" text-anchor="start">Bilingual outgoing email</text>
-<text x="766" y="226" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="10.5" font-weight="normal" font-style="normal" fill="#969dab" text-anchor="start">Templates filled from the record</text>
+<text x="766" y="208" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="600" font-style="normal" fill="#eceee6" text-anchor="start">Email with approval</text>
+<text x="766" y="226" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="10.5" font-weight="normal" font-style="normal" fill="#969dab" text-anchor="start">Claude drafts, the lawyer approves</text>
 <line x1="712" y1="212" x2="748" y2="212" stroke="#969dab" stroke-width="1.5" marker-end="url(#ar)"/>
 <rect x="750" y="258" width="210" height="56" rx="10" fill="#191d27" stroke="#33373f" stroke-width="1.2"/>
-<text x="766" y="282" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="600" font-style="normal" fill="#eceee6" text-anchor="start">WhatsApp Business API</text>
-<text x="766" y="300" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="10.5" font-weight="normal" font-style="normal" fill="#969dab" text-anchor="start">Notices and status bot</text>
+<text x="766" y="282" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="600" font-style="normal" fill="#eceee6" text-anchor="start">WhatsApp to the runner</text>
+<text x="766" y="300" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="10.5" font-weight="normal" font-style="normal" fill="#969dab" text-anchor="start">Link with the message written</text>
 <line x1="712" y1="286" x2="748" y2="286" stroke="#969dab" stroke-width="1.5" marker-end="url(#ar)"/>
 <rect x="750" y="332" width="210" height="56" rx="10" fill="#191d27" stroke="#33373f" stroke-width="1.2"/>
 <text x="766" y="356" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="600" font-style="normal" fill="#eceee6" text-anchor="start">Partner dashboard</text>
@@ -53,8 +53,8 @@
 <text x="500" y="210" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="600" font-style="normal" fill="#eceee6" text-anchor="middle">Document AI</text>
 <text x="500" y="228" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="10.5" font-weight="normal" font-style="normal" fill="#969dab" text-anchor="middle">Claude via API</text>
 <text x="500" y="242" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="10.5" font-weight="normal" font-style="normal" fill="#969dab" text-anchor="middle">reads passports,</text>
-<text x="500" y="256" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="10.5" font-weight="normal" font-style="normal" fill="#969dab" text-anchor="middle">checks the deed</text>
-<text x="500" y="270" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="10.5" font-weight="normal" font-style="normal" fill="#969dab" text-anchor="middle">against the record</text>
+<text x="500" y="256" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="10.5" font-weight="normal" font-style="normal" fill="#969dab" text-anchor="middle">reviews the deed,</text>
+<text x="500" y="270" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="10.5" font-weight="normal" font-style="normal" fill="#969dab" text-anchor="middle">fills templates</text>
 <rect x="450" y="280" width="100" height="16" rx="8" fill="#222a17" stroke="#cfff45" stroke-width="1"/>
 <text x="500" y="292" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="9.5" font-weight="600" font-style="normal" fill="#cfff45" text-anchor="middle">human approval</text>
 <line x1="630" y1="172" x2="630" y2="188" stroke="#cfff45" stroke-width="1.5" marker-end="url(#ar)"/>
@@ -94,18 +94,20 @@
 <rect x="510" y="412" width="450" height="190" rx="10" fill="#191d27" stroke="#33373f" stroke-width="1.2"/>
 <text x="530" y="441" font-family="'Cormorant Garamond', Georgia, serif" font-size="19" font-weight="normal" font-style="italic" fill="#cfff45" text-anchor="start">Design rules</text>
 <circle cx="534" cy="463" r="2.6" fill="#cfff45"/>
-<text x="546" y="467" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="11.5" font-weight="normal" font-style="normal" fill="#eceee6" text-anchor="start">20 closing steps: 11 automated, 7 assisted, 2 human</text>
-<circle cx="534" cy="484" r="2.6" fill="#cfff45"/>
-<text x="546" y="488" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="11.5" font-weight="normal" font-style="normal" fill="#eceee6" text-anchor="start">Steps 4 to 7 run in parallel once escrow opens</text>
-<circle cx="534" cy="505" r="2.6" fill="#cfff45"/>
-<text x="546" y="509" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="11.5" font-weight="normal" font-style="normal" fill="#eceee6" text-anchor="start">Anti-fraud: no flow ever sends bank details; an email</text>
-<text x="546" y="530" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="11.5" font-weight="normal" font-style="normal" fill="#eceee6" text-anchor="start">mentioning “new wiring instructions” raises a red alert</text>
-<circle cx="534" cy="547" r="2.6" fill="#cfff45"/>
-<text x="546" y="551" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="11.5" font-weight="normal" font-style="normal" fill="#eceee6" text-anchor="start">Demo on fictitious data; production on the client’s server</text>
-<circle cx="534" cy="568" r="2.6" fill="#cfff45"/>
-<text x="546" y="572" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="11.5" font-weight="normal" font-style="normal" fill="#eceee6" text-anchor="start">Expected savings: 50% to 70% of busywork per closing [ESTIMATE]</text>
+<text x="546" y="467" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="11.5" font-weight="normal" font-style="normal" fill="#eceee6" text-anchor="start">20 closing steps: 9 one-click, 10 assisted, 1 human</text>
+<circle cx="534" cy="482" r="2.6" fill="#cfff45"/>
+<text x="546" y="486" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="11.5" font-weight="normal" font-style="normal" fill="#eceee6" text-anchor="start">Steps 4 to 7 run in parallel once escrow opens</text>
+<circle cx="534" cy="501" r="2.6" fill="#cfff45"/>
+<text x="546" y="505" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="11.5" font-weight="normal" font-style="normal" fill="#eceee6" text-anchor="start">Hard data copied as is; nothing goes out without a click</text>
+<circle cx="534" cy="520" r="2.6" fill="#cfff45"/>
+<text x="546" y="524" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="11.5" font-weight="normal" font-style="normal" fill="#eceee6" text-anchor="start">Anti-fraud: no flow ever sends bank details; an email</text>
+<text x="546" y="543" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="11.5" font-weight="normal" font-style="normal" fill="#eceee6" text-anchor="start">mentioning “new wiring instructions” raises a red alert</text>
+<circle cx="534" cy="558" r="2.6" fill="#cfff45"/>
+<text x="546" y="562" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="11.5" font-weight="normal" font-style="normal" fill="#eceee6" text-anchor="start">Demo on fictitious data; production on the client’s server</text>
+<circle cx="534" cy="577" r="2.6" fill="#cfff45"/>
+<text x="546" y="581" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="11.5" font-weight="normal" font-style="normal" fill="#eceee6" text-anchor="start">Expected savings: 50% to 70% of busywork per closing [ESTIMATE]</text>
 <circle cx="918" cy="622" r="4" fill="#cfff45"/>
 <circle cx="932" cy="622" r="4" fill="#ffb648"/>
 <circle cx="946" cy="622" r="4" fill="#ff5d47"/>
-<text x="40" y="626" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="10.5" font-weight="normal" font-style="normal" fill="#969dab" text-anchor="start">Tools: n8n · Gmail · Google Drive and Sheets · WhatsApp Business API · Claude API</text>
+<text x="40" y="626" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="10.5" font-weight="normal" font-style="normal" fill="#969dab" text-anchor="start">Tools: n8n · Gmail · Google Drive, Docs and Sheets · WhatsApp (wa.me link) · Claude API · DocuSign API</text>
 </svg>

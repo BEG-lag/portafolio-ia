@@ -612,13 +612,13 @@
     </div>
 
     <div class="tally">
-      <div class="tally__blocks" role="img" aria-label="20 pasos: 11 pueden correr casi solos, 7 quedan asistidos y 2 siguen siendo humanos">
-        <i class="b b--auto" title="Paso 1: Bienvenida y documentos (automático)"></i><i class="b b--asis" title="Paso 2: Videollamada con el cliente (asistido)"></i><i class="b b--asis" title="Paso 3: Apertura de escrow (asistido)"></i><i class="b b--asis" title="Paso 4: Permiso de la SRE (asistido)"></i><i class="b b--auto" title="Paso 5: Solicitud a la notaría (automático)"></i><i class="b b--auto" title="Paso 6: Avalúo (automático)"></i><i class="b b--auto" title="Paso 7: Certificados (automático)"></i><i class="b b--hum" title="Paso 8: Revisión del proyecto de escritura (humano)"></i><i class="b b--asis" title="Paso 9: Revisión del banco fiduciario (asistido)"></i><i class="b b--auto" title="Paso 10: Documentos al banco (automático)"></i><i class="b b--auto" title="Paso 11: Aprobación del banco (automático)"></i><i class="b b--asis" title="Paso 12: Transferencia al escrow (asistido)"></i><i class="b b--asis" title="Paso 13: Saldo final (asistido)"></i><i class="b b--auto" title="Paso 14: Agendar el cierre (automático)"></i><i class="b b--hum" title="Paso 15: Firma ante notario (humano)"></i><i class="b b--asis" title="Paso 16: Dispersión por escrow (asistido)"></i><i class="b b--auto" title="Paso 17: Firma con el banco fiduciario (automático)"></i><i class="b b--auto" title="Paso 18: Inscripción en catastro y Registro Público (automático)"></i><i class="b b--auto" title="Paso 19: Original del Registro Público (automático)"></i><i class="b b--auto" title="Paso 20: Resguardo del original (automático)"></i>
+      <div class="tally__blocks" role="img" aria-label="20 pasos: en 9, Claude y n8n lo hacen y el abogado sólo da el clic; 10 quedan asistidos y 1 sigue siendo humano">
+        <i class="b b--auto" title="Paso 1: Bienvenida y documentos (un clic del abogado)"></i><i class="b b--asis" title="Paso 2: Videollamada con el cliente (asistido)"></i><i class="b b--asis" title="Paso 3: Apertura de escrow (asistido)"></i><i class="b b--asis" title="Paso 4: Aviso y formatos al fiduciario (asistido)"></i><i class="b b--auto" title="Paso 5: Solicitud a la notaría (un clic del abogado)"></i><i class="b b--asis" title="Paso 6: Avalúo: liga de WhatsApp al gestor (asistido)"></i><i class="b b--asis" title="Paso 7: Certificados: liga de WhatsApp al gestor (asistido)"></i><i class="b b--asis" title="Paso 8: Revisión del proyecto con IA (asistido)"></i><i class="b b--asis" title="Paso 9: Revisión del banco fiduciario (asistido)"></i><i class="b b--auto" title="Paso 10: Documentos al banco (un clic del abogado)"></i><i class="b b--auto" title="Paso 11: Aprobación del banco (un clic del abogado)"></i><i class="b b--asis" title="Paso 12: Aviso a las partes: fondos en escrow (asistido)"></i><i class="b b--asis" title="Paso 13: Saldo final al escrow (asistido)"></i><i class="b b--auto" title="Paso 14: Agendar el cierre (un clic del abogado)"></i><i class="b b--hum" title="Paso 15: Firma ante notario (humano, con apoyo)"></i><i class="b b--asis" title="Paso 16: Dispersión por escrow (asistido)"></i><i class="b b--auto" title="Paso 17: Firma con el banco fiduciario (un clic del abogado)"></i><i class="b b--auto" title="Paso 18: Inscripción en catastro y Registro Público (un clic del abogado)"></i><i class="b b--auto" title="Paso 19: Original del Registro Público (un clic del abogado)"></i><i class="b b--auto" title="Paso 20: Resguardo del original (un clic del abogado)"></i>
       </div>
       <ul class="tally__legend">
-        <li class="t--auto"><b><span data-count="11">11</span></b><span>pueden correr casi solos</span></li>
-        <li class="t--asis"><b><span data-count="7">7</span></b><span>quedan asistidos</span></li>
-        <li class="t--hum"><b><span data-count="2">2</span></b><span>siguen siendo humanos: la revisión jurídica del proyecto de escritura y la firma ante notario</span></li>
+        <li class="t--auto"><b><span data-count="9">9</span></b><span>Claude y n8n lo hacen; el abogado sólo da el clic</span></li>
+        <li class="t--asis"><b><span data-count="10">10</span></b><span>quedan asistidos: además alguien revisa a fondo, decide o ejecuta</span></li>
+        <li class="t--hum"><b><span data-count="1">1</span></b><span>sigue siendo humano, con apoyo: la firma ante notario</span></li>
       </ul>
       <p class="fine">Un bloque por paso, en el orden del cierre. Pasa el cursor para ver cuál es.</p>
     </div>
@@ -629,7 +629,7 @@
         <path d="M0,50 C50,50 50,12.5 100,12.5"/><path d="M0,50 C50,50 50,37.5 100,37.5"/><path d="M0,50 C50,50 50,62.5 100,62.5"/><path d="M0,50 C50,50 50,87.5 100,87.5"/>
       </svg>
       <ul class="lanes__to" aria-label="Pasos 4 a 7, en paralelo">
-        <li>Permiso de la SRE</li><li>Proyecto de escritura</li><li>Avalúo</li><li>Certificados</li>
+        <li>Aviso al fiduciario (SRE)</li><li>Proyecto de escritura</li><li>Avalúo</li><li>Certificados</li>
       </ul>
       <p class="lanes__note">Los pasos 4 a 7 arrancan en paralelo en cuanto se abre el escrow, lo que podría ahorrar de 7 a 10 días por cierre <small class="est-n">(estimado)</small>.</p>
     </div>
@@ -637,19 +637,21 @@
 
   <div class="hscroll">
     <div class="hscroll__head wrap">
-      <h3 class="mini">Las 9 piezas del diseño</h3>
+      <h3 class="mini">Las 11 piezas del diseño</h3>
       <p class="hscroll__hint" aria-hidden="true">Un expediente único por operación alimenta todos los correos, documentos y avisos.</p>
     </div>
     <ul class="hscroll__track">
       <li class="piece"><span class="piece__n">01</span><h4>Expediente único</h4><p>Una fila por operación con compradores, unidad, banco, notaría, escrow, fechas de cada paso, vigencias y estatus.</p><p class="piece__tool">Google Sheets al inicio; base de datos propia si crece el volumen</p></li>
       <li class="piece"><span class="piece__n">02</span><h4>Carpeta por operación</h4><p>Estructura fija creada sola: de 01 Cliente a 08 Post-cierre.</p><p class="piece__tool">Google Drive</p></li>
-      <li class="piece"><span class="piece__n">03</span><h4>Correo saliente</h4><p>Plantillas bilingües para cliente, notaría, banco, valuador, HOA y escrow, llenadas desde el expediente.</p><p class="piece__tool">Gmail</p></li>
+      <li class="piece"><span class="piece__n">03</span><h4>Correo saliente</h4><p>Claude redacta cada correo y n8n pega tal cual montos, nombres, pasaportes, superficies y fechas. Llega listo al abogado en Gmail: lo edita y lo aprueba, o pide que Claude lo rehaga. Queda registrado quién aprobó qué y cuándo.</p><p class="piece__tool">Gmail y Claude, con aprobación del abogado</p></li>
       <li class="piece"><span class="piece__n">04</span><h4>Lector de correo entrante</h4><p>Clasifica los correos de terceros, los liga a la operación, guarda adjuntos y mueve el estatus.</p><p class="piece__tool">Gmail e IA</p></li>
-      <li class="piece"><span class="piece__n">05</span><h4>WhatsApp</h4><p>Avisos, recordatorios y un bot que contesta "¿cómo va mi cierre?" desde el expediente.</p><p class="piece__tool">WhatsApp Business API</p></li>
-      <li class="piece"><span class="piece__n">06</span><h4>IA documental</h4><p>Lee pasaportes y certificados, compara el proyecto de escritura, resume videollamadas y comentarios del banco.</p><p class="piece__tool">API de Claude, con aprobación humana</p></li>
-      <li class="piece"><span class="piece__n">07</span><h4>Temporizadores y compuertas</h4><p>Plazos por paso, vigencia de certificados y compuerta de firma.</p><p class="piece__tool">n8n</p></li>
-      <li class="piece"><span class="piece__n">08</span><h4>Tablero del socio director</h4><p>Operaciones por etapa, días en cada paso, quién está atorando, alertas.</p><p class="piece__tool">Google Sheets o Looker Studio</p></li>
-      <li class="piece"><span class="piece__n">09</span><h4>Bitácora y errores</h4><p>Registro de cada ejecución y aviso inmediato si un flujo falla.</p><p class="piece__tool">n8n</p></li>
+      <li class="piece"><span class="piece__n">05</span><h4>WhatsApp</h4><p>Al inicio, sin API: para el gestor, n8n arma el mensaje y da una liga que abre WhatsApp con el texto escrito, y el abogado lo manda desde su número. Avisos y un bot de estatus para clientes, por definir.</p><p class="piece__tool">WhatsApp (liga wa.me); la API, después</p></li>
+      <li class="piece"><span class="piece__n">06</span><h4>IA documental</h4><p>Lee pasaportes y certificados, compara el proyecto de escritura, resume videollamadas y comentarios del banco. Falta validar el plan y que no haya entrenamiento ni retención de datos.</p><p class="piece__tool">Claude (Anthropic), con aprobación humana</p></li>
+      <li class="piece"><span class="piece__n">07</span><h4>Machotes</h4><p>El maestro de cada documento vive en Google Docs, donde lo edita el despacho. n8n lo copia, Claude redacta sólo las variantes (compradores, estado civil, sociedad, beneficiarios) y marca [FALTA] lo que no está; los datos duros los pega n8n tal cual y sale en Word.</p><p class="piece__tool">Google Docs y Drive</p></li>
+      <li class="piece"><span class="piece__n">08</span><h4>Firma electrónica</h4><p>El contrato de escrow y la dispersión se firman en DocuSign: n8n crea el sobre como borrador, el abogado lo manda con un clic y DocuSign avisa cuando todos firmaron.</p><p class="piece__tool">DocuSign por API (eSignature REST)</p></li>
+      <li class="piece"><span class="piece__n">09</span><h4>Temporizadores y compuertas</h4><p>Plazos por paso, vigencia de certificados y compuerta de firma.</p><p class="piece__tool">n8n</p></li>
+      <li class="piece"><span class="piece__n">10</span><h4>Tablero del socio director</h4><p>Operaciones por etapa, días en cada paso, quién está atorando, alertas.</p><p class="piece__tool">Google Sheets o Looker Studio</p></li>
+      <li class="piece"><span class="piece__n">11</span><h4>Bitácora y errores</h4><p>Registro de cada ejecución y aviso inmediato si un flujo falla.</p><p class="piece__tool">n8n</p></li>
     </ul>
   </div>
 
@@ -676,6 +678,8 @@
         </div>
         <ul class="guard__list" data-stagger>
           <li><strong>IA documental con aprobación humana.</strong> Lee pasaportes y certificados y compara el proyecto de escritura con el expediente.</li>
+          <li><strong>Los datos duros nunca los escribe la IA.</strong> n8n copia nombres, montos y fechas tal cual del expediente.</li>
+          <li><strong>Ningún correo ni contrato sale sin el clic del abogado.</strong> Claude redacta y llena; el abogado revisa y aprueba, y de cada correo queda registrado quién lo aprobó y cuándo.</li>
           <li><strong>Los datos del cliente nunca viven en mi infraestructura.</strong> La demo corre con datos ficticios y la producción va en el servidor propio del despacho.</li>
         </ul>
       </div>
@@ -683,7 +687,7 @@
 
     <div class="status" data-reveal>
       <p class="mono-label">Estatus · etapa de diseño (noviembre de 2026)</p>
-      <p>Propuesta entregada; decisiones en un registro de decisiones; implementación planeada en 4 fases de 10 a 13 semanas <small class="est-n">(estimado)</small>, empezando con un piloto en un solo desarrollo. Ahorro esperado: de 50% a 70% de las horas de talacha por cierre <small class="est-n">(estimado)</small>, a medir en el diagnóstico.</p>
+      <p>Propuesta entregada y decisiones en un registro de decisiones. El diseño ya está dibujado en n8n: un lienzo de 52 nodos en 5 etapas, más los carriles de correo, no funcional a propósito (disparadores apagados y datos ficticios). Falta validar que el plan de DocuSign del despacho incluya la API y que el formato del machote no se mueva al exportar a Word. Implementación planeada en 4 fases de 10 a 13 semanas <small class="est-n">(estimado)</small>, empezando con un piloto en un solo desarrollo. Ahorro esperado: de 50% a 70% de las horas de talacha por cierre <small class="est-n">(estimado)</small>, a medir en el diagnóstico.</p>
     </div>
   </div>
 </section>

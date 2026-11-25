@@ -610,13 +610,13 @@
     </div>
 
     <div class="tally">
-      <div class="tally__blocks" role="img" aria-label="20 steps: 11 can run almost on their own, 7 are assisted and 2 stay human">
-        <i class="b b--auto" title="Step 1: Welcome and documents (automatic)"></i><i class="b b--asis" title="Step 2: Video call with the client (assisted)"></i><i class="b b--asis" title="Step 3: Escrow opening (assisted)"></i><i class="b b--asis" title="Step 4: Foreign-affairs permit (assisted)"></i><i class="b b--auto" title="Step 5: Request to the notary (automatic)"></i><i class="b b--auto" title="Step 6: Appraisal (automatic)"></i><i class="b b--auto" title="Step 7: Certificates (automatic)"></i><i class="b b--hum" title="Step 8: Review of the deed draft (human)"></i><i class="b b--asis" title="Step 9: Trust bank review (assisted)"></i><i class="b b--auto" title="Step 10: Documents to the bank (automatic)"></i><i class="b b--auto" title="Step 11: Bank approval (automatic)"></i><i class="b b--asis" title="Step 12: Transfer to escrow (assisted)"></i><i class="b b--asis" title="Step 13: Final balance (assisted)"></i><i class="b b--auto" title="Step 14: Booking the closing (automatic)"></i><i class="b b--hum" title="Step 15: Signing before the notary (human)"></i><i class="b b--asis" title="Step 16: Escrow disbursement (assisted)"></i><i class="b b--auto" title="Step 17: Signing with the trust bank (automatic)"></i><i class="b b--auto" title="Step 18: Recording with the land cadastre and the public registry (automatic)"></i><i class="b b--auto" title="Step 19: Original from the public registry (automatic)"></i><i class="b b--auto" title="Step 20: Safekeeping of the original (automatic)"></i>
+      <div class="tally__blocks" role="img" aria-label="20 steps: in 9, Claude and n8n do the work and the lawyer only clicks; 10 are assisted and 1 stays human">
+        <i class="b b--auto" title="Step 1: Welcome and documents (one click from the lawyer)"></i><i class="b b--asis" title="Step 2: Video call with the client (assisted)"></i><i class="b b--asis" title="Step 3: Escrow opening (assisted)"></i><i class="b b--asis" title="Step 4: Notice and forms to the trust bank (assisted)"></i><i class="b b--auto" title="Step 5: Request to the notary (one click from the lawyer)"></i><i class="b b--asis" title="Step 6: Appraisal: WhatsApp link to the runner (assisted)"></i><i class="b b--asis" title="Step 7: Certificates: WhatsApp link to the runner (assisted)"></i><i class="b b--asis" title="Step 8: AI review of the deed draft (assisted)"></i><i class="b b--asis" title="Step 9: Trust bank review (assisted)"></i><i class="b b--auto" title="Step 10: Documents to the bank (one click from the lawyer)"></i><i class="b b--auto" title="Step 11: Bank approval (one click from the lawyer)"></i><i class="b b--asis" title="Step 12: Notice to the parties: funds in escrow (assisted)"></i><i class="b b--asis" title="Step 13: Final balance to escrow (assisted)"></i><i class="b b--auto" title="Step 14: Booking the closing (one click from the lawyer)"></i><i class="b b--hum" title="Step 15: Signing before the notary (human, with support)"></i><i class="b b--asis" title="Step 16: Escrow disbursement (assisted)"></i><i class="b b--auto" title="Step 17: Signing with the trust bank (one click from the lawyer)"></i><i class="b b--auto" title="Step 18: Recording with the land cadastre and the public registry (one click from the lawyer)"></i><i class="b b--auto" title="Step 19: Original from the public registry (one click from the lawyer)"></i><i class="b b--auto" title="Step 20: Safekeeping of the original (one click from the lawyer)"></i>
       </div>
       <ul class="tally__legend">
-        <li class="t--auto"><b><span data-count="11">11</span></b><span>can run almost on their own</span></li>
-        <li class="t--asis"><b><span data-count="7">7</span></b><span>are assisted</span></li>
-        <li class="t--hum"><b><span data-count="2">2</span></b><span>stay human: the legal review of the deed draft and the signing before the notary</span></li>
+        <li class="t--auto"><b><span data-count="9">9</span></b><span>Claude and n8n do the work; the lawyer only clicks</span></li>
+        <li class="t--asis"><b><span data-count="10">10</span></b><span>are assisted: someone also reviews in depth, decides or acts</span></li>
+        <li class="t--hum"><b><span data-count="1">1</span></b><span>stays human, with support: the signing before the notary</span></li>
       </ul>
       <p class="fine">One block per step, in closing order. Hover to see which step it is.</p>
     </div>
@@ -627,7 +627,7 @@
         <path d="M0,50 C50,50 50,12.5 100,12.5"/><path d="M0,50 C50,50 50,37.5 100,37.5"/><path d="M0,50 C50,50 50,62.5 100,62.5"/><path d="M0,50 C50,50 50,87.5 100,87.5"/>
       </svg>
       <ul class="lanes__to" aria-label="Steps 4 to 7, in parallel">
-        <li>Foreign-affairs permit</li><li>Deed draft</li><li>Appraisal</li><li>Certificates</li>
+        <li>Notice to the trust bank (SRE)</li><li>Deed draft</li><li>Appraisal</li><li>Certificates</li>
       </ul>
       <p class="lanes__note">Steps 4 to 7 start in parallel the moment escrow opens, which could cut 7 to 10 days per closing <small class="est-n">(estimate)</small>.</p>
     </div>
@@ -635,19 +635,21 @@
 
   <div class="hscroll">
     <div class="hscroll__head wrap">
-      <h3 class="mini">The 9 components of the design</h3>
+      <h3 class="mini">The 11 components of the design</h3>
       <p class="hscroll__hint" aria-hidden="true">One deal record feeds every email, document and notice.</p>
     </div>
     <ul class="hscroll__track">
       <li class="piece"><span class="piece__n">01</span><h4>Single deal record</h4><p>One row per deal with buyers, unit, bank, notary, escrow, dates per step, validity periods and status.</p><p class="piece__tool">Google Sheets first; own database if volume grows</p></li>
       <li class="piece"><span class="piece__n">02</span><h4>Folder per deal</h4><p>Fixed structure created automatically: 01 Client to 08 Post-closing.</p><p class="piece__tool">Google Drive</p></li>
-      <li class="piece"><span class="piece__n">03</span><h4>Outgoing email</h4><p>Bilingual templates for client, notary, bank, appraiser, HOA and escrow, filled from the record.</p><p class="piece__tool">Gmail</p></li>
+      <li class="piece"><span class="piece__n">03</span><h4>Outgoing email</h4><p>Claude drafts each email and n8n pastes amounts, names, passports, areas and dates exactly as recorded. It reaches the lawyer ready in Gmail: edit and approve it, or ask Claude to redo it. Who approved what, and when, is logged.</p><p class="piece__tool">Gmail and Claude, approved by the lawyer</p></li>
       <li class="piece"><span class="piece__n">04</span><h4>Incoming email reader</h4><p>Classifies third-party emails, links them to the deal, files attachments and moves the status.</p><p class="piece__tool">Gmail and AI</p></li>
-      <li class="piece"><span class="piece__n">05</span><h4>WhatsApp</h4><p>Notices, reminders and a bot that answers "what's the status of my closing?" from the record.</p><p class="piece__tool">WhatsApp Business API</p></li>
-      <li class="piece"><span class="piece__n">06</span><h4>Document AI</h4><p>Reads passports and certificates, compares the deed draft, summarizes video calls and bank comments.</p><p class="piece__tool">Claude API, with human approval</p></li>
-      <li class="piece"><span class="piece__n">07</span><h4>Timers and gates</h4><p>Deadlines per step, certificate validity and the signing gate.</p><p class="piece__tool">n8n</p></li>
-      <li class="piece"><span class="piece__n">08</span><h4>Partner dashboard</h4><p>Deals by stage, days per step, who is blocking, alerts.</p><p class="piece__tool">Google Sheets or Looker Studio</p></li>
-      <li class="piece"><span class="piece__n">09</span><h4>Logs and errors</h4><p>Record of every run and an instant alert if a flow fails.</p><p class="piece__tool">n8n</p></li>
+      <li class="piece"><span class="piece__n">05</span><h4>WhatsApp</h4><p>No API at first: for the runner (gestor), n8n writes the message and gives a link that opens WhatsApp with the text ready, and the lawyer sends it from their own number. Client notices and a status bot are still to be defined.</p><p class="piece__tool">WhatsApp (wa.me link); the API later</p></li>
+      <li class="piece"><span class="piece__n">06</span><h4>Document AI</h4><p>Reads passports and certificates, compares the deed draft, summarizes video calls and bank comments. Still to validate: the plan, and that data is neither used for training nor retained.</p><p class="piece__tool">Claude (Anthropic), with human approval</p></li>
+      <li class="piece"><span class="piece__n">07</span><h4>Templates</h4><p>Each master document lives in Google Docs, where the firm edits it. n8n copies it, Claude drafts only the variants (buyers, marital status, company, beneficiaries) and marks what is missing with [FALTA]; n8n pastes the hard data as is and it comes out in Word.</p><p class="piece__tool">Google Docs and Drive</p></li>
+      <li class="piece"><span class="piece__n">08</span><h4>E-signature</h4><p>The escrow agreement and the disbursement are signed in DocuSign: n8n creates the envelope as a draft, the lawyer sends it with one click and DocuSign reports back when everyone has signed.</p><p class="piece__tool">DocuSign API (eSignature REST)</p></li>
+      <li class="piece"><span class="piece__n">09</span><h4>Timers and gates</h4><p>Deadlines per step, certificate validity and the signing gate.</p><p class="piece__tool">n8n</p></li>
+      <li class="piece"><span class="piece__n">10</span><h4>Partner dashboard</h4><p>Deals by stage, days per step, who is blocking, alerts.</p><p class="piece__tool">Google Sheets or Looker Studio</p></li>
+      <li class="piece"><span class="piece__n">11</span><h4>Logs and errors</h4><p>Record of every run and an instant alert if a flow fails.</p><p class="piece__tool">n8n</p></li>
     </ul>
   </div>
 
@@ -674,6 +676,8 @@
         </div>
         <ul class="guard__list" data-stagger>
           <li><strong>Document AI with human approval.</strong> It reads passports and certificates and compares the deed draft against the record.</li>
+          <li><strong>AI never writes the hard data.</strong> n8n copies names, amounts and dates exactly as they are in the record.</li>
+          <li><strong>No email or contract goes out without the lawyer's click.</strong> Claude drafts and fills; the lawyer reviews and approves, and every email logs who approved it and when.</li>
           <li><strong>Client data never lives on my infrastructure.</strong> The demo runs on fictitious data and production goes on the firm's own server.</li>
         </ul>
       </div>
@@ -681,7 +685,7 @@
 
     <div class="status" data-reveal>
       <p class="mono-label">Status · design stage (November 2026)</p>
-      <p>Proposal delivered; decisions kept in a decision register; rollout planned in 4 phases over 10 to 13 weeks <small class="est-n">(estimate)</small>, starting with a pilot on one development. Expected savings: 50% to 70% of busywork hours per closing <small class="est-n">(estimate)</small>, to be measured in the diagnosis.</p>
+      <p>Proposal delivered and decisions kept in a decision register. The design is already drawn in n8n: a 52-node canvas in 5 stages, plus the email lanes, non-functional on purpose (triggers off and fictitious data). Still to validate: that the firm's DocuSign plan includes API access and that the template formatting holds when exported to Word. Rollout planned in 4 phases over 10 to 13 weeks <small class="est-n">(estimate)</small>, starting with a pilot on one development. Expected savings: 50% to 70% of busywork hours per closing <small class="est-n">(estimate)</small>, to be measured in the diagnosis.</p>
     </div>
   </div>
 </section>

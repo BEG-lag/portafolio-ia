@@ -111,13 +111,13 @@ T = {
         "sub": "Design for a real-estate law firm in Baja California (client anonymized). Stage: design.",
         "in": "Inputs", "out": "Outputs",
         "inputs": [("New deal intake", "Short paralegal form"), ("Client documents", "Secure upload link"),
-                   ("Third-party email", "Notary, bank, escrow, appraiser"), ("Client WhatsApp", "“What’s my closing status?”")],
-        "outputs": [("Folder per deal", "Drive: 01 Client … 08 Post-closing"), ("Bilingual outgoing email", "Templates filled from the record"),
-                    ("WhatsApp Business API", "Notices and status bot"), ("Partner dashboard", "Stage, days per step, blockers")],
+                   ("Third-party email", "Notary, bank, escrow, appraiser"), ("DocuSign", "Webhook when everyone has signed")],
+        "outputs": [("Folder per deal", "Drive: 01 Client … 08 Post-closing"), ("Email with approval", "Claude drafts, the lawyer approves"),
+                    ("WhatsApp to the runner", "Link with the message written"), ("Partner dashboard", "Stage, days per step, blockers")],
         "container": "n8n, self-hosted on the client’s server",
         "record": ("Single deal record", "Single source of truth · Google Sheets first, own database if volume grows"),
         "mods": [("Email reader", ["Gmail + AI", "classifies mail,", "links it to the deal"]),
-                 ("Document AI", ["Claude via API", "reads passports,", "checks the deed", "against the record"]),
+                 ("Document AI", ["Claude via API", "reads passports,", "reviews the deed,", "fills templates"]),
                  ("Timers", ["deadlines per step,", "certificate validity", "and reminders"])],
         "pill": "human approval",
         "gate": ("Signing gate", ["closing can only be booked", "when every condition is met"]),
@@ -126,24 +126,25 @@ T = {
         "a": ["Foreign Affairs (SRE) permit granted", "Appraisal received", "Certificates still valid on the proposed date",
               "Deed draft approved by the trust bank", "Funds confirmed in escrow", "Final balance paid"],
         "b_title": "Design rules",
-        "b": [("•", "20 closing steps: 11 automated, 7 assisted, 2 human"), ("•", "Steps 4 to 7 run in parallel once escrow opens"),
+        "b": [("•", "20 closing steps: 9 one-click, 10 assisted, 1 human"), ("•", "Steps 4 to 7 run in parallel once escrow opens"),
+              ("•", "Hard data copied as is; nothing goes out without a click"),
               ("•", "Anti-fraud: no flow ever sends bank details; an email"), ("", "mentioning “new wiring instructions” raises a red alert"),
               ("•", "Demo on fictitious data; production on the client’s server"),
               ("•", "Expected savings: 50% to 70% of busywork per closing [ESTIMATE]")],
-        "foot": "Tools: n8n · Gmail · Google Drive and Sheets · WhatsApp Business API · Claude API",
+        "foot": "Tools: n8n · Gmail · Google Drive, Docs and Sheets · WhatsApp (wa.me link) · Claude API · DocuSign API",
     },
     "es": {
         "title": "Cierre inmobiliario automatizado: arquitectura en n8n",
         "sub": "Diseño para un despacho inmobiliario en Baja California (cliente anonimizado). Etapa: diseño.",
         "in": "Entradas", "out": "Salidas",
         "inputs": [("Alta de operación", "Formulario corto del paralegal"), ("Documentos del cliente", "Liga segura de carga"),
-                   ("Correo de terceros", "Notaría, banco, escrow, valuador"), ("WhatsApp del cliente", "“¿Cómo va mi cierre?”")],
-        "outputs": [("Carpeta por operación", "Drive: 01 Cliente … 08 Post-cierre"), ("Correo saliente bilingüe", "Plantillas desde el expediente"),
-                    ("WhatsApp Business API", "Avisos y bot de estatus"), ("Tablero del socio director", "Etapas, días por paso, atorones")],
+                   ("Correo de terceros", "Notaría, banco, escrow, valuador"), ("DocuSign", "Aviso por webhook al firmar")],
+        "outputs": [("Carpeta por operación", "Drive: 01 Cliente … 08 Post-cierre"), ("Correo con aprobación", "Claude redacta, el abogado aprueba"),
+                    ("WhatsApp al gestor", "Liga con el mensaje ya escrito"), ("Tablero del socio director", "Etapas, días por paso, atorones")],
         "container": "n8n autoalojado en el servidor del cliente",
         "record": ("Expediente único por operación", "Única fuente de verdad · Google Sheets al inicio, base propia si crece"),
         "mods": [("Lector de correo", ["Gmail + IA", "clasifica correos", "y los liga a cada", "operación"]),
-                 ("IA documental", ["Claude vía API", "lee pasaportes y", "compara la escritura", "con el expediente"]),
+                 ("IA documental", ["Claude vía API", "lee pasaportes,", "revisa la escritura", "y llena machotes"]),
                  ("Temporizadores", ["plazos por paso,", "vigencias de", "certificados y", "recordatorios"])],
         "pill": "aprobación humana",
         "gate": ("Compuerta de firma", ["sólo deja agendar la firma", "cuando todo está listo"]),
@@ -152,11 +153,12 @@ T = {
         "a": ["Permiso de la SRE otorgado", "Avalúo recibido", "Certificados vigentes a la fecha propuesta",
               "Proyecto aprobado por el banco fiduciario", "Fondos confirmados en escrow", "Saldo final pagado"],
         "b_title": "Reglas de diseño",
-        "b": [("•", "20 pasos del cierre: 11 automáticos, 7 asistidos, 2 humanos"), ("•", "Pasos 4 a 7 en paralelo en cuanto se abre el escrow"),
+        "b": [("•", "20 pasos del cierre: 9 con un clic, 10 asistidos, 1 humano"), ("•", "Pasos 4 a 7 en paralelo en cuanto se abre el escrow"),
+              ("•", "Datos duros tal cual; nada sale sin el clic del abogado"),
               ("•", "Antifraude: ningún flujo envía cuentas bancarias; un correo"), ("", "con “cambio de cuenta” lanza alerta roja y exige llamada"),
               ("•", "Demo con datos ficticios; producción en servidor del cliente"),
               ("•", "Ahorro esperado: 50% a 70% de la talacha por cierre [ESTIMADO]")],
-        "foot": "Herramientas: n8n · Gmail · Google Drive y Sheets · WhatsApp Business API · Claude API",
+        "foot": "Herramientas: n8n · Gmail · Google Drive, Docs y Sheets · WhatsApp (liga wa.me) · Claude API · DocuSign API",
     },
 }
 
@@ -236,8 +238,9 @@ def arquitectura(L, tema="arena"):
               f'<path d="M62.5,{y-4.5} L65,{y-2} L69,{y-7.5}" fill="none" stroke="{P["acento"]}" stroke-width="1.6"/>',
               tx(80, y, s, 11.5)]
     o += [cj(510, 412, 450, 190), tx(530, 441, d["b_title"], ssize, "normal", P["acento_hondo"], family=sf, style=ss)]
+    paso = 21 if len(d["b"]) <= 6 else 19
     for i, (bul, s) in enumerate(d["b"]):
-        y = 467 + i * 21
+        y = 467 + i * paso
         if bul:
             o.append(vineta(534, y - 4))
         o.append(tx(546, y, s, 11.5))

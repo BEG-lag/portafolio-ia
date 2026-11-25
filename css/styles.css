@@ -258,7 +258,7 @@ h4{font-size:1.05rem;line-height:1.25;font-weight:650;letter-spacing:-.01em}
 .tally__blocks{display:grid;grid-template-columns:repeat(20,1fr);gap:clamp(3px,.6vw,8px);perspective:900px}
 .b{display:block;aspect-ratio:1/1.5;border-radius:clamp(3px,.6vw,8px);background:var(--lime);transform-origin:50% 100%}
 .b--asis{background:var(--amber)}.b--hum{background:var(--coral)}
-.tally__legend{display:grid;grid-template-columns:11fr 7fr 2fr;gap:clamp(3px,.6vw,8px);margin-top:1.2rem}
+.tally__legend{display:grid;grid-template-columns:9fr 10fr minmax(16rem,1fr);gap:clamp(3px,.6vw,8px);margin-top:1.2rem}
 .tally__legend li{border-top:2px solid var(--lime);padding-top:.8rem;display:flex;flex-direction:column;gap:.3rem;color:var(--mut);font-size:.92rem;min-width:0}
 .tally__legend b{font-size:clamp(2.4rem,5vw,4.6rem);letter-spacing:-.05em;line-height:1;color:var(--lime);font-variant-numeric:tabular-nums}
 .t--asis{border-color:var(--amber)!important}.t--asis b{color:var(--amber)}
