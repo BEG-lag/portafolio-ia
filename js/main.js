@@ -10,15 +10,17 @@
 
   /* ---------- construcciones estáticas (no dependen de GSAP) ---------- */
 
-  // 374 celdas: 352 vigentes, 22 abrogados
+  // Celdas del corpus: un cuadro por documento, en grupos (data-groups): leyes, reglamentos, DACG, abrogadas
   var cells = $('.cells');
   if (cells) {
-    var frag = document.createDocumentFragment();
-    for (var i = 0; i < 374; i++) {
-      var c = document.createElement('i');
-      if (i >= 352) c.className = 'off';
-      frag.appendChild(c);
-    }
+    var frag = document.createDocumentFragment(), cls = ['', 'cy', 'am', 'off'];
+    (cells.getAttribute('data-groups') || '').split(',').forEach(function (n, g) {
+      for (var i = 0; i < +n; i++) {
+        var c = document.createElement('i');
+        if (cls[g]) c.className = cls[g];
+        frag.appendChild(c);
+      }
+    });
     cells.appendChild(frag);
   }
 
@@ -127,13 +129,16 @@
     });
   }
 
-  // Campo de puntos de SupplySense: 560 + 150 puntos, cada uno 1,000 contratos
-  var dots = { progress: 1, canvas: $('.supply__canvas'), seeds: [] };
+  // Campo de puntos de SupplySense: dos grupos (data-groups), cada punto 1,000 procedimientos
+  var dots = { progress: 1, canvas: $('.supply__canvas'), seeds: [], a: 0, n: 0 };
   (function () {
-    var seed = 7;
+    if (!dots.canvas) return;
+    var g = (dots.canvas.getAttribute('data-groups') || '0,0').split(',');
+    dots.a = +g[0]; dots.n = dots.a + (+g[1] || 0);
+    var cut = 0.92 * dots.a / (dots.n || 1), seed = 7;
     function rnd() { seed = (seed * 16807) % 2147483647; return seed / 2147483647; }
-    for (var d = 0; d < 710; d++) {
-      dots.seeds.push(d < 560 ? rnd() * 0.72 : 0.76 + rnd() * 0.2);
+    for (var d = 0; d < dots.n; d++) {
+      dots.seeds.push(d < dots.a ? rnd() * cut : cut + 0.04 + rnd() * (0.92 - cut));
     }
   })();
   function drawDots() {
@@ -144,7 +149,7 @@
     if (cv.width !== W || cv.height !== H) { cv.width = W; cv.height = H; }
     var ctx = cv.getContext('2d');
     ctx.clearRect(0, 0, W, H);
-    var pad = 18 * dpr, w = W - pad * 2, h = H - pad * 2, N = 710;
+    var pad = 18 * dpr, w = W - pad * 2, h = H - pad * 2, N = dots.n;
     var cols = Math.ceil(Math.sqrt(N * w / h)), rows = Math.ceil(N / cols);
     var cw = w / cols, ch = h / rows, rad = Math.min(cw, ch) * 0.32;
     for (var n = 0; n < N; n++) {
@@ -156,7 +161,7 @@
         continue;
       }
       var e = t > 1 ? 1 : t;
-      ctx.fillStyle = n < 560 ? '#cfff45' : '#7fd8ff';
+      ctx.fillStyle = n < dots.a ? '#cfff45' : '#7fd8ff';
       ctx.globalAlpha = 0.25 + e * 0.75;
       ctx.beginPath(); ctx.arc(cx, cy, rad * (0.45 + 0.55 * e) * (t < 1.6 ? 1 + (1.6 - t) * 0.25 * e : 1), 0, 6.2832); ctx.fill();
       ctx.globalAlpha = 1;

@@ -18,14 +18,14 @@ TX = {
     'es': {'num': 'N.º', 'cc_lab': 'PRODUCTO EN VIVO', 'cc_pie': 'Una guía, 7 plugins y 7 skills.', 'cc_meta': 'A LA VENTA EN CONCRITERIO.MX',
            'cc_libros': ['NOTARIADO', 'ENERGÍA', 'C. COMERCIO'], 'guia': 'GUÍA', 'sello': 'VERIFICADO · CON CRITERIO ·',
            'rag_tit': ('EL', 'BUSCADOR'), 'rag_q': '¿qué permiso aplica hoy?', 'rag_pie': 'La ley de energía, en lenguaje natural.',
-           'rag_meta': '374 DOCUMENTOS · 11,112 FRAGMENTOS', 'ss_lab': 'DATOS A ESCALA', 'ss_pie': 'Quién compra, a qué precio y cuándo.',
-           'ss_meta': '560,000 + 150,000 CONTRATOS PÚBLICOS', 'ci_tit': ('EL', 'CIERRE'), 'ci_pie': '20 pasos, con freno de mano.',
+           'rag_meta': '35 DOCUMENTOS · 3,376 ARTÍCULOS', 'ss_lab': 'DATOS A ESCALA', 'ss_pie': 'Quién compra, a qué precio y cuándo.',
+           'ss_meta': '300,000+ ADJUDICACIONES, AL DÍA', 'ci_tit': ('EL', 'CIERRE'), 'ci_pie': '20 pasos, con freno de mano.',
            'ci_meta': '11 AUTOMÁTICOS · 7 ASISTIDOS · 2 HUMANOS', 'freno': 'FRENO'},
     'en': {'num': 'NO.', 'cc_lab': 'LIVE PRODUCT', 'cc_pie': 'A guide, 7 plugins and 7 skills.', 'cc_meta': 'ON SALE AT CONCRITERIO.MX',
            'cc_libros': ['NOTARIAL', 'ENERGY', 'COMMERCE'], 'guia': 'GUIDE', 'sello': 'VERIFIED · CON CRITERIO ·',
            'rag_tit': ('SEARCH', 'ENGINE'), 'rag_q': 'which permit applies today?', 'rag_pie': 'Energy law, in plain language.',
-           'rag_meta': '374 DOCUMENTS · 11,112 CHUNKS', 'ss_lab': 'DATA AT SCALE', 'ss_pie': 'Who buys, at what price and when.',
-           'ss_meta': '560,000 + 150,000 PUBLIC CONTRACTS', 'ci_tit': ('THE', 'CLOSING'), 'ci_pie': '20 steps, with a hand on the brake.',
+           'rag_meta': '35 DOCUMENTS · 3,376 ARTICLES', 'ss_lab': 'DATA AT SCALE', 'ss_pie': 'Who buys, at what price and when.',
+           'ss_meta': '300,000+ AWARDS, UPDATED DAILY', 'ci_tit': ('THE', 'CLOSING'), 'ci_pie': '20 steps, with a hand on the brake.',
            'ci_meta': '11 AUTOMATED · 7 ASSISTED · 2 HUMAN', 'freno': 'BRAKE'},
 }
 T = TX['es']

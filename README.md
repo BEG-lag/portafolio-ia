@@ -39,8 +39,8 @@ Mexico City · hola@pivotek.mx · [pivotek.mx](https://pivotek.mx) · [LinkedIn]
 - **More than 30 projects in 2026**, from cross-border regulatory audits to a legal-tech product that is on sale.
 - **Impact:** more than 40 legal matters done with AI and closed successfully; 90.7% of articles identical to the official text when an AI agent applied 34 real reforms from the Official Gazette ([reforma-al-dia](https://github.com/BEG-lag/reforma-al-dia)); and one live product, Con Criterio.
 - **One product live:** Con Criterio, a guide plus 7 plugins and 7 skills for Mexican lawyers, sold in Claude and ChatGPT editions at [concriterio.mx](https://concriterio.mx) since November 5, 2026.
-- **Retrieval over legal text:** 374 energy-law instruments split into 11,112 chunks along the hierarchy of Mexican statutes, with hybrid search and a regression test set.
-- **Data at scale:** a pipeline over more than 560,000 public procurement contracts to show oil and gas suppliers where the money goes.
+- **Retrieval over legal text:** [ley-energia-mx](https://github.com/BEG-lag/ley-energia-mx), Mexico's energy regulation article by article, with validity and lineage, which Claude queries over MCP with no API keys (40 of 40 evaluation cases); its first, private version indexed 374 instruments into 11,112 chunks.
+- **Data at scale:** [SupplySense](https://github.com/BEG-lag/SupplySense) matches the open tenders of ComprasMX, CFE, PEMEX and three states against more than 300,000 awards every morning, to show who wins, at what price and for which buyer, with energy, oil and gas as its featured vertical.
 - **Websites, video and marketing:** four sites live ([concriterio.mx](https://concriterio.mx), [pivotek.mx](https://pivotek.mx), [casalegado.mx](https://casalegado.mx) and [carocomunicando.com](https://carocomunicando.com)), a stage-entrance video for a speaker, an automated Reels pipeline, and social media run by AI agents (Grok Bot and Meta's Muse).
 - **Open source:** 21 public repositories on [GitHub](https://github.com/BEG-lag), including an agent that applies Official Gazette reforms to the law the same day, 36 federal laws versioned in git, a daily energy-sector radar, and severance, rent and pension calculators with automated tests ([§2](#2-open-source)).
 - **Connected tools:** Stripe, Gmail, Google Calendar and Drive, Vercel, Higgsfield, Apify, Canva and browser automation, all driven from Claude Code.
@@ -50,11 +50,11 @@ Mexico City · hola@pivotek.mx · [pivotek.mx](https://pivotek.mx) · [LinkedIn]
 
 ## 2. Open source
 
-**Status.** The 13 with a live site are in operation; mcp-leyes, mcp-dof, segundo-cerebro and tema-clawds are published products.
+**Status.** The 14 with a live site are in operation; mcp-leyes, mcp-dof, segundo-cerebro and tema-clawds are published products.
 
 **Problem.** Much of day-to-day legal and administrative work depends on knowing what the law says today and on calculations nobody checks; these tools solve that with the code in the open.
 
-21 public repositories at [github.com/BEG-lag](https://github.com/BEG-lag), built with Claude Code. Here are 17, arranged in the same four groups as my GitHub profile; sixteen are checked on GitHub Actions with every change (tests, types or data) and thirteen have a live site. Figures taken from each repository (its README and its test runs on GitHub Actions) on November 17, 2026; those for ley-energia-mx, on November 25, 2026. More on [my GitHub profile](https://github.com/BEG-lag).
+21 public repositories at [github.com/BEG-lag](https://github.com/BEG-lag), built with Claude Code. Here are 18, arranged in the same four groups as my GitHub profile; seventeen are checked on GitHub Actions with every change (tests, types or data) and fourteen have a live site. Figures taken from each repository (its README and its test runs on GitHub Actions) on November 17, 2026; those for ley-energia-mx and SupplySense, on November 25, 2026. More on [my GitHub profile](https://github.com/BEG-lag).
 
 ### 2.1 Law, compiled
 
@@ -71,6 +71,7 @@ Open-source tools that read, apply and audit Mexican law.
 Public records turned into living datasets, APIs and visual stories.
 
 - **[radar-energia](https://github.com/BEG-lag/radar-energia)** · Python · 53 tests. A daily radar of Mexico's energy sector: the Official Gazette by subsector, CNE, SENER, ASEA and CENACE, plus the FIX rate and power and fuel prices, each with its official source and a feed per subsector. Signed as PIVOTEK. [Live site](https://beg-lag.github.io/radar-energia/).
+- **[SupplySense](https://github.com/BEG-lag/SupplySense)** · Python · 81 tests. Open tenders from ComprasMX, CFE, PEMEX and three states, next to what was already paid: more than 300,000 awards with winner, price and buyer, each record linked to its official source. Updates itself every morning. It is the project in [§6](#6-featured-public-procurement-intelligence-for-oil-and-gas). [Live site](https://beg-lag.github.io/SupplySense/).
 - **[constitucion-viva](https://github.com/BEG-lag/constitucion-viva)** · TypeScript. The 1917 Mexican Constitution, alive: 285 reform decrees and 857 article reforms, with a time machine, how the text has grown, word-level changes since 2006 and the citation network of 36 federal laws. [Live site](https://beg-lag.github.io/constitucion-viva/).
 - **[indicadores-mx](https://github.com/BEG-lag/indicadores-mx)** · Python · 102 tests. 37,372 official values in 17 series (FIX since 1991, UDIS, TIIE, INPC, minimum wage and UMA), each linked to its Official Gazette notice, as a free static JSON and CSV API. Data in the public domain (CC0). [Live site](https://beg-lag.github.io/indicadores-mx/).
 - **[dof-diario](https://github.com/BEG-lag/dof-diario)** · Python. An archive of the Official Gazette's table of contents since January 2025: 484 days and 43,994 notices. It updates itself twice a day with GitHub Actions and has a search page with filters. Data in the public domain (CC0). [Live site](https://beg-lag.github.io/dof-diario/).
@@ -100,8 +101,8 @@ How I work, packaged for anyone.
 | Skill | What I have built with it |
 |:-----|:-------------|
 | AI agents and agentic workflows | Claude Code plugins, skills and subagents for seven areas of Mexican law ([§4](#4-featured-con-criterio-an-ai-toolkit-for-mexican-lawyers)); a nine-role multi-agent system with typed handoffs ([§11](#11-my-tools)); social media run by Grok Bot and Meta's Muse ([§10](#10-websites-video-and-digital-marketing-with-ai)) |
-| Retrieval over documents (RAG) | Legal RAG with law-specific embeddings, pgvector and hybrid ranking over 374 energy-law instruments ([§5](#5-featured-retrieval-engine-over-mexican-energy-law-rag)) |
-| Data engineering | A pipeline over more than 560,000 public procurement contracts with weekly updates and audits ([§6](#6-featured-public-procurement-intelligence-for-oil-and-gas)); financial models in Python and Excel ([§12](#12-feasibility-studies)) |
+| Retrieval over documents (RAG) | Legal RAG with hybrid ranking: 374 energy-law instruments with pgvector and legal embeddings in the first version, and [ley-energia-mx](https://github.com/BEG-lag/ley-energia-mx), public, with local embeddings and an MCP server for Claude ([§5](#5-featured-retrieval-engine-over-mexican-energy-law-rag)) |
+| Data engineering | Daily pipelines on GitHub Actions: SupplySense reads six public procurement sources and matches them against more than 300,000 awards ([§6](#6-featured-public-procurement-intelligence-for-oil-and-gas)); financial models in Python and Excel ([§12](#12-feasibility-studies)) |
 | Workflow automation | n8n designs for a 20-step real-estate closing and a daily regulatory digest ([§7](#7-featured-real-estate-closing-automation-in-n8n), [§8](#8-daily-regulatory-digest-from-the-official-gazette-n8n)); scheduled tasks for monthly regulatory reviews and a weekly second-brain review ([§4](#4-featured-con-criterio-an-ai-toolkit-for-mexican-lawyers), [§11](#11-my-tools)) |
 | AI for legal work | Cross-border regulatory audits, contract and compliance reviews, opinions and letters, every data point with source and cut-off date ([§9](#9-legal-and-regulatory-work-built-with-ai)) |
 | Product building | Con Criterio, from content to payments, automated delivery and QA with simulated buyers ([§4](#4-featured-con-criterio-an-ai-toolkit-for-mexican-lawyers)) |
@@ -144,22 +145,22 @@ How I work, packaged for anyone.
 
 **Problem.** Mexico's energy rules are scattered across the Official Gazette and the websites of eight energy authorities, and the 2025 reform replaced much of the framework. Finding the instrument that actually applies, and knowing whether it still applies, takes hours.
 
-**What I built.** A pipeline that collects, structures and indexes Mexican energy legislation so it can be queried in natural language.
+**What I built.** [ley-energia-mx](https://github.com/BEG-lag/ley-energia-mx): Mexico's energy regulation article by article, with validity, lineage and a link to the official publication. Claude queries it over MCP with no API keys; it also has a command line, a local web app with hybrid search and a static site that searches in the browser. Code under MIT, data under CC0. [Live site](https://beg-lag.github.io/ley-energia-mx/).
 
 | Stage | How it works |
 |:---|:------------|
-| Collection | Async scrapers over the Official Gazette and regulators' sites, with polite delays |
-| Extraction | Text from PDFs with an OCR fallback for scanned documents |
-| Chunking | Splits text along the hierarchy of Mexican legal instruments (title, chapter, article) instead of fixed sizes |
-| Storage | PostgreSQL with pgvector: documents and chunks, validity flags and a validity note for rules that are formally in force but suspended in practice |
-| Embeddings | Voyage AI `voyage-law-2`, built for legal text |
-| Search | Hybrid ranking (vector similarity plus keyword, merged with reciprocal rank fusion), synonyms, statute detection and boosts |
-| Answers | Claude answers natural-language questions over the retrieved chunks |
-| Quality | A golden test set used as a regression guardrail (9 of 9 passing) and database audits for duplicates, validity and publication dates |
+| Manifest | A YAML file declares each document: its official source, its publication and validity dates and the rule that replaced it |
+| Download | Reads leyes-mx, the Chamber of Deputies and the Official Gazette; segmented texts are versioned in git, so the index rebuilds without touching government sites |
+| Chunking | One chunk per article, numbered provision or transitory article, keeping its path (title, chapter, section), instead of fixed sizes |
+| Index | A single SQLite file: full-text search (FTS5) over Spanish stems plus local embeddings (multilingual MiniLM over ONNX); no database server and no keys |
+| Search | Weighted fusion of four signals: lexical, vector, exact article ("article 8" never returns article 80) and named document; 2014 vocabulary is mapped to the 2025 terms |
+| Validity and lineage | Only rules in force by default; with a date, the regime of that day; each result says whether it is in force and which rule replaced it, with date and legal basis |
+| Claude over MCP | A read-only server with 5 tools (`buscar`, `leer_articulo`, `documento`, `linaje` and `catalogo`) and 3 prompts; Claude reasons with the user's own subscription, reads before citing and treats document text as data |
+| Quality | 40 cases written from the official text: 40 of 40 in both engines (recall@5 of 1.00); 41 tests; CI rebuilds the index and runs the evaluations on every change, and every Monday it downloads the sources again and opens a pull request if an official text changed |
 
-**Scale (April 2026).** 374 documents and 11,112 chunks, all embedded: 352 in force and 22 repealed, from the Energy Regulatory Commission, the Energy Ministry, the grid operator, the hydrocarbons and gas regulators, the safety agency and Congress. No LangChain or LlamaIndex: plain Python and SQL.
+**Corpus (November 25, 2026).** 35 documents, 4,417 chunks and 3,376 articles and provisions: 10 laws in force, 8 regulations, 8 general administrative provisions (DACG) of the Comisión Nacional de Energía and 9 repealed rules linked to the ones that replaced them. No LangChain or LlamaIndex: plain Python and SQL. Not legal advice.
 
-**Public version (November 2026).** [ley-energia-mx](https://github.com/BEG-lag/ley-energia-mx) is an open, narrower version rebuilt from scratch: Mexico's energy regulation article by article, with validity, lineage and a link to the official publication. It holds 35 documents as of November 25, 2026: 10 laws in force, 8 regulations, 8 general administrative provisions (DACG) of the Comisión Nacional de Energía and 9 repealed rules linked to the ones that replaced them. Claude queries it over MCP with no API keys (5 read-only tools and 3 prompts); search is hybrid and local (SQLite FTS5 and local embeddings) and passes 40 of 40 evaluation cases. Code under MIT, data under CC0. [Live site](https://beg-lag.github.io/ley-energia-mx/). The full 374-document pipeline remains private.
+**First version (April 2026, private).** 374 documents and 11,112 chunks, all embedded (352 in force and 22 repealed), from the Energy Regulatory Commission, the Energy Ministry, the grid operator, the hydrocarbons and gas regulators, the safety agency and Congress: async scrapers with OCR, PostgreSQL with pgvector, Voyage AI `voyage-law-2` embeddings, answers through the Claude API and a golden test set (9 of 9). I audited it and rebuilt it from scratch for the public version; the 374-document pipeline remains private.
 
 <p align="center"><img src="assets/ornamento.svg" width="220" alt=""></p>
 
@@ -167,14 +168,16 @@ How I work, packaged for anyone.
 
 **Status.** Live.
 
-**Problem.** Suppliers to the oil and gas sector in Mexico bid blind: they don't know who buys what they sell, at what price, or when.
+**Problem.** Anyone selling to the Mexican government, and above all to CFE and PEMEX, the state power and oil companies, bids blind: they don't know who buys what they sell, what was paid before or when the next call for tender closes.
 
-**What I built.** SupplySense, a price-intelligence tool built on public procurement data.
+**What I built.** [SupplySense](https://github.com/BEG-lag/SupplySense): every morning it reads every open federal tender on ComprasMX, CFE and PEMEX, plus those of three states, and matches them against more than 300,000 awards: who won, at what price and for which buyer. Its featured vertical is energy, oil and gas, and every record links to its official source. [Live site](https://beg-lag.github.io/SupplySense/) (in Spanish).
 
-- Loaded more than 560,000 contracts from CompraNet (2023 to 2025) across 26 categories, plus 150,000 recent contracts from ComprasMX collected with Playwright.
-- Weekly automatic download with deduplication; data enrichment with geography and level of government; per-subsidiary links for the national oil company.
-- Dashboard with KPIs, watchlists, "my line of business" filters, global search, and CSV and PDF export; basic multi-tenancy per client.
-- Data audits that caught and fixed misclassified categories and outliers, and a market sizing (TAM) analysis.
+- **Sources.** All of ComprasMX (175,116 procedures and 221,654 contracts from 2025 and 2026), CFE since 2015 (114,977 procedures), PEMEX (11,926 notices) and the purchasing portals of Jalisco, Mexico City and Campeche. As of November 25, 2026: 302,986 procedures, 128,837 of them in energy, oil and gas, and 1,340 open calls.
+- **Updates.** GitHub Actions every morning at 06:30. Each source is isolated: if it fails it keeps its last good data, a response with less than 70% of the stored records is rejected and the workflow alerts when a source has been failing for three days.
+- **Site.** Search by trade and by meaning (word vectors trained on about 530,000 titles, running in the browser), prices by category (P5 to P95 percentiles in 35 categories, market concentration and a comparator), winners, companies and buyers, and the legal frame and calendar of each procedure. It is static: no server, accounts or keys.
+- **Quality and privacy.** 81 tests in CI (pytest and vitest). Tax IDs only for companies, no names or emails of public officials, estimated statuses flagged and outlier amounts kept out of prices.
+
+**First version (April 2026, private).** A dashboard with an API and PostgreSQL over more than 560,000 CompraNet contracts (2023 to 2025) across 26 categories and 150,000 from ComprasMX collected with Playwright, with weekly updates, watchlists, CSV and PDF export and a market sizing analysis. I rebuilt it from scratch as an open static site that updates itself.
 
 <p align="center"><img src="assets/ornamento.svg" width="220" alt=""></p>
 
@@ -289,7 +292,7 @@ Own ventures and services of PIVOTEK, my consultancy, each with a go or no-go ve
 ### Stack
 
 - **AI:** Claude Code (skills, plugins, subagents, MCP connectors, hooks, scheduled tasks), Claude API, Voyage AI embeddings, ChatGPT and Codex, Higgsfield (image, video, voice and music), Grok Bot and Meta's Muse.
-- **Data:** Python, PostgreSQL with pgvector, Playwright, pdfplumber and OCR, Excel.
+- **Data:** Python, PostgreSQL with pgvector, SQLite and DuckDB, Playwright, pdfplumber and OCR, Excel.
 - **Automation:** n8n, Docker, launchd, GitHub Actions and scheduled tasks.
 - **Video:** Remotion, ffmpeg, Whisper, Apple Vision (Swift).
 - **Web:** Next.js, TypeScript, static HTML and CSS, GSAP, Cloudflare Workers, Vercel, GitHub Pages, Stripe, Resend, Web3Forms.
