@@ -813,7 +813,7 @@ body::after{content:"";position:fixed;inset:-120px;z-index:58;pointer-events:non
 .pvk__pin{min-height:100vh;min-height:100svh;display:flex;align-items:center;padding:12vh 0}
 .pvk__pin > .wrap{width:min(1280px,100% - 2*var(--gut))}
 .pvk__stage{display:grid;grid-template-columns:minmax(150px,280px) 1fr;gap:clamp(32px,6vw,110px);align-items:center;margin-top:2.4rem}
-.pvk__iso{display:flex;align-items:stretch;width:100%;aspect-ratio:483/560}
+.pvk__iso{display:flex;align-items:stretch;width:100%;aspect-ratio:456.84/524.34}
 .pvk__iso img{display:block;height:100%;width:auto}
 .pvk__arrow{transform-origin:100% 60%}
 .pvk__word{font-size:clamp(4.2rem,13vw,11.5rem);font-weight:800;letter-spacing:-.065em;line-height:.88;text-transform:lowercase}
